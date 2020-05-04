@@ -11,12 +11,13 @@ cd tslide
 export REPO=$(pwd)
 ```
 
-Copy this text file, slides.hjon, someplace:
+Set some helpful variable:
 
 ```
 export INPUTDIR=~/tmp/slides 
-mkdir $INPUTDIR 
-cp slides.hjson $INPUTDIR
+mkdir $INPUTDIR
+export INPUTFILE=slides.hjsonA
+export OUTPUTIDR=~/tmp/output
 ```
 */
 
@@ -24,10 +25,10 @@ cp slides.hjson $INPUTDIR
 After edits, run tsmake on it:
 
 ```
-cd $REP
-./tsmake --outputDir /tmp/presentation
-	 --inputDir ~/tmp/slides 
-	 --slidesFile ~/tmp/slides.hjson
+cd $REPO
+./tsmake --outputDir     $OUTPUTDIR
+	 --inputDir      $INPUTDIR 
+	 --slidesFile    $INPUTFILE
 	 --slideListGlob "slide-*" 
 	 --slideTextNumRows=30 
 	 --verbosity 1
@@ -38,7 +39,7 @@ cd $REP
 Finally, run a web server in the repo:
 
 ```
-cd ~/tmp/presentation
+cd $OUTPUTDIR
 python -m http.server
 ```
 

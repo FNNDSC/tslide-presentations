@@ -5,7 +5,7 @@ A repo to house/keep tslide presentations.
 
 For vim, setup a [plugin manager](https://github.com/junegunn/vim-plug) and [here](https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation). Basically, in your `.vimrc`. do
 
-```
+```bash
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

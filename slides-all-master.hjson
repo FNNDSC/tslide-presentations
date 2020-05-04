@@ -1,0 +1,54 @@
+<slidebreak>
+
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+git clone https://github.org/FNNDSC/tslide
+cd tslide
+export REPO=$(pwd)
+```
+
+Copy this text file, slides.hjon, someplace:
+
+```
+export INPUTDIR=~/tmp/slides 
+mkdir $INPUTDIR 
+cp slides.hjson $INPUTDIR
+```
+*/
+
+/*
+After edits, run tsmake on it:
+
+```
+cd $REP
+./tsmake --outputDir /tmp/presentation
+	 --inputDir ~/tmp/slides 
+	 --slidesFile ~/tmp/slides.hjson
+	 --slideListGlob "slide-*" 
+	 --slideTextNumRows=30 
+	 --verbosity 1
+```
+*/
+
+/*
+Finally, run a web server in the repo:
+
+```
+cd ~/tmp/presentation
+python -m http.server
+```
+
+*/
+
+title: <tt>Slide Title</tt>
+body:
+'''
+<pre>
+This is the body.
+</pre>
+'''
+

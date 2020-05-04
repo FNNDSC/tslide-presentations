@@ -26,11 +26,11 @@ After edits, run tsmake on it:
 
 ```
 cd $REPO
-./tsmake --outputDir     $OUTPUTDIR
-	 --inputDir      $INPUTDIR 
-	 --slidesFile    $INPUTFILE
-	 --slideListGlob "slide-*" 
-	 --slideTextNumRows=30 
+./tsmake --outputDir     $OUTPUTDIR      \
+	 --inputDir      $INPUTDIR       \
+	 --slidesFile    $INPUTFILE      \
+	 --slideListGlob "slide-*"       \
+	 --slideTextNumRows=30           \
 	 --verbosity 1
 ```
 */

@@ -310,8 +310,12 @@ body:
 
 
 
-_#_o_01,f~l ● The |outputDir| from the generator now becomes the
-_#_o_02,f~l ● The |inputDir | for  the classifier
+_#_o_01,f~l ● the |outputDir| from the generator now becomes the
+_#_o_02,f~l ● the |inputDir | for  the classifier
+_#_o_03,f~l     ● they are the SAME directory!
+_#_o_04,f~l     ● the |inputDir| and |outputDir| are contextual
+_#_o_05,f~l     ● and relative to the perspective of a plugin
+
 
 
 
@@ -353,8 +357,8 @@ body:
 
 
 
-_#_o_01,f~l ● The |classifier| is a DS plugin
-_#_o_02,f~l ● Obviously :-)
+_#_o_01,f~l ● the |classifier| is a DS plugin
+_#_o_02,f~l ● ... obviously :-)
 
 
 
@@ -397,7 +401,7 @@ body:
 
 
 
-_#_o_01,f~l ● The |classifier| 
+_#_o_01,f~l ● the |classifier|: 
 _#_o_02,f~l,t~1 ● consumes the data in its  |inputDir  |
 _#_o_03,f~l,t~1 ● and places results in its |outputDir |
 
@@ -449,7 +453,7 @@ body:
 
 
 
-_#_o_01,f~l ● An |Evaluator| DS plugin
+_#_o_01,f~l ● an |Evaluator| DS plugin:
 _#_o_02,f~l,t~1 ● processes the classifier's output as input
 
 </pre>
@@ -506,7 +510,7 @@ body:
 
 
 
-_#_o_01,f~l ● The | Evaluator | plugin
+_#_o_01,f~l ● the | Evaluator | plugin:
 _#_o_02,f~l,t~1 ● consumes the | Classifier  | output
 _#_o_03,f~l,t~1 ● and ranks the "goodness" of the classification
 
@@ -576,7 +580,7 @@ body:
 
 
 
-● Finally, a possible | Reporter | DS plugin              
+● finally, a possible | Reporter | DS plugin              
     ● processes the evaluator output as input
     ● might produce some nice report         
 
@@ -707,7 +711,7 @@ _#_w_60
 
 <div>
 <pre style="float: right; width: 50%">
-_#_o_01,f~l,z~133% ● The design problem:      
+_#_o_01,f~l,z~133% ● the design problem:      
 _#_o_02,f~l,z~133%     ● script this pipeline
 
 
@@ -761,7 +765,7 @@ _#_w_60
 
 <div>
 <pre style="float: right; width: 50%;">
-● With the added twist of the "Classifier"
+● with the added twist of the "Classifier"
   needing "ad hoc registration" to a CUBE 
   instance                                
 </pre>
@@ -860,7 +864,7 @@ _#_w_60
 </pre>
 </div>
 <div style="float:right; width: 50%;">
-_#_o_01,f~l  ● Also need some FE to simply grab the classifier "name"                
+_#_o_01,f~l  ● also need some FE to simply grab the classifier "name"                
 _#_o_02,f~l  ● and register to CUBE                                         
 _#_o_03,f~l      ● this will require an additional backend service        
 _#_o_04,f~l      ● perhaps akin to pfcon                                       

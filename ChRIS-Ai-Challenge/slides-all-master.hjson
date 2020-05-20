@@ -1,0 +1,888 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+```
+
+Edit , someplace:
+
+```
+    export INPUTDIR=$REPO/ChRIS-plugin-overview 
+    export INPUTFILE=slides-all-master.hsjon
+    export OUTPUTDIR=~/tmp/presentation
+```
+
+After edits, run tsmake on it:
+
+```
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR         \
+             --inputDir $INPUTDIR           \
+             --slidesFile $INPUTFILE        \
+             --slideListGlob "slide-*"      \
+             --verbosity 1
+```
+
+Finally, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+*/
+
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_doom MICCAI 
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_doom Dev Challenge... 
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_doom ...design concepts
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>Notes on designing the MICCAI standalone dev challenge pipeline</tt>
+// body-class: terminal
+body:
+'''
+<div style="font-size:100%;">
+<pre>
+This slide show will give a conceptual and a tad
+programmatical overview into the concepts of building a 
+standalone ChRIS-conformant challenge pipeline
+</pre>
+</div>
+<div>
+_#_o_01,f~l,t~3,z~150%  ●                                        
+_#_o_02,f~l,t~3,z~150%  │        
+_#_o_03,f~l,t~3,z~150%  ●─ pipeline oveview ────────────────────●
+_#_o_04,f~l,t~3,z~150%                                          │        
+_#_o_05,f~l,t~3,z~150%     concepts for backend ◄───────────────●      
+_#_o_06,f~l,t~3,z~150%          │        
+_#_o_07,f~l,t~3,z~150%          ●─ server side backend ───►●
+_#_o_08,f~l,t~3,z~150%                                     │        
+_#_o_09,f~l,t~3,z~150%          ●─ "chassis" ◄─────────────●
+_#_o_10,f~l,t~3,z~150%          │        
+_#_o_11,f~l,t~3,z~150%          ▼       
+</div>
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width:40%;">
+_#_w_50    ╔═══════════╗ 
+_#_w_50    ║ Test data ║                    
+_#_w_50    ║ generator ║                                                    
+_#_w_50    ║           ║
+_#_w_50    ║           ║
+_#_w_50    ║           ║
+_#_w_50    ╚═══════════╝
+_#_w_50
+</pre>
+</div>
+<div>
+<pre style="float:right: width: 60%;">
+_#_o_01,f~l,z~200% ● First off, we have a |Test data generator|
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%;">
+_#_w_50    ╔═══════════╗ 
+_#_w_50    ║ Test data ║                    
+_#_w_50    ║ generator ║
+_#_w_50    ║           ║
+_#_w_50    ║ data: ███ ║
+_#_w_50    ║       ███ ║
+_#_w_50    ╚═══════════╝
+_#_w_50      
+</pre>
+</div>
+<div>
+<pre style="float:right; width: 60%">
+_#_o_01,f~l ● this houses data...
+_#_o_02,f~l ● ... to be classified
+
+</pre>
+</div>
+
+'''
+
+
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%">
+_#_w_50    ╔═══════════╗  
+_#_w_50    ║ Test data ║  
+_#_w_50    ║ generator ║  
+_#_w_50    ║           ║
+_#_w_50    ║ data: ███ ║
+_#_w_50    ║       ███ ║
+_#_w_50    ╚═════╦═════╝
+_#_w_50          ║
+_#_w_50          ▼
+</pre>
+</div>
+<div>
+<pre style="float:right; width: 60%;">
+_#_o_01,f~l ● Conceptually, this a ChRIS FS plugin
+_#_o_02,f~l,t~1 ● Test data is contained within the plugin
+_#_o_03,f~l,t~1 ● When run, this test data is simply copied to an |outputdir| 
+
+</pre>
+</div>
+
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+    ╔═══════════╗  
+    ║ Test data ║  
+    ║ generator ║   
+    ║           ║   (btw, within the container, this directory is)
+    ║ data: ███◄╫────────────────────────────────────────────────────── /usr/src/data
+    ║       ███ ║
+    ╚═════╦═════╝
+          ║
+          ▼
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+    ╔═══════════╗                          
+    ║ Test data ║                  
+    ║ generator ║
+    ║           ║   plugin.run()
+    ║ data: ███─╫─────────────────┐
+    ║       ███ ║                 │
+    ╚═════╦═════╝                 ▼                 
+          ║                      ███ |outputDir|
+          ║                      ███
+          ▼         
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%;">
+    ╔═══════════╗                          
+    ║ Test data ║                  
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      ███ |outputDir|
+          ║                      ███
+   ╔══════╩══════╗                 
+   ║ Classifier  ║                 
+   ║   plugin    ║                  
+   ╚═════════════╝
+
+
+
+
+
+</pre>
+</div>
+
+<div>
+<pre  style="float: right; width: 60%;">
+
+
+
+
+
+
+
+
+
+_#_o_01,f~l,z~100% ● Next up, the classifier
+_#_o_02,f~l    ● (ultimately this dynamically specified) 
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width:40%;">
+    ╔═══════════╗                          
+    ║ Test data ║                  
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      ███ |outputDir|
+          ║                      ███ |inputDir |
+   ╔══════╩══════╗   
+   ║ Classifier  ║
+   ║   plugin    ║
+   ╚═════════════╝
+                  
+  
+</pre>
+</div>
+<div>
+<pre style="float: right; width:60%;">
+
+
+
+
+
+
+_#_o_01,f~l ● The |outputDir| from the generator now becomes the
+_#_o_02,f~l ● The |inputDir | for  the classifier
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width:40%;">
+    ╔═══════════╗                          
+    ║ Test data ║                  
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      ███ 
+          ║                      ███ |inputDir |
+   ╔══════╩══════╗                │             
+   ║ Classifier  ║◄───────────────┘              
+   ║   plugin    ║   
+   ╚═════════════╝
+
+</pre>
+</div>
+<div>
+<pre style="float: right; width:60%;">
+
+
+
+
+
+
+
+
+
+_#_o_01,f~l ● The |classifier| is a DS plugin
+_#_o_02,f~l ● Obviously :-)
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width 40%;">
+    ╔═══════════╗                          
+    ║ Test data ║                  
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      ███
+          ║                      ███ |inputDir |
+   ╔══════╩══════╗                │             
+   ║ Classifier  ║◄───────────────┘              
+   ║   plugin    ╟────────────────┐             
+   ╚═════════════╝                │
+                                  ▼              
+                                 ███ |outputDir|
+                                 ███              
+</pre>
+</div>
+<div>
+<pre style="float: right; width:60%;">
+
+
+
+
+
+
+
+
+
+_#_o_01,f~l ● The |classifier| 
+_#_o_02,f~l,t~1 ● consumes the data in its  |inputDir  |
+_#_o_03,f~l,t~1 ● and places results in its |outputDir |
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%;">
+    ╔═══════════╗ 
+    ║ Test data ║ 
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      
+          ║                      
+   ╔══════╩══════╗                             
+   ║ Classifier  ║              
+   ║   plugin    ╟────────────────┐             
+   ╚══════╦══════╝                │
+          ║                       ▼  
+          ║                      ███ |outputDir|
+          ║                      ███            
+   ╔══════╩══════╗                │  
+   ║ Evalutator  ║◄───────────────┘
+   ║   plugin    ║
+   ╚═════════════╝
+</pre>
+</div>
+<div>
+<pre style="float right: width: 60%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+_#_o_01,f~l ● An |Evaluator| DS plugin
+_#_o_02,f~l,t~1 ● processes the classifier's output as input
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+    ╔═══════════╗ 
+    ║ Test data ║ 
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      
+          ║                      
+   ╔══════╩══════╗                             
+   ║ Classifier  ║              
+   ║   plugin    ║             
+   ╚══════╦══════╝
+          ║         
+          ║                      ███ 
+          ║                      ███ |inputDir |
+   ╔══════╩══════╗                │  
+   ║ Evalutator  ║◄───────────────┘   
+   ║   plugin    ╟────────────────┐
+   ╚═════════════╝                │
+                                  ▼    
+                                 ███ |outputDir|
+                                 ███  
+</pre>
+</div>
+
+<div>
+<pre style="float: right; width: 60%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_#_o_01,f~l ● The | Evaluator | plugin
+_#_o_02,f~l,t~1 ● consumes the | Classifier  | output
+_#_o_03,f~l,t~1 ● and ranks the "goodness" of the classification
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%">
+    ╔═══════════╗ 
+    ║ Test data ║ 
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      
+          ║                      
+   ╔══════╩══════╗                             
+   ║ Classifier  ║              
+   ║   plugin    ║             
+   ╚══════╦══════╝
+          ║         
+          ║       
+          ║       
+   ╔══════╩══════╗
+   ║ Evalutator  ║  
+   ║   plugin    ╟────────────────┐              
+   ╚══════╦══════╝                │              
+          ║                       ▼             
+          ║                      ███ |outputDir|
+          ║                      ███ |inputDir |
+   ╔══════╩══════╗                │             
+   ║  Reporter   ║◄───────────────┘             
+   ║   plugin    ║                              
+   ╚═════════════╝                              
+</pre>
+</div>
+
+<div>
+<pre style="float: right; width: 60%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● Finally, a possible | Reporter | DS plugin              
+    ● processes the evaluator output as input
+    ● might produce some nice report         
+
+</pre>
+</div>
+
+'''
+
+<slidebreak>
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%">
+_#_w_50    ╔═══════════╗                                  
+_#_w_50    ║ Test data ║  
+_#_w_50    ║ generator ║  
+_#_w_50    ║           ║   
+_#_w_50    ║ data: ███ ║  
+_#_w_50    ║       ███ ║  
+_#_w_50    ╚═════╦═════╝                 
+_#_w_50          ║                      
+_#_w_50          ║                      
+_#_w_50   ╔══════╩══════╗                 
+_#_w_50   ║ Classifier  ║               
+_#_w_50   ║   plugin    ║               
+_#_w_50   ╚══════╦══════╝  
+_#_w_50          ║         
+_#_w_50          ║         
+_#_w_50          ║         
+_#_w_50   ╔══════╩══════╗  
+_#_w_50   ║ Evalutator  ║    
+_#_w_50   ║   plugin    ║  
+_#_w_50   ╚══════╦══════╝  
+_#_w_50          ║         
+_#_w_50          ║                                       
+_#_w_50          ║                                     
+_#_w_50   ╔══════╩══════╗                              
+_#_w_50   ║  Reporter   ║                              
+_#_w_50   ║   plugin    ╟────────────────┐             
+_#_w_50   ╚═════════════╝                │             
+_#_w_50                                  ▼             
+_#_w_50                                 ███ |outputDir|
+_#_w_50                                 ███           
+_#_w_50
+</pre>
+</div>
+
+<div>
+<pre style="float: right; width: 60%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● here the |outputDir| contains some useful formatted report
+● the | Reporter | plugin could also conceivably maintain a dynamic
+  ranking of different classifier's utility
+
+
+</pre>
+</div>
+
+'''
+
+
+
+<slidebreak>
+title: <tt>Full workflow"...</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 50%">
+_#_w_60    ╔═══════════╗                                  
+_#_w_60    ║ Test data ║  
+_#_w_60    ║ generator ║  
+_#_w_60    ║           ║   
+_#_w_60    ║ data: ███ ║ ────────────────┐              
+_#_w_60    ║       ███ ║                 │              
+_#_w_60    ╚═════╦═════╝                 ▼                             
+_#_w_60          ║                      ███ |outputDir: generator |               
+_#_w_60          ║                      ███ |inputDir:  classifier|               
+_#_w_60   ╔══════╩══════╗                │                              
+_#_w_60   ║ Classifier  ║◄───────────────┘                            
+_#_w_60   ║   plugin    ║────────────────┐                            
+_#_w_60   ╚══════╦══════╝                │               
+_#_w_60          ║                       ▼               
+_#_w_60          ║                      ███ |outputDir: classifier|  
+_#_w_60          ║                      ███ |inputDir:  evaluator |  
+_#_w_60   ╔══════╩══════╗                │               
+_#_w_60   ║ Evalutator  ║◄───────────────┘                 
+_#_w_60   ║   plugin    ║────────────────┐               
+_#_w_60   ╚══════╦══════╝                │               
+_#_w_60          ║                       ▼               
+_#_w_60          ║                      ███ |outputDir: evaluator|                                
+_#_w_60          ║                      ███ |inputDir:  reporter |                              
+_#_w_60   ╔══════╩══════╗                │                                           
+_#_w_60   ║  Reporter   ║◄───────────────┘                                           
+_#_w_60   ║   plugin    ╟────────────────┐             
+_#_w_60   ╚═════════════╝                │             
+_#_w_60                                  ▼             
+_#_w_60                                 ███ |outputDir: reporter |
+_#_w_60                                 ███           
+_#_w_60
+</pre>
+</div>
+
+<div>
+<pre style="float: right; width: 50%">
+_#_o_01,f~l,z~133% ● The design problem:      
+_#_o_02,f~l,z~133%     ● script this pipeline
+
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Full workflow"...</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 50%">
+_#_w_60    ╔═══════════╗                                  
+_#_w_60    ║ Test data ║  
+_#_w_60    ║ generator ║  
+_#_w_60    ║           ║   
+_#_w_60    ║ data: ███ ║ ────────────────┐              
+_#_w_60    ║       ███ ║                 │              
+_#_w_60    ╚═════╦═════╝                 ▼                             
+_#_w_60          ║                      ███ |outputDir: generator |               
+_#_w_60          ║                      ███ |inputDir:  classifier|               
+_#_w_60   ╔══════╩══════╗                │                              
+_#_w_60   ║ Classifier  ║◄───────────────┘                            
+_#_w_60   ║   plugin    ║────────────────┐                            
+_#_w_60   ╚══════╦══════╝                │               
+_#_w_60          ║                       ▼               
+_#_w_60          ║                      ███ |outputDir: classifier|  
+_#_w_60          ║                      ███ |inputDir:  evaluator |  
+_#_w_60   ╔══════╩══════╗                │               
+_#_w_60   ║ Evalutator  ║◄───────────────┘                 
+_#_w_60   ║   plugin    ║────────────────┐               
+_#_w_60   ╚══════╦══════╝                │               
+_#_w_60          ║                       ▼               
+_#_w_60          ║                      ███ |outputDir: evaluator|                                
+_#_w_60          ║                      ███ |inputDir:  reporter |                              
+_#_w_60   ╔══════╩══════╗                │                                           
+_#_w_60   ║  Reporter   ║◄───────────────┘                                           
+_#_w_60   ║   plugin    ╟────────────────┐             
+_#_w_60   ╚═════════════╝                │             
+_#_w_60                                  ▼             
+_#_w_60                                 ███ |outputDir: reporter |
+_#_w_60                                 ███           
+_#_w_60
+</pre>
+</div>
+
+<div>
+<pre style="float: right; width: 50%;">
+● With the added twist of the "Classifier"
+  needing "ad hoc registration" to a CUBE 
+  instance                                
+</pre>
+</div>
+
+'''
+
+<slidebreak>
+title: <tt>Full workflow"...</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 50%">
+_#_w_60    ╔═══════════╗                                  
+_#_w_60    ║ Test data ║  
+_#_w_60    ║ generator ║  
+_#_w_60    ║           ║   
+_#_w_60    ║ data: ███ ║ ────────────────┐              
+_#_w_60    ║       ███ ║                 │              
+_#_w_60    ╚═════╦═════╝                 ▼                             
+_#_w_60          ║                      ███ |outputDir: generator |               
+_#_w_60          ║                      ███ |inputDir:  classifier|               
+_#_w_60   ╔══════╩══════╗                │                              
+_#_w_60   ║ Classifier  ║◄───────────────┘                            
+_#_w_60   ║   plugin    ║────────────────┐                            
+_#_w_60   ╚══════╦══════╝                │               
+_#_w_60          ║                       ▼               
+_#_w_60          ║                      ███ |outputDir: classifier|  
+_#_w_60          ║                      ███ |inputDir:  evaluator |  
+_#_w_60   ╔══════╩══════╗                │               
+_#_w_60   ║ Evalutator  ║◄───────────────┘                 
+_#_w_60   ║   plugin    ║────────────────┐               
+_#_w_60   ╚══════╦══════╝                │               
+_#_w_60          ║                       ▼               
+_#_w_60          ║                      ███ |outputDir: evaluator|                                
+_#_w_60          ║                      ███ |inputDir:  reporter |                              
+_#_w_60   ╔══════╩══════╗                │                                           
+_#_w_60   ║  Reporter   ║◄───────────────┘                                           
+_#_w_60   ║   plugin    ╟────────────────┐             
+_#_w_60   ╚═════════════╝                │             
+_#_w_60                                  ▼             
+_#_w_60                                 ███ |outputDir: reporter |
+_#_w_60                                 ███           
+_#_w_60
+</pre>
+</div>
+<div style="float: right; width: 50%;">
+<pre>
+_#_o_01,f~l  ● script the workflow, requiring                                               
+_#_o_02,f~l      ● some parameterized python script                                     
+_#_o_03,f~l      ● that runs the pipeline                                            
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Full workflow"...</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 50%">
+_#_w_60    ╔═══════════╗                                  
+_#_w_60    ║ Test data ║  
+_#_w_60    ║ generator ║  
+_#_w_60    ║           ║   
+_#_w_60    ║ data: ███ ║ ────────────────┐              
+_#_w_60    ║       ███ ║                 │              
+_#_w_60    ╚═════╦═════╝                 ▼                             
+_#_w_60          ║                      ███ |outputDir: generator |               
+_#_w_60          ║                      ███ |inputDir:  classifier|               
+_#_w_60   ╔══════╩══════╗                │                              
+_#_w_60   ║ Classifier  ║◄───────────────┘                            
+_#_w_60   ║   plugin    ║────────────────┐                            
+_#_w_60   ╚══════╦══════╝                │               
+_#_w_60          ║                       ▼               
+_#_w_60          ║                      ███ |outputDir: classifier|  
+_#_w_60          ║                      ███ |inputDir:  evaluator |  
+_#_w_60   ╔══════╩══════╗                │               
+_#_w_60   ║ Evalutator  ║◄───────────────┘                 
+_#_w_60   ║   plugin    ║────────────────┐               
+_#_w_60   ╚══════╦══════╝                │               
+_#_w_60          ║                       ▼               
+_#_w_60          ║                      ███ |outputDir: evaluator|                                
+_#_w_60          ║                      ███ |inputDir:  reporter |                              
+_#_w_60   ╔══════╩══════╗                │                                           
+_#_w_60   ║  Reporter   ║◄───────────────┘                                           
+_#_w_60   ║   plugin    ╟────────────────┐             
+_#_w_60   ╚═════════════╝                │             
+_#_w_60                                  ▼             
+_#_w_60                                 ███ |outputDir: reporter |
+_#_w_60                                 ███           
+_#_w_60
+</pre>
+</div>
+<div style="float:right; width: 50%;">
+_#_o_01,f~l  ● Also need some FE to simply grab the classifier "name"                
+_#_o_02,f~l  ● and register to CUBE                                         
+_#_o_03,f~l      ● this will require an additional backend service        
+_#_o_04,f~l      ● perhaps akin to pfcon                                       
+</div>
+'''
+
+
+
+<slidebreak>
+
+title: <tt>End</tt>
+body-style: "background: black; color:green;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_doom Thank you.
+</pre>
+
+'''
+
+
+

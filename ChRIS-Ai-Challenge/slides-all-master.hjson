@@ -132,6 +132,9 @@ _#_o_01,f~l,z~200% ● First off, we have a |Test data generator|
 
 
 
+
+
+
 </pre>
 </div>
 '''
@@ -156,6 +159,9 @@ _#_w_50
 <pre style="float:right; width: 60%">
 _#_o_01,f~l ● this houses data...
 _#_o_02,f~l ● ... to be classified
+
+
+
 
 </pre>
 </div>
@@ -186,6 +192,8 @@ _#_w_50          ▼
 _#_o_01,f~l ● Conceptually, this a ChRIS FS plugin
 _#_o_02,f~l,t~1 ● Test data is contained within the plugin
 _#_o_03,f~l,t~1 ● When run, this test data is simply copied to an |outputdir| 
+
+
 
 </pre>
 </div>
@@ -456,6 +464,8 @@ body:
 _#_o_01,f~l ● an |Evaluator| DS plugin:
 _#_o_02,f~l,t~1 ● processes the classifier's output as input
 
+
+
 </pre>
 </div>
 '''
@@ -513,6 +523,8 @@ body:
 _#_o_01,f~l ● the | Evaluator | plugin:
 _#_o_02,f~l,t~1 ● consumes the | Classifier  | output
 _#_o_03,f~l,t~1 ● and ranks the "goodness" of the classification
+
+
 
 </pre>
 </div>

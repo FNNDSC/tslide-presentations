@@ -98,7 +98,7 @@ standalone ChRIS-conformant challenge pipeline
 <div>
 _#_o_01,f~l,t~3,z~150%  ●                                        
 _#_o_02,f~l,t~3,z~150%  │        
-_#_o_03,f~l,t~3,z~150%  ●─ pipeline oveview ────────────────────●
+_#_o_03,f~l,t~3,z~150%  ●─ pipeline overview ───────────────────●
 _#_o_04,f~l,t~3,z~150%                                          │        
 _#_o_05,f~l,t~3,z~150%     concepts for backend ◄───────────────●      
 _#_o_06,f~l,t~3,z~150%          │        
@@ -837,7 +837,7 @@ _#_o_03,f~l      ● that runs the pipeline
 '''
 
 <slidebreak>
-title: <tt>Full workflow"...</tt>
+title: <tt>Full workflow...</tt>
 body:
 '''
 <div>

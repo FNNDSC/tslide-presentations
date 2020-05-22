@@ -1,0 +1,52 @@
+
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%;">
+    ╔═══════════╗ 
+    ║ Test data ║ 
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      
+          ║                      
+   ╔══════╩══════╗                             
+   ║ Classifier  ║              
+   ║   plugin    ╟────────────────┐             
+   ╚══════╦══════╝                │
+          ║                       ▼  
+          ║                      ███ |outputDir|
+          ║                      ███            
+   ╔══════╩══════╗                │  
+   ║ Evaluator   ║◄───────────────┘
+   ║   plugin    ║
+   ╚═════════════╝
+</pre>
+</div>
+<div>
+<pre style="float right: width: 60%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+_#_o_01,f~l ● an |Evaluator| DS plugin:
+_#_o_02,f~l,t~1 ● processes the classifier's output as input
+
+
+
+</pre>
+</div>
+'''
+

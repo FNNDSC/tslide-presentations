@@ -1,0 +1,20 @@
+
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+    ╔═══════════╗                          
+    ║ Test data ║                  
+    ║ generator ║
+    ║           ║   plugin.run()
+    ║ data: ███─╫─────────────────┐
+    ║       ███ ║                 │
+    ╚═════╦═════╝                 ▼                 
+          ║                      ███ |outputDir|
+          ║                      ███
+          ▼         
+</pre>
+</div>
+'''
+

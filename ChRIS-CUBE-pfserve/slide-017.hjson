@@ -1,0 +1,80 @@
+
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%">
+_#_w_50    ╔═══════════╗                                  
+_#_w_50    ║ Test data ║  
+_#_w_50    ║ generator ║  
+_#_w_50    ║           ║   
+_#_w_50    ║ data: ███ ║  
+_#_w_50    ║       ███ ║  
+_#_w_50    ╚═════╦═════╝                 
+_#_w_50          ║                      
+_#_w_50          ║                      
+_#_w_50   ╔══════╩══════╗                 
+_#_w_50   ║ Classifier  ║               
+_#_w_50   ║   plugin    ║               
+_#_w_50   ╚══════╦══════╝  
+_#_w_50          ║         
+_#_w_50          ║         
+_#_w_50          ║         
+_#_w_50   ╔══════╩══════╗  
+_#_w_50   ║ Evaluator   ║    
+_#_w_50   ║   plugin    ║  
+_#_w_50   ╚══════╦══════╝  
+_#_w_50          ║         
+_#_w_50          ║                                       
+_#_w_50          ║                                     
+_#_w_50   ╔══════╩══════╗                              
+_#_w_50   ║  Reporter   ║                              
+_#_w_50   ║   plugin    ╟────────────────┐             
+_#_w_50   ╚═════════════╝                │             
+_#_w_50                                  ▼             
+_#_w_50                                 ███ |outputDir|
+_#_w_50                                 ███           
+_#_w_50
+</pre>
+</div>
+
+<div>
+<pre style="float: right; width: 60%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● here the |outputDir| contains some useful formatted report
+● the | Reporter | plugin could also conceivably maintain a dynamic
+  ranking of different classifier's utility
+
+
+</pre>
+</div>
+
+'''
+
+
+

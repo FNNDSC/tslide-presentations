@@ -1,0 +1,29 @@
+
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width:40%;">
+_#_w_50    ╔═══════════╗ 
+_#_w_50    ║ Test data ║                    
+_#_w_50    ║ generator ║                                                    
+_#_w_50    ║           ║
+_#_w_50    ║           ║
+_#_w_50    ║           ║
+_#_w_50    ╚═══════════╝
+_#_w_50
+</pre>
+</div>
+<div>
+<pre style="float:right: width: 60%;">
+_#_o_01,f~l,z~200% ● First off, we have a |Test data generator|
+
+
+
+
+
+
+</pre>
+</div>
+'''
+

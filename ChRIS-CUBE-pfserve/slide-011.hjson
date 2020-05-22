@@ -1,0 +1,45 @@
+
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width:40%;">
+    ╔═══════════╗                          
+    ║ Test data ║                  
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      ███ |outputDir|
+          ║                      ███ |inputDir |
+   ╔══════╩══════╗   
+   ║ Classifier  ║
+   ║   plugin    ║
+   ╚═════════════╝
+                  
+  
+</pre>
+</div>
+<div>
+<pre style="float: right; width:60%;">
+
+
+
+
+
+
+_#_o_01,f~l ● the |outputDir| from the generator now becomes the
+_#_o_02,f~l ● the |inputDir | for  the classifier
+_#_o_03,f~l     ● they are the SAME directory!
+_#_o_04,f~l     ● the |inputDir| and |outputDir| are contextual
+_#_o_05,f~l     ● and relative to the perspective of a plugin
+
+
+
+
+
+</pre>
+</div>
+'''
+

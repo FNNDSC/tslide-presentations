@@ -1,0 +1,47 @@
+
+title: <tt>Challenge workflow</tt>
+body:
+'''
+<div>
+<pre style="float:left; width: 40%;">
+    ╔═══════════╗                          
+    ║ Test data ║                  
+    ║ generator ║
+    ║           ║   
+    ║ data: ███ ║
+    ║       ███ ║
+    ╚═════╦═════╝                 
+          ║                      ███ |outputDir|
+          ║                      ███
+   ╔══════╩══════╗                 
+   ║ Classifier  ║                 
+   ║   plugin    ║                  
+   ╚═════════════╝
+
+
+
+
+
+</pre>
+</div>
+
+<div>
+<pre  style="float: right; width: 60%;">
+
+
+
+
+
+
+
+
+
+_#_o_01,f~l,z~100% ● Next up, the classifier
+_#_o_02,f~l    ● (ultimately this dynamically specified) 
+
+
+
+</pre>
+</div>
+'''
+

@@ -96,17 +96,19 @@ standalone ChRIS-conformant challenge pipeline
 </pre>
 </div>
 <div>
+<pre>
 _#_o_01,f~l,t~3,z~150%  ●                                        
 _#_o_02,f~l,t~3,z~150%  │        
-_#_o_03,f~l,t~3,z~150%  ●─ pipeline overview ───────────────────●
-_#_o_04,f~l,t~3,z~150%                                          │        
-_#_o_05,f~l,t~3,z~150%     concepts for backend ◄───────────────●      
+_#_o_03,f~l,t~3,z~150%  ●─ pipeline overview ──────────────●
+_#_o_04,f~l,t~3,z~150%                                     │        
+_#_o_05,f~l,t~3,z~150%     concepts for backend ◄──────────●      
 _#_o_06,f~l,t~3,z~150%          │        
 _#_o_07,f~l,t~3,z~150%          ●─ server side backend ───►●
 _#_o_08,f~l,t~3,z~150%                                     │        
 _#_o_09,f~l,t~3,z~150%          ●─ "chassis" ◄─────────────●
 _#_o_10,f~l,t~3,z~150%          │        
 _#_o_11,f~l,t~3,z~150%          ▼       
+</pre>
 </div>
 '''
 

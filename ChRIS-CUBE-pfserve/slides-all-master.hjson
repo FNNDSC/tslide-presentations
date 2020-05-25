@@ -48,7 +48,7 @@ body:
 <pre>
 
 
-_#_font_doom pfserve 
+_#_font_doom pfserve
 
 
 </pre>
@@ -63,7 +63,7 @@ body:
 <pre>
 
 
-_#_font_doom CUBE 
+_#_font_doom CUBE
 
 
 </pre>
@@ -84,6 +84,7 @@ _#_font_doom ...design concepts
 </pre>
 </div>
 '''
+
 <slidebreak>
 title:<tt>Notes on pfserve</tt>
 // body-class: terminal
@@ -91,7 +92,7 @@ body:
 '''
 <div>
 <pre style="float:left; width: 40%;">
-    ╔═══════════╗ 
+    ╔═══════════╗
     ║           ║
     ║  pfserve  ║
     ║           ║
@@ -115,218 +116,58 @@ _#_o_02,f~l,z~300% pfserve
 '''
 
 <slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left; width:40%;">
-_#_w_50    ╔═══════════╗ 
-_#_w_50    ║ Test data ║                    
-_#_w_50    ║ generator ║                                                    
-_#_w_50    ║           ║
-_#_w_50    ║           ║
-_#_w_50    ║           ║
-_#_w_50    ╚═══════════╝
-_#_w_50
-</pre>
-</div>
-<div>
-<pre style="float:right: width: 60%;">
-_#_o_01,f~l,z~200% ● First off, we have a |Test data generator|
-
-
-
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
 body:
 '''
 <div>
 <pre style="float:left; width: 40%;">
-_#_w_50    ╔═══════════╗ 
-_#_w_50    ║ Test data ║                    
-_#_w_50    ║ generator ║
-_#_w_50    ║           ║
-_#_w_50    ║ data: ███ ║
-_#_w_50    ║       ███ ║
-_#_w_50    ╚═══════════╝
-_#_w_50      
+    ╔═══════════╗
+    ║           ║
+    ║  pfserve  ║
+    ║           ║
+    ╚═══════════╝
+
+
+
+
+                  ─^─
+                _╵   ╵_
+             _╵         ╵ _
+          _╵               ╵ _
+       _╵                     ╵ _
+    _╵                           ╵_
+   │─           C U B E           ─│
+   │ ╵_                         _╵ │
+   │    ╵_                   _╵    │
+   │       ╵_             _╵       │
+   │          ╵_       _╵          │
+   │             ╵_ _╵             │
+   │               │               │
+   │               │               │
+   │               │               │
+   │               │               │
+   │               │               │
+    ─              │              ─
+     ╵_            │            _╵
+        ╵_         │         _╵
+           ╵_      │      _╵
+              ╵_   │   _╵
+                 ╵_│_╵
+
+
+
+
+
+
 </pre>
 </div>
-<div>
-<pre style="float:right; width: 60%">
-_#_o_01,f~l ● this houses data...
-_#_o_02,f~l ● ... to be classified
 
-
-
-
-</pre>
-</div>
-
-'''
-
-
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left; width: 40%">
-_#_w_50    ╔═══════════╗  
-_#_w_50    ║ Test data ║  
-_#_w_50    ║ generator ║  
-_#_w_50    ║           ║
-_#_w_50    ║ data: ███ ║
-_#_w_50    ║       ███ ║
-_#_w_50    ╚═════╦═════╝
-_#_w_50          ║
-_#_w_50          ▼
-</pre>
-</div>
 <div>
 <pre style="float:right; width: 60%;">
-_#_o_01,f~l ● Conceptually, this a ChRIS FS plugin
-_#_o_02,f~l,t~1 ● Test data is contained within the plugin
-_#_o_03,f~l,t~1 ● When run, this test data is simply copied to an |outputdir| 
-
-
-
-</pre>
-</div>
-
-'''
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left;">
-    ╔═══════════╗  
-    ║ Test data ║  
-    ║ generator ║   
-    ║           ║   (btw, within the container, this directory is)
-    ║ data: ███◄╫────────────────────────────────────────────────────── /usr/src/data
-    ║       ███ ║
-    ╚═════╦═════╝
-          ║
-          ▼
-</pre>
-</div>
-'''
-
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left;">
-    ╔═══════════╗                          
-    ║ Test data ║                  
-    ║ generator ║
-    ║           ║   plugin.run()
-    ║ data: ███─╫─────────────────┐
-    ║       ███ ║                 │
-    ╚═════╦═════╝                 ▼                 
-          ║                      ███ |outputDir|
-          ║                      ███
-          ▼         
-</pre>
-</div>
-'''
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left; width: 40%;">
-    ╔═══════════╗                          
-    ║ Test data ║                  
-    ║ generator ║
-    ║           ║   
-    ║ data: ███ ║
-    ║       ███ ║
-    ╚═════╦═════╝                 
-          ║                      ███ |outputDir|
-          ║                      ███
-   ╔══════╩══════╗                 
-   ║ Classifier  ║                 
-   ║   plugin    ║                  
-   ╚═════════════╝
-
-
-
-
-
-</pre>
-</div>
-
-<div>
-<pre  style="float: right; width: 60%;">
-
-
-
-
-
-
-
-
-
-_#_o_01,f~l,z~100% ● Next up, the classifier
-_#_o_02,f~l    ● (ultimately this dynamically specified) 
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left; width:40%;">
-    ╔═══════════╗                          
-    ║ Test data ║                  
-    ║ generator ║
-    ║           ║   
-    ║ data: ███ ║
-    ║       ███ ║
-    ╚═════╦═════╝                 
-          ║                      ███ |outputDir|
-          ║                      ███ |inputDir |
-   ╔══════╩══════╗   
-   ║ Classifier  ║
-   ║   plugin    ║
-   ╚═════════════╝
-                  
-  
-</pre>
-</div>
-<div>
-<pre style="float: right; width:60%;">
-
-
-
-
-
-
-_#_o_01,f~l ● the |outputDir| from the generator now becomes the
-_#_o_02,f~l ● the |inputDir | for  the classifier
-_#_o_03,f~l     ● they are the SAME directory!
-_#_o_04,f~l     ● the |inputDir| and |outputDir| are contextual
-_#_o_05,f~l     ● and relative to the perspective of a plugin
+_#_o_01,f~l ● pfserve address the need for a server-side entry point for running
+_#_o_02,f~l     ● specific processing needs directly within the core CUBE environment
+_#_o_03,f~l     ● these services may or may not be CUBE related.
 
 
 
@@ -337,398 +178,1301 @@ _#_o_05,f~l     ● and relative to the perspective of a plugin
 '''
 
 <slidebreak>
-title: <tt>Challenge workflow</tt>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
 body:
 '''
 <div>
-<pre style="float:left; width:40%;">
-    ╔═══════════╗                          
-    ║ Test data ║                  
-    ║ generator ║
-    ║           ║   
-    ║ data: ███ ║
-    ║       ███ ║
-    ╚═════╦═════╝                 
-          ║                      ███ 
-          ║                      ███ |inputDir |
-   ╔══════╩══════╗                │             
-   ║ Classifier  ║◄───────────────┘              
-   ║   plugin    ║   
-   ╚═════════════╝
-
-</pre>
-</div>
-<div>
-<pre style="float: right; width:60%;">
-
-
-
-
-
-
-
-
-
-_#_o_01,f~l ● the |classifier| is a DS plugin
-_#_o_02,f~l ● ... obviously :-)
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left; width 40%;">
-    ╔═══════════╗                          
-    ║ Test data ║                  
-    ║ generator ║
-    ║           ║   
-    ║ data: ███ ║
-    ║       ███ ║
-    ╚═════╦═════╝                 
-          ║                      ███
-          ║                      ███ |inputDir |
-   ╔══════╩══════╗                │             
-   ║ Classifier  ║◄───────────────┘              
-   ║   plugin    ╟────────────────┐             
-   ╚═════════════╝                │
-                                  ▼              
-                                 ███ |outputDir|
-                                 ███              
-</pre>
-</div>
-<div>
-<pre style="float: right; width:60%;">
-
-
-
-
-
-
-
-
-
-_#_o_01,f~l ● the |classifier|: 
-_#_o_02,f~l,t~1 ● consumes the data in its  |inputDir  |
-_#_o_03,f~l,t~1 ● and places results in its |outputDir |
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left; width: 40%;">
-    ╔═══════════╗ 
-    ║ Test data ║ 
-    ║ generator ║
-    ║           ║   
-    ║ data: ███ ║
-    ║       ███ ║
-    ╚═════╦═════╝                 
-          ║                      
-          ║                      
-   ╔══════╩══════╗                             
-   ║ Classifier  ║              
-   ║   plugin    ╟────────────────┐             
-   ╚══════╦══════╝                │
-          ║                       ▼  
-          ║                      ███ |outputDir|
-          ║                      ███            
-   ╔══════╩══════╗                │  
-   ║ Evaluator   ║◄───────────────┘
-   ║   plugin    ║
-   ╚═════════════╝
-</pre>
-</div>
-<div>
-<pre style="float right: width: 60%;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-_#_o_01,f~l ● an |Evaluator| DS plugin:
-_#_o_02,f~l,t~1 ● processes the classifier's output as input
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left;">
-    ╔═══════════╗ 
-    ║ Test data ║ 
-    ║ generator ║
-    ║           ║   
-    ║ data: ███ ║
-    ║       ███ ║
-    ╚═════╦═════╝                 
-          ║                      
-          ║                      
-   ╔══════╩══════╗                             
-   ║ Classifier  ║              
-   ║   plugin    ║             
-   ╚══════╦══════╝
-          ║         
-          ║                      ███ 
-          ║                      ███ |inputDir |
-   ╔══════╩══════╗                │  
-   ║ Evaluator   ║◄───────────────┘   
-   ║   plugin    ╟────────────────┐
-   ╚═════════════╝                │
-                                  ▼    
-                                 ███ |outputDir|
-                                 ███  
-</pre>
-</div>
-
-<div>
-<pre style="float: right; width: 60%;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-_#_o_01,f~l ● the | Evaluator | plugin:
-_#_o_02,f~l,t~1 ● consumes the | Classifier  | output
-_#_o_03,f~l,t~1 ● and ranks the "goodness" of the classification
-
-
-
-</pre>
-</div>
-'''
-
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left; width: 40%">
-    ╔═══════════╗ 
-    ║ Test data ║ 
-    ║ generator ║
-    ║           ║   
-    ║ data: ███ ║
-    ║       ███ ║
-    ╚═════╦═════╝                 
-          ║                      
-          ║                      
-   ╔══════╩══════╗                             
-   ║ Classifier  ║              
-   ║   plugin    ║             
-   ╚══════╦══════╝
-          ║         
-          ║       
-          ║       
-   ╔══════╩══════╗
-   ║ Evaluator   ║  
-   ║   plugin    ╟────────────────┐              
-   ╚══════╦══════╝                │              
-          ║                       ▼             
-          ║                      ███ |outputDir|
-          ║                      ███ |inputDir |
-   ╔══════╩══════╗                │             
-   ║  Reporter   ║◄───────────────┘             
-   ║   plugin    ║                              
-   ╚═════════════╝                              
-</pre>
-</div>
-
-<div>
-<pre style="float: right; width: 60%;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-● finally, a possible | Reporter | DS plugin              
-    ● processes the evaluator output as input
-    ● might produce some nice report         
-
-</pre>
-</div>
-
-'''
-
-<slidebreak>
-title: <tt>Challenge workflow</tt>
-body:
-'''
-<div>
-<pre style="float:left; width: 40%">
-_#_w_50    ╔═══════════╗                                  
-_#_w_50    ║ Test data ║  
-_#_w_50    ║ generator ║  
-_#_w_50    ║           ║   
-_#_w_50    ║ data: ███ ║  
-_#_w_50    ║       ███ ║  
-_#_w_50    ╚═════╦═════╝                 
-_#_w_50          ║                      
-_#_w_50          ║                      
-_#_w_50   ╔══════╩══════╗                 
-_#_w_50   ║ Classifier  ║               
-_#_w_50   ║   plugin    ║               
-_#_w_50   ╚══════╦══════╝  
-_#_w_50          ║         
-_#_w_50          ║         
-_#_w_50          ║         
-_#_w_50   ╔══════╩══════╗  
-_#_w_50   ║ Evaluator   ║    
-_#_w_50   ║   plugin    ║  
-_#_w_50   ╚══════╦══════╝  
-_#_w_50          ║         
-_#_w_50          ║                                       
-_#_w_50          ║                                     
-_#_w_50   ╔══════╩══════╗                              
-_#_w_50   ║  Reporter   ║                              
-_#_w_50   ║   plugin    ╟────────────────┐             
-_#_w_50   ╚═════════════╝                │             
-_#_w_50                                  ▼             
-_#_w_50                                 ███ |outputDir|
-_#_w_50                                 ███           
-_#_w_50
-</pre>
-</div>
-
-<div>
-<pre style="float: right; width: 60%;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-● here the |outputDir| contains some useful formatted report
-● the | Reporter | plugin could also conceivably maintain a dynamic
-  ranking of different classifier's utility
-
-
-</pre>
-</div>
-
-'''
-
-
-
-<slidebreak>
-title: <tt>Full workflow...</tt>
-body:
-'''
-<div>
-<pre style="float:left; width: 50%">
-_#_w_60    ╔═══════════╗                                  
-_#_w_60    ║ Test data ║  
-_#_w_60    ║ generator ║  
-_#_w_60    ║           ║   
-_#_w_60    ║ data: ███ ║ ────────────────┐              
-_#_w_60    ║       ███ ║                 │              
-_#_w_60    ╚═════╦═════╝                 ▼                             
-_#_w_60          ║                      ███ |outputDir: generator |               
-_#_w_60          ║                      ███ |inputDir:  classifier|               
-_#_w_60   ╔══════╩══════╗                │                              
-_#_w_60   ║ Classifier  ║◄───────────────┘                            
-_#_w_60   ║   plugin    ║────────────────┐                            
-_#_w_60   ╚══════╦══════╝                │               
-_#_w_60          ║                       ▼               
-_#_w_60          ║                      ███ |outputDir: classifier|  
-_#_w_60          ║                      ███ |inputDir:  evaluator |  
-_#_w_60   ╔══════╩══════╗                │               
-_#_w_60   ║ Evaluator   ║◄───────────────┘                 
-_#_w_60   ║   plugin    ║────────────────┐               
-_#_w_60   ╚══════╦══════╝                │               
-_#_w_60          ║                       ▼               
-_#_w_60          ║                      ███ |outputDir: evaluator|                                
-_#_w_60          ║                      ███ |inputDir:  reporter |                              
-_#_w_60   ╔══════╩══════╗                │                                           
-_#_w_60   ║  Reporter   ║◄───────────────┘                                           
-_#_w_60   ║   plugin    ╟────────────────┐             
-_#_w_60   ╚═════════════╝                │             
-_#_w_60                                  ▼             
-_#_w_60                                 ███ |outputDir: reporter |
-_#_w_60                                 ███           
+<pre style="float:left; width: 60%;">
+_#_w_60                                     ╔═══════════╗
+_#_w_60                                     ║   swift   ║
+_#_w_60                                     ║  object   ║
+_#_w_60                                     ║  storage  ║
+_#_w_60                                     ╚═══════════╝
+_#_w_60
+_#_w_60
+_#_w_60
+_#_w_60
+_#_w_60                                          ─^─
+_#_w_60                                        _╵   ╵_
+_#_w_60                                     _╵         ╵ _
+_#_w_60                                  _╵               ╵ _
+_#_w_60                               _╵                     ╵ _
+_#_w_60                            _╵                           ╵_
+_#_w_60                           │─           C U B E           ─│
+_#_w_60                           │ ╵_                         _╵ │
+_#_w_60                           │    ╵_                   _╵    │
+_#_w_60    ╔═══════════╗          │       ╵_             _╵       │
+_#_w_60    ║           ║          │          ╵_       _╵          │
+_#_w_60    ║   pfcon   ║          │             ╵_ _╵             │
+_#_w_60    ║           ║          │               │               │
+_#_w_60    ╚═══════════╝          │               │               │
+_#_w_60                           │               │               │
+_#_w_60                           │               │               │
+_#_w_60                           │               │               │
+_#_w_60                            ─              │              ─
+_#_w_60                             ╵_            │            _╵
+_#_w_60                                ╵_         │         _╵
+_#_w_60                                   ╵_      │      _╵
+_#_w_60                                      ╵_   │   _╵
+_#_w_60                                         ╵_│_╵
+_#_w_60
+_#_w_60
+_#_w_60
+_#_w_60
+_#_w_60
 _#_w_60
 </pre>
 </div>
 
 <div>
-<pre style="float: right; width: 50%">
-_#_o_01,f~l,z~133% ● the design problem:      
-_#_o_02,f~l,z~133%     ● script this pipeline
+<pre style="float:right; width: 40%;">
+_#_o_01,f~l ● typical CUBE backend architecture
+_#_o_02,f~l     ● CUBE component
+_#_o_03,f~l     ● swift object storage
+_#_o_04,f~l     ● pfcon
+
+
+
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 60%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║
+                                  _╵               ╵ _                       ║ ║
+                               _╵                     ╵ _                    ║ ║
+                            _╵                           ╵_                  ║ ║
+                           │─           C U B E           ─│                 ║ ║
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 40%;">
+_#_o_01,f~l ● logical relations
+_#_o_02,f~l     ● a │ REST entry point │
+_#_o_03,f~l     ● a ║ pfcon  ║ service
+_#_o_04,f~l     ● a ║ swift  ║ object storage
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+_#_o_01,f~l ● a client, typically outside the network
+_#_o_02,f~l     ● speaks to the │ REST entry point │
+_#_o_03,f~l     ● assuming an open access point
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬─◄──◄──┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌──◄──◄──╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        ▼        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        ▼        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├◄◄─┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌████████┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │████████│   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │████████├───┘        ║o║
+    ║           ║          │               │           │████████│            ║u║
+    ╚═══════════╝          │               │           └████████┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵███╵_                              ║ ║
+                                     _╵█████████╵ _                          ║ ║       ┌────────┐
+                                  _╵███████████████╵ _                       ║ ║       │ client │
+                               _╵█████████████████████╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵███████████████████████████╵_         │        ║ ║       │        │
+                           │─ █████████ C U B E █████████ ─│        │        ║ ║       └────────┘
+                           │ ╵███████████████████████████╵ │        │        ║ ║
+                           │    ╵█████████████████████╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵███████████████╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵█████████╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵███╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟────◄──◄──┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟─◄──◄─────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    █████████████          │          ╵_       _╵      │  REST  │   │        ║b║
+    █████████████──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    █████████████          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟─►──►─────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵███╵_                              ║ ║
+                                     _╵█████████╵ _                          ║ ║       ┌────────┐
+                                  _╵███████████████╵ _                       ║ ║       │ client │
+                               _╵█████████████████████╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵███████████████████████████╵_         │        ║ ║       │        │
+                           │─ █████████ C U B E █████████ ─│        │        ║ ║       └────────┘
+                           │ ╵███████████████████████████╵ │        │        ║ ║
+                           │    ╵█████████████████████╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵███████████████╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵█████████╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵███╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           ▲                                 ║r║
+                                           ▲                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           ▲                                 ║w║
+                                           ▲                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     █████████████                           ║ ║
+                                     █████████████                           ║n║
+                                     █████████████                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● Comms pathways
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │                                 ║w║
+                                           │                                 ║o║
+                                           │                                 ║r║
+                                           │                                 ║k║
+                                          ─^─                                ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _           ┌────────╬═╬───────┤  comms │
+                            _╵                           ╵_         │        ║ ║       │        │
+                           │─           C U B E           ─│        │        ║ ║       └────────┘
+                           │ ╵_                         _╵ │        │        ║ ║
+                           │    ╵_                   _╵    │        │        ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐   │        ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │   │        ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry ├───┘        ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+_#_o_01,f~l ● possible weaknesses:
+_#_o_02,f~l     ● all ops go through CUBE
+_#_o_03,f~l     ● can be complex
+_#_o_04,f~l     ● limited ability for general ops
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │            ╔═══════════╗        ║w║
+                                           │            ║           ║        ║o║
+                                           │            ║  pfserve  ║        ║r║
+                                           │            ║           ║        ║k║
+                                          ─^─           ╚═══════════╝        ║ ║
+                                        _╵   ╵_                              ║ ║
+                                     _╵         ╵ _                          ║ ║       ┌────────┐
+                                  _╵               ╵ _                       ║ ║       │ client │
+                               _╵                     ╵ _                    ╬═╬       │  comms │
+                            _╵                           ╵_                  ║ ║       │        │
+                           │─           C U B E           ─│                 ║ ║       └────────┘
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+_#_o_01,f~l ● possible weaknesses:
+_#_o_02,f~l     ● all ops go through CUBE
+_#_o_03,f~l     ● can be complex
+_#_o_04,f~l     ● limited ability for general ops
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+
+
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │            ╔═══════════╗        ║w║
+                                           │            ║           ║        ║o║
+                                           │            ║  pfserve  ╟──┐     ║r║
+                                           │            ║           ║  │     ║k║
+                                          ─^─           ╚═══════════╝  │     ║ ║
+                                        _╵   ╵_                        │     ║ ║
+                                     _╵         ╵ _                    │     ║ ║       ┌────────┐
+                                  _╵               ╵ _                 │     ║ ║       │ client │
+                               _╵                     ╵ _              └─────╬═╬───────┤  comms │
+                            _╵                           ╵_                  ║ ║       │        │
+                           │─           C U B E           ─│                 ║ ║       └────────┘
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+_#_o_01,f~l ● pfserve:
+_#_o_02,f~l     ● lives in CUBE's env
+_#_o_03,f~l     ● can execute complex ops
+_#_o_04,f~l     ● easily general ops
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │            ╔═══════════╗        ║w║
+                                           │            ║           ║        ║o║
+                                           │            ║  pfserve  ╟──┐     ║r║
+                                           │            ║           ║  │     ║k║
+                                          ─^─           ╚═══════════╝  │     ║ ║
+                                        _╵   ╵_                        │     ║ ║
+                                     _╵         ╵ _                    │     ║ ║       ┌────────┐
+                                  _╵               ╵ _                 │     ║ ║       │ client │
+                               _╵                     ╵ _              └─────╬═╬─◄──◄──┤  comms │
+                            _╵                           ╵_                  ║ ║       │        │
+                           │─           C U B E           ─│                 ║ ║       └────────┘
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● pfserve:
+    ● register new plugins
+    ● build CUBE feeds
 
 
 
@@ -740,99 +1484,62 @@ _#_o_02,f~l,z~133%     ● script this pipeline
 '''
 
 <slidebreak>
-title: <tt>Full workflow...</tt>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
 body:
 '''
 <div>
-<pre style="float:left; width: 50%">
-_#_w_60    ╔═══════════╗                                  
-_#_w_60    ║ Test data ║  
-_#_w_60    ║ generator ║  
-_#_w_60    ║           ║   
-_#_w_60    ║ data: ███ ║ ────────────────┐              
-_#_w_60    ║       ███ ║                 │              
-_#_w_60    ╚═════╦═════╝                 ▼                             
-_#_w_60          ║                      ███ |outputDir: generator |               
-_#_w_60          ║                      ███ |inputDir:  classifier|               
-_#_w_60   ╔══════╩══════╗                │                              
-_#_w_60   ║ Classifier  ║◄───────────────┘                            
-_#_w_60   ║   plugin    ║────────────────┐                            
-_#_w_60   ╚══════╦══════╝                │               
-_#_w_60          ║                       ▼               
-_#_w_60          ║                      ███ |outputDir: classifier|  
-_#_w_60          ║                      ███ |inputDir:  evaluator |  
-_#_w_60   ╔══════╩══════╗                │               
-_#_w_60   ║ Evaluator   ║◄───────────────┘                 
-_#_w_60   ║   plugin    ║────────────────┐               
-_#_w_60   ╚══════╦══════╝                │               
-_#_w_60          ║                       ▼               
-_#_w_60          ║                      ███ |outputDir: evaluator|                                
-_#_w_60          ║                      ███ |inputDir:  reporter |                              
-_#_w_60   ╔══════╩══════╗                │                                           
-_#_w_60   ║  Reporter   ║◄───────────────┘                                           
-_#_w_60   ║   plugin    ╟────────────────┐             
-_#_w_60   ╚═════════════╝                │             
-_#_w_60                                  ▼             
-_#_w_60                                 ███ |outputDir: reporter |
-_#_w_60                                 ███           
-_#_w_60
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │            ╔═══════════╗        ║w║
+                                           │            ║           ║        ║o║
+                                           │            ║  pfserve  ╟──┐     ║r║
+                                           │            ║           ║  │     ║k║
+                                          ─^─           ╚═══════════╝  │     ║ ║
+                                        _╵   ╵_                        │     ║ ║
+                                     _╵         ╵ _                    │     ║ ║       ┌────────┐
+                                  _╵               ╵ _                 │     ║ ║       │ client │
+                               _╵                     ╵ _              └◄──◄─╬═╬───────┤  comms │
+                            _╵                           ╵_                  ║ ║       │        │
+                           │─           C U B E           ─│                 ║ ║       └────────┘
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
 </pre>
 </div>
 
 <div>
-<pre style="float: right; width: 50%;">
-● with the added twist of the "Classifier"
-  needing "ad hoc registration" to a CUBE 
-  instance                                
-</pre>
-</div>
+<pre style="float:right; width: 30%;">
+● pfserve:
+    ● register new plugins
+    ● build CUBE feeds
 
-'''
 
-<slidebreak>
-title: <tt>Full workflow...</tt>
-body:
-'''
-<div>
-<pre style="float:left; width: 50%">
-_#_w_60    ╔═══════════╗                                  
-_#_w_60    ║ Test data ║  
-_#_w_60    ║ generator ║  
-_#_w_60    ║           ║   
-_#_w_60    ║ data: ███ ║ ────────────────┐              
-_#_w_60    ║       ███ ║                 │              
-_#_w_60    ╚═════╦═════╝                 ▼                             
-_#_w_60          ║                      ███ |outputDir: generator |               
-_#_w_60          ║                      ███ |inputDir:  classifier|               
-_#_w_60   ╔══════╩══════╗                │                              
-_#_w_60   ║ Classifier  ║◄───────────────┘                            
-_#_w_60   ║   plugin    ║────────────────┐                            
-_#_w_60   ╚══════╦══════╝                │               
-_#_w_60          ║                       ▼               
-_#_w_60          ║                      ███ |outputDir: classifier|  
-_#_w_60          ║                      ███ |inputDir:  evaluator |  
-_#_w_60   ╔══════╩══════╗                │               
-_#_w_60   ║ Evaluator   ║◄───────────────┘                 
-_#_w_60   ║   plugin    ║────────────────┐               
-_#_w_60   ╚══════╦══════╝                │               
-_#_w_60          ║                       ▼               
-_#_w_60          ║                      ███ |outputDir: evaluator|                                
-_#_w_60          ║                      ███ |inputDir:  reporter |                              
-_#_w_60   ╔══════╩══════╗                │                                           
-_#_w_60   ║  Reporter   ║◄───────────────┘                                           
-_#_w_60   ║   plugin    ╟────────────────┐             
-_#_w_60   ╚═════════════╝                │             
-_#_w_60                                  ▼             
-_#_w_60                                 ███ |outputDir: reporter |
-_#_w_60                                 ███           
-_#_w_60
-</pre>
-</div>
-<div style="float: right; width: 50%;">
-<pre>
-_#_o_01,f~l  ● script the workflow, requiring                                               
-_#_o_02,f~l      ● some parameterized python script                                     
-_#_o_03,f~l      ● that runs the pipeline                                            
+
 
 
 
@@ -841,49 +1548,259 @@ _#_o_03,f~l      ● that runs the pipeline
 '''
 
 <slidebreak>
-title: <tt>Full workflow...</tt>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
 body:
 '''
 <div>
-<pre style="float:left; width: 50%">
-_#_w_60    ╔═══════════╗                                  
-_#_w_60    ║ Test data ║  
-_#_w_60    ║ generator ║  
-_#_w_60    ║           ║   
-_#_w_60    ║ data: ███ ║ ────────────────┐              
-_#_w_60    ║       ███ ║                 │              
-_#_w_60    ╚═════╦═════╝                 ▼                             
-_#_w_60          ║                      ███ |outputDir: generator |               
-_#_w_60          ║                      ███ |inputDir:  classifier|               
-_#_w_60   ╔══════╩══════╗                │                              
-_#_w_60   ║ Classifier  ║◄───────────────┘                            
-_#_w_60   ║   plugin    ║────────────────┐                            
-_#_w_60   ╚══════╦══════╝                │               
-_#_w_60          ║                       ▼               
-_#_w_60          ║                      ███ |outputDir: classifier|  
-_#_w_60          ║                      ███ |inputDir:  evaluator |  
-_#_w_60   ╔══════╩══════╗                │               
-_#_w_60   ║ Evaluator   ║◄───────────────┘                 
-_#_w_60   ║   plugin    ║────────────────┐               
-_#_w_60   ╚══════╦══════╝                │               
-_#_w_60          ║                       ▼               
-_#_w_60          ║                      ███ |outputDir: evaluator|                                
-_#_w_60          ║                      ███ |inputDir:  reporter |                              
-_#_w_60   ╔══════╩══════╗                │                                           
-_#_w_60   ║  Reporter   ║◄───────────────┘                                           
-_#_w_60   ║   plugin    ╟────────────────┐             
-_#_w_60   ╚═════════════╝                │             
-_#_w_60                                  ▼             
-_#_w_60                                 ███ |outputDir: reporter |
-_#_w_60                                 ███           
-_#_w_60
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │            ╔═══════════╗        ║w║
+                                           │            ║           ║        ║o║
+                                           │            ║  pfserve  ╟──┐     ║r║
+                                           │            ║           ║  │     ║k║
+                                          ─^─           ╚═══════════╝  ▲     ║ ║
+                                        _╵   ╵_                        │     ║ ║
+                                     _╵         ╵ _                    ▲     ║ ║       ┌────────┐
+                                  _╵               ╵ _                 │     ║ ║       │ client │
+                               _╵                     ╵ _              └─────╬═╬───────┤  comms │
+                            _╵                           ╵_                  ║ ║       │        │
+                           │─           C U B E           ─│                 ║ ║       └────────┘
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
 </pre>
 </div>
-<div style="float:right; width: 50%;">
-_#_o_01,f~l  ● also need some FE to simply grab the classifier "name"                
-_#_o_02,f~l  ● and register to CUBE                                         
-_#_o_03,f~l      ● this will require an additional backend service        
-_#_o_04,f~l      ● perhaps akin to pfcon                                       
+
+<div>
+<pre style="float:right; width: 30%;">
+● pfserve:
+    ● register new plugins
+    ● build CUBE feeds
+
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │            ╔═══════════╗        ║w║
+                                           │            ║           ║        ║o║
+                                           │            ║  pfserve  ╟◄◄┐     ║r║
+                                           │            ║           ║  │     ║k║
+                                          ─^─           ╚═══════════╝  │     ║ ║
+                                        _╵   ╵_                        │     ║ ║
+                                     _╵         ╵ _                    │     ║ ║       ┌────────┐
+                                  _╵               ╵ _                 │     ║ ║       │ client │
+                               _╵                     ╵ _              └─────╬═╬───────┤  comms │
+                            _╵                           ╵_                  ║ ║       │        │
+                           │─           C U B E           ─│                 ║ ║       └────────┘
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● pfserve:
+    ● register new plugins
+    ● build CUBE feeds
+
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │            ╔═══════════╗        ║w║
+                                           │            █████████████        ║o║
+                                           │            █████████████──┐     ║r║
+                                           │            █████████████  │     ║k║
+                                          ─^─           ╚═══════════╝  │     ║ ║
+                                        _╵   ╵_                        │     ║ ║
+                                     _╵         ╵ _                    │     ║ ║       ┌────────┐
+                                  _╵               ╵ _                 │     ║ ║       │ client │
+                               _╵                     ╵ _              └─────╬═╬───────┤  comms │
+                            _╵                           ╵_                  ║ ║       │        │
+                           │─           C U B E           ─│                 ║ ║       └────────┘
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● pfserve:
+    ● register new plugins
+    ● build CUBE feeds
+
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Notes on pfserve</tt>
+// body-class: terminal
+body:
+'''
+<div>
+<pre style="float:left; width: 70%;">
+                                     ╔═══════════╗                           ║ ║
+                                     ║   swift   ║                           ║ ║
+                                     ║  object   ║                           ║n║
+                                     ║  storage  ║                           ║e║
+                                     ╚═════╤═════╝                           ║t║
+                                           │            ╔═══════════╗        ║w║
+                                           │            ║           ║        ║o║
+                                           │            ║  pfserve  ╟──┐     ║r║
+                                           │            ║           ║  │     ║k║
+                                          ─^─           ╚═══════════╝  │     ║ ║
+                                        _╵   ╵_                        │     ║ ║
+                                     _╵         ╵ _                    │     ║ ║       ┌────────┐
+                                  _╵               ╵ _                 │     ║ ║       │ client │
+                               _╵                     ╵ _              └─────╬═╬───────┤  comms │
+                            _╵                           ╵_                  ║ ║       │        │
+                           │─           C U B E           ─│                 ║ ║       └────────┘
+                           │ ╵_                         _╵ │                 ║ ║
+                           │    ╵_                   _╵    │                 ║ ║
+    ╔═══════════╗          │       ╵_             _╵   ┌───┴────┐            ║ ║
+    ║           ║          │          ╵_       _╵      │  REST  │            ║b║
+    ║   pfcon   ╟──────────┤	         ╵_ _╵         │  entry │            ║o║
+    ║           ║          │               │           │  point │            ║u║
+    ╚═══════════╝          │               │           └───┬────┘            ║n║
+                           │               │               │                 ║d║
+                           │               │               │                 ║a║
+                           │               │               │                 ║r║
+                            ─              │              ─                  ║y║
+                             ╵_            │            _╵                   ║ ║
+                                ╵_         │         _╵                      ║ ║
+                                   ╵_      │      _╵                         ║ ║
+                                      ╵_   │   _╵                            ∠ ∠
+                                         ╵_│_╵                               ⦢ ⦢
+                                                                             ⦣ ⦣
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 30%;">
+● pfserve:
+    ● register new plugins
+    ● build CUBE feeds
+
+
+
+
+
+
+</pre>
 </div>
 '''
 
@@ -892,7 +1809,7 @@ _#_o_04,f~l      ● perhaps akin to pfcon
 <slidebreak>
 
 title: <tt>End</tt>
-body-style: "background: black; color:green;"
+body-style: "background: black; color:lightgreen;"
 body:
 '''
 <pre>

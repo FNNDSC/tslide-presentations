@@ -1,0 +1,659 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+```
+
+Edit , someplace:
+
+```
+    export INPUTDIR=$REPO/ChRIS-plugin-overview 
+    export INPUTFILE=slides-all-master.hsjon
+    export OUTPUTDIR=~/tmp/presentation
+```
+
+After edits, run tsmake on it:
+
+```
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR         \
+             --inputDir $INPUTDIR           \
+             --slidesFile $INPUTFILE        \
+             --slideListGlob "slide-*"      \
+             --verbosity 1
+```
+
+Finally, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+*/
+
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:green;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_doom ChRIS 
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>about this module...</tt>
+body-style: "background: black; color:green;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_doom processing 
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>about this module...</tt>
+body-style: "background: black; color:green;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_doom pipelines!
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>ChRIS concepts of processing and pipelines</tt>
+// body-class: terminal
+body:
+'''
+<div style="font-size:100%;">
+<pre>
+This slide show will give a conceptual and a tad
+programmatical overview into the concepts of processing
+pipelines in
+_#_font_doom ChRIS
+_#_o_01,l,6  ●        
+_#_o_02,l,6  │        
+_#_o_03,l,6  ●─ logical concept of processing units ─●
+_#_o_04,l,6                                          │        
+_#_o_05,l,6  ●─ two fundamental types ───────────────●      
+_#_o_06,l,6  │        
+_#_o_07,l,6  ●─ chains ──────────────────────────────●
+_#_o_08,l,6                                          │        
+_#_o_09,l,6  ●─ branches ────────────────────────────●
+_#_o_10,l,6  │        
+_#_o_11,l,6  ▼        
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>Box drawing chars</tt>
+body:
+'''
+<pre>
+
+┌	┍	┎	┏
+├	┝	┞	┟
+
+🠴 🠶 🠵 🠷
+▲
+│
+  
+
+   ▲            
+┌─┴┼─┐          │                               
+┤    ├          └                               
+└─┬──┘              ▇▇▇▇ ╔═╩╬══╗                    
+  ▼                 ████ ║     ║⇐ ⇒ ⇑ ⇓              
+                    ████ ╣     ╠⟹  ⟸             
+┌───┐               ▇█▉▊ ╚═╦═══╝                 
+│   │                                          
+└───┘              ▇▇▇▇				               
+┌─┐                ████                           
+└─┘                ████                          
+                   ▇█▉▊                                   
+┤    ├                                            
+└─┬──┘             █                                
+                
+← ◄────►  → ↑ ↓ 
+</pre>
+'''
+<slidebreak>
+title: <tt>Workflows in ChRIS</tt>
+body:
+'''
+<pre>
+
+
+</pre>
+'''
+<slidebreak>
+title: <tt>Consider some processing chain...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+
+    ╔═══╗           
+    ║   ╠═          
+    ╚═══╝           
+_#_o_1,l ● Processing has a definite "start" or origin
+_#_o_2,l ● By implied convention, a "direction" or flow exists out of the origin
+_#_o_3,l ● ... in this case from left ⟹ right
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>from the origin, processing proceeds in an ordered fashion...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+
+    ╔═══╗     ╔═══╗    
+    ║   ╠═════╣   ╠════  
+    ╚═══╝     ╚═══╝    
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>from the origin, processing proceeds in an ordered fashion...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+
+    ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝     ╚═══╝     ╚═══╝      
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>from the origin, processing proceeds in an ordered fashion...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+                                            
+    ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗       
+    ║   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════  
+    ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝       
+                                        
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>from the origin, processing proceeds in an ordered fashion...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+                                                                                             
+    ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+                                                                                            
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>Every chain has...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+                                                                                             
+    ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+                                                                                            
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>Every chain has a head...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+  ┌───────┐                                                                             
+  │ ╔═══╗ │   ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+  │ ║   ╠═╪═══╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+  │ ╚═══╝ │   ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+  └───────┘                                                                              
+_#_o_1,l ● Processing has a definite "start" or origin...
+_#_o_2,l ● and a series of intermediate, chained connections
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>and one or more "links"...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+            ┌───────┐                                                                     
+    ╔═══╗   │ ╔═══╗ │   ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═══╪═╣   ╠═╪═══╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝   │ ╚═══╝ │   ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+            └───────┘                                                                   
+                ▲                                                                     
+                │                                                                       
+                │                                                                       
+                │                                                                       
+               here                                                                      
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>and one or more "links"...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+            ┌───────┐                                                                     
+    ╔═══╗   │ ╔═══╗ │   ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═══╪═╣   ╠═╪═══╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝   │ ╚═══╝ │   ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+            └───────┘                                                                   
+                              ▲                                                                     
+                              │                                                                       
+              ┌───────────────┘                                                                       
+              │                                                                       
+           and here                                                                      
+
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>and one or more "links"...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+            ┌───────┐                                                                     
+    ╔═══╗   │ ╔═══╗ │   ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═══╪═╣   ╠═╪═══╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝   │ ╚═══╝ │   ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+            └───────┘                                                                   
+                                                      ▲                                                                     
+                                                      │                                                                       
+              ┌───────────────────────────────────────┘                                                                       
+              │                                                                       
+           and here                                                                      
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>Logically, or structurally...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+            ┌───────┐                                                                     
+    ╔═══╗   │ ╔═══╗ │   ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═══╪═╣   ╠═╪═══╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝   │ ╚═══╝ │   ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+            └───────┘                                                                                                                                                          
+_#_o_1,l ● If we consider this organization
+_#_o_2,l ● we can group two logical or structural components...
+
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>Logically, or structurally...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+
+    ╔═══╗    
+    ║   ╠══  
+    ╚═══╝    
+                                                                                       
+_#_o_1,l ● A head, or start, structure
+
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>Logically, or structurally...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+
+    ╔═══╗           
+    ║   ╠══════════  
+    ╚═══╝            
+
+_#_o_1,l ● from which a new chain is grown
+
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>Logically, or structurally...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+
+                    ╔═══╗ 
+              ══════╣   ╠══════
+                    ╚═══╝ 
+
+_#_o_1,l ● and a concatenation of "body" links...
+
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>Every chain has a head...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+            ┌───────┐                                                                     
+    ╔═══╗   │ ╔═══╗ │   ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═══╪═╣   ╠═╪═══╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝   │ ╚═══╝ │   ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+            └───────┘                                                                   
+_#_o_1,l ● one head
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title: <tt>and any number of body links"...</tt>
+body:
+'''
+<div>
+<pre style="float:left;">
+            ┌───────┐                                                                     
+    ╔═══╗   │ ╔═══╗ │   ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗      
+    ║   ╠═══╪═╣   ╠═╪═══╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠═════╣   ╠════  
+    ╚═══╝   │ ╚═══╝ │   ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝     ╚═══╝      
+            └───────┘                                                                   
+              ▲               ▲                       ▲                                                                     
+              │               │                       │                                                                       
+              ├───────────────┴───────────────────────┘                                                                       
+              │                                                                       
+           and here                                                                      
+
+
+</pre>
+</div>
+'''
+
+
+
+<slidebreak>
+title: <tt>Computational framework for accelerating COVID work</tt>
+body:
+'''
+<pre>
+
+
+
+
+
+The Fetal Neonatal Neuroimaging Development Science Center has led the
+development of a compute platform called 
+
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>Computational framework for accelerating COVID work</tt>
+body:
+'''
+<pre>
+
+
+
+
+
+The Fetal Neonatal Neuroimaging Development Science Center has led the
+development of a compute platform called 
+
+
+ _____ _    ______ _____ _____ 
+/  __ \ |   | ___ \_   _/  ___|
+| /  \/ |__ | |_/ / | | \ `--. 
+| |   | '_ \|    /  | |  `--. \
+| \__/\ | | | |\ \ _| |_/\__/ /
+ \____/_| |_\_| \_|\___/\____/ 
+
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>ChRIS</tt>
+body:
+'''
+<div>
+<pre>
+
+
+
+ChRIS is a distributed platform that:
+
+_#_o_1,style="float:left;font-size:100%;" ● Uses containerized compute
+_#_o_2,style="float:left;font-size:100%;" ● Allows for seamless data transfer between
+_#_o_3,style="float:left;font-size:100%;"      ● Internal BCH 
+_#_o_4,style="float:left;font-size:100%;"      ● BCH <---> MOC 
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre>
+
+
+
+ChRIS is a distributed platform that:
+</pre>
+<div class="snippet" id="order-1">
+<pre style="float: left;">
+        * Uses containerized compute
+</pre>
+</div>
+<br>
+<div class="snippet" id="order-2">
+<pre style="float: left;">
+        * Allows for seamless data transfer between
+</pre>
+<br>
+</div>
+<div class="snippet" id="order-3" style="float:left;">
+<pre>        
+		* Internal BCH
+</pre>
+</div>
+<br>
+<div class="snippet" id="order-4" style="float:left;">
+<pre>
+
+		* BCH --> Massachusetts Open Cloud
+</pre>
+</div>
+<pre>
+
+
+
+</pre>
+'''
+
+<slidebreak>
+title:<tt>Quick style test</tt>
+body:'''
+<div class="tty">
+<p>What font is this?</p>
+<pre>
+
+
+and how about this?
+</pre>
+
+</div>
+<pre>
+</pre>
+'''
+
+<slidebreak>
+
+title:<tt>Time is arguably of the essence...</tt>
+body:
+'''
+<pre>
+
+
+
+
+Computational platforms for simulation/crunching/analysis can
+provide a meaningful contribution.
+
+
+Need to reduce the barrier of entry to deploying analysis
+at computational scale.
+
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>We propose...</tt>
+body:
+'''
+<pre>
+
+
+
+
+We propose to use ChRIS to deploy data and algorithms to the 
+Massachusetts Open Cloud to run at speed and scale.
+
+Current possible candidate analysis:
+
+	* Analysis of lung images for signs of COVID-19
+
+	* Protein folding
+
+</pre>
+'''
+
+
+<slidebreak>
+
+title: <tt>COVID-NET</tt>
+body:
+'''
+<pre>
+COVID-NET is an Initiative out of University of Waterloo and DarwinAI to
+provide various neural network models tuned to recognize abnormalities
+in chest CT indicative of COVID-19 infections.
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>We aim to...</tt>
+body:
+'''
+<pre>
+* Use ChRIS as a compute delivery platform to run COVID-NET on the 
+Mass Open Cloud
+
+* Possibly use pediatric CT where meaningful to train additional
+tuned models using ChRIS and COVID-NEt.
+</pre>
+'''
+
+
+<slidebreak>
+
+title:<tt>Additionally...</tt>
+body:
+'''
+<pre>
+
+
+* We hope to help any other basic research efforts in BCH that
+might rely on computational analysis and
+
+* Accelerate and simplify deployment
+
+
+
+</pre>
+'''
+
+
+<slidebreak>
+
+title: <tt>End</tt>
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_doom Thank you.
+</pre>
+
+'''
+
+
+

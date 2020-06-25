@@ -1,0 +1,107 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+```
+
+Edit , someplace:
+
+```
+    export INPUTDIR=$REPO/FNNDSC-e2 
+    export INPUTFILE=slides-all-master.hjson
+    export OUTPUTDIR=/var/www/html/slides/FNNDSC-e2
+```
+
+After edits, run tsmake on it:
+
+```
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR         \
+             --inputDir $INPUTDIR           \
+             --slidesFile $INPUTFILE        \
+             --slideListGlob "slide-*"      \
+             --verbosity 1
+```
+
+Finally, if needed, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+(this is not needed if the $OUTPUTDIR is already serviced by a default
+websever).
+
+*/
+
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_univers FNNDSC
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_univers e2
+
+
+</pre>
+</div>
+'''
+<slidebreak>
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_univers FNNDSC
+_#_font_univers   e2
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+
+title: <tt>End</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+</pre>
+
+'''
+
+
+

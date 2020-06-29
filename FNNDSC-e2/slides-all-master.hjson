@@ -9,7 +9,7 @@ Clone the repo:
     export REPO=$(pwd)
 ```
 
-Edit , someplace:
+then,
 
 ```
     export INPUTDIR=$REPO/FNNDSC-e2 
@@ -56,6 +56,7 @@ _#_font_univers FNNDSC
 </pre>
 </div>
 '''
+
 <slidebreak>
 title:<tt>about this module...</tt>
 body-style: "background: black; color:lightgreen;"

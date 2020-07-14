@@ -1,0 +1,458 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+```
+```
+    export INPUTDIR=$REPO/ChRIS-GE-workflow 
+    export INPUTFILE=slides-all-master.hjson
+    export OUTPUTDIR=/var/www/html/slides/ChRIS-GE-workflow
+```
+
+After edits, run tsmake on it:
+
+```
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR         \
+             --inputDir $INPUTDIR           \
+             --slidesFile $INPUTFILE        \
+             --slideListGlob "slide-*"      \
+             --verbosity 1
+```
+
+Finally, if needed, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+(this is not needed if the $OUTPUTDIR is already serviced by a default
+websever).
+
+*/
+
+title:<tt>ChRIS introduction</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+
+_#_font_basic Overview report
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>ChRIS introduction</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+
+_#_font_basic BCH
+_#_font_basic GE
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>ChRIS introduction</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+
+_#_font_univers SOW4
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+
+
+title: <tt>About me...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
+    <div class="sl-block-content" style="z-index: 10;">
+        <iframe style="width: 1000px; height: 550px; left: 80px; top: 70px;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation" data-src="https://codepen.io/rudolphpienaar/live/abOQoao" src="https://codepen.io/rudolphpienaar/live/abOQoao">
+        </iframe>
+    </div>
+</div>
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="images/profile1.jpg" width=200 style="float: left;">
+</div>
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+
+<pre id="typewriter" style="float: left; width: 70%;font-size: 200%;">
+Overview report on the Machine Learning
+pipeline.
+
+With emphasis on:
+</pre>
+
+<pre style="float: right; width: 50%; font-size: 200%">
+_#_o_01 ▆ Training
+_#_o_02 ▆ Inference
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+// body-style: "background: black; color:lightgreen;"
+// body-class: terminal
+body:
+'''
+
+<pre id="typewriter" style="float: left; width: 50%;font-size: 200%;">
+Training considerations:
+
+▆ process components of a
+  single training data set
+    ▆ extract dynamic set of features
+
+▆ process collection of input 
+  training data sets
+    ▆ how to effectively handle a 
+      collective input set
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre id="typewriter" style="float: right; width: 30%; font-size: 200%;">
+Input data fileset, 
+`features.mgz`
+</pre>
+<pre stlye="float: left; width: 70%;">
+                       
+╔════════════════════╗ 
+║ input dir          ║  
+╟────────────────────╢  
+║   features.mgz     ║    
+║                    ║     
+╚════════════════════╝      
+                             
+                              
+                                 
+                       
+                       
+                       
+                       
+                       
+                        
+                         
+                         
+                              
+                         
+                         
+                        
+                         
+                         
+                         
+                         
+                         
+                        
+                         
+                         
+                         
+                         
+                      
+                      
+
+                              
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre id="typewriter" style="float: right; width: 30%; font-size: 200%;">
+Processed by plugin
+pl-mgz2imgslices
+</pre>
+<pre stlye="float: left; width: 70%;">
+                       
+╔════════════════════╗      ┌───────────────────┐ 
+║ input dir          ║      │ pl-mgz2imgslices  │  
+╟────────────────────╫──────┼───────────────────┤  
+║   features.mgz     ║      │                   │    
+║                    ║      └───────────────────┘     
+╚════════════════════╝                                
+                                                     
+                                                     
+                                                    
+                                                    
+                                                   
+                                                      
+                                                      
+                                                      
+                                                       
+                                                       
+                                                       
+                                                        
+                                                         
+                                                            
+                                                  
+                                                  
+                                                  
+                                                  
+                                                  
+                                                   
+                                                    
+                                                    
+                                                         
+                                                    
+                                                    
+                                                   
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                   
+                                                    
+                                                    
+                                                    
+                                                    
+                                                 
+                                                 
+
+                              
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre id="typewriter" style="float: right; width: 30%; font-size: 200%;">
+Creates multiple sets 
+of dynamically discovered
+labels, each of which 
+consititues training
+exemplars for one 
+neural network.
+</pre>
+<pre stlye="float: left; width: 70%;">
+                       
+╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗ 
+║ input dir          ║      │ pl-mgz2imgslices  │     ║ output dir                                     ║  
+╟────────────────────╢──────┼───────────────────┼─────╫────────────────────────────────────────────────╫  
+║   features.mgz     ║      │                   │     ║                                                ║    
+║                    ║      └───────────────────┘     ║                                                ║     
+╚════════════════════╝                                ║    ┌─[labelset_1]                              ║     
+                                                      ║    │    ├─img-000.png                          ║    
+                                                      ║    │    ├─img-001.png                          ║    
+                                                      ║    │         ...                               ║   
+                                                      ║    │    └─img-255.png                          ║   
+                                                      ║    │                                           ║  
+                                                      ║    ├─[labelset_2]                              ║     
+                                                      ║    │    ├─img-000.png                          ║     
+                                                      ║    │    ├─img-001.png                          ║     
+                                                      ║    │         ...                               ║      
+                                                      ║    │    └─img-255.png                          ║      
+                                                      ║    │                                           ║      
+                                                      ║    └─[labelset_[L]]                            ║       
+                                                      ║         ├─img-000.png                          ║        
+                                                      ║         ├─img-001.png                          ║           
+                                                      ║              ...                               ║ 
+                                                      ║         └─img-255.png                          ║ 
+                                                      ╚════════════════════════════════════════════════╝
+
+                              
+
+</pre>
+
+'''
+
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre id="typewriter" style="float: right; width: 30%; font-size: 200%;">
+Training overview
+</pre>
+<pre stlye="float: left; width: 70%;">
+                       
+╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗ 
+║ input dir          ║      │ pl-mgz2imgslices  │     ║ output dir                                     ║  
+╟────────────────────╫──────┼───────────────────┼─────╫────────────────────────────────────────────────╫  
+║ ┌ subject_1        ║      │                   │     ║                                                ║    
+║ │  └─ features.mgz ║      └───────────────────┘     ║ ┌─subject_1            ┌─subject_2             ║     
+║ │                  ║                                ║ │  ├─[labelset_1]      │  ├─[labelset_1]       ║     
+║ ├ subject_2        ║                                ║ │  │    ├─img-000.png  │  │    ├─img-000.png   ║    
+║ │  └─ features.mgz ║                                ║ │  │    ├─img-001.png  │  │    ├─img-001.png   ║    
+║ │                  ║                                ║ │  │         ...       │  │         ...        ║   
+║ | ...              ║                                ║ │  │    └─img-255.png  │  │    └─img-255.png   ║   
+║ │                  ║                                ║ │  │                   │  │                    ║  
+║ ├ subject_[N-1]    ║                                ║ │  ├─[labelset_2]      │  ├─[labelset_2]       ║     
+║ │  └─ features.mgz ║                                ║ │  │    ├─img-000.png  │  │    ├─img-000.png   ║     
+║ │                  ║                                ║ │  │    ├─img-001.png  │  │    ├─img-001.png   ║     
+║ └ subject_[N]      ║                                ║ │  │         ...       │  │         ...        ║      
+║   └─ features.mgz  ║                                ║ │  │    └─img-255.png  │  │    └─img-255.png   ║      
+╚════════════════════╝                                ║ │  │                   │  │                    ║      
+                                                      ║ │  └─[labelset_[L]]    │  └─[labelset_[L]]     ║       
+                                                      ║ │       ├─img-000.png  │       ├─img-000.png   ║        
+                                                      ║ │       ├─img-001.png  │       ├─img-001.png   ║           
+                                                      ║ │            ...       │            ...        ║ 
+                                                      ║ │       └─img-255.png  │       └─img-255.png   ║ 
+                                                      ║ │                      │                       ║ 
+                                                      ║ │                      │                       ║ 
+                                                      ║ └─subject_[N-1]        └─subject_[N]           ║ 
+                                                      ║    ├─[labelset_1]         ├─[labelset_1]       ║  
+                                                      ║    │    ├─img-000.png     │    ├─img-000.png   ║   
+                                                      ║    │    ├─img-001.png     │    ├─img-001.png   ║   
+                                                      ║    │         ...          │         ...        ║        
+                                                      ║    │    └─img-255.png     │    └─img-255.png   ║   
+                                                      ║    │                      │                    ║   
+                                                      ║    ├─[labelset_2]         ├─[labelset_2]       ║  
+                                                      ║    │    ├─img-000.png     │    ├─img-000.png   ║   
+                                                      ║    │    ├─img-001.png     │    ├─img-001.png   ║   
+                                                      ║    │         ...          │         ...        ║   
+                                                      ║    │    └─img-255.png     │    └─img-255.png   ║   
+                                                      ║    │                      │                    ║   
+                                                      ║    └─[labelset_[N]]       └─[labelset_[N]]     ║  
+                                                      ║         ├─img-000.png          ├─img-000.png   ║   
+                                                      ║         ├─img-001.png          ├─img-001.png   ║   
+                                                      ║              ...                    ...        ║   
+                                                      ║         └─img-255.png          └─img-255.png   ║   
+                                                      ║                                                ║
+                                                      ╚════════════════════════════════════════════════╝
+
+                              
+
+</pre>
+
+'''
+
+
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+
+<pre id="typewriter" style="float: right; width: 30%; font-size: 200%;">
+Inference overview
+</pre>
+<pre stlye="float: left; width: 70%;">
+                                   ╔═══════════════╗                         ║ ║    
+                                   ║ swift storage ║                         ║ ║    
+                                   ╫───────────────╫──────────┐              ║ ║
+                                   ║               ║          │              ║ ║
+                                   ╚═══════╤═══════╝          │              ║n║
+                                           │                  │              ║e║
+                                           │                  │              ║t║
+                                           │                  │              ║w║
+                                           │                  │              ║o║
+                                           │                  │              ║r║
+                                           │                  │              ║k║
+                                          ─^─                 │              ║ ║
+                                        _╵   ╵_               │              ║ ║
+                                     _╵         ╵ _           │              ║ ║       
+                                  _╵               ╵ _        │              ║ ║       
+                               _╵                     ╵ _     │     ┌────────╬═╬───┬▲▲▲        
+                            _╵                           ╵_   │     │        ║ ║   │          
+                           │─           C U B E           ─│  │     │        ║ ║   │          
+                           │ ╵_                         _╵ │  │     │        ║ ║   │        
+                           │    ╵_                   _╵    │  │     │        ║ ║   │         
+                           │       ╵_             _╵   ┌───┴──┴─┐   │        ║ ║   │          
+                           │          ╵_       _╵      │  REST  │   │        ║b║   │                           
+                           │	         ╵_ _╵         │  entry ├───┘        ║o║   │                           
+                           │               │           │  point │            ║u║   │   ┌────────┐               
+                           │  ┌───────────┐│           └───┬────┘            ║n║   │   │ client │               
+                           │  │ django DB ││               │                 ║d║   └───┤  comms │               
+                           │  ├───────────┤│               │                 ║a║       │        │               
+                           │  │           ││               │                 ║r║       └────┬───┘               
+                            ─ └────┐      ││              ─                  ║y║           ▲▲▲            
+                             ╵_    │      ││            _╵                   ║ ║  
+                                ╵_ └──────┘│         _╵                      ║ ║     
+                                   ╵_      │      _╵                         ║ ║      
+                                      ╵_   │   _╵                            ∠ ∠  
+                                         ╵_│_╵                               ⦢ ⦢  
+                                                                             ⦣ ⦣  
+                                                                             ║ ║  
+                                                                             ║ ║  
+                                                                             ║ ║                   
+                                                                             ║ ║                   
+                                                                             ╬═╬                   
+                                                                             ║ ║                     
+                                                                             ║ ║                     
+                                                                             ║ ║                     
+                                                                             ║ ║
+                                                                             ║ ║
+                                                                             ║ ║
+</pre>
+
+'''
+
+
+
+
+
+
+
+
+
+<slidebreak>
+title: <tt>End</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_basic Questions?
+
+</pre>
+
+'''
+
+
+

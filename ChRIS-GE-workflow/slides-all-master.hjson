@@ -162,7 +162,7 @@ body:
 Input data fileset, 
 `features.mgz`
 </pre>
-<pre stlye="float: left; width: 70%;">
+<pre style="float: left; width: 70%;">
                        
 ╔════════════════════╗ 
 ║ input dir          ║  
@@ -212,7 +212,7 @@ body:
 Processed by plugin
 pl-mgz2imgslices
 </pre>
-<pre stlye="float: left; width: 70%;">
+<pre style="float: left; width: 70%;">
                        
 ╔════════════════════╗      ┌───────────────────┐ 
 ║ input dir          ║      │ pl-mgz2imgslices  │  
@@ -273,15 +273,15 @@ body:
 Creates multiple sets 
 of dynamically discovered
 labels, each of which 
-consititues training
+constitutes training
 exemplars for one 
 neural network.
 </pre>
-<pre stlye="float: left; width: 70%;">
+<pre style="float: left; width: 70%;">
                        
 ╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗ 
 ║ input dir          ║      │ pl-mgz2imgslices  │     ║ output dir                                     ║  
-╟────────────────────╢──────┼───────────────────┼─────╫────────────────────────────────────────────────╫  
+╟────────────────────╢──────┼───────────────────┼─────╫────────────────────────────────────────────────╢	  
 ║   features.mgz     ║      │                   │     ║                                                ║    
 ║                    ║      └───────────────────┘     ║                                                ║     
 ╚════════════════════╝                                ║    ┌─[labelset_1]                              ║     
@@ -309,6 +309,496 @@ neural network.
 
 '''
 
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%; font-size: 200%;">
+
+The above worflow essentially extracts a set of labeled features from 
+one input data set:
+
+features.mgz ─────────────────────────────────────┬─[labelset_1]         
+                                                  │    ├─img-000.png    
+                                                  │    ├─img-001.png    
+                                                  │         ...         
+                                                  │    └─img-255.png    
+                                                  │                     
+                                                  ├─[labelset_2]        
+                                                  │    ├─img-000.png    
+                                                  │    ├─img-001.png    
+                                                  │         ...         
+                                                  │    └─img-255.png    
+                                                  │                     
+                                                  └─[labelset_[L]]      
+                                                       ├─img-000.png    
+                                                       ├─img-001.png    
+                                                            ...         
+                                                       └─img-255.png    
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: right; width: 30%; font-size: 100%;">
+In current form, one instance of plugin
+is not suited for building a training 
+workflow.
+</pre>
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗      ┌───────────────────┐ 
+║ input dir          ║      │ pl-mgz2imgslices  │  
+╟────────────────────╫──────┼───────────────────┤	  
+║ ┌ subject_1        ║      │  which subject?   │    
+║ │  └─ features.mgz ║      └───────────────────┘     
+║ │                  ║                                
+║ ├ subject_2        ║                               
+║ │  └─ features.mgz ║                               
+║ │                  ║                              
+║ | ...              ║                              
+║ │                  ║                             
+║ ├ subject_[N-1]    ║                                
+║ │  └─ features.mgz ║                                
+║ │                  ║                                
+║ └ subject_[N]      ║                                 
+║    └─ features.mgz ║                                 
+╚════════════════════╝                                 
+                                                        
+                                                         
+                                                            
+                                                  
+                                                  
+                                                 
+
+                              
+
+</pre>
+
+'''
+
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗ 
+║ input dir          ║      │ pl-mgz2imgslices  │     ║ output dir                                     ║  
+╟────────────────────╫──────┼───────────────────┼─────╫────────────────────────────────────────────────╢	  
+║ ┌ subject_1        ║      │  subject_1        │     ║                                                ║    
+║ │  └─ features.mgz ║      └───────────────────┘     ║                                                ║     
+║ │                  ║                                ║    ┌─[labelset_1]                              ║     
+║ ├ subject_2        ║                                ║    │    ├─img-000.png                          ║    
+║ │  └─ features.mgz ║                                ║    │    ├─img-001.png                          ║    
+║ │                  ║                                ║    │         ...                               ║   
+║ | ...              ║                                ║    │    └─img-255.png                          ║   
+║ │                  ║                                ║    │                                           ║  
+║ ├ subject_[N-1]    ║                                ║    ├─[labelset_2]                              ║     
+║ │  └─ features.mgz ║                                ║    │    ├─img-000.png                          ║     
+║ │                  ║                                ║    │    ├─img-001.png                          ║     
+║ └ subject_[N]      ║                                ║    │         ...                               ║      
+║    └─ features.mgz ║                                ║    │    └─img-255.png                          ║      
+╚════════════════════╝                                ║    │                                           ║      
+                                                      ║    └─[labelset_[L]]                            ║       
+                                                      ║         ├─img-000.png                          ║        
+                                                      ║         ├─img-001.png                          ║           
+                                                      ║              ...                               ║ 
+                                                      ║         └─img-255.png                          ║ 
+                                                      ╚════════════════════════════════════════════════╝
+
+                              
+
+</pre>
+<pre style="float: right; width: 30%; font-size: 100%;">
+Might need multiple parallel instances of
+pl-mgz2imgslices
+</pre>
+
+'''
+
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗ 
+║ input dir          ║      │ pl-mgz2imgslices  │     ║ output dir                                     ║  
+╟────────────────────╫──┬───┼───────────────────┼─────╫────────────────────────────────────────────────╢	  
+║ ┌ subject_1        ║  │   │  subject_1        │     ║                                                ║    
+║ │  └─ features.mgz ║  │   └───────────────────┘     ║                                                ║     
+║ │                  ║  │                             ║    ┌─[labelset_1]                              ║     
+║ ├ subject_2        ║  │                             ║    │    ├─img-000.png                          ║    
+║ │  └─ features.mgz ║  │   ┌───────────────────┐     ║    │    ├─img-001.png                          ║    
+║ │                  ║  │   │ pl-mgz2imgslices  │     ║    │         ...                               ║   
+║ | ...              ║  └───┼───────────────────┼──┐  ║    │    └─img-255.png                          ║   
+║ │                  ║      │  subject_2        │  │  ║    │                                           ║  
+║ ├ subject_[N-1]    ║      └───────────────────┘  │  ║    ├─[labelset_2]                              ║     
+║ │  └─ features.mgz ║                             │  ║    │    ├─img-000.png                          ║     
+║ │                  ║                             │  ║    │    ├─img-001.png                          ║     
+║ └ subject_[N]      ║                             │  ║    │         ...                               ║      
+║    └─ features.mgz ║                             │  ║    │    └─img-255.png                          ║      
+╚════════════════════╝                             │  ║    │                                           ║      
+                                                   │  ║    └─[labelset_[L]]                            ║       
+                                                   │  ║         ├─img-000.png                          ║        
+                                                   │  ║         ├─img-001.png                          ║           
+                                                   │  ║              ...                               ║ 
+                                                   │  ║         └─img-255.png                          ║ 
+                                                   │  ╚════════════════════════════════════════════════╝
+                                                   └─────┐                                                        
+                                                         │                                                   
+                                                         │   ╔════════════════════════════════════════════════╗   
+                                                         │   ║ output dir                                     ║   
+                                                         └───╫────────────────────────────────────────────────╢   
+                                                             ║                                                ║   
+                                                             ║                                                ║   
+                                                             ║    ┌─[labelset_1]                              ║   
+                                                             ║    │    ├─img-000.png                          ║   
+                                                             ║    │    ├─img-001.png                          ║   
+                                                             ║    │         ...                               ║   
+                                                             ║    │    └─img-255.png                          ║   
+                                                             ║    │                                           ║   
+                                                             ║    ├─[labelset_2]                              ║   
+                                                             ║    │    ├─img-000.png                          ║   
+                                                             ║    │    ├─img-001.png                          ║   
+                                                             ║    │         ...                               ║   
+                                                             ║    │    └─img-255.png                          ║   
+                                                             ║    │                                           ║   
+                                                             ║    └─[labelset_[L]]                            ║   
+                                                             ║         ├─img-000.png                          ║   
+                                                             ║         ├─img-001.png                          ║   
+                                                             ║              ...                               ║   
+                                                             ║         └─img-255.png                          ║   
+                                                             ╚════════════════════════════════════════════════╝   
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+
+</pre>
+<pre style="float: right; width: 30%; font-size: 100%;">
+Might need multiple parallel instances of
+pl-mgz2imgslices
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗ 
+║ input dir          ║      │ pl-mgz2imgslices  │     ║ output dir                                     ║  
+╟────────────────────╫──┬───┼───────────────────┼─────╫────────────────────────────────────────────────╢	  
+║ ┌ subject_1        ║  │   │  subject_1        │     ║                                                ║    
+║ │  └─ features.mgz ║  │   └───────────────────┘     ║                                                ║     
+║ │                  ║  │                             ║    ┌─[labelset_1]                              ║     
+║ ├ subject_2        ║  │                             ║    │    ├─img-000.png                          ║    
+║ │  └─ features.mgz ║  │   ┌───────────────────┐     ║    │    ├─img-001.png                          ║    
+║ │                  ║  │   │ pl-mgz2imgslices  │     ║    │         ...                               ║   
+║ | ...              ║  ├───┼───────────────────┼──┐  ║    │    └─img-255.png                          ║   
+║ │                  ║  │   │  subject_2        │  │  ║    │                                           ║  
+║ ├ subject_[N-1]    ║  │   └───────────────────┘  │  ║    ├─[labelset_2]                              ║     
+║ │  └─ features.mgz ║  │                          │  ║    │    ├─img-000.png                          ║     
+║ │                  ║  │                          │  ║    │    ├─img-001.png                          ║     
+║ └ subject_[N]      ║  │                          │  ║    │         ...                               ║      
+║    └─ features.mgz ║  │   ┌───────────────────┐  │  ║    │    └─img-255.png                          ║      
+╚════════════════════╝  │   │ pl-mgz2imgslices  │  │  ║    │                                           ║      
+                        └───┼───────────────────┼─┐│  ║    └─[labelset_[L]]                            ║       
+                            │  subject_[N]      │ ││  ║         ├─img-000.png                          ║        
+                            └───────────────────┘ ││  ║         ├─img-001.png                          ║           
+                                                  ││  ║              ...                               ║ 
+                                                  ││  ║         └─img-255.png                          ║ 
+                                                  ││  ╚════════════════════════════════════════════════╝
+  ┌───────────────────────────────────────────────┘└─────┐                                                        
+  │                                                      │                                                   
+  │ ╔════════════════════════════════════════════════╗   │   ╔════════════════════════════════════════════════╗   
+  │ ║ output dir                                     ║   │   ║ output dir                                     ║   
+  └─╫────────────────────────────────────────────────╢   └───╫────────────────────────────────────────────────╢   
+    ║                                                ║       ║                                                ║   
+    ║                                                ║       ║                                                ║   
+    ║    ┌─[labelset_1]                              ║       ║    ┌─[labelset_1]                              ║   
+    ║    │    ├─img-000.png                          ║       ║    │    ├─img-000.png                          ║   
+    ║    │    ├─img-001.png                          ║       ║    │    ├─img-001.png                          ║   
+    ║    │         ...                               ║       ║    │         ...                               ║   
+    ║    │    └─img-255.png                          ║       ║    │    └─img-255.png                          ║   
+    ║    │                                           ║       ║    │                                           ║   
+    ║    ├─[labelset_2]                              ║       ║    ├─[labelset_2]                              ║   
+    ║    │    ├─img-000.png                          ║       ║    │    ├─img-000.png                          ║   
+    ║    │    ├─img-001.png                          ║       ║    │    ├─img-001.png                          ║   
+    ║    │         ...                               ║       ║    │         ...                               ║   
+    ║    │    └─img-255.png                          ║       ║    │    └─img-255.png                          ║   
+    ║    │                                           ║       ║    │                                           ║   
+    ║    └─[labelset_[L]]                            ║       ║    └─[labelset_[L]]                            ║   
+    ║         ├─img-000.png                          ║       ║         ├─img-000.png                          ║   
+    ║         ├─img-001.png                          ║       ║         ├─img-001.png                          ║   
+    ║              ...                               ║       ║              ...                               ║   
+    ║         └─img-255.png                          ║       ║         └─img-255.png                          ║   
+    ╚════════════════════════════════════════════════╝       ╚════════════════════════════════════════════════╝   
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+
+</pre>
+<pre style="float: right; width: 30%; font-size: 100%;">
+Might need multiple parallel instances of
+pl-mgz2imgslices
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗                
+║ input dir          ║  
+╟────────────────────╢ 
+║ ┌ subject_1        ║         
+║ │  └─ features.mgz ║                              
+║ │                  ║                  
+║ ├ subject_2        ║         
+║ │  └─ features.mgz ║                 
+║ │                  ║                 
+║ | ...              ║       
+║ │                  ║      
+║ ├ subject_[N-1]    ║         
+║ │  └─ features.mgz ║         
+║ │                  ║    
+║ └ subject_[N]      ║     
+║    └─ features.mgz ║     
+╚════════════════════╝    
+                                 
+                                  
+                                     
+                             
+                             
+                             
+                                                                                 
+                                                                                                             
+                                                                                                             
+                                                                                                             
+
+</pre>
+<pre style="float: right; width: 30%; font-size: 100%;">
+Might need multiple parallel instances of
+pl-mgz2imgslices
+</pre>
+
+'''
+
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗                
+║ input dir          ║      ┌───┐    ╔═══╗ 
+╟────────────────────╫──┬───┤   ├────╢   ║ 
+║ ┌ subject_1        ║  │   └───┘    ╚═══╝        
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗                             
+║ │                  ║  ├───┤   ├────╢   ║                 
+║ ├ subject_2        ║  │   └───┘    ╚═══╝        
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗                
+║ │                  ║  ├───┤   ├────╢   ║                
+║ | ...              ║  │   └───┘    ╚═══╝      
+║ │                  ║  │   ┌───┐    ╔═══╗     
+║ ├ subject_[N-1]    ║  ├───┤   ├────╢   ║        
+║ │  └─ features.mgz ║  │   └───┘    ╚═══╝        
+║ │                  ║  │                      
+║ └ subject_[N]      ║  │                     
+║    └─ features.mgz ║  │                        
+╚════════════════════╝  │                         
+                        │   ┌───┐    ╔═══╗          
+                        └───┤   ├────╢   ║           
+                            └───┘    ╚═══╝              
+                             
+                             
+                             
+                                                                                 
+                                                                                                             
+                                                                                                             
+                                                                                                             
+
+</pre>
+<pre style="float: right; width: 30%; font-size: 100%;">
+Might need multiple parallel instances of
+pl-mgz2imgslices
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗                
+║ input dir          ║      ┌───┐    ╔═══╗ 
+╟────────────────────╫──┬───┤   ├────╢   ╟────┐ 
+║ ┌ subject_1        ║  │   └───┘    ╚═══╝    │     
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    │                          
+║ │                  ║  ├───┤   ├────╢   ╟────┤              
+║ ├ subject_2        ║  │   └───┘    ╚═══╝    │     
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    │    ┌───┐    ╔═══╗          
+║ │                  ║  ├───┤   ├────╢   ╟────┼────┤   ├────╢   ║          
+║ | ...              ║  │   └───┘    ╚═══╝    │    └───┘    ╚═══╝
+║ │                  ║  │   ┌───┐    ╔═══╗    │  
+║ ├ subject_[N-1]    ║  ├───┤   ├────╢   ╟────┤     
+║ │  └─ features.mgz ║  │   └───┘    ╚═══╝    │     
+║ │                  ║  │                     │    
+║ └ subject_[N]      ║  │                     │     
+║    └─ features.mgz ║  │                     │     
+╚════════════════════╝  │                     │     
+                        │   ┌───┐    ╔═══╗    │       
+                        └───┤   ├────╢   ╟────┘        
+                            └───┘    ╚═══╝              
+                                                          
+                             
+                                                                                 
+                                                                                                             
+                                                                                                             
+                                                                                                             
+
+</pre>
+<pre style="float: right; width: 30%; font-size: 100%;">
+Might need multiple parallel instances of
+pl-mgz2imgslices
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗                
+║ input dir          ║      ┌───┐    ╔═══╗    ┌───┐    ╔═══╗ 
+╟────────────────────╫──┬───┤   ├────╢   ╟────┤   ├────╢   ╟────┐ 
+║ ┌ subject_1        ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │     
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │                          
+║ │                  ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┤              
+║ ├ subject_2        ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │     
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │    ┌───┐    ╔═══╗          
+║ │                  ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┼────┤   ├────╢   ║          
+║ | ...              ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │    └───┘    ╚═══╝
+║ │                  ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │  
+║ ├ subject_[N-1]    ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┤     
+║ │  └─ features.mgz ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │     
+║ │                  ║  │                                       │    
+║ └ subject_[N]      ║  │                                       │     
+║    └─ features.mgz ║  │                                       │     
+╚════════════════════╝  │                                       │     
+                        │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │       
+                        └───┤   ├────╢   ╟────┤   ├────╢   ╟────┘        
+                            └───┘    ╚═══╝    └───┘    ╚═══╝              
+                                                          
+                             
+                                                                                 
+                                                                                                             
+                                                                                                             
+                                                                                                             
+
+</pre>
+<pre style="float: right; width: 30%; font-size: 100%;">
+Might need multiple parallel instances of
+pl-mgz2imgslices
+</pre>
+
+'''
+
+
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%;">
+                       
+╔════════════════════╗                
+║ input dir          ║      ┌───┐    ╔═══╗ 
+╟────────────────────╫──┬───┤   ├────╢   ╟────┐ 
+║ ┌ subject_1        ║  │   └───┘    ╚═══╝    │     
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    │                          
+║ │                  ║  ├───┤   ├────╢   ╟────┤              
+║ ├ subject_2        ║  │   └───┘    ╚═══╝    │     
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    │    ┌───┐    ╔═══╗    ┌───┐      
+║ │                  ║  ├───┤   ├────╢   ╟────┼────┤   ├────╢   ╟────┤   │          
+║ | ...              ║  │   └───┘    ╚═══╝    │    └───┘    ╚═══╝    └───┘      
+║ │                  ║  │   ┌───┐    ╔═══╗    │  
+║ ├ subject_[N-1]    ║  ├───┤   ├────╢   ╟────┤     
+║ │  └─ features.mgz ║  │   └───┘    ╚═══╝    │     
+║ │                  ║  │                     │    
+║ └ subject_[N]      ║  │                     │     
+║    └─ features.mgz ║  │                     │     
+╚════════════════════╝  │                     │     
+                        │   ┌───┐    ╔═══╗    │       
+                        └───┤   ├────╢   ╟────┘        
+                            └───┘    ╚═══╝              
+                                                          
+                             
+                                                                                 
+                                                                                                             
+                                                                                                             
+                                                                                                             
+
+</pre>
+<pre style="float: right; width: 30%; font-size: 100%;">
+Might need multiple parallel instances of
+pl-mgz2imgslices
+</pre>
+
+'''
+
+
+
+
+
+
 
 <slidebreak>
 title: <tt>ChRIS</tt>
@@ -317,10 +807,10 @@ body:
 <pre id="typewriter" style="float: right; width: 30%; font-size: 200%;">
 Training overview
 </pre>
-<pre stlye="float: left; width: 70%;">
+<pre style="float: left; width: 70%;">
                        
 ╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗ 
-║ input dir          ║      │ pl-mgz2imgslices  │     ║ output dir                                     ║  
+║ input dir          ║      │ pl-mgz2imgTree    │     ║ output dir                                     ║  
 ╟────────────────────╫──────┼───────────────────┼─────╫────────────────────────────────────────────────╫  
 ║ ┌ subject_1        ║      │                   │     ║                                                ║    
 ║ │  └─ features.mgz ║      └───────────────────┘     ║ ┌─subject_1            ┌─subject_2             ║     
@@ -334,7 +824,7 @@ Training overview
 ║ │  └─ features.mgz ║                                ║ │  │    ├─img-000.png  │  │    ├─img-000.png   ║     
 ║ │                  ║                                ║ │  │    ├─img-001.png  │  │    ├─img-001.png   ║     
 ║ └ subject_[N]      ║                                ║ │  │         ...       │  │         ...        ║      
-║   └─ features.mgz  ║                                ║ │  │    └─img-255.png  │  │    └─img-255.png   ║      
+║    └─ features.mgz ║                                ║ │  │    └─img-255.png  │  │    └─img-255.png   ║      
 ╚════════════════════╝                                ║ │  │                   │  │                    ║      
                                                       ║ │  └─[labelset_[L]]    │  └─[labelset_[L]]     ║       
                                                       ║ │       ├─img-000.png  │       ├─img-000.png   ║        
@@ -369,71 +859,6 @@ Training overview
 </pre>
 
 '''
-
-
-
-<slidebreak>
-title: <tt>ChRIS</tt>
-body:
-'''
-
-<pre id="typewriter" style="float: right; width: 30%; font-size: 200%;">
-Inference overview
-</pre>
-<pre stlye="float: left; width: 70%;">
-                                   ╔═══════════════╗                         ║ ║    
-                                   ║ swift storage ║                         ║ ║    
-                                   ╫───────────────╫──────────┐              ║ ║
-                                   ║               ║          │              ║ ║
-                                   ╚═══════╤═══════╝          │              ║n║
-                                           │                  │              ║e║
-                                           │                  │              ║t║
-                                           │                  │              ║w║
-                                           │                  │              ║o║
-                                           │                  │              ║r║
-                                           │                  │              ║k║
-                                          ─^─                 │              ║ ║
-                                        _╵   ╵_               │              ║ ║
-                                     _╵         ╵ _           │              ║ ║       
-                                  _╵               ╵ _        │              ║ ║       
-                               _╵                     ╵ _     │     ┌────────╬═╬───┬▲▲▲        
-                            _╵                           ╵_   │     │        ║ ║   │          
-                           │─           C U B E           ─│  │     │        ║ ║   │          
-                           │ ╵_                         _╵ │  │     │        ║ ║   │        
-                           │    ╵_                   _╵    │  │     │        ║ ║   │         
-                           │       ╵_             _╵   ┌───┴──┴─┐   │        ║ ║   │          
-                           │          ╵_       _╵      │  REST  │   │        ║b║   │                           
-                           │	         ╵_ _╵         │  entry ├───┘        ║o║   │                           
-                           │               │           │  point │            ║u║   │   ┌────────┐               
-                           │  ┌───────────┐│           └───┬────┘            ║n║   │   │ client │               
-                           │  │ django DB ││               │                 ║d║   └───┤  comms │               
-                           │  ├───────────┤│               │                 ║a║       │        │               
-                           │  │           ││               │                 ║r║       └────┬───┘               
-                            ─ └────┐      ││              ─                  ║y║           ▲▲▲            
-                             ╵_    │      ││            _╵                   ║ ║  
-                                ╵_ └──────┘│         _╵                      ║ ║     
-                                   ╵_      │      _╵                         ║ ║      
-                                      ╵_   │   _╵                            ∠ ∠  
-                                         ╵_│_╵                               ⦢ ⦢  
-                                                                             ⦣ ⦣  
-                                                                             ║ ║  
-                                                                             ║ ║  
-                                                                             ║ ║                   
-                                                                             ║ ║                   
-                                                                             ╬═╬                   
-                                                                             ║ ║                     
-                                                                             ║ ║                     
-                                                                             ║ ║                     
-                                                                             ║ ║
-                                                                             ║ ║
-                                                                             ║ ║
-</pre>
-
-'''
-
-
-
-
 
 
 

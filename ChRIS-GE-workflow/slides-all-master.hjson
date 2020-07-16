@@ -1,14 +1,12 @@
 /*
 To create slides from this text file:
 
-Clone the repo:
+Clone the repo and set some vars:
 
 ```
     git clone https://github.org/FNNDSC/tslide-presentations
     cd tslide-presentations
     export REPO=$(pwd)
-```
-```
     export INPUTDIR=$REPO/ChRIS-GE-workflow
     export INPUTFILE=slides-all-master.hjson
     export OUTPUTDIR=/var/www/html/slides/ChRIS-GE-workflow

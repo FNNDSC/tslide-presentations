@@ -45,7 +45,7 @@ body:
 
 
 
-_#_font_basic Overview report
+_#_font_basic Brief Overview report
 
 
 
@@ -64,7 +64,28 @@ body:
 
 
 
+_#_font_basic on the...
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+
+title:<tt>ChRIS introduction</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+
 _#_font_basic BCH
+_#_font_basic  /
 _#_font_basic GE
 
 
@@ -116,37 +137,42 @@ body:
 '''
 
 <pre style="float: left; width: 50%;font-size: 200%;">
-Overview report on the Machine Learning
+Quick overview report on the Machine Learning
 pipeline.
 
 With emphasis on:
+_#_o_01 ▆ Training
+_#_o_02 ▆ Inference
+
 </pre>
 
 <pre style="float: right; width: 50%; font-size: 200%">
-_#_o_01 ▆ Training
-_#_o_02 ▆ Inference
 </pre>
 
 '''
 
 <slidebreak>
 title: <tt>ChRIS</tt>
-// body-style: "background: black; color:lightgreen;"
-// body-class: terminal
 body:
 '''
 
 <pre style="float: left; width: 50%;font-size: 200%;">
-Training considerations:
+Quick overview report on the Machine Learning
+pipeline.
 
-▆ process components of a
-  single training data set
-    ▆ extract dynamic set of features
+With emphasis on:
 
-▆ process collection of input
-  training data sets
-    ▆ how to effectively handle a
-      collective input set
+ ▆ Training
+
+ ▆ Inference
+
+</pre>
+
+<pre style="float: right; width: 50%; font-size: 200%">
+ ▆ Training
+
+_#_o_01 ▙ Pipeline design
+_#_o_02 ▙ End-to-end deployment
 
 </pre>
 
@@ -156,235 +182,247 @@ Training considerations:
 title: <tt>ChRIS</tt>
 body:
 '''
-<pre id="typewriter" style="float: right; width: 40%; font-size: 200%;">
-Input data fileset,
-`features.mgz`
+
+<pre style="float: left; width: 50%;font-size: 200%;">
+Quick overview report on the Machine Learning
+pipeline.
+
+With emphasis on:
+
+ ▆ Training
+
+ ▆ Inference
+
 </pre>
-<pre style="float: left; width: 60%;">
-╔════════════════════╗
-║         [inputDir] ║
-╟────────────────────╢
-║   features.mgz     ║
-║                    ║
-╚════════════════════╝
 
+<pre style="float: right; width: 50%; font-size: 200%">
+ ▆ Inference
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+_#_o_01 ▙ Preliminary integration into ChRIS UI
+_#_o_02 ▙ Preliminary results
 
 
 </pre>
 
 '''
+
 
 <slidebreak>
 title: <tt>ChRIS</tt>
 body:
 '''
-<pre style="float: right; width: 40%; font-size: 200%;">
-Input data fileset,
-`features.mgz`
-<pre id="typewriter">
-is processed by a plugin
-`pl-mgz2imgslices`...
-</pre>
-</pre>
-<pre style="float: left; width: 60%;">
-╔════════════════════╗      ┌───────────────────┐
-║         [inputDir] ║      │ pl-mgz2imgslices  │
-╟────────────────────╫──────┼───────────────────┤
-║   features.mgz     ║      │                   │
-║                    ║      └───────────────────┘
-╚════════════════════╝
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
-'''
-
-<slidebreak>
-title: <tt>ChRIS</tt>
-body:
-'''
-<pre style="float: right; width: 40%; font-size: 200%;">
-Input data fileset,
-`features.mgz`
-
-is processed by a plugin
-`pl-mgz2imgslices`...
-
-
-which dynamically discovers
-labels in the feature set and
-creates an output organization
-of image files for each label.
-</pre>
 <pre style="float: left; width: 60%;">
 ╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗
-║         [inputDir] ║      │ pl-mgz2imgslices  │     ║ [outputDir]                                    ║
-╟────────────────────╢──────┼───────────────────┼─────╫────────────────────────────────────────────────╢
-║   features.mgz     ║      │  -i features.mgz  │     ║    ┌─label-[set_1]                             ║
-║                    ║      │  -l label-        │     ║    │    ├─img-000.png                          ║
-╚════════════════════╝      │  -o img.png       │     ║    │    ├─img-001.png                          ║
-                            └───────────────────┘     ║    │         ...                               ║
-                                                      ║    │    └─img-255.png                          ║
-                                                      ║    │                                           ║
-                                                      ║    ├─label-[set_2]                             ║
-                                                      ║    │    ├─img-000.png                          ║
-                                                      ║    │    ├─img-001.png                          ║
-                                                      ║    │         ...                               ║
-                                                      ║    │    └─img-255.png                          ║
-                                                      ║    │                                           ║
-                                                      ║    └─label-[set_[L]]                           ║
-                                                      ║         ├─img-000.png                          ║
-                                                      ║         ├─img-001.png                          ║
-                                                      ║              ...                               ║
-                                                      ║         └─img-255.png                          ║
+║         [inputDir] ║      │ training plugin   │     ║ [outputDir]                                    ║
+╟────────────────────╫──────┼───────────────────┼─────╫────────────────────────────────────────────────╢
+║ ┌ subject_1        ║      │                   │     ║                                                ║
+║ │                  ║      │                   │     ║                   Model                        ║
+║ │                  ║      │                   │     ║                                                ║
+║ ├ subject_2        ║      │                   │     ║                                                ║
+║ │                  ║      └───────────────────┘     ║                                                ║
+║ │                  ║                                ║                                                ║
+║ | ...              ║                                ║                                                ║
+║ │                  ║                                ║                                                ║
+║ ├ subject_[N-1]    ║                                ║                                                ║
+║ │                  ║                                ║                                                ║
+║ │                  ║                                ║                                                ║
+║ └ subject_[N]      ║                                ║                                                ║
+║                    ║                                ║                                                ║
+╚════════════════════╝                                ║                                                ║
+                                                      ║                                                ║
+                                                      ║                                                ║
+                                                      ║                                                ║
+                                                      ║                                                ║
+                                                      ║                                                ║
                                                       ╚════════════════════════════════════════════════╝
 
 
-
+<pre id="typewriter" style="font-size:200%;">
+             Preliminary work is exploring
+              a multi-model design, with
+                each model tuned to a
+                specific cortical label.
 </pre>
-
-'''
-
-<slidebreak>
-title: <tt>ChRIS</tt>
-body:
-'''
-<pre style="float: left; width: 70%; font-size: 200%;">
-
-The above worflow essentially extracts a set of labeled features from
-one input data set:
-
-features.mgz ─────────────────────────────────────┬─label-[set_1]
-                                                  │    ├─img-000.png
-                                                  │    ├─img-001.png
-                                                  │         ...
-                                                  │    └─img-255.png
-                                                  │
-                                                  ├─label-[set_2]
-                                                  │    ├─img-000.png
-                                                  │    ├─img-001.png
-                                                  │         ...
-                                                  │    └─img-255.png
-                                                  │
-                                                  └─label-[set_[L]]
-                                                       ├─img-000.png
-                                                       ├─img-001.png
-                                                            ...
-                                                       └─img-255.png
-
-
-
 
 
 </pre>
-
-'''
-
-<slidebreak>
-title: <tt>ChRIS</tt>
-body:
-'''
 <pre style="float: right; width: 40%; font-size: 200%;">
-In current form, one instance of plugin
-is not suited for building a training
-workflow.
-</pre>
-<pre style="float: left; width: 60%;">
-╔════════════════════╗      ┌───────────────────┐
-║         [inputDir] ║      │ pl-mgz2imgslices  │
-╟────────────────────╫──────┼───────────────────┤
-║ ┌ subject_1        ║      │  which subject?   │
-║ │  └─ features.mgz ║      └───────────────────┘
-║ │                  ║
-║ ├ subject_2        ║
-║ │  └─ features.mgz ║
-║ │                  ║
-║ | ...              ║
-║ │                  ║
-║ ├ subject_[N-1]    ║
-║ │  └─ features.mgz ║
-║ │                  ║
-║ └ subject_[N]      ║
-║    └─ features.mgz ║
-╚════════════════════╝
-
-
-
-
-
-
-
-
-
 </pre>
 
 '''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+╔════════════╗      ┌────────────┐     ╔═══════════════════╗
+║      input ║      │            │     ║ output            ║
+╟────────────╫──────┼────────────┼─────╫───────────────────╢
+║  multiple  ║      │  feature   │     ║ multiple labels   ║
+║ source and ║      │ extraction │     ║        and        ║
+║   targets  ║      │            │     ║ multiple subjects ║
+╚════════════╝      └────────────┘     ╚═══════════════════╝
+
+
+<pre>
+</pre>
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+╔════════════╗      ┌────────────┐     ╔═══════════════════╗
+║      input ║      │            │     ║ output            ║
+╟────────────╫──────┼────────────┼─────╫───────────────────╫──────┐
+║  multiple  ║      │  feature   │     ║ multiple labels   ║      │
+║ source and ║      │ extraction │     ║        and        ║      │
+║   targets  ║      │            │     ║ multiple subjects ║      │
+╚════════════╝      └────────────┘     ╚═══════════════════╝      │
+                 ┌────────────────────────────────────────────────┘
+                 │
+                 │  ┌────────────┐     ╔═══════════════════╗
+                 │  │            │     ║ output            ║
+                 └──┼────────────┼─────╫───────────────────╢
+                    │   model    │     ║ model             ║
+                    │  builder   │     ║      1            ║
+                    │            │     ║                   ║
+                    └────────────┘     ╚═══════════════════╝
+
+
+
+
+
+
+
+
+
+<pre>
+</pre>
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+╔════════════╗      ┌────────────┐     ╔═══════════════════╗
+║      input ║      │            │     ║ output            ║
+╟────────────╫──────┼────────────┼─────╫───────────────────╫──────┐
+║  multiple  ║      │  feature   │     ║ multiple labels   ║      │
+║ source and ║      │ extraction │     ║        and        ║      │
+║   targets  ║      │            │     ║ multiple subjects ║      │
+╚════════════╝      └────────────┘     ╚═══════════════════╝      │
+               ┌─┬────────────────────────────────────────────────┘
+               │ │
+               │ │  ┌────────────┐     ╔═══════════════════╗
+               │ │  │            │     ║ output            ║
+               │ └──┼────────────┼─────╫───────────────────╢
+               │    │   model    │     ║ model             ║
+               │    │  builder   │     ║      1            ║
+               │    │            │     ║                   ║
+               │    └────────────┘     ╚═══════════════════╝
+               │
+               │
+               │
+               │    ┌────────────┐     ╔═══════════════════╗
+               │    │            │     ║ output            ║
+               └────┼────────────┼─────╫───────────────────╢
+                    │   model    │     ║ model             ║
+                    │  builder   │     ║      2            ║
+                    │            │     ║                   ║
+                    └────────────┘     ╚═══════════════════╝
+
+
+
+
+
+
+
+
+<pre>
+</pre>
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+╔════════════╗      ┌────────────┐     ╔═══════════════════╗
+║      input ║      │            │     ║ output            ║
+╟────────────╫──────┼────────────┼─────╫───────────────────╫──────┐
+║  multiple  ║      │  feature   │     ║ multiple labels   ║      │
+║ source and ║      │ extraction │     ║        and        ║      │
+║   targets  ║      │            │     ║ multiple subjects ║      │
+╚════════════╝      └────────────┘     ╚═══════════════════╝      │
+             ┌─┬─┬────────────────────────────────────────────────┘
+             │ │ │
+             │ │ │  ┌────────────┐     ╔═══════════════════╗
+             │ │ │  │            │     ║ output            ║
+             │ │ └──┼────────────┼─────╫───────────────────╢
+             │ │    │   model    │     ║ model             ║
+             │ │    │  builder   │     ║      1            ║
+             │ │    │            │     ║                   ║
+             │ │    └────────────┘     ╚═══════════════════╝
+             │ │
+             │ │
+             │ │
+             │ │    ┌────────────┐     ╔═══════════════════╗
+             │ │    │            │     ║ output            ║
+             │ └────┼────────────┼─────╫───────────────────╢
+             │      │   model    │     ║ model             ║
+             │      │  builder   │     ║      2            ║
+             │      │            │     ║                   ║
+             │      └────────────┘     ╚═══════════════════╝
+             │
+             │
+             │                     . . .
+             │
+             │
+             │      ┌────────────┐     ╔═══════════════════╗
+             │      │            │     ║ output            ║
+             └──────┼────────────┼─────╫───────────────────╢
+                    │   model    │     ║ model             ║
+                    │  builder   │     ║      [L]          ║
+                    │            │     ║                   ║
+                    └────────────┘     ╚═══════════════════╝
+
+
+
+
+<pre>
+</pre>
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+
+
 
 
 <slidebreak>
@@ -455,9 +493,9 @@ body:
                                                    │  ║              ...                               ║
                                                    │  ║         └─img-255.png                          ║
                                                    │  ╚════════════════════════════════════════════════╝
-                                                   │ 
-                                                   │ 
-                                                   │ 
+                                                   │
+                                                   │
+                                                   │
                                                    └─────┐
                                                          │
                                                          │   ╔════════════════════════════════════════════════╗
@@ -687,26 +725,26 @@ title: <tt>ChRIS</tt>
 body:
 '''
 <pre style="float: left; width: 60%;">
-╔════════════════════╗                                                                       
-║         [inputDir] ║      ┌───┐    ╔═══╗    ┌───┐    ╔═══╗                                 
-╟────────────────────╫──┬───┤   ├────╢   ╟────┤   ├────╢   ╟────┐                            
-║ ┌ subject_1        ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │                            
-║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │                            
-║ │                  ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┤                            
-║ ├ subject_2        ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │                            
-║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │    ┌───┐    ╔═══╗          
-║ │                  ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┼────┤   ├────╢   ║          
-║ | ...              ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │    └───┘    ╚═══╝          
-║ │                  ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │                            
-║ ├ subject_[N-1]    ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┤                            
-║ │  └─ features.mgz ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │                            
-║ │                  ║  │                                       │                            
-║ └ subject_[N]      ║  │                                       │                            
-║    └─ features.mgz ║  │                                       │                            
-╚════════════════════╝  │                                       │                            
-                        │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │                            
-                        └───┤   ├────╢   ╟────┤   ├────╢   ╟────┘                            
-                            └───┘    ╚═══╝    └───┘    ╚═══╝                                 
+╔════════════════════╗
+║         [inputDir] ║      ┌───┐    ╔═══╗    ┌───┐    ╔═══╗
+╟────────────────────╫──┬───┤   ├────╢   ╟────┤   ├────╢   ╟────┐
+║ ┌ subject_1        ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │
+║ │                  ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┤
+║ ├ subject_2        ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │
+║ │  └─ features.mgz ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │    ┌───┐    ╔═══╗
+║ │                  ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┼────┤   ├────╢   ║
+║ | ...              ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │    └───┘    ╚═══╝
+║ │                  ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │
+║ ├ subject_[N-1]    ║  ├───┤   ├────╢   ╟────┤   ├────╢   ╟────┤
+║ │  └─ features.mgz ║  │   └───┘    ╚═══╝    └───┘    ╚═══╝    │
+║ │                  ║  │                                       │
+║ └ subject_[N]      ║  │                                       │
+║    └─ features.mgz ║  │                                       │
+╚════════════════════╝  │                                       │
+                        │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │
+                        └───┤   ├────╢   ╟────┤   ├────╢   ╟────┘
+                            └───┘    ╚═══╝    └───┘    ╚═══╝
 
 
 
@@ -722,7 +760,7 @@ process one subject independently and
 would finally need to recombine the
 branches.
 
-Each branch in theory could have 
+Each branch in theory could have
 additional plugins.
 
 Note this topology is not yet fully
@@ -894,7 +932,7 @@ title: <tt>ChRIS</tt>
 body:
 '''
 <pre style="float: right; width: 40%; font-size: 200%;">
-And creates an output directory 
+And creates an output directory
 structure...
 </pre>
 <pre style="float: left; width: 60%;">
@@ -956,7 +994,7 @@ body:
 <pre style="float: right; width: 45%; font-size: 200%;">
 This meta plugin, `pl-mgz2imgTree` would
 intelligently probe its [inputDir] space
-and create an [outputDir] of similar 
+and create an [outputDir] of similar
 structure containing png data of the
 source.
 
@@ -1172,9 +1210,9 @@ title: <tt>ChRIS</tt>
 body:
 '''
 <pre style="float: right; width: 30%; font-size: 200%;">
-into a reorganization from 
+into a reorganization from
 labels-per-subject to
-subjects-per-label which 
+subjects-per-label which
 is suitable for training
 models per label.
 
@@ -1307,41 +1345,41 @@ title: <tt>ChRIS</tt>
 body:
 '''
 <pre style="float: left; width: 60%;">
-                                                                            
-                                                                     cNN     model          
-                                                                     per      per           
-╔════════════════════╗                                              label    label                        
-║         [inputDir] ║                                              ┌───┐    ╔═══╗                       
-╟────────────────────╫──┐                                       ┌───┤   ├────╢   ║                       
-║ ┌ subject_1        ║  │                                       │   └───┘    ╚═══╝                       
-║ │  ├─ features.mgz ║  │                                       │   ┌───┐    ╔═══╗                       
-║ │  └─ image.mgz    ║  │                                       ├───┤   ├────╢   ║                       
-║ │                  ║  │             png               png     │   └───┘    ╚═══╝                       
-║ ├ subject_2        ║  │            labels           subjects  │   ┌───┐    ╔═══╗     
-║ │  ├─ features.mgz ║  │             per               per     ├───┤   ├────╢   ║     
-║ │  └─ image.mgz    ║  │           subjects           labels   │   └───┘    ╚═══╝     
-║ | ...              ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │   ┌───┐    ╔═══╗                       
-║ │                  ║  └───┤   ├────╢   ╟────┤   ├────╢   ╟────┼───┤   ├────╢   ║                       
-║ ├ subject_[N-1]    ║      └───┘    ╚═══╝    └───┘    ╚═══╝    │   └───┘    ╚═══╝                       
-║ │  ├─ features.mgz ║                                          │                                        
-║ │  └─ image.mgz    ║                                          │                                        
-║ │                  ║                                          │                                        
-║ └ subject_[N]      ║                                          │                                        
-║    ├─ features.mgz ║                                          │   ┌───┐    ╔═══╗                       
-║    └─ image.mgz    ║                                          └───┤   ├────╢   ║                       
-╚════════════════════╝                                              └───┘    ╚═══╝                       
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
+
+                                                                     cNN     model
+                                                                     per      per
+╔════════════════════╗                                              label    label
+║         [inputDir] ║                                              ┌───┐    ╔═══╗
+╟────────────────────╫──┐                                       ┌───┤   ├────╢   ║
+║ ┌ subject_1        ║  │                                       │   └───┘    ╚═══╝
+║ │  ├─ features.mgz ║  │                                       │   ┌───┐    ╔═══╗
+║ │  └─ image.mgz    ║  │                                       ├───┤   ├────╢   ║
+║ │                  ║  │             png               png     │   └───┘    ╚═══╝
+║ ├ subject_2        ║  │            labels           subjects  │   ┌───┐    ╔═══╗
+║ │  ├─ features.mgz ║  │             per               per     ├───┤   ├────╢   ║
+║ │  └─ image.mgz    ║  │           subjects           labels   │   └───┘    ╚═══╝
+║ | ...              ║  │   ┌───┐    ╔═══╗    ┌───┐    ╔═══╗    │   ┌───┐    ╔═══╗
+║ │                  ║  └───┤   ├────╢   ╟────┤   ├────╢   ╟────┼───┤   ├────╢   ║
+║ ├ subject_[N-1]    ║      └───┘    ╚═══╝    └───┘    ╚═══╝    │   └───┘    ╚═══╝
+║ │  ├─ features.mgz ║                                          │
+║ │  └─ image.mgz    ║                                          │
+║ │                  ║                                          │
+║ └ subject_[N]      ║                                          │
+║    ├─ features.mgz ║                                          │   ┌───┐    ╔═══╗
+║    └─ image.mgz    ║                                          └───┤   ├────╢   ║
+╚════════════════════╝                                              └───┘    ╚═══╝
+
+
+
+
+
+
+
+
+
+
+
+
 
 </pre>
 <pre style="float: right; width: 40%; font-size: 200%;">
@@ -1360,6 +1398,360 @@ cNN for that label.
 '''
 
 
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+
+                                           
+                                     ╔═══╗ 
+╔════════════════════╗               ║▁  ║ 
+║         [inputDir] ║               ║   ║ 
+╟────────────────────╫──┐            ║   ║ 
+║ ┌ subject_1 ▁      ║  │            ║   ║ 
+║ │  ├─ features.mgz ║  │            ║   ║ 
+║ │  └─ image.mgz    ║  │            ║   ║ 
+║ │                  ║  │            ║▂  ║ 
+║ ├ subject_2 ▂      ║  │            ║   ║ 
+║ │  ├─ features.mgz ║  │            ║   ║ 
+║ │  └─ image.mgz    ║  │            ║   ║ 
+║ | ...              ║  │   ┌───┐    ║   ║ 
+║ │                  ║  └───┤   ├────╢ . ║ 
+║ ├ subject_[N-1] ▃  ║      └───┘    ║ . ║ 
+║ │  ├─ features.mgz ║               ║▃  ║ 
+║ │  └─ image.mgz    ║               ║   ║ 
+║ │                  ║               ║   ║ 
+║ └ subject_[N] ▄    ║               ║   ║ 
+║    ├─ features.mgz ║               ║   ║
+║    └─ image.mgz    ║               ║   ║
+╚════════════════════╝               ║▄  ║
+                                     ║   ║     
+                                     ║   ║      
+                                     ║   ║      
+                                     ║   ║      
+                                     ╚═══╝      
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+
+
+
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+
+                                           
+                                     ╔═══╗ 
+╔════════════════════╗               ║▁  ║ 
+║         [inputDir] ║               ║ ▙ ║ 
+╟────────────────────╫──┐            ║   ║ 
+║ ┌ subject_1 ▁      ║  │            ║   ║ 
+║ │  ├─ features.mgz ║  │            ║   ║ 
+║ │  └─ image.mgz    ║  │            ║   ║ 
+║ │                  ║  │            ║▂  ║ 
+║ ├ subject_2 ▂      ║  │            ║ ▙ ║ 
+║ │  ├─ features.mgz ║  │            ║   ║ 
+║ │  └─ image.mgz    ║  │            ║   ║ 
+║ | ...              ║  │   ┌───┐    ║   ║ 
+║ │                  ║  └───┤   ├────╢ . ║ 
+║ ├ subject_[N-1] ▃  ║      └───┘    ║ . ║ 
+║ │  ├─ features.mgz ║               ║▃  ║ 
+║ │  └─ image.mgz    ║               ║ ▙ ║ 
+║ │                  ║               ║   ║ 
+║ └ subject_[N] ▄    ║               ║   ║ 
+║    ├─ features.mgz ║               ║   ║
+║    └─ image.mgz    ║               ║   ║
+╚════════════════════╝               ║▄  ║
+                                     ║ ▙ ║     
+                                     ║   ║      
+                                     ║   ║      
+                                     ║   ║      
+                                     ╚═══╝      
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+
+
+
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+
+                                           
+                                     ╔═══╗ 
+╔════════════════════╗               ║▁  ║ 
+║         [inputDir] ║               ║ ▙ ║ 
+╟────────────────────╫──┐            ║ ▚ ║ 
+║ ┌ subject_1 ▁      ║  │            ║ ▛ ║ 
+║ │  ├─ features.mgz ║  │            ║ ▚ ║ 
+║ │  └─ image.mgz    ║  │            ║   ║ 
+║ │                  ║  │            ║▂  ║ 
+║ ├ subject_2 ▂      ║  │            ║ ▙ ║ 
+║ │  ├─ features.mgz ║  │            ║ ▚ ║ 
+║ │  └─ image.mgz    ║  │            ║ ▛ ║ 
+║ | ...              ║  │   ┌───┐    ║ ▚ ║ 
+║ │                  ║  └───┤   ├────╢ . ║ 
+║ ├ subject_[N-1] ▃  ║      └───┘    ║ . ║ 
+║ │  ├─ features.mgz ║               ║▃  ║ 
+║ │  └─ image.mgz    ║               ║ ▙ ║ 
+║ │                  ║               ║ ▚ ║ 
+║ └ subject_[N] ▄    ║               ║ ▛ ║ 
+║    ├─ features.mgz ║               ║ ▚ ║
+║    └─ image.mgz    ║               ║   ║
+╚════════════════════╝               ║▄  ║
+                                     ║ ▙ ║     
+                                     ║ ▚ ║      
+                                     ║ ▛ ║      
+                                     ║ ▚ ║      
+                                     ╚═══╝      
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+
+
+
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+
+                                                            
+                                     ╔═══╗             ╔═══╗ 
+╔════════════════════╗               ║▁  ║             ║▙  ║ 
+║         [inputDir] ║               ║ ▙ ║             ║   ║
+╟────────────────────╫──┐            ║ ▚ ║             ║   ║
+║ ┌ subject_1 ▁      ║  │            ║ ▛ ║             ║   ║
+║ │  ├─ features.mgz ║  │            ║ ▚ ║             ║   ║
+║ │  └─ image.mgz    ║  │            ║   ║             ║   ║
+║ │                  ║  │            ║▂  ║             ║▚  ║
+║ ├ subject_2 ▂      ║  │            ║ ▙ ║             ║   ║ 
+║ │  ├─ features.mgz ║  │            ║ ▚ ║             ║   ║ 
+║ │  └─ image.mgz    ║  │            ║ ▛ ║             ║   ║ 
+║ | ...              ║  │   ┌───┐    ║ ▚ ║    ┌───┐    ║   ║
+║ │                  ║  └───┤   ├────╢ . ╟────┤   ├────╢ . ╟
+║ ├ subject_[N-1] ▃  ║      └───┘    ║ . ║    └───┘    ║ . ║
+║ │  ├─ features.mgz ║               ║▃  ║             ║▛  ║ 
+║ │  └─ image.mgz    ║               ║ ▙ ║             ║   ║ 
+║ │                  ║               ║ ▚ ║             ║   ║ 
+║ └ subject_[N] ▄    ║               ║ ▛ ║             ║   ║ 
+║    ├─ features.mgz ║               ║ ▚ ║             ║   ║
+║    └─ image.mgz    ║               ║   ║             ║   ║
+╚════════════════════╝               ║▄  ║             ║▚  ║
+                                     ║ ▙ ║             ║   ║     
+                                     ║ ▚ ║             ║   ║      
+                                     ║ ▛ ║             ║   ║      
+                                     ║ ▚ ║             ║   ║      
+                                     ╚═══╝             ╚═══╝      
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+
+
+
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+
+                                                            
+                                     ╔═══╗             ╔═══╗ 
+╔════════════════════╗               ║▁  ║             ║▙  ║ 
+║         [inputDir] ║               ║ ▙ ║             ║ ▁ ║
+╟────────────────────╫──┐            ║ ▚ ║             ║   ║
+║ ┌ subject_1 ▁      ║  │            ║ ▛ ║             ║   ║
+║ │  ├─ features.mgz ║  │            ║ ▚ ║             ║   ║
+║ │  └─ image.mgz    ║  │            ║   ║             ║   ║
+║ │                  ║  │            ║▂  ║             ║▚  ║
+║ ├ subject_2 ▂      ║  │            ║ ▙ ║             ║ ▁ ║ 
+║ │  ├─ features.mgz ║  │            ║ ▚ ║             ║   ║ 
+║ │  └─ image.mgz    ║  │            ║ ▛ ║             ║   ║ 
+║ | ...              ║  │   ┌───┐    ║ ▚ ║    ┌───┐    ║   ║
+║ │                  ║  └───┤   ├────╢ . ╟────┤   ├────╢ . ╟
+║ ├ subject_[N-1] ▃  ║      └───┘    ║ . ║    └───┘    ║ . ║
+║ │  ├─ features.mgz ║               ║▃  ║             ║▛  ║ 
+║ │  └─ image.mgz    ║               ║ ▙ ║             ║ ▁ ║ 
+║ │                  ║               ║ ▚ ║             ║   ║ 
+║ └ subject_[N] ▄    ║               ║ ▛ ║             ║   ║ 
+║    ├─ features.mgz ║               ║ ▚ ║             ║   ║
+║    └─ image.mgz    ║               ║   ║             ║   ║
+╚════════════════════╝               ║▄  ║             ║▚  ║
+                                     ║ ▙ ║             ║ ▁ ║     
+                                     ║ ▚ ║             ║   ║      
+                                     ║ ▛ ║             ║   ║      
+                                     ║ ▚ ║             ║   ║      
+                                     ╚═══╝             ╚═══╝      
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+
+
+
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+
+                                                            
+                                     ╔═══╗             ╔═══╗ 
+╔════════════════════╗               ║▁  ║             ║▙  ║ 
+║         [inputDir] ║               ║ ▙ ║             ║ ▁ ║
+╟────────────────────╫──┐            ║ ▚ ║             ║ ▂ ║
+║ ┌ subject_1 ▁      ║  │            ║ ▛ ║             ║ ▃ ║
+║ │  ├─ features.mgz ║  │            ║ ▚ ║             ║ ▄ ║
+║ │  └─ image.mgz    ║  │            ║   ║             ║   ║
+║ │                  ║  │            ║▂  ║             ║▚  ║
+║ ├ subject_2 ▂      ║  │            ║ ▙ ║             ║ ▁ ║ 
+║ │  ├─ features.mgz ║  │            ║ ▚ ║             ║ ▂ ║ 
+║ │  └─ image.mgz    ║  │            ║ ▛ ║             ║ ▃ ║ 
+║ | ...              ║  │   ┌───┐    ║ ▚ ║    ┌───┐    ║ ▄ ║
+║ │                  ║  └───┤   ├────╢ . ╟────┤   ├────╢ . ╟
+║ ├ subject_[N-1] ▃  ║      └───┘    ║ . ║    └───┘    ║ . ║
+║ │  ├─ features.mgz ║               ║▃  ║             ║▛  ║ 
+║ │  └─ image.mgz    ║               ║ ▙ ║             ║ ▁ ║ 
+║ │                  ║               ║ ▚ ║             ║ ▂ ║ 
+║ └ subject_[N] ▄    ║               ║ ▛ ║             ║ ▃ ║ 
+║    ├─ features.mgz ║               ║ ▚ ║             ║ ▄ ║
+║    └─ image.mgz    ║               ║   ║             ║   ║
+╚════════════════════╝               ║▄  ║             ║▚  ║
+                                     ║ ▙ ║             ║ ▁ ║     
+                                     ║ ▚ ║             ║ ▂ ║      
+                                     ║ ▛ ║             ║ ▃ ║      
+                                     ║ ▚ ║             ║ ▄ ║      
+                                     ╚═══╝             ╚═══╝      
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+
+
+
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 60%;">
+
+                                                                     cNN     model
+                                     ╔═══╗             ╔═══╗         per      per
+╔════════════════════╗               ║▁  ║             ║▙  ║        label    label
+║         [inputDir] ║               ║ ▙ ║             ║ ▁ ║        ┌───┐    ╔═══╗
+╟────────────────────╫──┐            ║ ▚ ║             ║ ▂ ║    ┌───┤   ├────╢ ▙ ║
+║ ┌ subject_1 ▁      ║  │            ║ ▛ ║             ║ ▃ ║    │   └───┘    ╚═══╝
+║ │  ├─ features.mgz ║  │            ║ ▚ ║             ║ ▄ ║    │   ┌───┐    ╔═══╗
+║ │  └─ image.mgz    ║  │            ║   ║             ║   ║    ├───┤   ├────╢ ▚ ║
+║ │                  ║  │            ║▂  ║             ║▚  ║    │   └───┘    ╚═══╝
+║ ├ subject_2 ▂      ║  │            ║ ▙ ║             ║ ▁ ║    │
+║ │  ├─ features.mgz ║  │            ║ ▚ ║             ║ ▂ ║    │
+║ │  └─ image.mgz    ║  │            ║ ▛ ║             ║ ▃ ║    │
+║ | ...              ║  │   ┌───┐    ║ ▚ ║    ┌───┐    ║ ▄ ║    │   ┌───┐    ╔═══╗
+║ │                  ║  └───┤   ├────╢ . ╟────┤   ├────╢ . ╟────┼───┤   ├────╢ ▛ ║
+║ ├ subject_[N-1] ▃  ║      └───┘    ║ . ║    └───┘    ║ . ║    │   └───┘    ╚═══╝
+║ │  ├─ features.mgz ║               ║▃  ║             ║▛  ║    │
+║ │  └─ image.mgz    ║               ║ ▙ ║             ║ ▁ ║    │
+║ │                  ║               ║ ▚ ║             ║ ▂ ║    │
+║ └ subject_[N] ▄    ║               ║ ▛ ║             ║ ▃ ║    │
+║    ├─ features.mgz ║               ║ ▚ ║             ║ ▄ ║    │   ┌───┐    ╔═══╗
+║    └─ image.mgz    ║               ║   ║             ║   ║    └───┤   ├────╢ ▚ ║
+╚════════════════════╝               ║▄  ║             ║▚  ║        └───┘    ╚═══╝
+                                     ║ ▙ ║             ║ ▁ ║                           
+                                     ║ ▚ ║             ║ ▂ ║                            
+                                     ║ ▛ ║             ║ ▃ ║                            
+                                     ║ ▚ ║             ║ ▄ ║                            
+                                     ╚═══╝             ╚═══╝                            
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+
+
+
+
+
+</pre>
+<pre style="float: right; width: 40%; font-size: 200%;">
+</pre>
+
+'''
+
+
+
+<slidebreak>
+title: <tt>End</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random quick demo...
+
+
+</pre>
+
+'''
 
 
 

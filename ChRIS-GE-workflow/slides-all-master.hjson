@@ -127,7 +127,7 @@ body:
     </div>
 </div>
 <div style="float:right; width:50%;" class="snippet" id="order-1">
-    <img src="images/profile1.jpg" width=200 style="float: left;">
+    <img src="figs/profile1.jpg" width=400 style="float: left;">
 </div>
 '''
 

@@ -1,0 +1,400 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+    export INPUTDIR=$REPO/ChRIS-COVIDnet
+    export INPUTFILE=slides-all-master.hjson
+    export OUTPUTDIR=/var/www/html/slides/ChRIS-COVIDnet
+```
+
+After edits, run tsmake on it:
+
+```
+    cd ~
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR             \
+             --inputDir $INPUTDIR               \
+             --slidesFile $INPUTFILE            \
+             --slideListGlob "slide-*"          \
+             --additionalDirList $INPUTDIR/figs \
+             --verbosity 3
+```
+
+Finally, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+*/
+
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_basic COVIDnet
+_#_font_basic   +
+_#_font_basic ChRIS
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+
+
+title: <tt>About me...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
+    <div class="sl-block-content" style="z-index: 10;">
+        <iframe style="width: 1000px; height: 550px; left: 80px; top: 70px;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation" data-src="https://codepen.io/rudolphpienaar/live/abOQoao" src="https://codepen.io/rudolphpienaar/live/abOQoao">
+        </iframe>
+    </div>
+</div>
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/profile1.jpg" width=400 style="float: right;">
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic TL;DR
+</pre>
+
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    What is the "Too Long; Didn't Read" here..?
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic TL;DL
+</pre>
+
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    Or maybe, "Too Long; Didn't Look"...
+
+    "Too Long; Don't Really Want to Look or Read"...
+
+    :-)
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic TL;DL
+</pre>
+
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    <b>COVID-NET</b> is an <i>application</i> 
+    
+    
+                   and
+
+
+        <b>ChRIS</b> is a <i>platform</i>.
+
+
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01    <i>Both are opensource under MIT-esque licenses</i>
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic TL;DL
+</pre>
+
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    Actually, <b>COVID-NET</b> is more a <i>pipeline</i> of
+    docker images (these images must conform
+    to a simple CLI spec) and...
+
+    <b>ChRIS</b> allows for the dynamic or scripted
+    execution of these containers...
+
+    kind of <i>anywhere</i>...
+
+    <i>cool, right?</i>
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Oh..!
+</pre>
+
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    Containers that "run" on <b>ChRIS</b> are called
+    <i>plugins</i>.
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01   ▆ Arguably <i>plugin</i> is lexically misleading...
+_#_o_02   ▆ ChRIS <i>plugins</i> can run outside of ChRIS
+_#_o_03      ▆ quite happily in fact
+_#_o_04      ▆ but are then fully under user control
+</pre>
+
+
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    What is <b>THIS</b> talk about?
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01   ▆ What exists on the COVID-NET pipeline?
+_#_o_02   ▆ What are the <i>current</i> COVID-NET needs?
+_#_o_03   ▆ What exists on the ChRIS platform?
+_#_o_04   ▆ What are the <i>current</i> ChRIS needs?
+_#_o_05   ▆ Possibly a ChRIS <i>deeper dive</i>...
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    What exists on the COVID-NET pipeline?
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01   ▆ Copy DICOM image into new workflow
+_#_o_02   ▆ Convert DICOM image to png
+_#_o_03   ▆ Run inference engine
+_#_o_04   ▆ Generate PDF report
+
+_#_o_05   <i>Other than tweaks, these are mostly...</i>
+_#_o_06   <b>done</b>
+
+
+</pre>
+
+
+
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre id="typewriter" style="font-size:300%;">
+    Wait... what's a <i>DICOM</i>?
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 50%">
+_#_o_01   ▆ <i>D</i>igital <i>I</i>mage and <i>COM</i>munications
+_#_o_02   ▆ de-facto standard for medical images
+_#_o_03   ▆ Basically just a jpg and a binary header
+_#_o_04   ▆ Very very 90's.
+</pre>
+
+<div style="float:right; width:50%;" class="snippet" id="order-5">
+    <img src="figs/SAG_MPRAGE_220_FOV-slice115.jpg" width=512>
+</div>
+
+
+</div>
+'''
+
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    What are the <i>current</i> COVID-NET needs?
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01   ▆ Most of the work is on the UI front
+_#_o_02   ▆ Control of ChRIS is via JS libs
+_#_o_03   ▆ Client based
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    <i>Any other</i> COVID-NET needs?
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01   ▆ UI work on meaningfully "accessing" images
+_#_o_02      ▆ Medical images exist in something called a <b>PACS</b>
+_#_o_03      ▆ A somewhat arcane bi-phase operational interface
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about COVID-NET...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div class="iframe-container">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSrEqLeCoCUUhGW7S6HI9oN9UslKeSGuB5rCDRWpzGlMHSCkN1C4WIuMTkbu8y57vI1q5gTx3FRwi05/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+</div>
+'''
+
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    What are the <i>current</i> ChRIS needs?
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01   ▆ Backend workflow control
+_#_o_02   ▆ Help re-architect some of the Command-and-Control
+_#_o_03     ▆ ChRIS coordinator
+_#_o_04     ▆ Remote file handler
+_#_o_05     ▆ Remote process manager
+
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+
+</div>
+'''
+
+
+
+<slidebreak>
+
+title: <tt>End</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_doom Thank you.
+</pre>
+
+'''
+
+
+

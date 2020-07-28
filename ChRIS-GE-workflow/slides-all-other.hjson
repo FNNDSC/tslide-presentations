@@ -1,0 +1,257 @@
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+// body-style: "background: black; color:lightgreen;"
+// body-class: terminal
+body:
+'''
+
+<pre style="float: left; width: 50%;font-size: 200%;">
+Training considerations:
+
+▆ process components of a
+  single training data set
+    ▆ extract dynamic set of features
+
+▆ process collection of input
+  training data sets
+    ▆ how to effectively handle a
+      collective input set
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre id="typewriter" style="float: right; width: 40%; font-size: 200%;">
+Input data fileset,
+`features.mgz`
+</pre>
+<pre style="float: left; width: 60%;">
+╔════════════════════╗
+║         [inputDir] ║
+╟────────────────────╢
+║   features.mgz     ║
+║                    ║
+╚════════════════════╝
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: right; width: 40%; font-size: 200%;">
+Input data fileset,
+`features.mgz`
+<pre id="typewriter">
+is processed by a plugin
+`pl-mgz2imgslices`...
+</pre>
+</pre>
+<pre style="float: left; width: 60%;">
+╔════════════════════╗      ┌───────────────────┐
+║         [inputDir] ║      │ pl-mgz2imgslices  │
+╟────────────────────╫──────┼───────────────────┤
+║   features.mgz     ║      │                   │
+║                    ║      └───────────────────┘
+╚════════════════════╝
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: right; width: 40%; font-size: 200%;">
+Input data fileset,
+`features.mgz`
+
+is processed by a plugin
+`pl-mgz2imgslices`...
+
+
+which dynamically discovers
+labels in the feature set and
+creates an output organization
+of image files for each label.
+</pre>
+<pre style="float: left; width: 60%;">
+╔════════════════════╗      ┌───────────────────┐     ╔════════════════════════════════════════════════╗
+║         [inputDir] ║      │ pl-mgz2imgslices  │     ║ [outputDir]                                    ║
+╟────────────────────╢──────┼───────────────────┼─────╫────────────────────────────────────────────────╢
+║   features.mgz     ║      │  -i features.mgz  │     ║    ┌─label-[set_1]                             ║
+║                    ║      │  -l label-        │     ║    │    ├─img-000.png                          ║
+╚════════════════════╝      │  -o img.png       │     ║    │    ├─img-001.png                          ║
+                            └───────────────────┘     ║    │         ...                               ║
+                                                      ║    │    └─img-255.png                          ║
+                                                      ║    │                                           ║
+                                                      ║    ├─label-[set_2]                             ║
+                                                      ║    │    ├─img-000.png                          ║
+                                                      ║    │    ├─img-001.png                          ║
+                                                      ║    │         ...                               ║
+                                                      ║    │    └─img-255.png                          ║
+                                                      ║    │                                           ║
+                                                      ║    └─label-[set_[L]]                           ║
+                                                      ║         ├─img-000.png                          ║
+                                                      ║         ├─img-001.png                          ║
+                                                      ║              ...                               ║
+                                                      ║         └─img-255.png                          ║
+                                                      ╚════════════════════════════════════════════════╝
+
+
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: left; width: 70%; font-size: 200%;">
+
+The above worflow essentially extracts a set of labeled features from
+one input data set:
+
+features.mgz ─────────────────────────────────────┬─label-[set_1]
+                                                  │    ├─img-000.png
+                                                  │    ├─img-001.png
+                                                  │         ...
+                                                  │    └─img-255.png
+                                                  │
+                                                  ├─label-[set_2]
+                                                  │    ├─img-000.png
+                                                  │    ├─img-001.png
+                                                  │         ...
+                                                  │    └─img-255.png
+                                                  │
+                                                  └─label-[set_[L]]
+                                                       ├─img-000.png
+                                                       ├─img-001.png
+                                                            ...
+                                                       └─img-255.png
+
+
+
+
+
+</pre>
+
+'''
+
+<slidebreak>
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre style="float: right; width: 40%; font-size: 200%;">
+In current form, one instance of plugin
+is not suited for building a training
+workflow.
+</pre>
+<pre style="float: left; width: 60%;">
+╔════════════════════╗      ┌───────────────────┐
+║         [inputDir] ║      │ pl-mgz2imgslices  │
+╟────────────────────╫──────┼───────────────────┤
+║ ┌ subject_1        ║      │  which subject?   │
+║ │  └─ features.mgz ║      └───────────────────┘
+║ │                  ║
+║ ├ subject_2        ║
+║ │  └─ features.mgz ║
+║ │                  ║
+║ | ...              ║
+║ │                  ║
+║ ├ subject_[N-1]    ║
+║ │  └─ features.mgz ║
+║ │                  ║
+║ └ subject_[N]      ║
+║    └─ features.mgz ║
+╚════════════════════╝
+
+
+
+
+
+
+
+
+
+</pre>
+
+'''

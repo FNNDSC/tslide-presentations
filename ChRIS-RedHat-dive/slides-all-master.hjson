@@ -363,6 +363,40 @@ body:
 '''
 
 <slidebreak>
+title:<tt>But fair is fair</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:100%;">
+<pre id="typewriter" style="font-size: 400%;">
+
+ to be fair, however,
+    what do some
+     Linux apps
+    look like in...
+</pre>
+</div>
+
+<div style="float:left; width:100%;">
+<pre style="font-size: 800%;">
+_#_o_01 2020?
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Where's my terminal..? I left it here somewhere...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
+<iframe style="display: block; height: 1050px; width: 100%;" src="http://localhost:3080/web/login"></iframe>
+</div>
+'''
+
+
+
+<slidebreak>
 title:<tt>Getting back on track...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
@@ -8049,7 +8083,6 @@ body:
 
 
 <slidebreak>
-
 title: <tt>End</tt>
 body-style: "background: black; color:lightgreen;"
 body:
@@ -8063,5 +8096,18 @@ _#_font_doom Thank you.
 
 '''
 
+
+<slidebreak>
+title: <tt>?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Questions..?
+
+</pre>
+
+'''
 
 

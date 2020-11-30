@@ -44,11 +44,46 @@ body:
 
 
 _#_font_basic Welcome!
+</pre>
 
+<pre style="font-size:300%;">
+       Stories from the Front Lines: 
+        The Good, Bad, and Ugly of
+Building an Opensource Distributed Platform 
+         for Scientific Compute: 
+   Software, Hardware, and Community
+</pre>
 
+<pre style="font-size:150%; line-height: 125%;">
+
+┌─────────────────────────┐
+│ Rudolph Pienaar, Dr.Eng │
+├─────────────────────────┴────────────────────────────────────┐
+│ slack:  https://slack.babymri.org                            │
+│ mailto: rudolph.pienaar@childrens.harvard.edu                │
+│ web:    http://fnndsc.babymri.org                            │
+└──────────────────────────────────────────────────────────────┘
+
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+title: <tt>Is this talk somewhere..?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="font-size:300%;">
+A copy of this talk is available here:
+</pre>
+<pre style="font-size:175%;">
+http://fnndsc.childrens.harvard.edu/research/investigator/rudolph.pienaar/2020/talks/ChRIS-GoodBadAndUgly
 </pre>
 </div>
 '''
+
 
 <slidebreak>
 title: <tt>Who is this guy..?</tt>
@@ -607,7 +642,7 @@ _#_o_01,f~l,z~150% ● and wire them up!
 
 
 <slidebreak>
-title:<tt>Notes on file upload</tt>
+title:<tt>The innards of ChRIS</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -681,7 +716,7 @@ body:
 
 
 <slidebreak>
-title:<tt>Notes on file upload</tt>
+title:<tt>The innards of ChRIS</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -754,7 +789,7 @@ body:
 '''
 
 <slidebreak>
-title:<tt>Notes on file upload</tt>
+title:<tt>The innards of ChRIS</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -829,7 +864,7 @@ body:
 
 
 <slidebreak>
-title:<tt>Notes on file upload</tt>
+title:<tt>The innards of ChRIS</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -902,7 +937,7 @@ body:
 '''
 
 <slidebreak>
-title:<tt>Notes on file upload</tt>
+title:<tt>The innards of ChRIS</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -975,7 +1010,7 @@ body:
 '''
 
 <slidebreak>
-title:<tt>Notes on file upload</tt>
+title:<tt>The innards of ChRIS</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -1049,7 +1084,7 @@ body:
 
 
 <slidebreak>
-title:<tt>Notes on file upload</tt>
+title:<tt>The innards of ChRIS</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -1275,7 +1310,7 @@ _#_o_12   ▆ new developers' struggle
 '''
 
 <slidebreak>
-title:<tt>Look there, the heart..!</tt>
+title:<tt>Look there, there it beats, the heart..!</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -1317,7 +1352,7 @@ _#_o_14   ▆ docker-compose complex
 '''
 
 <slidebreak>
-title:<tt>Look there, the heart..!</tt>
+title:<tt>In the weather today...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -1359,7 +1394,7 @@ _#_o_13   ▆ hard to pin point source of error
 '''
 
 <slidebreak>
-title:<tt>Look there, the heart..!</tt>
+title:<tt>We all come together...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -1405,7 +1440,7 @@ _#_o_19     services
 '''
 
 <slidebreak>
-title:<tt>Look there, the heart..!</tt>
+title:<tt>When in doubt, read the docs..!</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -1451,7 +1486,7 @@ _#_o_18     DOES NOT EXIST
 '''
 
 <slidebreak>
-title:<tt>Look there, the heart..!</tt>
+title:<tt>It all comes down to this...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -1477,20 +1512,24 @@ _#_o_03   ▆ focus on researchers
 _#_o_04 BAD...
 _#_o_05   ▆ volunteers working on core are rare
 _#_o_06   ▆ volunteer efforts are hard to focus
-_#_o_07   ▆ hard problems take a long time for reward
+_#_o_07   ▆ hard problems take a long time for
+_#_o_08     the "dopamine" reward hit
 </pre>
 
 <pre style="font-size:150%; float:right; width: 33%">
-_#_o_08 UGLY...
-_#_o_09   ▆ personality clashes!
-_#_o_10   ▆ benign dictator
+_#_o_09 UGLY...
+_#_o_10   ▆ personality clashes!
+_#_o_11   ▆ benign dictator
+_#_o_12   ▆ end up spending a lot of time
+_#_o_13     "managing" and less coding or
+_#_o_14     engaged in research
 </pre>
 
 </div>
 '''
 
 <slidebreak>
-title:<tt>Look there, the heart..!</tt>
+title:<tt>People are, well, people...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -1507,23 +1546,25 @@ _#_font_basic People
 
 <pre style="font-size:150%; float:left; width: 33%";>
 _#_o_01 GOOD...
-_#_o_02   ▆ attractive projects can greatly increase community
-_#_o_03   ▆ COVID-NET and lung diagnosis
-_#_o_04   ▆ Red Hat internal support for volunteers
-_#_o_05   ▆ add something here
+_#_o_02   ▆ attractive projects can greatly  
+_#_o_03     increase community
+_#_o_04   ▆ COVID-NET and lung diagnosis
+_#_o_05   ▆ Red Hat internal support for volunteers
+_#_o_06   ▆ people want to be part of something 
 </pre>
 
 <pre style="font-size:150%; float:left; width: 33%">
-_#_o_06 BAD...
-_#_o_07   ▆ new developers can be overwhelmed
-_#_o_08   ▆ need support infrastructure
-_#_o_09   ▆ need direction and time
+_#_o_07 BAD...
+_#_o_08   ▆ new developers can be overwhelmed
+_#_o_09   ▆ need support infrastructure
+_#_o_10   ▆ need direction and time
 </pre>
 
 <pre style="font-size:150%; float:right; width: 33%">
-_#_o_10 UGLY...
-_#_o_11   ▆ investment is never guaranteed
-_#_o_12   ▆ broken attention span results in loss
+_#_o_11 UGLY...
+_#_o_12   ▆ investment is never guaranteed
+_#_o_13   ▆ broken attention span results in loss
+_#_o_14     of productivity and contribution
 </pre>
 
 </div>

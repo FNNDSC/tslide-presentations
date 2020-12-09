@@ -1,0 +1,770 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+    export INPUTDIR=$REPO/ChRIS-GE-conceptual
+    export INPUTFILE=slides-all-master.hjson
+    export OUTPUTDIR=/var/www/html/slides/ChRIS-GE-conceptual
+```
+
+After edits, run tsmake on it:
+
+```
+    cd ~
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR             \
+             --inputDir $INPUTDIR               \
+             --slidesFile $INPUTFILE            \
+             --slideListGlob "slide-*"          \
+             --additionalDirList $INPUTDIR/figs \
+             --verbosity 3
+```
+
+Finally, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+or, if outputs are stored to an apache serviced directory, simply visit
+the page/link directly.
+
+*/
+
+title:<tt>Hello, world!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_basic Welcome!
+</pre>
+
+<pre style="font-size:300%;">
+      BCH/FNNDSC and GE Healthcare collaboration:
+
+            December 2020 Governance Meeting
+                 brief technical report 
+</pre>
+
+<pre style="font-size:150%; line-height: 125%;">
+
+┌─────────────────────────┐
+│ Rudolph Pienaar, Dr.Eng │
+├─────────────────────────┴────────────────────────────────────┐
+│ slack:  https://slack.babymri.org                            │
+│ mailto: rudolph.pienaar@childrens.harvard.edu                │
+│ web:    http://fnndsc.babymri.org                            │
+└──────────────────────────────────────────────────────────────┘
+
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+title: <tt>Is this talk somewhere..?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="font-size:300%;">
+A copy of this talk is available here:
+</pre>
+<pre style="font-size:175%;">
+http://fnndsc.childrens.harvard.edu/research/investigator/rudolph.pienaar/2020/talks/ChRIS-GE-conceptual
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title: <tt>Who is this guy..?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
+    <div class="sl-block-content" style="z-index: 10;">
+        <iframe style="width: 1200px; height: 750px; left: 80px; top: 70px;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation" data-src="https://codepen.io/rudolphpienaar/live/abOQoao" src="https://codepen.io/rudolphpienaar/live/abOQoao">
+        </iframe>
+    </div>
+</div>
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/profile1.jpg" width=600 style="float: right;">
+</div>
+'''
+
+<slidebreak>
+title:<tt>What does it all mean...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Overview
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   In this quick talk, I'll provide a brief overview of the 
+   techincal work performed as part of SOW 4 / 2020. 
+
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>What does it all mean...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic The Core
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   The core deliverable of this work has been the 
+   construction of an infrastructure that can allow 
+   for future rapid software advancements in the 
+   AI-informed medical image analysis space.
+
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>What does it all mean...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic The Core
+</pre>
+
+<pre id="typewriter" style="float:left; width 50%; font-size:300%;">
+
+   Simplistically, the project was 
+   tasked with:
+
+</pre>
+
+<pre style="float:left; right: 50%; font-size: 200%">
+_#_o_01 ▆ building a full-stack workflow
+_#_o_02 ▆ train a robust brain segmentation model
+_#_o_03    ▆ classified multiple regions
+_#_o_04       ▆ cortical
+_#_o_05       ▆ sub cortical
+_#_o_06 ▆ provide rudimentary reporting
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>What does it all mean...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic The Core
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   Deliverables included:
+
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 200%">
+_#_o_01 ▆ selection of a cohort of baby brain images
+_#_o_02 ▆ segment the images using automated tools
+_#_o_03 ▆ use segmentation results as training
+_#_o_04 ▆ build two pipelines
+_#_o_05    ▆ training
+_#_o_06    ▆ inference
+</pre>
+
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>What does it all mean...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic The Core
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   Development challenges:
+
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 200%">
+_#_o_01 ▆ impact of COVID
+_#_o_02 ▆ delays in dev team ramp up
+_#_o_03 ▆ maturing technologies
+</pre>
+
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>What does it all mean...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic The Core
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   Design adaptations:
+
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 200%">
+_#_o_01 ▆ optimise stability in training models
+_#_o_02    ▆ HCP (Human Connectome Project)
+_#_o_03    ▆ Pre-segmented normal adults
+_#_o_04 ▆ pediatric training models unstable
+_#_o_05    ▆ variability in age/development
+</pre>
+
+
+</div>
+'''
+
+
+
+<slidebreak>
+title:<tt>After the "why?" comes the...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic HOW?
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    We leveraged our ongoing development work on an
+    in-house  maturing <b>P</b>latform-<b>A</b>s-<b>A</b>-<b>S</b>ervice solution:
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 800%">
+_#_o_01 ChRIS
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 200%">
+_#_o_02     ▆ fully opensource
+_#_o_03     ▆ fully containerized
+_#_o_04     ▆ chains on containerized compute
+_#_o_05     ▆ on-premise
+_#_o_06     ▆ and cloud!
+</pre>
+
+
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Getting back on track...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic ChRIS
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    <b>ChRIS</b> was created to address the basic need of:
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01   ▆ running some type of <b>analysis</b> on
+_#_o_02   ▆ some type of unstructured <b>data</b>
+_#_o_03   ▆ <b>anywhere</b>!
+_#_o_04   ▆ using a <b>modern</b> web-based interface
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>I love demos..! They *always* work! Except when they don't...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
+<iframe style="display: block; height: 1050px; width: 100%;" src="http://app.chrisproject.org"></iframe>
+</div>
+'''
+
+<slidebreak>
+title:<tt>In the beginning...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width: 80%; font-size: 110%; line-height: 125%;;">
+
+
+
+
+
+
+
+
+
+
+
+                                                                          ─^─
+                                                                        _╵   ╵_
+                                                                     _╵         ╵ _
+                                                                  _╵               ╵ _
+                                                               _╵                     ╵ _
+                                                            _╵                           ╵_
+                                                           │─           C U B E           ─│
+                                                           │ ╵_                         _╵ │
+                                                           │    ╵_                   _╵    │
+                                                           │       ╵_             _╵       │
+                                                           │          ╵_       _╵          │
+                                                           │             ╵_ _╵             │
+                                                           │               │               │
+                                                           │               │               │
+                                                           │               │               │
+                                                           │               │               │
+                                                           │               │               │
+                                                            ─              │              ─
+                                                             ╵_            │            _╵
+                                                                ╵_         │         _╵
+                                                                   ╵_      │      _╵
+                                                                      ╵_   │   _╵
+                                                                         ╵_│_╵
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 20%;">
+_#_o_01,f~l,z~150% ● Let's start with CUBE
+_#_o_02,f~l,z~150%   that consititutes the
+_#_o_03,f~l,z~150%   core of ChRIS
+
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>there was a core and a boundary...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width: 80%; font-size: 110%; line-height: 125%;; ">
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║n║
+                                                                                                             ║e║
+                                                                                                             ║t║
+                                                                                                             ║w║
+                                                                                                             ║o║
+                                                                                                             ║r║
+                                                                                                             ║k║
+                                                                          ─^─                                ║ ║
+                                                                        _╵   ╵_                              ║ ║
+                                                                     _╵         ╵ _                          ║ ║
+                                                                  _╵               ╵ _                       ║ ║
+                                                               _╵                     ╵ _                    ╬═╬
+                                                            _╵                           ╵_                  ║ ║
+                                                           │─           C U B E           ─│                 ║ ║
+                                                           │ ╵_                         _╵ │                 ║ ║
+                                                           │    ╵_                   _╵    │                 ║ ║
+                                                           │       ╵_             _╵       │                 ║ ║
+                                                           │          ╵_       _╵          │                 ║b║
+                                                           │             ╵_ _╵             │                 ║o║
+                                                           │               │               │                 ║u║
+                                                           │               │               │                 ║n║
+                                                           │               │               │                 ║d║
+                                                           │               │               │                 ║a║
+                                                           │               │               │                 ║r║
+                                                            ─              │              ─                  ║y║
+                                                             ╵_            │            _╵                   ║ ║
+                                                                ╵_         │         _╵                      ║ ║
+                                                                   ╵_      │      _╵                         ║ ║
+                                                                      ╵_   │   _╵                            ∠ ∠
+                                                                         ╵_│_╵                               ∠ ∠
+                                                                                                             ∠ ∠
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ╬═╬
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 20%;">
+_#_o_01,f~l,z~150% ● add a network boundary
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>and a client wanting to connect...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width: 80%; font-size: 110%; line-height: 125%;;">
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║n║
+                                                                                                             ║e║
+                                                                                                             ║t║
+                                                                                                             ║w║
+                                                                                                             ║o║
+                                                                                                             ║r║
+                                                                                                             ║k║
+                                                                          ─^─                                ║ ║
+                                                                        _╵   ╵_                              ║ ║
+                                                                     _╵         ╵ _                          ║ ║
+                                                                  _╵               ╵ _                       ║ ║
+                                                               _╵                     ╵ _                    ╬═╬
+                                                            _╵                           ╵_                  ║ ║
+                                                           │─           C U B E           ─│                 ║ ║
+                                                           │ ╵_                         _╵ │                 ║ ║
+                                                           │    ╵_                   _╵    │                 ║ ║
+                                                           │       ╵_             _╵       │                 ║ ║
+                                                           │          ╵_       _╵          │                 ║b║
+                                                           │             ╵_ _╵             │                 ║o║
+                                                           │               │               │                 ║u║       ┌────────┐
+                                                           │               │               │                 ║n║       │ client │
+                                                           │               │               │                 ║d║       │  comms │
+                                                           │               │               │                 ║a║       │        │
+                                                           │               │               │                 ║r║       └────────┘
+                                                            ─              │              ─                  ║y║
+                                                             ╵_            │            _╵                   ║ ║
+                                                                ╵_         │         _╵                      ║ ║
+                                                                   ╵_      │      _╵                         ║ ║
+                                                                      ╵_   │   _╵                            ∠ ∠
+                                                                         ╵_│_╵                               ∠ ∠
+                                                                                                             ∠ ∠
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ╬═╬
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+                                                                                                             ║ ║
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 20%;">
+
+_#_o_01,f~l,z~150% ● and some client that
+_#_o_02,f~l,z~150%   will interact with CUBE
+
+
+
+
+</pre>
+</div>
+'''
+
+
+
+
+<slidebreak>
+title:<tt>The innards of ChRIS</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width: 80%; font-size: 110%; line-height: 125%;;">
+                                     ║ ║                           ╔═══════════════╗                         ║ ║
+                                     ║ ║                           ║ swift storage ║                         ║ ║
+                                     ║ ║                           ╟───────────────╢                         ║ ║
+                                     ║ ║                           ║           ▲▲▲ ║                         ║ ║
+                                     ║n║                           ╚═══════╤═══════╝                         ║n║
+                                     ║e║                                   │                                 ║e║
+                                     ║t║                                   │                                 ║t║
+                                     ║w║                                   │                                 ║w║
+                  ┌────────┐         ║o║                                   │                                 ║o║
+                  │        │         ║r║                                   │                                 ║r║
+                  │ pfioh  │         ║k║                                   │                                 ║k║
+                  │        │         ║ ║                                  ─^─                                ║ ║
+                  └────────┘         ╬═╬                                _╵   ╵_                              ║ ║
+                                     ║ ║                             _╵         ╵ _                          ║ ║
+                  ┌────────┐         ╬═╬                          _╵               ╵ _                       ║ ║
+                  │        │         ║ ║                       _╵                     ╵ _                    ╬═╬    
+                  │  pman  │         ║ ║                    _╵                           ╵_                  ║ ║    
+                  │        │         ║ ║                   │─           C U B E           ─│                 ║ ║    
+                  └────────┘         ║ ║                   │ ╵_                         _╵ │                 ║ ║    
+                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║    
+                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║    
+                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║    
+                                     ║o║                   │             ╵_ _╵         │  entry ├──┐         ║o║    
+                                     ║u║                   │               │           │  point │  │         ║u║       ┌────────┐
+                                     ║n║                   │  ┌───────────┐│┌─────────┐└───┬────┘  │         ║n║       │ client │
+                                     ║d║                   │  │ django DB │││ manager │    │       │         ║d║   ┌───┤  comms │
+                                     ║a║                   │  ├───────────┤│├─────────┤    │       │         ║a║   │   │        │
+                                     ║r║                   │  │           │││         │    │       │         ║r║   │   └────────┘
+                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │   
+                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │   
+═════════════════════════════════════╝ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │   
+═════════════════════════════════════╗ ║                           ╵_      │      _╵               │         ║ ║   │   
+                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │   
+           ╔═══════════════╗         ∠ ∠                                 ╵_│_╵                     │         ∠ ∠   │   
+           ║   dockerhub   ║         ∠ ∠                                                           │         ∠ ∠   │   
+           ╟───────────────╢         ║ ║                                                           │         ║ ║   │   
+           ║       pl-repo ║         ║ ╚════════════════════════════════╗                          │         ║ ║   │   
+           ╚═══════════════╝         ║ ╔══════════════════════════════╗ ║       ┌────────┐    ┌────┴───┐     ║ ║   │   
+                                     ║ ║                              ║ ║       │        │    │  ChRIS │     ║ ║   │   
+                                     ║ ║                              ║ ║       │ pfcon  │    │   UI   ├─────╬═╬───┘   
+═════════════════════════════════════╝ ║                              ║ ║       │        │    │        │     ║ ║
+═════════════════════════════════════╗ ║         ┌─────────┐          ║ ║       └────────┘    └────────┘     ║ ║
+                                     ║ ║         │  ChRIS  │          ║ ║                                    ║ ║
+                                     ║ ║         │  store  │          ║ ║                                    ║ ║
+           ╔═══════════════╗         ║ ║         │         │          ║ ║                                    ║ ║
+           ║     github    ║         ║ ║         └─────────┘          ║ ║                                    ║ ║
+           ╟───────────────╢         ║ ║                              ║ ║                                    ║ ║
+           ║       pl-repo ║         ║ ║                              ║ ║                                    ║ ║
+           ╚═══════════════╝         ║ ║                              ║ ║                                    ║ ║
+                                     ║ ║                              ║ ║                                    ║ ║
+                                     ║ ║                              ║ ║                                    ║ ║
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 20%;">
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>The innards of ChRIS</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width: 80%; font-size: 110%; line-height: 125%;;">
+                                     ║ ║                           ╔═══════════════╗                         ║ ║
+                                     ║ ║                           ║ swift storage ║                         ║ ║
+                                     ║ ║               ┌───────────╫───────────────╢                         ║ ║
+                                     ║ ║               │           ║▼▼▼        ▲▲▲ ║                         ║ ║
+                                     ║n║               │           ╚═══════╤═══════╝                         ║n║
+                                     ║e║               │                   │                                 ║e║
+                                     ║t║               │                   │                                 ║t║
+                                     ║w║               │                   │                                 ║w║
+                  ┌────────┐         ║o║               │                   │                                 ║o║
+                  │        │         ║r║               │                   │                                 ║r║
+    ┌─────┬───────┤ pfioh  ├────┐    ║k║               │                   │                                 ║k║
+    │     │       │       █│    │    ║ ║               │                  ─^─                                ║ ║
+    │     │       └────────┘    └────╬═╬───┐           │                _╵   ╵_                              ║ ║
+    │     │                          ║ ║   │           │             _╵         ╵ _                          ║ ║
+    │     │       ┌────────┐    ┌────╬═╬───┤           │          _╵               ╵ _                       ║ ║
+    │     │       │        │    │    ║ ║   │           │       _╵                     ╵ _                    ╬═╬    
+    │     │       │  pman  ├────┘    ║ ║   │           │    _╵                           ╵_                  ║ ║    
+    │     │       │       ▟│         ║ ║   │           │   │─           C U B E           ─│                 ║ ║    
+    │     │       └────────┘         ║ ║   │           │   │ ╵_                         _╵ │                 ║ ║    
+    │     │                          ║ ║   │           │   │    ╵_                   _╵    │                 ║ ║    
+    │     │                          ║ ║   │           │   │       ╵_             _╵   ┌───┴────┐            ║ ║    
+    │     │                          ║b║   │           │   │          ╵_       _╵      │  REST  │            ║b║    
+    │     └─────────────────────┐    ║o║   │           │   │             ╵_ _╵         │  entry ├──┐         ║o║    
+  ╔═╧═╗      ┌─────────┐      ╔═╧═╗  ║u║   │           │   │               │           │  point │  │         ║u║       ┌────────┐
+  ║▲▲▲╟──────┤ pl-repo ├──────╢▼▼▼║  ║n║   │           │   │  ┌───────────┐│┌─────────┐└───┬────┘  │         ║n║       │ client │
+  ╚═══╝      └─────────┘      ╚═══╝  ║d║   │           │   │  │ django DB │││ manager │    │       │         ║d║   ┌───┤  comms │
+                                     ║a║   │           │   │  ├───────────┤│├─────────┼┐   │       │         ║a║   │   │        │
+                                     ║r║   │           │   │  │▟          │││         ││   │       │         ║r║   │   └────────┘
+                                     ║y║   │           │    ─ └────┐     ▲││└─────────┘│  ─        │         ║y║   │   
+                                     ║ ║   │           │     ╵_    │     ▼││           │_╵         │         ║ ║   │   
+═════════════════════════════════════╝ ║   │           │        ╵_ └──────┘│         _╵│           │         ║ ║   │   
+═════════════════════════════════════╗ ║   │           │           ╵_      │      _╵   │           │         ║ ║   │   
+                                     ∠ ∠   │           │              ╵_   │   _╵      │           │         ∠ ∠   │   
+           ╔═══════════════╗         ∠ ∠   │           │                 ╵_│_╵       ┌─┘           │         ∠ ∠   │   
+           ║   dockerhub   ║         ∠ ∠   │           │                             │             │         ∠ ∠   │   
+           ╟───────────────╫────┐    ║ ║   └───────────┴────────────────────┐        │             │         ║ ║   │   
+           ║       pl-repo ║    │    ║ ╚════════════════════════════════╗   │        │             │         ║ ║   │   
+           ╚═══════╦═══════╝    │    ║ ╔══════════════════════════════╗ ║   │   ┌────┴───┐    ┌────┴───┐     ║ ║   │   
+                   │            │    ║ ║                              ║ ║   │   │        │    │  ChRIS │     ║ ║   │   
+                   │            └────╬═╬────┐                         ║ ║   └───┤ pfcon  │    │   UI   ├─────╬═╬───┘   
+═══════════════════╬═════════════════╝ ║    │                         ║ ║       │     ▟ ▼│    │▟ ▼▲    │     ║ ║
+═══════════════════╬═════════════════╗ ║    │    ┌─────────┐          ║ ║       └────────┘    └────────┘     ║ ║
+                   │                 ║ ║    │    │  ChRIS  │          ║ ║               █                    ║ ║
+                   │                 ║ ║    └────┤  store  │          ║ ║                                    ║ ║
+           ╔═══════╩═══════╗         ║ ║         │        ▟│          ║ ║                                    ║ ║
+           ║     github    ║         ║ ║         └─────────┘          ║ ║                                    ║ ║
+           ╟───────────────╢         ║ ║                              ║ ║                                    ║ ║
+           ║       pl-repo ║         ║ ║                              ║ ║                                    ║ ║
+           ╚═══════════════╝         ║ ║                              ║ ║                                    ║ ║
+                                     ║ ║                              ║ ║                                    ║ ║
+                                     ║ ║                              ║ ║                                    ║ ║
+
+</pre>
+</div>
+
+<div>
+<pre style="float:right; width: 20%;">
+
+
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title: <tt>And so, it ends...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float: left; width: 50%; font-size: 300%;">
+Conclusions
+
+_#_o_01   ▆ Need more models across
+_#_o_02     different ages
+_#_o_03   ▆ explore/optimise
+_#_o_04      ▆ reporting
+_#_o_05      ▆ workflow
+_#_o_06   ▆ <b>abnormal exemplars</b>
+</pre>
+<div style="float: right; width: 50%;">
+<p class="codepen"  data-height="500" data-theme-id="23783" data-default-tab="result" data-user="rudolphpienaar" data-slug-hash="ExgadVj" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Neural Network visualization">
+  <span>See the Pen <a href="https://codepen.io/rudolphpienaar/pen/ExgadVj">
+  Neural Network visualization</a> by Rudolph Pienaar (<a href="https://codepen.io/rudolphpienaar">@rudolphpienaar</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+</div>
+'''
+
+
+<slidebreak>
+title: <tt>End</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_doom Thank you.
+</pre>
+
+'''
+
+
+<slidebreak>
+title: <tt>?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Questions..?
+
+</pre>
+
+'''
+
+

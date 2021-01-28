@@ -1,0 +1,345 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+    export INPUTDIR=$REPO/ChRIS-MLAI-blitz
+    export INPUTFILE=slides-all-master.hjson
+    export OUTPUTDIR=/var/www/html/slides/ChRIS-MLAI-blitz
+```
+
+After edits, run tsmake on it:
+
+```
+    cd ~
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR             \
+             --inputDir $INPUTDIR               \
+             --slidesFile $INPUTFILE            \
+             --slideListGlob "slide-*"          \
+             --additionalDirList $INPUTDIR/figs \
+             --verbosity 3
+```
+
+Finally, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+*/
+
+title:<tt>Hello, world!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_basic Welcome!
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+
+title: <tt>About me...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
+    <div class="sl-block-content" style="z-index: 10;">
+        <iframe style="width: 1000px; height: 550px; left: 80px; top: 70px;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation" data-src="https://codepen.io/rudolphpienaar/live/abOQoao" src="https://codepen.io/rudolphpienaar/live/abOQoao">
+        </iframe>
+    </div>
+</div>
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/profile1.jpg" width=400 style="float: right;">
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about the ACG...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic WHO?
+</pre>
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    The <b>Advanced Computing Group</b> (ACG) within the
+    <b>Fetal-Neonatal Neuroimaging and Developmental Science Center</b>
+    (FNNDSC) at Boston Children's Hospital (BCH) focuses on:
+</pre>
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ the "D" in computational R&D
+_#_o_02   ▆ computational platforms
+_#_o_03   ▆ workflow development
+_#_o_04   ▆ deploying existing compute
+_#_o_05   ▆ de novo research solutions
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Why do we do what we do..?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic WHY?
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+    Computing solutions, no matter how transformative, if not
+    easily usable, have limited large scale impact. We try to
+    address the problem of easily allowing developers
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ to deploy their work to as <b>large</b> an audience of users
+_#_o_02   ▆ in as <b>simple and effective</b> way as possible.
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Remember, remember the 5th of November...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Remember!
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+    Tesler's law, or the "Law of Conservation of Complexity"...
+
+    Complexity in human-computer interaction cannot be
+    removed or hidden -- it can only be transferred between:
+</pre>
+
+<pre style="font-size:300%; float:left; width: 100%">
+_#_o_01   ▆ the user
+_#_o_02   ▆ the application developer
+_#_o_03   ▆ the platform developer
+</pre>
+</div>
+'''
+
+
+
+<slidebreak>
+title:<tt>After the why comes the...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic HOW?
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    We have a maturing platform-as-a-service solution
+    developed in house at BCH (with deep collaboration
+    from Red Hat and others) called
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 800%">
+_#_o_01 ChRIS
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 200%">
+_#_o_02     ▆ fully opensource
+_#_o_03     ▆ fully containerized
+_#_o_04     ▆ on-premise
+_#_o_05     ▆ and cloud!
+</pre>
+
+
+</div>
+'''
+
+<slidebreak>
+
+title: <tt>PaaS...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:100%;" class="snippet" id="order-1">
+    <img src="figs/iaas-paas-saas-comparison-1024x759.jpg" style="width: 1200px; display: block; float: right;">
+</div>
+
+<div class="snippet" id="order-2">
+<pre style="float:left; width:100%; font-size:200%">
+
+ In the research software world of 
+ computational labs,researchers often 
+ need to handle not just their apps
+ and data, but the whole stack of 
+ computation.
+
+</pre>
+
+</div>
+
+<div class="snippet" id="order-3">
+<pre style="float:left; width:100%; font-size:200%">
+
+ Or, they simply just run their 
+ application, publish results
+ and software withers slowly on 
+ the vine.
+
+</pre>
+
+</div>
+
+
+'''
+
+<slidebreak>
+
+title: <tt>PaaS...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:70%;">
+    <img src="figs/iaas-paas-saas-comparison-1024x759.jpg" style="width: 1200px; display: block; float: right;">
+</div>
+
+<pre style="float:left; width:100%; font-size:200%">
+
+ With our platform, we attempt to leverage all the platform benefits to users without
+ having research developers needing to continually reinvent infrastucture wheels.
+
+</pre>
+
+
+
+
+'''
+
+
+<slidebreak>
+title: <tt>Hidden debt in ML...</tt>
+body-style: "background: white; color:black;"
+body:
+'''
+<div style="float:right; width:100%;" class="snippet" id="order-1">
+    <img src="figs/technicalDebt.png" style="width: 100%; display: block; float: right;">
+</div>
+<div style="float:left; width:20%;" class="snippet" id="order-2">
+<pre style="font-size: 200%">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                In reality, the actual "ML" part, while the kernel of the process
+                consitutes in terms of source code lines and system complexity the
+                minority of a working system.
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Time to get something out there...</tt>
+body-style: "background: white; color:black;"
+body:
+'''
+<div style="float:right; width:100%;" class="snippet" id="order-1">
+    <img src="figs/deploymentTime.png" style="width: 1200px; display: block; float: right;">
+<pre>
+Source: Algorithmia’s “2020 State of Enterprise ML”.
+This question about how long it takes to deploy an ML model into
+production was only asked to a subset of respondents at a
+company that has an ML model production.
+</pre>
+</div>
+'''
+
+
+
+<slidebreak>
+title:<tt>OK, so how about ML...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre style="float:left; width:100%">
+_#_font_basic ML! ML! ML!
+</pre>
+
+<div style="float:left; width:100%;">
+<pre id="typewriter" style="font-size: 400%;">
+Our Current specific ML/AI approaches are
+mostly image processing based around cNNS
+using standard python libs:
+</pre>
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ brain based MRI voxel segmentation
+_#_o_02     ▆ volume calculation
+_#_o_03     ▆ normative determination
+_#_o_04   ▆ Lung CT analysis
+_#_o_05     ▆ COVID-19 detection
+</pre>
+
+</div>
+
+'''
+
+
+
+
+
+<slidebreak>
+
+title: <tt>End</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_doom Thank you.
+</pre>
+
+'''
+
+
+

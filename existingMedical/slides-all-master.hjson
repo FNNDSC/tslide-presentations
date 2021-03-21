@@ -1,0 +1,188 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+    export INPUTDIR=$REPO/existingMedical
+    export INPUTFILE=slides-all-master.hjson
+    export OUTPUTDIR=/var/www/html/slides/existingMedical
+```
+
+After edits, run tsmake on it:
+
+```
+    cd ~
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR             \
+             --inputDir $INPUTDIR               \
+             --slidesFile $INPUTFILE            \
+             --slideListGlob "slide-*"          \
+             --additionalDirList $INPUTDIR/figs \
+             --verbosity 3
+```
+
+Finally, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+*/
+
+title:<tt>Hello, world!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_basic Welcome!
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+
+title: <tt>About me...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
+    <div class="sl-block-content" style="z-index: 10;">
+        <iframe style="width: 1000px; height: 550px; left: 80px; top: 70px;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation" data-src="https://codepen.io/rudolphpienaar/live/abOQoao" src="https://codepen.io/rudolphpienaar/live/abOQoao">
+        </iframe>
+    </div>
+</div>
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/profile1.jpg" width=400 style="float: right;">
+</div>
+'''
+
+<slidebreak>
+
+
+title:<tt>Medical compute is advanced... maybe not so much</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:100%;">
+<pre id="typewriter" style="font-size: 400%;">
+
+    What do typical
+medical / clinical apps
+    look like in...
+</pre>
+</div>
+
+<div style="float:left; width:100%;">
+<pre style="font-size: 800%;">
+_#_o_01 2020?
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+
+title:<tt>Judge much?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:100%;">
+<pre id="typewriter" style="font-size: 400%;">
+
+You be the judge...
+
+</pre>
+</div>
+
+'''
+
+<slidebreak>
+title: <tt>Scheduling...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:100%;">
+    <img src="figs/EPIC1-anon.jpg" style="width: 100%; display: block; float: right;">
+</div>
+'''
+
+<slidebreak>
+title: <tt>Real time anaesthesia...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:100%;">
+    <img src="figs/AIMS1-anon.jpg" style="width: 100%; display: block; float: right;">
+</div>
+'''
+
+<slidebreak>
+title: <tt>Powerchart...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:100%;">
+    <img src="figs/powerchart_report1-anon.jpg" style="width: 100%; display: block; float: right;">
+</div>
+'''
+
+<slidebreak>
+title: <tt>Powerchart...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:100%;">
+    <img src="figs/powerchart_report2-anon.jpg" style="width: 100%; display: block; float: right;">
+</div>
+'''
+
+<slidebreak>
+title: <tt>Powerchart...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:100%;">
+    <img src="figs/powerchart_report3-anon.jpg" style="width: 100%; display: block; float: right;">
+</div>
+'''
+
+<slidebreak>
+title: <tt>Synapse...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:100%;">
+    <img src="figs/synapse-anon.jpg" style="width: 100%; display: block; float: right;">
+</div>
+'''
+
+
+<slidebreak>
+
+title: <tt>C'est la vie...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_doom Thank you.
+</pre>
+
+'''
+
+
+

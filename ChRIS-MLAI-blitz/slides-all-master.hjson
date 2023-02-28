@@ -6,10 +6,11 @@ Clone the repo:
 ```
     git clone https://github.org/FNNDSC/tslide-presentations
     cd tslide-presentations
-    export REPO=$(pwd)
+    export REPO=$PWD
+    export HTMLDOCS=/srv/http/slides
     export INPUTDIR=$REPO/ChRIS-MLAI-blitz
     export INPUTFILE=slides-all-master.hjson
-    export OUTPUTDIR=/var/www/html/slides/ChRIS-MLAI-blitz
+    export OUTPUTDIR=$HTMLDOCS/ChRIS-MLAI-blitz
 ```
 
 After edits, run tsmake on it:
@@ -20,6 +21,7 @@ After edits, run tsmake on it:
     cd tslide
     ./tsmake --outputDir $OUTPUTDIR             \
              --inputDir $INPUTDIR               \
+             --no-pageSplit                     \
              --slidesFile $INPUTFILE            \
              --slideListGlob "slide-*"          \
              --additionalDirList $INPUTDIR/figs \

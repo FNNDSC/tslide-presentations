@@ -6,10 +6,11 @@ Clone the repo:
 ```
     git clone https://github.org/FNNDSC/tslide-presentations
     cd tslide-presentations
-    export REPO=$(pwd)
+    export REPO=$PWD
+    export HTMLDOCS=/srv/http/slides
     export INPUTDIR=$REPO/existingMedical
     export INPUTFILE=slides-all-master.hjson
-    export OUTPUTDIR=/var/www/html/slides/existingMedical
+    export OUTPUTDIR=$HTMLDOCS/existingMedical
 ```
 
 After edits, run tsmake on it:
@@ -87,6 +88,8 @@ medical / clinical apps
 <div style="float:left; width:100%;">
 <pre style="font-size: 800%;">
 _#_o_01 2020?
+
+
 </pre>
 </div>
 '''
@@ -168,9 +171,19 @@ body:
 </div>
 '''
 
+<slidebreak>
+title: <tt>RadSTAR...</tt>
+body-style: "background: #a0a0a0; color:black;"
+body:
+'''
+<div style="float:right; width:100%;">
+    <img src="figs/radstar_snap2e.png" style="width: 100%; display: block; float: right;">
+</div>
+'''
+
+
 
 <slidebreak>
-
 title: <tt>C'est la vie...</tt>
 body-style: "background: black; color:lightgreen;"
 body:

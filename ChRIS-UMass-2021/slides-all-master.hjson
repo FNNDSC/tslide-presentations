@@ -7,9 +7,10 @@ Clone the repo:
     git clone https://github.org/FNNDSC/tslide-presentations
     cd tslide-presentations
     export REPO=$PWD
+    export HTMLDOCS=/srv/http/slides
     export INPUTDIR=$REPO/ChRIS-UMass-2021
     export INPUTFILE=slides-all-master.hjson
-    export OUTPUTDIR=/var/www/html/slides/ChRIS-UMass-2021
+    export OUTPUTDIR=$HTMLDOCS/ChRIS-UMass-2021
 ```
 
 After edits, run tsmake on it:
@@ -20,6 +21,7 @@ After edits, run tsmake on it:
     cd tslide
     ./tsmake --outputDir $OUTPUTDIR             \
              --inputDir $INPUTDIR               \
+             --no-pageSplit                     \
              --slidesFile $INPUTFILE            \
              --slideListGlob "slide-*"          \
              --additionalDirList $INPUTDIR/figs \

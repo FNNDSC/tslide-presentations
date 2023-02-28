@@ -6,7 +6,7 @@ Clone the repo:
 ```
     git clone https://github.org/FNNDSC/tslide-presentations
     cd tslide-presentations
-    export REPO=$(pwd)
+    export REPO=$PWD
     export INPUTDIR=$REPO/MedicalCompute-GoodBadAndUgly
     export INPUTFILE=slides-all-master.hjson
     export OUTPUTDIR=/var/www/html/slides/MedicalCompute-GoodBadAndUgly

@@ -892,7 +892,7 @@ _#_font_basic Debt
 </pre>
 
 <pre style="font-size:200%; float:left; width: 40%">
-_#_o_02   ▆ no real concern for supporting system
+_#_o_02   ▆ no real concern for <i>system</i>
 _#_o_03   ▆ which is then never created.
 
 </pre>
@@ -980,9 +980,10 @@ _#_font_basic AI...
 
    "AI" to most folks: Neural Networks.
 
-   "NNs": to me... a serendipituos rebranding (misbranding?)
-   of a particular class of non-linear mathematics /
-   logarithm regressors / function approximators that
+   "NNs": to me... a serendipituos rebranding
+   (misbranding?) of a particular class of
+   non-linear mathematics / logarithm regressors
+   / function approximators that
 
 </pre>
 <pre style="font-size:200%; float:left; width: 100%">
@@ -1005,8 +1006,8 @@ _#_font_basic AI
 </pre>
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-    Why so hype-able? Moreso than most other fields of science or
-    endeavours of engineering...
+    Why so hype-able? Moreso than most other fields
+    of science or endeavours of engineering...
 
 </pre>
 <pre style="font-size:150%; float:left; width: 33%";>
@@ -1046,10 +1047,10 @@ _#_font_basic AI
 </pre>
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-    Speaking of "neural nets"... or a bunch of non-linear
-    matrix multiplications based on "weights" that are
-    updated by partial derivatives of an error gradient
-    signal...
+    Speaking of "neural nets"... or a bunch of non-
+    linear matrix multiplications based on "weights"
+    that are updated by partial derivatives of an
+    error gradient signal...
 
 </pre>
 <pre style="font-size:150%; float:left; width: 50%";>

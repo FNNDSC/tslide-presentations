@@ -7,9 +7,10 @@ Clone the repo:
     git clone https://github.org/FNNDSC/tslide-presentations
     cd tslide-presentations
     export REPO=$PWD
+    export HTMLDOCS=/srv/http/slides
     export INPUTDIR=$REPO/MedicalCompute-GoodBadAndUgly
     export INPUTFILE=slides-all-master.hjson
-    export OUTPUTDIR=/var/www/html/slides/MedicalCompute-GoodBadAndUgly
+    export OUTPUTDIR=$HTMLDOCS/MedicalCompute-GoodBadAndUgly
 ```
 
 After edits, run tsmake on it:
@@ -41,26 +42,36 @@ body:
 '''
 <div>
 <pre>
-
-
 _#_font_basic Welcome!
-</pre>
 
+
+
+</pre>
+</div>
+
+<div class="container">
 <pre style="font-size:300%;">
-Let's get practical: developing and disseminating
-     AI research/workflows to audiences of
-            researchers and clinicians
-                    within BCH
-
-            (using the ChRIS platform)
+Scientific Compute and <em style="color: yellow;">AI</em> in Medicine: The Good, The Bad, and the Ugly
 </pre>
+</div>
 
+<div>
+<pre style="font-size:300%;">
+<em>Reflections from the trenches</em>
+</pre>
+</div>
+
+<div>
 <pre style="font-size:150%; line-height: 118%;">
+
+
+
+
 
 ┌─────────────────────────┐
 │ Rudolph Pienaar, Dr.Eng │
 ├─────────────────────────┴────────────────────────────────────┐
-│ slack:  https://slack.babymri.org                            │
+│ matrix: @rpienaar:fedora.im                                  │
 │ mailto: rudolph.pienaar@childrens.harvard.edu                │
 │ web:    http://fnndsc.babymri.org                            │
 └──────────────────────────────────────────────────────────────┘
@@ -81,7 +92,7 @@ body:
 A copy of this talk is available here:
 </pre>
 <pre style="font-size:175%;">
-http://fnndsc.childrens.harvard.edu/research/investigator/rudolph.pienaar/2020/talks/ChRIS-BCH-AIpractical
+http://fnndsc.childrens.harvard.edu/research/investigator/rudolph.pienaar/2023/talks/MedicalCompute-GoodBadAndUgly
 </pre>
 </div>
 '''
@@ -99,7 +110,7 @@ body:
     </div>
 </div>
 <div style="float:right; width:50%;" class="snippet" id="order-1">
-    <img src="figs/profile1.jpg" width=600 style="float: right;">
+    <img src="figs/profile2.jpg" width=600 style="float: right;">
 </div>
 '''
 
@@ -118,15 +129,11 @@ _#_font_basic Overview
 
     Wither this talk?
 
-        ▆ "practicalities"
-        ▆ my biases..
-        ▆ my experience
-        ▆ "AI"
-            ▆ good
-            ▆ bad
-            ▆ ugly
-    
-        ▆ <em style="color: yellow;">Demo</em>
+   ▆ "practicalities"
+   ▆ my experience...
+   ▆ <em>and biases!</em>
+   ▆ Scientific Compute
+   ▆ "AI"
 
 </pre>
 
@@ -146,6 +153,40 @@ _#_font_basic Overview
 </div>
 '''
 
+<slidebreak>
+title:<tt>Is this Italy...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Overview
+</pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+
+    Computing in medicine
+
+   ▆ the <em style="color: yellow;">good...</em>
+   ▆ the <em style="color: yellow;">bad...</em>
+   ▆ and the most definitely
+         <em style="color: red;">ugly...</em>
+
+
+</pre>
+
+<div style="float:right; width:60%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="border-width: 0px; width: 819px; height: 490px; left: 80px; top: 70px;">
+    <div class="sl-block-content" style="z-index: 10;">
+<iframe src="https://giphy.com/embed/9smDomSoAcBkQ" width="819" height="490" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/maudit-maudit-clint-eastwood-the-good-bad-and-ugly-9smDomSoAcBkQ">via GIPHY</a></p>
+
+    </div>
+
+</div>
+
+
+</div>
+'''
 
 <slidebreak>
 title:<tt>Eenie meenie miney mo...?</tt>
@@ -160,26 +201,28 @@ _#_font_basic Overview
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-   In this talk, I'll briefly touch upon some of the 
-   practical realities shaping compute and "AI" in 
-   real world biomedical compute environments.
+   What shapes biomedical computer? And is "AI" the
+   saviour?
 
 </pre>
 
 <pre style="font-size:200%; float:left; width: 50%">
 _#_o_01 <em style="color: yellow;">The churn...</em>
-_#_o_02   ▆ developer perspective
-_#_o_03   ▆ systems designer perspecitve
-_#_o_04   ▆ research perspective
-_#_o_05   ▆ clinician perspective
+_#_o_02   ▆ medicine does not understand computing
+_#_o_03   ▆ medicine does not appreciate computing
+_#_o_04   ▆ computing "just happens"
+_#_o_05   ▆ what is considered hard is not hard
+_#_o_06   ▆ what is hard is not appreciated
+
 </pre>
 
 <pre style="font-size:200%; float:right; width: 50%">
-_#_o_06 <em style="color: red;">The burn...</em>
-_#_o_07   ▆ data control
-_#_o_08   ▆ privacy
-_#_o_09   ▆ HIPAA / Regulatory
-_#_o_10   ▆ often err on side of conservatism
+_#_o_07 <em style="color: red;">The burn...</em>
+_#_o_08   ▆ a huge gulf between research and practice
+_#_o_09   ▆ private companies fill the void
+_#_o_10   ▆ little to any open players
+_#_o_11   ▆ skewed funding models
+
 </pre>
 
 
@@ -187,33 +230,36 @@ _#_o_10   ▆ often err on side of conservatism
 '''
 
 <slidebreak>
-title:<tt>But there's more..!</tt>
+title:<tt>If only we can chat..!</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
 
 <pre style="float:left; width:100%">
-_#_font_basic Caveats
+_#_font_basic Gulf
 </pre>
 
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-   Apologies in advance ── this is a "non standard" talk. 
-   Part of what I'm really interested in is the larger 
-   picture of compute to solve real clinical and biomedical 
-   research problems. I'm actually more interested in the 
-   <em style="color: yellow;">why</em> than the <b style="color: yellow;">how</b>...
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+    The model in medicine is based off Pharma.
+
+<i style="color: white;">  this is not computing!</i>
 </pre>
 
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ "AI" is a bit of convenient vehicle
-_#_o_02   ▆ "AI" is to me really a specific instance
-_#_o_03      ... of a larger compute universe
+<pre style="font-size:200%; float:left; width: 40%">
+_#_o_02   ▆ Basic lab discoveries in academia
+_#_o_03   ▆ can be productized only by
+_#_o_04      ... a commercial entity.
 
-_#_o_04        <b style="color: white;">How to meaningfully enable complex compute in medicine and biomedical research?</b>
 </pre>
+
+<div style="float:right; width:60%;" class="snippet" id="order-1">
+    <img src="figs/scientistJump.png" width=700 style="float: right;">
+</div>
+
 
 </div>
+
 '''
 
 <slidebreak>
@@ -234,7 +280,7 @@ _#_font_basic Roads...
 
        ▆ how my thinking
          was shaped by my
-         experience of 
+         experience of
          academic research
          compute over two
          decades in the
@@ -268,21 +314,243 @@ body:
 <pre style="float:left; width:100%">
 _#_font_basic Roads...
 </pre>
+</div>
 
+<div>
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
    Once upon a time... early 2000s
 
 </pre>
+</div>
 
+<div>
 <pre style="font-size:200%; float:left; width: 50%">
 _#_o_01   ▆ PhD in Reinforcement Learning
 _#_o_02   ▆ Practically: software software and...
 _#_o_03   ▆ software
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>In the beginning... there was</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic ???
+</pre>
+</div>
+
+<div>
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+
+   Ok, so what is <em>scientific</em> compute?
+
+</pre>
+</div>
+
+<div>
+<pre style="font-size:200%; float:right; width: 50%">
+_#_o_01   ▆ mortal
+_#_o_02   ▆ non-interactive (CLI based)
+_#_o_03   ▆ "self contained"
 </pre>
 
 </div>
 '''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗
+║         [inputDir] ║
+╟────────────────────╢
+║                    ║
+║                    ║
+║                    ║
+╚════════════════════╝
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗      ┌───────────────────┐
+║         [inputDir] ║      │ some "app"        │
+╟────────────────────╫──────┼───────────────────┤
+║                    ║      │                   │
+║                    ║      │                   │
+║                    ║      │                   │
+╚════════════════════╝      │                   │
+                            └───────────────────┘
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+║         [inputDir] ║      │ some "app"        │      ║ [outputDir]        ║
+╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+║                    ║      │                   │      ║                    ║
+║                    ║      │                   │      ║                    ║
+║                    ║      │                   │      ║                    ║
+╚════════════════════╝      │                   │      ╚════════════════════╝
+                            └───────────────────┘
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+║         [inputDir] ║      │ some "app"  (CLI) │      ║ [outputDir]        ║
+╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+║  any type of dir   ║      │ consumes          │      ║  any type of dir   ║
+║  tree and file     ║      │ [inputDir]        │      ║  tree and file     ║
+║  hierarchy         ║      │                   │      ║  hierarchy         ║
+╚════════════════════╝      │                   │      ╚════════════════════╝
+                            └───────────────────┘
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+║         [inputDir] ║      │ some "app"  (CLI) │      ║ [outputDir]        ║
+╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+║  any type of dir   ║      │   containerized   │      ║  any type of dir   ║
+║  tree and file     ║      │       docker      │      ║  tree and file     ║
+║  hierarchy         ║      │       image       │      ║  hierarchy         ║
+╚════════════════════╝      │                   │      ╚════════════════════╝
+                            └───────────────────┘
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>The road more traveled...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic AI...
+</pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+
+   Let's talk about AI..
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 50%">
+_#_o_01   ▆ MRI sequence development
+_#_o_02   ▆ Neuro MRI
+_#_o_03   ▆ Postdoc at MGH -- image processing
+_#_o_04   ▆ FreeSurfer team
+</pre>
+
+</div>
+'''
+
+
+
+
 
 <slidebreak>
 title:<tt>A Song of Ice and...</tt>
@@ -300,8 +568,8 @@ _#_font_basic brrr...
    <em style="color: yellow;">Winter was coming...</em>
 
    The early 2000's was
-   a grim time for AI.   
-   
+   a grim time for AI.
+
    Hype...
    Boom...
    Bust
@@ -323,6 +591,7 @@ _#_font_basic brrr...
 
 </div>
 '''
+
 <slidebreak>
 title:<tt>The road more traveled...</tt>
 body-style: "background: black; color:lightgreen;"
@@ -387,6 +656,7 @@ _#_font_basic Roads...
 _#_o_01   ▆ Biomedical research compute landscape is amazingly rich
 _#_o_02   ▆ Many meaningful apps exist
 _#_o_03   ▆ <b style="color: yellow;">Almost none ever escape the confines of their labs</b>
+
 </pre>
 
 </div>
@@ -411,36 +681,8 @@ _#_font_basic Why..?
 
 </pre>
 
-<pre style="font-size:200%; float:left; width: 50%">
-_#_o_01   ▆ Perhaps topic for different talk...
-
-</pre>
-
 </div>
 '''
-
-<slidebreak>
-title:<tt>Computing is in vogue... En garde! Avant garde?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Why..?
-</pre>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   For now it would seem that "AI" has brought this reality
-   (for good or ill) to a broader awareness.
-
-</pre>
-
-
-</div>
-'''
-
 
 <slidebreak>
 title:<tt>If a tree falls in the woods...</tt>
@@ -454,9 +696,9 @@ _#_font_basic Hmmm...
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-   Susan Dray, usability expert in human computer 
-   interaction and user experience, 
-   
+   Susan Dray, usability expert in human computer
+   interaction and user experience,
+
    <em style="color: yellow;">If the user can't use it, it doesn't work</em>
 
 </pre>
@@ -471,6 +713,61 @@ _#_o_02     <em style="color: yellow;">it essentially doesn't exist.</em>
 </div>
 '''
 
+<slidebreak>
+title:<tt>If a tree falls in the woods...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width:100%">
+_#_font_basic CLI... CLI
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   The inescapable fact is that most <i>scientific</i> compute is all
+   terminal based, running almost exclusively on Linux.
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ No matter how amazing a tool, if never used...
+_#_o_02     <em style="color: yellow;">it essentially doesn't exist.</em>
+
+</pre>
+
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>If a tree falls in the woods...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width:100%">
+_#_font_basic CLI... CLI
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   And therein lies the rub... No (well vanishingly few) clinicians
+   will ever fire up a terminal to type commands.
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ which means that all the decades' worth of scientific tools
+_#_o_02     <em style="color: yellow;">essentially doesn't exist.</em>
+_#_o_03     in the clinical world
+_#_o_04   ▆ and computers are only ever seen to be running email, browsers
+_#_o_05     and dinky web apps
+</pre>
+
+
+</div>
+'''
 
 <slidebreak>
 title:<tt>Ooooohhhh... Shiny!</tt>
@@ -483,19 +780,19 @@ _#_font_basic AI...
 </pre>
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-   "AI": some perceptions
+   "AI": to the rescue!
 
 </pre>
 <pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ High data needs
-_#_o_02   ▆ Specific (pseudo-high end) compute needs
-_#_o_03   ▆ <em style="color: yellow;">"magic"</em>
+_#_o_01   ▆ BAM!
+_#_o_02   ▆ AI is here, and suddenly computers can
+_#_o_03   ▆ <em style="color: yellow;">"compute"</em>
 </pre>
 </div>
 '''
 
 <slidebreak>
-title:<tt>There's hype... and there's reality... and therein lies the rub</tt>
+title:<tt>There's hype... and there's reality...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -506,85 +803,16 @@ _#_font_basic AI...
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
    "AI": to me... a serendipituos rebranding (misbranding?)
-   of a particular class of non-linear mathematics / 
+   of a particular class of non-linear mathematics /
    logarithm regressors / function approximators that
 
 </pre>
 <pre style="font-size:200%; float:left; width: 100%">
 _#_o_01   ▆ captured imaginations
-_#_o_02   ▆ and can lead to ... qualified... but
-_#_o_03   ▆ possibly fundamental improvements in medical compute
+_#_o_02   ▆ but are really...
+_#_o_03   ▆ ... ultimately, a bunch of matix multiplications
 
 </pre>
-</div>
-'''
-
-
-
-<slidebreak>
-title:<tt>Less about a specific AI...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic AI...
-</pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   "AI" is perhaps to me most interesting as a vehicle
-   for discussing what advanced computing would need
-   to be realized in medicine...
-
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ infrastructure
-_#_o_02   ▆ integration
-_#_o_03   ▆ hybrid / edge / cloud
-
-</pre>
-
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>There be dragons...?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic AI
-</pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-    AI in medicine can be considered from many perspectives...
-
-</pre>
-<pre style="font-size:150%; float:left; width: 33%";>
-_#_o_01 GOOD...
-_#_o_02   ▆ solve certain problems very quickly
-_#_o_03   ▆ can be an impetus to advancing compute
-_#_o_04   ▆ science / AI / ML
-</pre>
-<pre style="font-size:150%; float:left; width: 33%">
-_#_o_05 BAD...
-_#_o_06  ▆ forest for the trees
-_#_o_07  ▆ AI is one tree in a larger forest
-_#_o_08  ▆ At the end of the day... it is no more
-_#_o_09    "special" than other advanced computing
-</pre>
-<pre style="font-size:150%; float:right; width: 33%">
-_#_o_10 UGLY...
-_#_o_11   ▆ Hype beyond reality leads to bust
-_#_o_12   ▆ Not magic
-_#_o_13   ▆ History suggests winter is coming
-_#_o_14   ▆ Even the term itself is misused!
-_#_o_15   ▆ can "blind" policy makers
-</pre>
-
 </div>
 '''
 
@@ -638,7 +866,7 @@ _#_font_basic AI
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
     Speaking of "neural nets"... or a bunch of non-linear
-    matrix multiplications based on "weights" that are 
+    matrix multiplications based on "weights" that are
     updated by partial derivatives of an error gradient
     signal...
 
@@ -669,7 +897,7 @@ _#_font_basic AI
 </pre>
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-    Somehow talking about existential crisis posed 
+    Somehow talking about existential crisis posed
     to human kind by
 
 </pre>
@@ -739,7 +967,7 @@ _#_font_basic WHAT?
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
     We have a maturing <b>P</b>latform-<b>A</b>s-<b>A</b>-<b>S</b>ervice solution
-    developed in house at Boston Children's Hospital 
+    developed in house at Boston Children's Hospital
     (with deep collaboration from Red Hat and others):
 </pre>
 
@@ -1341,14 +1569,14 @@ body:
                                      ║ ║                                _╵   ╵_                              ║ ║
                                      ║ ║                             _╵         ╵ _                          ║ ║
                                      ║ ║                          _╵               ╵ _                       ║ ║
-                                     ║ ║                       _╵                     ╵ _                    ╬═╬    
-                                     ║ ║                    _╵                           ╵_                  ║ ║    
-                                     ║ ║                   │─           C U B E           ─│                 ║ ║    
-                                     ║ ║                   │ ╵_                         _╵ │                 ║ ║    
-                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║    
-                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║    
-                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║    
-                                     ║o║                   │	         ╵_ _╵         │  entry │            ║o║    
+                                     ║ ║                       _╵                     ╵ _                    ╬═╬
+                                     ║ ║                    _╵                           ╵_                  ║ ║
+                                     ║ ║                   │─           C U B E           ─│                 ║ ║
+                                     ║ ║                   │ ╵_                         _╵ │                 ║ ║
+                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║
+                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║
+                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║
+                                     ║o║                   │	         ╵_ _╵         │  entry │            ║o║
                                      ║u║                   │               │           │  point │            ║u║       ┌────────┐
                                      ║n║                   │  ┌───────────┐│┌─────────┐└───┬────┘            ║n║       │ client │
                                      ║d║                   │  │ django DB │││ manager │    │                 ║d║       │  comms │
@@ -1414,24 +1642,24 @@ body:
                                      ║ ║                                _╵   ╵_                              ║ ║
                                      ║ ║                             _╵         ╵ _                          ║ ║
                                      ║ ║                          _╵               ╵ _                       ║ ║
-                                     ║ ║                       _╵                     ╵ _                    ╬═╬        
-                                     ║ ║                    _╵                           ╵_                  ║ ║        
-                                     ║ ║                   │─           C U B E           ─│                 ║ ║        
-                                     ║ ║                   │ ╵_                         _╵ │                 ║ ║        
-                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║        
-                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║        
-                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║        
-                                     ║o║                   │	         ╵_ _╵         │  entry ├──┐         ║o║        
+                                     ║ ║                       _╵                     ╵ _                    ╬═╬
+                                     ║ ║                    _╵                           ╵_                  ║ ║
+                                     ║ ║                   │─           C U B E           ─│                 ║ ║
+                                     ║ ║                   │ ╵_                         _╵ │                 ║ ║
+                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║
+                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║
+                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║
+                                     ║o║                   │	         ╵_ _╵         │  entry ├──┐         ║o║
                                      ║u║                   │               │           │  point │  │         ║u║       ┌────────┐
                                      ║n║                   │  ┌───────────┐│┌─────────┐└───┬────┘  │         ║n║       │ client │
                                      ║d║                   │  │ django DB │││ manager │    │       │         ║d║   ┌───┤  comms │
                                      ║a║                   │  ├───────────┤│├─────────┤    │       │         ║a║   │   │        │
                                      ║r║                   │  │           │││         │    │       │         ║r║   │   └────────┘
-                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │ 
-                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │ 
-                                     ║ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │ 
-                                     ║ ║                           ╵_      │      _╵               │         ║ ║   │ 
-                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │ 
+                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │
+                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │
+                                     ║ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │
+                                     ║ ║                           ╵_      │      _╵               │         ║ ║   │
+                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │
                                      ∠ ∠                                 ╵_│_╵                     │         ∠ ∠   │
                                      ∠ ∠                                                           │         ∠ ∠   │
                                      ║ ║                                                           │         ║ ║   │
@@ -1489,31 +1717,31 @@ body:
                   └────────┘         ╬═╬                                _╵   ╵_                              ║ ║
                                      ║ ║                             _╵         ╵ _                          ║ ║
                   ┌────────┐         ╬═╬                          _╵               ╵ _                       ║ ║
-                  │        │         ║ ║                       _╵                     ╵ _                    ╬═╬    
-                  │  pman  │         ║ ║                    _╵                           ╵_                  ║ ║    
-                  │        │         ║ ║                   │─           C U B E           ─│                 ║ ║    
-                  └────────┘         ║ ║                   │ ╵_                         _╵ │                 ║ ║    
-                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║    
-                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║    
-                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║    
-                                     ║o║                   │	         ╵_ _╵         │  entry ├──┐         ║o║    
+                  │        │         ║ ║                       _╵                     ╵ _                    ╬═╬
+                  │  pman  │         ║ ║                    _╵                           ╵_                  ║ ║
+                  │        │         ║ ║                   │─           C U B E           ─│                 ║ ║
+                  └────────┘         ║ ║                   │ ╵_                         _╵ │                 ║ ║
+                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║
+                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║
+                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║
+                                     ║o║                   │	         ╵_ _╵         │  entry ├──┐         ║o║
                                      ║u║                   │               │           │  point │  │         ║u║       ┌────────┐
                                      ║n║                   │  ┌───────────┐│┌─────────┐└───┬────┘  │         ║n║       │ client │
                                      ║d║                   │  │ django DB │││ manager │    │       │         ║d║   ┌───┤  comms │
                                      ║a║                   │  ├───────────┤│├─────────┤    │       │         ║a║   │   │        │
                                      ║r║                   │  │           │││         │    │       │         ║r║   │   └────────┘
-                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │   
-                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │   
-                                     ║ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │   
-                                     ║ ║                           ╵_      │      _╵               │         ║ ║   │   
-                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │   
-                                     ∠ ∠                                 ╵_│_╵                     │         ∠ ∠   │   
-                                     ∠ ∠                                                           │         ∠ ∠   │   
-                                     ║ ║                                                           │         ║ ║   │   
-                                     ║ ╚════════════════════════════════╗                          │         ║ ║   │   
-                                     ╚════════════════════════════════╗ ║       ┌────────┐    ┌────┴───┐     ║ ║   │   
-                                                                      ║ ║       │        │    │  ChRIS │     ║ ║   │   
-                                                                      ║ ║       │ pfcon  │    │   UI   ├─────╬═╬───┘   
+                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │
+                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │
+                                     ║ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │
+                                     ║ ║                           ╵_      │      _╵               │         ║ ║   │
+                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │
+                                     ∠ ∠                                 ╵_│_╵                     │         ∠ ∠   │
+                                     ∠ ∠                                                           │         ∠ ∠   │
+                                     ║ ║                                                           │         ║ ║   │
+                                     ║ ╚════════════════════════════════╗                          │         ║ ║   │
+                                     ╚════════════════════════════════╗ ║       ┌────────┐    ┌────┴───┐     ║ ║   │
+                                                                      ║ ║       │        │    │  ChRIS │     ║ ║   │
+                                                                      ║ ║       │ pfcon  │    │   UI   ├─────╬═╬───┘
                                                                       ║ ║       │        │    │        │     ║ ║
                                                                       ║ ║       └────────┘    └────────┘     ║ ║
                                                                       ║ ║                                    ║ ║
@@ -1562,31 +1790,31 @@ body:
                   └────────┘         ╬═╬                                _╵   ╵_                              ║ ║
                                      ║ ║                             _╵         ╵ _                          ║ ║
                   ┌────────┐         ╬═╬                          _╵               ╵ _                       ║ ║
-                  │        │         ║ ║                       _╵                     ╵ _                    ╬═╬    
-                  │  pman  │         ║ ║                    _╵                           ╵_                  ║ ║    
-                  │        │         ║ ║                   │─           C U B E           ─│                 ║ ║    
-                  └────────┘         ║ ║                   │ ╵_                         _╵ │                 ║ ║    
-                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║    
-                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║    
-                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║    
-                                     ║o║                   │	         ╵_ _╵         │  entry ├──┐         ║o║    
+                  │        │         ║ ║                       _╵                     ╵ _                    ╬═╬
+                  │  pman  │         ║ ║                    _╵                           ╵_                  ║ ║
+                  │        │         ║ ║                   │─           C U B E           ─│                 ║ ║
+                  └────────┘         ║ ║                   │ ╵_                         _╵ │                 ║ ║
+                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║
+                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║
+                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║
+                                     ║o║                   │	         ╵_ _╵         │  entry ├──┐         ║o║
                                      ║u║                   │               │           │  point │  │         ║u║       ┌────────┐
                                      ║n║                   │  ┌───────────┐│┌─────────┐└───┬────┘  │         ║n║       │ client │
                                      ║d║                   │  │ django DB │││ manager │    │       │         ║d║   ┌───┤  comms │
                                      ║a║                   │  ├───────────┤│├─────────┤    │       │         ║a║   │   │        │
                                      ║r║                   │  │           │││         │    │       │         ║r║   │   └────────┘
-                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │   
-                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │   
-                                     ║ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │   
-                                     ║ ║                           ╵_      │      _╵               │         ║ ║   │   
-                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │   
-                                     ∠ ∠                                 ╵_│_╵                     │         ∠ ∠   │   
-                                     ∠ ∠                                                           │         ∠ ∠   │   
-                                     ║ ║                                                           │         ║ ║   │   
-                                     ║ ╚════════════════════════════════╗                          │         ║ ║   │   
-                                     ║ ╔══════════════════════════════╗ ║       ┌────────┐    ┌────┴───┐     ║ ║   │   
-                                     ║ ║                              ║ ║       │        │    │  ChRIS │     ║ ║   │   
-                                     ║ ║                              ║ ║       │ pfcon  │    │   UI   ├─────╬═╬───┘   
+                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │
+                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │
+                                     ║ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │
+                                     ║ ║                           ╵_      │      _╵               │         ║ ║   │
+                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │
+                                     ∠ ∠                                 ╵_│_╵                     │         ∠ ∠   │
+                                     ∠ ∠                                                           │         ∠ ∠   │
+                                     ║ ║                                                           │         ║ ║   │
+                                     ║ ╚════════════════════════════════╗                          │         ║ ║   │
+                                     ║ ╔══════════════════════════════╗ ║       ┌────────┐    ┌────┴───┐     ║ ║   │
+                                     ║ ║                              ║ ║       │        │    │  ChRIS │     ║ ║   │
+                                     ║ ║                              ║ ║       │ pfcon  │    │   UI   ├─────╬═╬───┘
                                      ║ ║                              ║ ║       │        │    │        │     ║ ║
                                      ║ ║         ┌─────────┐          ║ ║       └────────┘    └────────┘     ║ ║
                                      ║ ║         │  ChRIS  │          ║ ║                                    ║ ║
@@ -1635,31 +1863,31 @@ body:
                   └────────┘         ╬═╬                                _╵   ╵_                              ║ ║
                                      ║ ║                             _╵         ╵ _                          ║ ║
                   ┌────────┐         ╬═╬                          _╵               ╵ _                       ║ ║
-                  │        │         ║ ║                       _╵                     ╵ _                    ╬═╬    
-                  │  pman  │         ║ ║                    _╵                           ╵_                  ║ ║    
-                  │        │         ║ ║                   │─           C U B E           ─│                 ║ ║    
-                  └────────┘         ║ ║                   │ ╵_                         _╵ │                 ║ ║    
-                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║    
-                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║    
-                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║    
-                                     ║o║                   │	         ╵_ _╵         │  entry ├──┐         ║o║    
+                  │        │         ║ ║                       _╵                     ╵ _                    ╬═╬
+                  │  pman  │         ║ ║                    _╵                           ╵_                  ║ ║
+                  │        │         ║ ║                   │─           C U B E           ─│                 ║ ║
+                  └────────┘         ║ ║                   │ ╵_                         _╵ │                 ║ ║
+                                     ║ ║                   │    ╵_                   _╵    │                 ║ ║
+                                     ║ ║                   │       ╵_             _╵   ┌───┴────┐            ║ ║
+                                     ║b║                   │          ╵_       _╵      │  REST  │            ║b║
+                                     ║o║                   │	         ╵_ _╵         │  entry ├──┐         ║o║
                                      ║u║                   │               │           │  point │  │         ║u║       ┌────────┐
                                      ║n║                   │  ┌───────────┐│┌─────────┐└───┬────┘  │         ║n║       │ client │
                                      ║d║                   │  │ django DB │││ manager │    │       │         ║d║   ┌───┤  comms │
                                      ║a║                   │  ├───────────┤│├─────────┤    │       │         ║a║   │   │        │
                                      ║r║                   │  │           │││         │    │       │         ║r║   │   └────────┘
-                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │   
-                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │   
-═════════════════════════════════════╝ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │   
-═════════════════════════════════════╗ ║                           ╵_      │      _╵               │         ║ ║   │   
-                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │   
-           ╔═══════════════╗         ∠ ∠                                 ╵_│_╵                     │         ∠ ∠   │   
-           ║   dockerhub   ║         ∠ ∠                                                           │         ∠ ∠   │   
-           ╟───────────────╢         ║ ║                                                           │         ║ ║   │   
-           ║       pl-repo ║         ║ ╚════════════════════════════════╗                          │         ║ ║   │   
-           ╚═══════════════╝         ║ ╔══════════════════════════════╗ ║       ┌────────┐    ┌────┴───┐     ║ ║   │   
-                                     ║ ║                              ║ ║       │        │    │  ChRIS │     ║ ║   │   
-                                     ║ ║                              ║ ║       │ pfcon  │    │   UI   ├─────╬═╬───┘   
+                                     ║y║                    ─ └────┐      ││└─────────┘   ─        │         ║y║   │
+                                     ║ ║                     ╵_    │     ▼││            _╵         │         ║ ║   │
+═════════════════════════════════════╝ ║                        ╵_ └──────┘│         _╵            │         ║ ║   │
+═════════════════════════════════════╗ ║                           ╵_      │      _╵               │         ║ ║   │
+                                     ∠ ∠                              ╵_   │   _╵                  │         ∠ ∠   │
+           ╔═══════════════╗         ∠ ∠                                 ╵_│_╵                     │         ∠ ∠   │
+           ║   dockerhub   ║         ∠ ∠                                                           │         ∠ ∠   │
+           ╟───────────────╢         ║ ║                                                           │         ║ ║   │
+           ║       pl-repo ║         ║ ╚════════════════════════════════╗                          │         ║ ║   │
+           ╚═══════════════╝         ║ ╔══════════════════════════════╗ ║       ┌────────┐    ┌────┴───┐     ║ ║   │
+                                     ║ ║                              ║ ║       │        │    │  ChRIS │     ║ ║   │
+                                     ║ ║                              ║ ║       │ pfcon  │    │   UI   ├─────╬═╬───┘
 ═════════════════════════════════════╝ ║                              ║ ║       │        │    │        │     ║ ║
 ═════════════════════════════════════╗ ║         ┌─────────┐          ║ ║       └────────┘    └────────┘     ║ ║
                                      ║ ║         │  ChRIS  │          ║ ║                                    ║ ║
@@ -1709,31 +1937,31 @@ body:
     │     │       └────────┘    └────╬═╬───┐           │                _╵   ╵_                              ║ ║
     │     │                          ║ ║   │           │             _╵         ╵ _                          ║ ║
     │     │       ┌────────┐    ┌────╬═╬───┤           │          _╵               ╵ _                       ║ ║
-    │     │       │        │    │    ║ ║   │           │       _╵                     ╵ _                    ╬═╬    
-    │     │       │  pman  ├────┘    ║ ║   │           │    _╵                           ╵_                  ║ ║    
-    │     │       │       ▟│         ║ ║   │           │   │─           C U B E           ─│                 ║ ║    
-    │     │       └────────┘         ║ ║   │           │   │ ╵_                         _╵ │                 ║ ║    
-    │     │                          ║ ║   │           │   │    ╵_                   _╵    │                 ║ ║    
-    │     │                          ║ ║   │           │   │       ╵_             _╵   ┌───┴────┐            ║ ║    
-    │     │                          ║b║   │           │   │          ╵_       _╵      │  REST  │            ║b║    
-    │     └─────────────────────┐    ║o║   │           │   │             ╵_ _╵         │  entry ├──┐         ║o║    
+    │     │       │        │    │    ║ ║   │           │       _╵                     ╵ _                    ╬═╬
+    │     │       │  pman  ├────┘    ║ ║   │           │    _╵                           ╵_                  ║ ║
+    │     │       │       ▟│         ║ ║   │           │   │─           C U B E           ─│                 ║ ║
+    │     │       └────────┘         ║ ║   │           │   │ ╵_                         _╵ │                 ║ ║
+    │     │                          ║ ║   │           │   │    ╵_                   _╵    │                 ║ ║
+    │     │                          ║ ║   │           │   │       ╵_             _╵   ┌───┴────┐            ║ ║
+    │     │                          ║b║   │           │   │          ╵_       _╵      │  REST  │            ║b║
+    │     └─────────────────────┐    ║o║   │           │   │             ╵_ _╵         │  entry ├──┐         ║o║
   ╔═╧═╗      ┌─────────┐      ╔═╧═╗  ║u║   │           │   │               │           │  point │  │         ║u║       ┌────────┐
   ║▲▲▲╟──────┤ pl-repo ├──────╢▼▼▼║  ║n║   │           │   │  ┌───────────┐│┌─────────┐└───┬────┘  │         ║n║       │ client │
   ╚═══╝      └─────────┘      ╚═══╝  ║d║   │           │   │  │ django DB │││ manager │    │       │         ║d║   ┌───┤  comms │
                                      ║a║   │           │   │  ├───────────┤│├─────────┼┐   │       │         ║a║   │   │        │
                                      ║r║   │           │   │  │▟          │││         ││   │       │         ║r║   │   └────────┘
-                                     ║y║   │           │    ─ └────┐     ▲││└─────────┘│  ─        │         ║y║   │   
-                                     ║ ║   │           │     ╵_    │     ▼││           │_╵         │         ║ ║   │   
-═════════════════════════════════════╝ ║   │           │        ╵_ └──────┘│         _╵│           │         ║ ║   │   
-═════════════════════════════════════╗ ║   │           │           ╵_      │      _╵   │           │         ║ ║   │   
-                                     ∠ ∠   │           │              ╵_   │   _╵      │           │         ∠ ∠   │   
-           ╔═══════════════╗         ∠ ∠   │           │                 ╵_│_╵       ┌─┘           │         ∠ ∠   │   
-           ║   dockerhub   ║         ∠ ∠   │           │                             │             │         ∠ ∠   │   
-           ╟───────────────╫────┐    ║ ║   └───────────┴────────────────────┐        │             │         ║ ║   │   
-           ║       pl-repo ║    │    ║ ╚════════════════════════════════╗   │        │             │         ║ ║   │   
-           ╚═══════╦═══════╝    │    ║ ╔══════════════════════════════╗ ║   │   ┌────┴───┐    ┌────┴───┐     ║ ║   │   
-                   │            │    ║ ║                              ║ ║   │   │        │    │  ChRIS │     ║ ║   │   
-                   │            └────╬═╬────┐                         ║ ║   └───┤ pfcon  │    │   UI   ├─────╬═╬───┘   
+                                     ║y║   │           │    ─ └────┐     ▲││└─────────┘│  ─        │         ║y║   │
+                                     ║ ║   │           │     ╵_    │     ▼││           │_╵         │         ║ ║   │
+═════════════════════════════════════╝ ║   │           │        ╵_ └──────┘│         _╵│           │         ║ ║   │
+═════════════════════════════════════╗ ║   │           │           ╵_      │      _╵   │           │         ║ ║   │
+                                     ∠ ∠   │           │              ╵_   │   _╵      │           │         ∠ ∠   │
+           ╔═══════════════╗         ∠ ∠   │           │                 ╵_│_╵       ┌─┘           │         ∠ ∠   │
+           ║   dockerhub   ║         ∠ ∠   │           │                             │             │         ∠ ∠   │
+           ╟───────────────╫────┐    ║ ║   └───────────┴────────────────────┐        │             │         ║ ║   │
+           ║       pl-repo ║    │    ║ ╚════════════════════════════════╗   │        │             │         ║ ║   │
+           ╚═══════╦═══════╝    │    ║ ╔══════════════════════════════╗ ║   │   ┌────┴───┐    ┌────┴───┐     ║ ║   │
+                   │            │    ║ ║                              ║ ║   │   │        │    │  ChRIS │     ║ ║   │
+                   │            └────╬═╬────┐                         ║ ║   └───┤ pfcon  │    │   UI   ├─────╬═╬───┘
 ═══════════════════╬═════════════════╝ ║    │                         ║ ║       │     ▟ ▼│    │▟ ▼▲    │     ║ ║
 ═══════════════════╬═════════════════╗ ║    │    ┌─────────┐          ║ ║       └────────┘    └────────┘     ║ ║
                    │                 ║ ║    │    │  ChRIS  │          ║ ║               █                    ║ ║
@@ -1801,7 +2029,7 @@ _#_font_basic Language
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-   Our core language choice is python                                
+   Our core language choice is python
 
 </pre>
 
@@ -1856,7 +2084,7 @@ _#_o_05   ▆ modern
 <pre style="font-size:200%; float:left; width: 33%">
 _#_o_06 BAD...
 _#_o_07   ▆ docker containers need root
-_#_o_08   ▆ performance penalty on non 
+_#_o_08   ▆ performance penalty on non
 _#_o_09     Linux platforms
 _#_o_10   ▆ can be hard to debug
 </pre>
@@ -1864,8 +2092,8 @@ _#_o_10   ▆ can be hard to debug
 <pre style="font-size:200%; float:right; width: 33%">
 _#_o_11 UGLY...
 _#_o_12   ▆ dependencies issues
-_#_o_13   ▆ version management  
-_#_o_14   ▆ docker-compose complex  
+_#_o_13   ▆ version management
+_#_o_14   ▆ docker-compose complex
 </pre>
 
 </div>
@@ -1884,7 +2112,7 @@ _#_font_basic Cloudy
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
    Working with a third part cloud provider, in this case the
-   Massachusetts Open Cloud, jumpstarted our reach into 
+   Massachusetts Open Cloud, jumpstarted our reach into
    distributed cloud services;
 </pre>
 
@@ -1907,7 +2135,7 @@ _#_o_09   ▆ custom, tailored code for ChRIS
 _#_o_10 UGLY...
 _#_o_11   ▆ provider updates can break things!
 _#_o_12   ▆ SSO woes
-_#_o_13   ▆ hard to pin point source of error  
+_#_o_13   ▆ hard to pin point source of error
 </pre>
 
 </div>
@@ -1995,7 +2223,7 @@ _#_font_basic And..!
 </pre>
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-    And an amazing team of volunteers working from Red Hat, 
+    And an amazing team of volunteers working from Red Hat,
     esp on the COVID-19 project.
 </pre>
 

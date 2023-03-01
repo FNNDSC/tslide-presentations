@@ -137,8 +137,11 @@ _#_font_basic Overview
    ▆ "practicalities"
    ▆ my experience...
    ▆ <em>and biases!</em>
-   ▆ Scientific Compute
+   ▆ scientific compute
    ▆ "AI"
+   ▆ <em style="color: yellow;">Think outside the box!</em>
+   ▆ <b style="color: purple;">KNOW THE BOX</b>
+
 
 </pre>
 
@@ -171,13 +174,15 @@ _#_font_basic Overview
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
 
-    Computing in medicine
+    Computing (and "AI") in
+    medicine
 
    ▆ the <em style="color: yellow;">good...</em>
    ▆ the <em style="color: yellow;">bad...</em>
    ▆ and the most definitely
          <em style="color: red;">ugly...</em>
 
+   ▆ how to <em style="color: white;">WIN</em>
 
 </pre>
 
@@ -206,8 +211,8 @@ _#_font_basic Overview
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-   What shapes biomedical computer? And is "AI" the
-   saviour?
+   What shapes biomedical computing? And is "AI" the
+   saviour? Why do people think that?
 
 </pre>
 
@@ -217,7 +222,7 @@ _#_o_02   ▆ medicine does not understand computing
 _#_o_03   ▆ medicine does not appreciate computing
 _#_o_04   ▆ computing "just happens"
 _#_o_05   ▆ what is considered hard is not hard
-_#_o_06   ▆ what is hard is not appreciated
+_#_o_06   ▆ what is hard is not appreciated or seen
 
 </pre>
 
@@ -225,7 +230,7 @@ _#_o_06   ▆ what is hard is not appreciated
 _#_o_07 <em style="color: red;">The burn...</em>
 _#_o_08   ▆ a huge gulf between research and practice
 _#_o_09   ▆ private companies fill the void
-_#_o_10   ▆ little to any open players
+_#_o_10   ▆ opensource is largely unknown
 _#_o_11   ▆ skewed funding models
 
 </pre>
@@ -248,7 +253,7 @@ _#_font_basic Gulf
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
     The model in medicine is based off Pharma.
 
-<i style="color: white;">  this is not computing!</i>
+            <i style="color: white;">this does not make sense for computing!</i>
 </pre>
 
 <pre style="font-size:200%; float:left; width: 40%">
@@ -331,9 +336,9 @@ _#_font_basic Roads...
 
 <div>
 <pre style="font-size:200%; float:left; width: 50%">
-_#_o_01   ▆ PhD in Reinforcement Learning
-_#_o_02   ▆ Practically: software software and...
-_#_o_03   ▆ software
+    _#_o_01   ▆ PhD in Reinforcement Learning
+    _#_o_02   ▆ Practically: software software and...
+    _#_o_03   ▆ software
 
 </pre>
 </div>
@@ -359,10 +364,11 @@ _#_font_basic Roads...
 </pre>
 
 <pre style="font-size:200%; float:left; width: 50%">
-_#_o_01   ▆ MRI sequence development
-_#_o_02   ▆ Neuro MRI
-_#_o_03   ▆ Postdoc at MGH -- image processing
-_#_o_04   ▆ FreeSurfer team
+    _#_o_01   ▆ MRI sequence development
+    _#_o_02   ▆ Neuro MRI
+    _#_o_03   ▆ Postdoc at MGH -- image processing
+    _#_o_04   ▆ FreeSurfer team
+
 </pre>
 
 </div>
@@ -392,9 +398,10 @@ _#_font_basic ???
 
 <div>
 <pre style="font-size:200%; float:right; width: 50%">
-_#_o_01   ▆ mortal
-_#_o_02   ▆ non-interactive (CLI based)
-_#_o_03   ▆ "self contained"
+    _#_o_01   ▆ mortal
+    _#_o_02   ▆ non-interactive (CLI based)
+    _#_o_03   ▆ "self contained"
+
 </pre>
 
 </div>
@@ -564,7 +571,7 @@ body:
 <div>
 
 <pre style="float:left; width:100%">
-_#_font_basic Roads...
+_#_font_basic Many Worlds...
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
@@ -585,10 +592,10 @@ _#_font_basic Roads...
     </div>
 </div>
 
-<pre style="font-size:133%; float:left; width: 40%">
-_#_o_01   ▆ Biomedical research compute landscape is amazingly rich
+<pre style="font-size:150%; float:left; width: 40%">
+_#_o_01   ▆ Biomedical research compute landscape is rich
 _#_o_02   ▆ Many meaningful apps exist
-_#_o_03   ▆ <b style="color: yellow;">Almost none ever escape the confines of their labs</b>
+_#_o_03   ▆ <b style="color: yellow;">Almost none escape the lab</b>
 
 </pre>
 
@@ -632,13 +639,14 @@ _#_font_basic Hmmm...
    Susan Dray, usability expert in human computer
    interaction and user experience,
 
-   <em style="color: yellow;">If the user can't use it, it doesn't work</em>
+   <em style="color: yellow;">"If the user can't use it, it doesn't work"</em>
 
 </pre>
 
 <pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ No matter how amazing a tool, if never used...
-_#_o_02     <em style="color: yellow;">it essentially doesn't exist.</em>
+_#_o_01 COROLLARY
+_#_o_02   ▆ No matter how amazing a tool, if never used...
+_#_o_03     <em style="color: yellow;">it essentially doesn't exist.</em>
 
 </pre>
 
@@ -685,17 +693,17 @@ _#_font_basic CLI... CLI
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-   And therein lies the rub... No (well vanishingly few) clinicians
+   And therein lies the rub... No (few) clinicians
    will ever fire up a terminal to type commands.
 
 </pre>
 
 <pre style="font-size:200%; float:left; width: 100%">
 _#_o_01   ▆ which means that all the decades' worth of scientific tools
-_#_o_02     <em style="color: yellow;">essentially doesn't exist.</em>
-_#_o_03     in the clinical world
-_#_o_04   ▆ and computers are only ever seen to be running email, browsers
-_#_o_05     and dinky web apps
+_#_o_02     <em style="color: yellow;">essentially doesn't exist</em> in the clinical world
+_#_o_03   ▆ and computers are only ever seen to be running email, browsers
+_#_o_04   ▆ and dinky web apps
+
 </pre>
 
 
@@ -821,6 +829,127 @@ body:
 '''
 <div>
 <pre style="float:left; width:100%">
+_#_font_basic RAs..!
+</pre>
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   Scientific compute is done by non-programmers
+
+</pre>
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ RAs, engineers, PhDs
+_#_o_02   ▆ with little to any computing experience, coding in
+_#_o_03       ▆ MatLAB
+_#_o_04       ▆ R
+_#_o_05       ▆ jupyter notebook
+_#_o_06   ▆ writing papers...
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Ooooohhhh... Shiny!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width:100%">
+_#_font_basic $$$$
+</pre>
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   Show me the money....
+
+</pre>
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ Funding agencies do not reward <i>process</i>
+_#_o_02   ▆ Funding agencies reward results
+_#_o_03   ▆ No incentive to develop good code
+_#_o_04       ▆ no tests
+_#_o_05       ▆ no documentation
+_#_o_06       ▆ reusability? What's that?
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>If only we can chat..!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Debt
+</pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+    Funding constraints mean only the most kernel
+    "algorithm" counts.
+</pre>
+
+<pre style="font-size:200%; float:left; width: 40%">
+_#_o_02   ▆ no real concern for supporting system
+_#_o_03   ▆ which is then never created.
+
+</pre>
+
+<div style="float:right; width:60%;" class="snippet" id="order-1">
+    <img src="figs/technicalDebt.png" width=700 style="float: right;">
+</div>
+
+
+</div>
+
+'''
+
+
+
+<slidebreak>
+title:<tt>If only we can chat..!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Gulf
+</pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+    A MatLAB script is <i style="color: yellow;">not usable
+    by a larger non-sophisticated user base</i>
+
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 40%">
+_#_o_02   ▆ Basic lab discoveries in academia
+_#_o_03   ▆ can be productized only by
+_#_o_04      ... a commercial entity.
+
+</pre>
+
+<div style="float:right; width:60%;" class="snippet" id="order-1">
+    <img src="figs/scientistJump.png" width=700 style="float: right;">
+</div>
+
+
+</div>
+
+'''
+
+
+
+<slidebreak>
+title:<tt>Ooooohhhh... Shiny!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width:100%">
 _#_font_basic AI...
 </pre>
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
@@ -832,6 +961,7 @@ _#_font_basic AI...
 _#_o_01   ▆ BAM!
 _#_o_02   ▆ AI is here, and suddenly computers can
 _#_o_03   ▆ <em style="color: yellow;">"compute"</em>
+
 </pre>
 </div>
 '''
@@ -847,7 +977,9 @@ _#_font_basic AI...
 </pre>
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-   "AI": to me... a serendipituos rebranding (misbranding?)
+   "AI" to most folks: Neural Networks.
+
+   "NNs": to me... a serendipituos rebranding (misbranding?)
    of a particular class of non-linear mathematics /
    logarithm regressors / function approximators that
 
@@ -881,19 +1013,22 @@ _#_o_01 Language shapes thought...
 _#_o_02   ▆ evocative / mysterious
 _#_o_03   ▆ "bio"-thropomorphic terminology
 _#_o_04   ▆ learning / training / black box
+
 </pre>
 <pre style="font-size:150%; float:left; width: 33%">
 _#_o_05 More than most science touches on...
 _#_o_06   ▆ the creation urge
 _#_o_07   ▆ lure of "more than"
 _#_o_08   ▆ mostly just obtuse
+
 </pre>
 <pre style="font-size:150%; float:right; width: 33%">
 _#_o_09 Celebrity...
-_#_o_10   ▆ Accessible to anyone
-_#_o_11   ▆ Lends itself to "tech"
-_#_o_12   ▆ History suggests winter is coming
-_#_o_13   ▆ Even the term itself is misused!
+_#_o_10   ▆ accessible to anyone
+_#_o_11   ▆ lends itself to "tech"
+_#_o_12   ▆ even the term itself is misused!
+_#_o_13   ▆ no one "understands"
+
 </pre>
 
 </div>
@@ -921,11 +1056,13 @@ _#_o_01 Pure mathematical constructs...
 _#_o_02   ▆ only in the loosest possible sense linked to biology
 _#_o_03   ▆ analogous to 2D genome sequences vs
 _#_o_04   ▆ 3D protein folding
+
 </pre>
 <pre style="font-size:150%; float:left; width: 50%">
 _#_o_05 Used to be known as...
 _#_o_06   ▆ pattern classifiers
 _#_o_07   ▆ non-linear regressors/function approximators
+
 </pre>
 
 </div>
@@ -942,7 +1079,7 @@ _#_font_basic AI
 </pre>
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-    Somehow talking about existential crisis posed
+    Somehow talking about existential crises posed
     to human kind by
 
 </pre>
@@ -951,41 +1088,16 @@ _#_o_01 Learning computers based on braaaaaaaiinns...
 _#_o_02   ▆ very scary
 _#_o_03   ▆ need tech billionares to protect us
 _#_o_04   ▆ never mind that actual AI scientists unconcerned
+
 </pre>
 <pre style="font-size:150%; float:left; width: 50%">
 _#_o_05 Optimization algorithms that are non-linear regressors...
 _#_o_06   ▆ a lot more boring
 _#_o_07   ▆ not exciting to billionaires
-_#_o_08   ▆ are not going to become self aware
-_#_o_09     and demand voting rights
-</pre>
-</div>
-'''
-
-
-<slidebreak>
-title:<tt>Let's take a step back from the edge...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Brains...
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    But "AI" (or neural networks)
-    are based on real neurons!
-
+_#_o_08   ▆ unless they make money!
+_#_o_09   ▆ ChatGPT is not going to become self aware
 
 </pre>
-
-<div style="float:right; width:70%;" class="snippet" id="order-1">
-    <img src="figs/realneuron.jpg" width=700 style="float: right;">
-</div>
-
 </div>
 '''
 
@@ -1009,7 +1121,7 @@ _#_font_basic Brains...
 </pre>
 
 <div style="float:right; width:70%;" class="snippet" id="order-1">
-    <img src="figs/realneuron.jpg" width=700 style="float: right;">
+    <img src="figs/realNeuron.jpg" width=700 style="float: right;">
 </div>
 
 </div>
@@ -1055,19 +1167,23 @@ _#_font_basic 3D!
 
     What's the problem?
 
-   ▆ model hasn't changed since the 1940's
-   ▆ there is a fundamentally missing "dimension"
-   ▆ arguably does not accurately model any real neurology
+   ▆ model hasn't changed
+     since the 1940's
+   ▆ there is a fundamentally
+     missing "dimension"
+   ▆ arguably does not
+     accurately model any
+     neurology
 
 </pre>
 
 <div style="float:right; width:60%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="border-width: 0px; width: 819px; height: 490px; left: 80px; top: 70px;">
     <div class="sl-block-content" style="z-index: 10;">
-<iframe style="width: 1000px; height: 750px; left: 80px; top: 70px;" scrolling="no" title="Only CSS: Paper Bird" src=""https://codepen.io/rudolphpienaar/pen/ExgadVj?height=300&theme-id=23783&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/rudolphpienaar/pen/PRObNr'>Only CSS: Paper Bird</a> by Rudolph Pienaar
-  (<a href='https://codepen.io/rudolphpienaar'>@rudolphpienaar</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-    </div>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Neural Network visualization" src="https://codepen.io/rudolphpienaar/embed/ExgadVj?default-tab=result&theme-id=23783" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/rudolphpienaar/pen/ExgadVj">
+  Neural Network visualization</a> by Rudolph Pienaar (<a href="https://codepen.io/rudolphpienaar">@rudolphpienaar</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>    </div>
 </div>
 </div>
 '''
@@ -1080,7 +1196,7 @@ body:
 <div>
 
 <pre style="float:left; width:100%">
-_#_font_basic :-(
+_#_font_basic :-)
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
@@ -1092,8 +1208,8 @@ _#_font_basic :-(
 
 </pre>
 
-<div style="float:right; width:70%;" class="snippet" id="order-1">
-    <img src="figs/SAG_MPRAGE_220_FOV-slice115.jpg" width=700 style="float: right;">
+<div style="float:right; width:30%;" class="snippet" id="order-1">
+    <img src="figs/outsideBox.png" style="float: right;">
 </div>
 
 </div>
@@ -1107,19 +1223,55 @@ body:
 <div>
 
 <pre style="float:left; width:100%">
-_#_font_basic :-(
+_#_font_basic Key idea!
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
 
-    computing can change the world...
+    Being a subject-domain expert
+    is not enough!
 
-    moreso if you can better understand the nuances
-    and challenges!
+    I'm hoping to show that there
+    is still so much to do...
+    so much potential.
 
 </pre>
 
-<div style="float:right; width:70%;" class="snippet" id="order-1">
+<div style="float:right; width:60%;" class="snippet" id="order-1">
+    <img src="figs/SAG_MPRAGE_220_FOV-slice115.jpg" width=700 style="float: right;">
+</div>
+
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Let's take a step back from the edge...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic :-)
+</pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+
+    scientific computing can
+    change the world...
+
+    moreso if you can better
+    understand the nuances
+    and challenges!
+
+    ▆ docker
+    ▆ and Linux
+    ▆ and systems
+    ▆ oh my!
+</pre>
+
+<div style="float:right; width:60%;" class="snippet" id="order-1">
     <img src="figs/outsideBox.png" width=1000 style="float: right;">
 </div>
 
@@ -1137,7 +1289,7 @@ body:
 <div>
 
 <pre style="float: left; width: 50%; font-size: 300%;">
-Conclusions
+Scientific Compute
 
 _#_o_01   ▆ computing projects are more
 _#_o_02     than code!

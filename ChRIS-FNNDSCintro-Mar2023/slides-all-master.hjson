@@ -7,10 +7,10 @@ Clone the repo:
     git clone https://github.org/FNNDSC/tslide-presentations
     cd tslide-presentations
     export REPO=$PWD
-    export HTMLDOCS=/usr/local/var/www/slides
-    export INPUTDIR=$REPO/MedicalCompute-GoodBadAndUgly
+    export HTMLDOCS=/srv/http/slides
+    export INPUTDIR=$REPO/ChRIS-FNNDSCintro-Mar2023
     export INPUTFILE=slides-all-master.hjson
-    export OUTPUTDIR=$HTMLDOCS/MedicalCompute-GoodBadAndUgly
+    export OUTPUTDIR=$HTMLDOCS/ChRIS-FNNDSCintro-Mar2023
 ```
 
 After edits, run tsmake on it:
@@ -65,10 +65,6 @@ Everything you wanted to know about <em style="color: yellow;">ChRIS</em>
 <div>
 <pre style="font-size:150%; line-height: 118%;">
 
-
-
-
-
 ┌─────────────────────────┐
 │ Rudolph Pienaar, Dr.Eng │
 ├─────────────────────────┴────────────────────────────────────┐
@@ -90,10 +86,12 @@ body:
 '''
 <div>
 <pre style="font-size:300%;">
-A copy of this talk is available here:
+A copy of this talk might be available here:
 </pre>
 <pre style="font-size:175%;">
+<a href=http://fnndsc.childrens.harvard.edu/research/investigator/rudolph.pienaar/2023/talks/ChRIS-FNNDSC-overview>
 http://fnndsc.childrens.harvard.edu/research/investigator/rudolph.pienaar/2023/talks/ChRIS-FNNDSC-overview
+</a>
 </pre>
 </div>
 '''
@@ -128,33 +126,20 @@ body:
 <div>
 
 <pre style="float:left; width:100%">
-_#_font_basic ME? Oh my
+_#_font_basic ME? OH  MY
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
     A bit about me...
 
+   ▆ scientific compute
    ▆ "practicalities"
    ▆ my experience...
    ▆ <em>and biases!</em>
-   ▆ scientific compute
 
+   ▆ Oh... and I'm to blame for any "help" weirdness...
 
 </pre>
-
-<div style="float:right; width:60%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="border-width: 0px; width: 819px; height: 490px; left: 80px; top: 70px;">
-    <div class="sl-block-content" style="z-index: 10;">
-<iframe style="width: 1000px; height: 750px; left: 80px; top: 70px;" scrolling="no" title="Only CSS: Paper Bird" src="https://codepen.io/rudolphpienaar/embed/PRObNr?height=300&theme-id=23783&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/rudolphpienaar/pen/PRObNr'>Only CSS: Paper Bird</a> by Rudolph Pienaar
-  (<a href='https://codepen.io/rudolphpienaar'>@rudolphpienaar</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-    </div>
-
-
-
-</div>
-
 
 </div>
 '''
@@ -175,7 +160,8 @@ _#_font_basic Overview
     Wither this talk?
 
    ▆ What is ChRIS?
-   ▆ How can ChRIS help me? Like really?
+   ▆ How can ChRIS help me?
+   ▆ Like really?
    ▆ Typical examples:
    ▆ Anon
    ▆ FreeSurfer
@@ -200,117 +186,6 @@ _#_font_basic Overview
 </div>
 '''
 
-
-<slidebreak>
-title:<tt>Is this Italy...?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Overview
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    Computing (and "AI") in
-    medicine
-
-   ▆ the <em style="color: yellow;">good...</em>
-   ▆ the <em style="color: yellow;">bad...</em>
-   ▆ and the most definitely
-         <em style="color: red;">ugly...</em>
-
-   ▆ how to <em style="color: white;">WIN</em>
-
-</pre>
-
-<div style="float:right; width:60%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="border-width: 0px; width: 819px; height: 490px; left: 80px; top: 70px;">
-    <div class="sl-block-content" style="z-index: 10;">
-<iframe src="https://giphy.com/embed/9smDomSoAcBkQ" width="819" height="490" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/maudit-maudit-clint-eastwood-the-good-bad-and-ugly-9smDomSoAcBkQ">via GIPHY</a></p>
-
-    </div>
-
-</div>
-
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Eenie meenie miney mo...?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Overview
-</pre>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   What shapes biomedical computing? And is "AI" the
-   saviour? Why do people think that?
-
-</pre>
-
-<pre style="font-size:200%; float:left; width: 50%">
-_#_o_01 <em style="color: yellow;">The churn...</em>
-_#_o_02   ▆ medicine does not understand computing
-_#_o_03   ▆ medicine does not appreciate computing
-_#_o_04   ▆ computing "just happens"
-_#_o_05   ▆ what is considered hard is not hard
-_#_o_06   ▆ what is hard is not appreciated or seen
-
-</pre>
-
-<pre style="font-size:200%; float:right; width: 50%">
-_#_o_07 <em style="color: red;">The burn...</em>
-_#_o_08   ▆ a huge gulf between research and practice
-_#_o_09   ▆ private companies fill the void
-_#_o_10   ▆ opensource is largely unknown
-_#_o_11   ▆ skewed funding models
-
-</pre>
-
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>If only we can chat..!</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Gulf
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    The model in medicine is based off Pharma.
-
-            <i style="color: white;">this does not make sense for computing!</i>
-</pre>
-
-<pre style="font-size:200%; float:left; width: 40%">
-_#_o_02   ▆ Basic lab discoveries in academia
-_#_o_03   ▆ can be productized only by
-_#_o_04      ... a commercial entity.
-
-</pre>
-
-<div style="float:right; width:60%;" class="snippet" id="order-1">
-    <img src="figs/scientistJump.png" width=700 style="float: right;">
-</div>
-
-
-</div>
-
-'''
 
 <slidebreak>
 title:<tt>There's a backstory...</tt>
@@ -728,629 +603,170 @@ body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
-<pre style="float:left; width:100%">
-_#_font_basic CLI... CLI
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+Let's try running FreeSurfer at the FNNDSC -- old school
 </pre>
+</span>
 
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   And therein lies the rub... No (few) clinicians
-   will ever fire up a terminal to type commands.
-
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ which means that all the decades' worth of scientific tools
-_#_o_02     <em style="color: yellow;">essentially doesn't exist</em> in the clinical world
-_#_o_03   ▆ and computers are only ever seen to be running email, browsers
-_#_o_04   ▆ and dinky web apps
+<pre id="typewriter" style="float:left; width 100%; font-size:200%;">
+   ~$ ssc
+   ~$ . neuro-fs stable
 
 </pre>
 
-
 </div>
 '''
+
+
 
 <slidebreak>
-
-
-title:<tt>Medical compute is advanced... maybe not so much</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div style="float:left; width:100%;">
-<pre id="typewriter" style="font-size: 400%;">
-
-    What do typical
-medical / clinical apps
-    look like in...
-</pre>
-</div>
-
-<div style="float:left; width:100%;">
-<pre style="font-size: 800%;">
-_#_o_01 2023?
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-
-
-title:<tt>Judge much?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div style="float:left; width:100%;">
-<pre id="typewriter" style="font-size: 400%;">
-
-You be the judge...
-
-</pre>
-</div>
-
-'''
-
-<slidebreak>
-title: <tt>Scheduling...</tt>
-body-style: "background: #a0a0a0; color:black;"
-body:
-'''
-<div style="float:right; width:100%;">
-    <img src="figs/EPIC1-anon.jpg" style="width: 100%; display: block; float: right;">
-</div>
-'''
-
-<slidebreak>
-title: <tt>Real time anaesthesia...</tt>
-body-style: "background: #a0a0a0; color:black;"
-body:
-'''
-<div style="float:right; width:100%;">
-    <img src="figs/AIMS1-anon.jpg" style="width: 100%; display: block; float: right;">
-</div>
-'''
-
-<slidebreak>
-title: <tt>Powerchart...</tt>
-body-style: "background: #a0a0a0; color:black;"
-body:
-'''
-<div style="float:right; width:100%;">
-    <img src="figs/powerchart_report1-anon.jpg" style="width: 100%; display: block; float: right;">
-</div>
-'''
-
-<slidebreak>
-title: <tt>Powerchart...</tt>
-body-style: "background: #a0a0a0; color:black;"
-body:
-'''
-<div style="float:right; width:100%;">
-    <img src="figs/powerchart_report2-anon.jpg" style="width: 100%; display: block; float: right;">
-</div>
-'''
-
-<slidebreak>
-title: <tt>Powerchart...</tt>
-body-style: "background: #a0a0a0; color:black;"
-body:
-'''
-<div style="float:right; width:100%;">
-    <img src="figs/powerchart_report3-anon.jpg" style="width: 100%; display: block; float: right;">
-</div>
-'''
-
-<slidebreak>
-title: <tt>Synapse...</tt>
-body-style: "background: #a0a0a0; color:black;"
-body:
-'''
-<div style="float:right; width:100%;">
-    <img src="figs/synapse-anon.jpg" style="width: 100%; display: block; float: right;">
-</div>
-'''
-
-<slidebreak>
-title: <tt>RadSTAR...</tt>
-body-style: "background: #a0a0a0; color:black;"
-body:
-'''
-<div style="float:right; width:100%;">
-    <img src="figs/radstar_snap2e.png" style="width: 100%; display: block; float: right;">
-</div>
-'''
-
-<slidebreak>
-title:<tt>Ooooohhhh... Shiny!</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic RAs..!
-</pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   Scientific compute is done by non-programmers
-
-</pre>
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ RAs, engineers, PhDs
-_#_o_02   ▆ with little to any computing experience, coding in
-_#_o_03       ▆ MatLAB
-_#_o_04       ▆ R
-_#_o_05       ▆ jupyter notebook
-_#_o_06   ▆ writing papers...
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Ooooohhhh... Shiny!</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic $$$$
-</pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   Show me the money....
-
-</pre>
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ Funding agencies do not reward <i>process</i>
-_#_o_02   ▆ Funding agencies reward results
-_#_o_03   ▆ No incentive to develop good code
-_#_o_04       ▆ no tests
-_#_o_05       ▆ no documentation
-_#_o_06       ▆ reusability? What's that?
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>If only we can chat..!</tt>
+title:<tt>If a tree falls in the woods...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
 
-<pre style="float:left; width:100%">
-_#_font_basic Debt
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+Let's try running FreeSurfer at the FNNDSC -- old school
 </pre>
+</span>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    Funding constraints mean only the most kernel
-    "algorithm" counts.
-</pre>
-
-<pre style="font-size:200%; float:left; width: 40%">
-_#_o_02   ▆ no real concern for <i>system</i>
-_#_o_03   ▆ which is then never created.
-
-</pre>
-
-<div style="float:right; width:60%;" class="snippet" id="order-1">
-    <img src="figs/technicalDebt.png" width=700 style="float: right;">
-</div>
-
-
-</div>
-
-'''
-
-
-
-<slidebreak>
-title:<tt>If only we can chat..!</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Gulf
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    A MatLAB script is <i style="color: yellow;">not usable
-    by a larger non-sophisticated user base</i>
-
-
-</pre>
-
-<pre style="font-size:200%; float:left; width: 40%">
-_#_o_02   ▆ Basic lab discoveries in academia
-_#_o_03   ▆ can be productized only by
-_#_o_04      ... a commercial entity.
-
-</pre>
-
-<div style="float:right; width:60%;" class="snippet" id="order-1">
-    <img src="figs/scientistJump.png" width=700 style="float: right;">
-</div>
-
-
-</div>
-
-'''
-
-
-
-<slidebreak>
-title:<tt>Ooooohhhh... Shiny!</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic AI...
-</pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   "AI": to the rescue!
-
-</pre>
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ BAM!
-_#_o_02   ▆ AI is here, and suddenly computers can
-_#_o_03   ▆ <em style="color: yellow;">"compute"</em>
-
+<pre style="float:left; width 100%; font-size:200%;">
+   ~$ ssc
+   ~$ . neuro-fs stable
+    version:  stable
+    revision: -system default-
+    Host type is x86_64-Linux
+    -------- freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0 --------
+    Setting up environment for FreeSurfer/FS-FAST (and FSL)
+    FREESURFER_HOME   /neuro/arch/x86_64-Linux/packages/freesurfer/stable
+    FSFAST_HOME       /neuro/arch/x86_64-Linux/packages/freesurfer/stable/fsfast
+    FSF_OUTPUT_FORMAT nii.gz
+    SUBJECTS_DIR      /neuro/users/rudolphpienaar
+    MNI_DIR           /neuro/arch/x86_64-Linux/packages/freesurfer/stable/mni
+    FSL_DIR           /neuro/arch/x86_64-Linux/packages/fsl/current
 </pre>
 </div>
 '''
 
 <slidebreak>
-title:<tt>There's hype... and there's reality...</tt>
+title:<tt>If a tree falls in the woods...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
-<pre style="float:left; width:100%">
-_#_font_basic AI...
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+Let's try running FreeSurfer at the FNNDSC -- old school
 </pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+</span>
 
-   "AI" to most folks: Neural Networks.
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
 
-   "NNs": to me... a serendipituos rebranding
-   (misbranding?) of a particular class of
-   non-linear mathematics / logarithm regressors
-   / function approximators that
-
-</pre>
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ captured imaginations
-_#_o_02   ▆ but are really...
-_#_o_03   ▆ ... ultimately, a bunch of matix multiplications
+Now we need to really understand where the data we want to process "lives"
+<em style="color: yellow;">and do some "tricky" CLI magic...</em>
 
 </pre>
-</div>
-'''
+</span>
 
-<slidebreak>
-title:<tt>Why speakest thou in parables...?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic AI
-</pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-    Why so hype-able? Moreso than most other fields
-    of science or endeavours of engineering...
-
-</pre>
-<pre style="font-size:150%; float:left; width: 33%";>
-_#_o_01 Language shapes thought...
-_#_o_02   ▆ evocative / mysterious
-_#_o_03   ▆ "bio"-thropomorphic terminology
-_#_o_04   ▆ learning / training / black box
-
-</pre>
-<pre style="font-size:150%; float:left; width: 33%">
-_#_o_05 More than most science touches on...
-_#_o_06   ▆ the creation urge
-_#_o_07   ▆ lure of "more than"
-_#_o_08   ▆ mostly just obtuse
-
-</pre>
-<pre style="font-size:150%; float:right; width: 33%">
-_#_o_09 Celebrity...
-_#_o_10   ▆ accessible to anyone
-_#_o_11   ▆ lends itself to "tech"
-_#_o_12   ▆ even the term itself is misused!
-_#_o_13   ▆ no one "understands"
-
+<pre id="typewriter" style="float:left; width 100%; font-size:200%;">
+    <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
+    ~$ cd ~/data
+    ~$ export SUBJECTS_DIR=$PWD
+    <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
+    ~$ recon-all -all -s SAG-anon -notalairach
 </pre>
 
 </div>
 '''
 
 <slidebreak>
-title:<tt>AI and DL and cNN... oh my!</tt>
+title:<tt>If a tree falls in the woods...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
-<pre style="float:left; width:100%">
-_#_font_basic AI
-</pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-    Speaking of "neural nets"... or a bunch of non-
-    linear matrix multiplications based on "weights"
-    that are updated by partial derivatives of an
-    error gradient signal...
-
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+Let's try running FreeSurfer at the FNNDSC -- with apptainer!
 </pre>
-<pre style="font-size:150%; float:left; width: 50%";>
-_#_o_01 Pure mathematical constructs...
-_#_o_02   ▆ only in the loosest possible sense linked to biology
-_#_o_03   ▆ analogous to 2D genome sequences vs
-_#_o_04   ▆ 3D protein folding
+</span>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+
+Now, let's use apptainer instead and run FreeSurfer
+
 
 </pre>
-<pre style="font-size:150%; float:left; width: 50%">
-_#_o_05 Used to be known as...
-_#_o_06   ▆ pattern classifiers
-_#_o_07   ▆ non-linear regressors/function approximators
+</span>
 
+<pre id="typewriter" style="float:left; width 100%; font-size:200%;">
+    <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
+    ~$ cd ~/data
+    ~$ export SUBJECTS_DIR=$PWD
+    <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
+    ~$ FREESURFER_HOME=/usr/local/freesurfer freesurfer.sif \
+       recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach
 </pre>
 
 </div>
 '''
 
 <slidebreak>
-title:<tt>What tongue is that...?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic AI
-</pre>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-    Somehow talking about existential crises posed
-    to human kind by
-
-</pre>
-<pre style="font-size:150%; float:left; width: 50%";>
-_#_o_01 Learning computers based on braaaaaaaiinns...
-_#_o_02   ▆ very scary
-_#_o_03   ▆ need tech billionares to protect us
-_#_o_04   ▆ never mind that actual AI scientists unconcerned
-
-</pre>
-<pre style="font-size:150%; float:left; width: 50%">
-_#_o_05 Optimization algorithms that are non-linear regressors...
-_#_o_06   ▆ a lot more boring
-_#_o_07   ▆ not exciting to billionaires
-_#_o_08   ▆ unless they make money!
-_#_o_09   ▆ ChatGPT is not going to become self aware
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Let's take a step back from the edge...</tt>
+title:<tt>If a tree falls in the woods...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
 
-<pre style="float:left; width:100%">
-_#_font_basic Brains...
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+FreeSurfer -- old and new
+</pre>
+</span>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+On the metal
+</pre>
+</span>
+
+<pre style="float:left; width 100%; font-size:200%;">
+    <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
+    ~$ cd ~/data
+    ~$ export SUBJECTS_DIR=$PWD
+    <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
+    ~$ recon-all -all -s SAG-anon -notalairach
 </pre>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+Apptainer!
+</pre>
+</span>
 
-    But "AI" (or neural networks)
-    are based on real neurons!
-
-
+<pre style="float:left; width 100%; font-size:200%;">
+    <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
+    ~$ cd ~/data
+    ~$ export SUBJECTS_DIR=$PWD
+    <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
+    ~$ FREESURFER_HOME=/usr/local/freesurfer freesurfer.sif \
+       recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach
 </pre>
 
-<div style="float:right; width:70%;" class="snippet" id="order-1">
-    <img src="figs/realNeuron.jpg" width=700 style="float: right;">
-</div>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Let's take a step back from the edge...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Brains...
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    which we model like this
-
-
-</pre>
-
-<div style="float:right; width:70%;" class="snippet" id="order-1">
-    <img src="figs/perceptron.jpg" width=700 style="float: right;">
-</div>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Where are you going...?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic 3D!
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    What's the problem?
-
-   ▆ model hasn't changed
-     since the 1940's
-   ▆ there is a fundamentally
-     missing "dimension"
-   ▆ arguably does not
-     accurately model any
-     neurology
-
-</pre>
-
-<div style="float:right; width:60%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="border-width: 0px; width: 819px; height: 490px; left: 80px; top: 70px;">
-    <div class="sl-block-content" style="z-index: 10;">
-<iframe height="500" style="width: 100%;" scrolling="no" title="Neural Network visualization" src="https://codepen.io/rudolphpienaar/embed/ExgadVj?default-tab=result&theme-id=23783" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/rudolphpienaar/pen/ExgadVj">
-  Neural Network visualization</a> by Rudolph Pienaar (<a href="https://codepen.io/rudolphpienaar">@rudolphpienaar</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>    </div>
-</div>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Let's take a step back from the edge...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic :-)
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    wait... what does all this mean?
-
-    I'm hoping to show that there is still so much
-    to do... so much potential.
-
-</pre>
-
-<div style="float:right; width:30%;" class="snippet" id="order-1">
-    <img src="figs/outsideBox.png" style="float: right;">
-</div>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Let's take a step back from the edge...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Key idea!
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    Being a subject-domain expert
-    is not enough!
-
-    I'm hoping to show that there
-    is still so much to do...
-    so much potential.
-
-</pre>
-
-<div style="float:right; width:60%;" class="snippet" id="order-1">
-    <img src="figs/SAG_MPRAGE_220_FOV-slice115.jpg" width=700 style="float: right;">
-</div>
-
-</div>
-'''
-
-
-<slidebreak>
-title:<tt>Let's take a step back from the edge...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic :-)
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    scientific computing can
-    change the world...
-
-    moreso if you can better
-    understand the nuances
-    and challenges!
-
-    ▆ docker
-    ▆ and Linux
-    ▆ and systems
-    ▆ oh my!
-</pre>
-
-<div style="float:right; width:60%;" class="snippet" id="order-1">
-    <img src="figs/outsideBox.png" width=1000 style="float: right;">
-</div>
 
 </div>
 '''
 
 
 
-
-<slidebreak>
-title: <tt>And so, it ends...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float: left; width: 50%; font-size: 300%;">
-Scientific Compute
-
-_#_o_01   ▆ computing projects are more
-_#_o_02     than code!
-_#_o_03   ▆ to grow, need to focus on
-_#_o_04      ▆ documentation
-_#_o_05      ▆ people
-_#_o_06      ▆ communication
-
-</pre>
-<div style="float: right; width: 50%;">
-<p class="codepen"  data-height="500" data-theme-id="23783" data-default-tab="result" data-user="rudolphpienaar" data-slug-hash="ExgadVj" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Neural Network visualization">
-  <span>See the Pen <a href="https://codepen.io/rudolphpienaar/pen/ExgadVj">
-  Neural Network visualization</a> by Rudolph Pienaar (<a href="https://codepen.io/rudolphpienaar">@rudolphpienaar</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-</div>
-</div>
-'''
 
 <slidebreak>
 title:<tt>https://chrisproject.org</tt>

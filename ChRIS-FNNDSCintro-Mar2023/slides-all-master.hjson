@@ -63,7 +63,7 @@ Everything you wanted to know about <em style="color: yellow;">ChRIS</em>
 </div>
 
 <div>
-<pre style="font-size:150%; line-height: 118%;">
+<pre style="font-size:150%; line-height: 118%; color: white;">
 
 ┌─────────────────────────┐
 │ Rudolph Pienaar, Dr.Eng │
@@ -126,46 +126,22 @@ body:
 <div>
 
 <pre style="float:left; width:100%">
-_#_font_basic ME? OH  MY
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    A bit about me...
-
-   ▆ scientific compute
-   ▆ "practicalities"
-   ▆ my experience...
-   ▆ <em>and biases!</em>
-
-   ▆ Oh... and I'm to blame for any "help" weirdness...
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Where are you going...?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
 _#_font_basic Overview
 </pre>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    Wither this talk?
-
-   ▆ What is ChRIS?
-   ▆ How can ChRIS help me?
-   ▆ Like really?
+<pre id="typewriter" style="float:left; width 40%; font-size:250%;">
+    <font style = "color:white;">Wither this talk?</font>
+   ▆ How do we currently do
+     computing at the FNNDSC?
+   ▆ What's all this stuff
+     I hear about containers?
+   ▆ ChRIS?
    ▆ Typical examples:
-   ▆ Anon
-   ▆ FreeSurfer
-   ▆ PACS
+       ▙ FreeSurfer
+       ▙ DICOM anonymization
+   ▆ A whirlwind tour of the
+     ChRIS UI
+
 
 
 </pre>
@@ -186,6 +162,89 @@ _#_font_basic Overview
 </div>
 '''
 
+<slidebreak>
+title:<tt>Where are you going...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Overview
+</pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+
+    <font style="color: white;">What I want to leave you with...</font>
+
+   ▆ Better understanding of ChRIS
+   ▆ Curiousity about using it for your compute needs
+   ▆ Ultimately contributing your own work to the ChRIS ecosystem
+
+
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>Where are you going...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Core
+</pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+
+    <font style="color:white;">In a nutshell... ChRIS can help with</font>
+
+   ▆ ease of use -- not just GUI!
+   ▆ but also definitely GUI
+   ▆ data management / meta data
+   ▆ scaling / multi-experiments
+   ▆ center-wide collaboration
+
+
+</pre>
+
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>Where are you going...?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic ME? OH  MY
+</pre>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+    A bit about me...
+</pre>
+</span>
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+   ▆ scientific compute
+   ▆ "practicalities"
+   ▆ my experience...
+   ▆ <em>and biases!</em>
+   ▆ <em style="color: red;">Oh... and I'm to blame for how lots
+     of stuff at the FNNDSC have been setup.
+                   Sorry!</em>
+
+</pre>
+
+</div>
+'''
+
 
 <slidebreak>
 title:<tt>There's a backstory...</tt>
@@ -200,7 +259,7 @@ _#_font_basic Roads...
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
 
-    twisty windy roads
+    <font style="color: white;">twisty windy roads</font>
 
 
        ▆ how my thinking
@@ -241,19 +300,19 @@ _#_font_basic Roads...
 </pre>
 </div>
 
-<div>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
+<span style="width:100%; float: left;">
+<pre id="typewriter" style="font-size:400%; color: white;">
    Once upon a time... early 2000s
-
 </pre>
-</div>
+</span>
 
 <div>
-<pre style="font-size:200%; float:left; width: 50%">
-    _#_o_01   ▆ PhD in Reinforcement Learning
-    _#_o_02   ▆ Practically: software software and...
-    _#_o_03   ▆ software
+<pre style="font-size:200%; float:left; width: 100%">
+    _#_o_01   ▆ PhD in a Machine Learning technique called <em style="color: yellow;">Reinforcement Learning</em>
+    _#_o_02   ▆ Practically: Control systems, muscle modeling software and...
+    _#_o_03   ▆ making a human biomechanical simulation "balance"
+    _#_o_04   ▆ and did I mention?
+    _#_o_05   ▆ <em style="color:white;">software... lots of... software</em>
 
 </pre>
 </div>
@@ -270,24 +329,54 @@ body:
 _#_font_basic Roads...
 </pre>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-
-
+<span style="width:100%; float: left;">
+<pre id="typewriter" style="font-size:400%; color: white;">
    Shifted to neuro imaging...
-
 </pre>
+</span>
 
-<pre style="font-size:200%; float:left; width: 50%">
-    _#_o_01   ▆ MRI sequence development
-    _#_o_02   ▆ Neuro MRI
-    _#_o_03   ▆ Postdoc at MGH -- image processing
+<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
+    _#_o_01   ▆ Postdoc at MGH -- image processing
+    _#_o_02   ▆ MRI sequence development
+    _#_o_03   ▆ Image post-processing
     _#_o_04   ▆ FreeSurfer team
+    _#_o_05   ▆ Developed <b style="color:cyan;">mris_calc</b>, <b style="color:cyan;">mris_curvature_stats</b>, and <b style="color:cyan;">mris_pmake</b>
 
 </pre>
 
 </div>
 '''
+
+<slidebreak>
+title:<tt>The road more traveled...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic BCH
+</pre>
+
+<span style="width:100%; float: left;">
+<pre id="typewriter" style="font-size:400%; color: white;">
+   At BCH...
+</pre>
+</span>
+
+<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
+    _#_o_01   ▆ Technical Director of the FNNDSC
+    _#_o_02   ▆ Developed yet more software
+    _#_o_03   ▆ Continued research on brain shape/curvature
+    _#_o_04   ▆ Began to think about computing in medicine
+    _#_o_05   ▆ Started work on <b style="color:cyan;">ChRIS</b>
+    _#_o_06   ▆ Began building out the <b style="color:cyan;">Advanced Computing Group</b>
+
+</pre>
+
+</div>
+'''
+
 
 
 <slidebreak>
@@ -302,20 +391,21 @@ _#_font_basic ???
 </pre>
 </div>
 
+<span style="width:100%; float: left;">
 <div>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-
-   Ok, so what is <em>scientific</em> compute?
-
+<pre id="typewriter" style="float:left; width 100%; font-size:300%; color: white;">
+   Ok, so what is <em style="color: yellow;">scientific</em> compute?
 </pre>
 </div>
+</span>
 
 <div>
-<pre style="font-size:200%; float:right; width: 50%">
+<pre style="font-size:200%; float:right; width: 100%">
     _#_o_01   ▆ mortal
     _#_o_02   ▆ non-interactive (CLI based)
     _#_o_03   ▆ "self contained"
+    _#_o_04         ▙ initial conditions are set <em>a priori</em>
+    _#_o_05   	    ▙ an end state with terminal results is reached
 
 </pre>
 
@@ -335,17 +425,17 @@ _#_font_basic Key idea!
 </pre>
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+   <em style="color: yellow;">Scientific compute</em> can be represented like this:
 </pre>
 
 <pre style="font-size:200%; float:left; width: 100%">
-╔════════════════════╗
-║         [inputDir] ║
-╟────────────────────╢
-║                    ║
-║                    ║
-║                    ║
-╚════════════════════╝
+    ╔════════════════════╗
+    ║         [inputDir] ║
+    ╟────────────────────╢
+    ║                    ║
+    ║                    ║
+    ║                    ║
+    ╚════════════════════╝
 </pre>
 </div>
 '''
@@ -363,50 +453,18 @@ _#_font_basic Key idea!
 </pre>
 
 <pre style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+   <em style="color: yellow;">Scientific compute</em> can be represented like this:
 </pre>
 
 <pre style="font-size:200%; float:left; width: 100%">
-╔════════════════════╗      ┌───────────────────┐
-║         [inputDir] ║      │ some "app"        │
-╟────────────────────╫──────┼───────────────────┤
-║                    ║      │                   │
-║                    ║      │                   │
-║                    ║      │                   │
-╚════════════════════╝      │                   │
-                            └───────────────────┘
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-
-title:<tt>about this module...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Key idea!
-</pre>
-
-<pre style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
-║         [inputDir] ║      │ some "app"        │      ║ [outputDir]        ║
-╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
-║                    ║      │                   │      ║                    ║
-║                    ║      │                   │      ║                    ║
-║                    ║      │                   │      ║                    ║
-╚════════════════════╝      │                   │      ╚════════════════════╝
-                            └───────────────────┘
+    ╔════════════════════╗      ┌───────────────────┐
+    ║         [inputDir] ║      │ some "app"        │
+    ╟────────────────────╫──────┼───────────────────┤
+    ║                    ║      │                   │
+    ║                    ║      │                   │
+    ║                    ║      │                   │
+    ╚════════════════════╝      │                   │
+                                └───────────────────┘
 
 
 
@@ -427,18 +485,18 @@ _#_font_basic Key idea!
 </pre>
 
 <pre style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+   <em style="color: yellow;">Scientific compute</em> can be represented like this:
 </pre>
 
 <pre style="font-size:200%; float:left; width: 100%">
-╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
-║         [inputDir] ║      │ some "app"  (CLI) │      ║ [outputDir]        ║
-╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
-║  any type of dir   ║      │ consumes          │      ║  any type of dir   ║
-║  tree and file     ║      │ [inputDir]        │      ║  tree and file     ║
-║  hierarchy         ║      │                   │      ║  hierarchy         ║
-╚════════════════════╝      │                   │      ╚════════════════════╝
-                            └───────────────────┘
+    ╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+    ║         [inputDir] ║      │ some "app"        │      ║ [outputDir]        ║
+    ╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+    ║                    ║      │                   │      ║                    ║
+    ║                    ║      │                   │      ║                    ║
+    ║                    ║      │                   │      ║                    ║
+    ╚════════════════════╝      │                   │      ╚════════════════════╝
+                                └───────────────────┘
 
 
 
@@ -459,18 +517,50 @@ _#_font_basic Key idea!
 </pre>
 
 <pre style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented by this canonical structure:
+   <em style="color: yellow;">Scientific compute</em> can be represented like this:
 </pre>
 
 <pre style="font-size:200%; float:left; width: 100%">
-╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
-║         [inputDir] ║      │ some "app"  (CLI) │      ║ [outputDir]        ║
-╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
-║  any type of dir   ║      │   containerized   │      ║  any type of dir   ║
-║  tree and file     ║      │       docker      │      ║  tree and file     ║
-║  hierarchy         ║      │       image       │      ║  hierarchy         ║
-╚════════════════════╝      │                   │      ╚════════════════════╝
-                            └───────────────────┘
+    ╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+    ║         [inputDir] ║      │ some "app"  (CLI) │      ║ [outputDir]        ║
+    ╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+    ║  any type of dir   ║      │ consumes          │      ║  any type of dir   ║
+    ║  tree and file     ║      │ [inputDir]        │      ║  tree and file     ║
+    ║  hierarchy         ║      │                   │      ║  hierarchy         ║
+    ╚════════════════════╝      │                   │      ╚════════════════════╝
+                                └───────────────────┘
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>about this module...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+   <em style="color: yellow;">Scientific compute</em> can be represented like this:
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+    ╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+    ║         [inputDir] ║      │ some "app"  (CLI) │      ║ [outputDir]        ║
+    ╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+    ║  any type of dir   ║      │   containerized   │      ║  any type of dir   ║
+    ║  tree and file     ║      │       docker      │      ║  tree and file     ║
+    ║  hierarchy         ║      │       image       │      ║  hierarchy         ║
+    ╚════════════════════╝      │                   │      ╚════════════════════╝
+                                └───────────────────┘
 
 
 
@@ -485,9 +575,11 @@ body:
 '''
 <div>
 
-<pre style="float:left; width:100%">
+<span style="float:left; width:40%">
+<pre>
 _#_font_basic Many Worlds...
 </pre>
+</span>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
 
@@ -582,8 +674,8 @@ _#_font_basic CLI... CLI
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
 
-   The inescapable fact is that most <i>scientific</i> compute is all
-   terminal based, running almost exclusively on Linux.
+   The inescapable fact is that most <i>scientific</i> compute is
+   often terminal based, running almost exclusively on Linux.
 
 </pre>
 
@@ -605,14 +697,14 @@ body:
 <div>
 
 <span style="width:100%; float: left;">
-<pre style="font-size:300%;">
+<pre style="font-size:300%; color: white;">
 Let's try running FreeSurfer at the FNNDSC -- old school
 </pre>
 </span>
 
-<pre id="typewriter" style="float:left; width 100%; font-size:200%;">
-   ~$ ssc
-   ~$ . neuro-fs stable
+<pre id="typewriter" style="float:left; width 100%; font-size:200%; color: white;">
+   ~$ <font style="color:green;">ssc</font>
+   ~$ <font style="color:green;">.</font> neuro-fs stable
 
 </pre>
 
@@ -629,15 +721,15 @@ body:
 <div>
 
 <span style="width:100%; float: left;">
-<pre style="font-size:300%;">
+<pre style="font-size:300%; color: white;">
 Let's try running FreeSurfer at the FNNDSC -- old school
 </pre>
 </span>
 
-<pre style="float:left; width 100%; font-size:200%;">
-   ~$ ssc
-   ~$ . neuro-fs stable
-    version:  stable
+<pre style="float:left; width 100%; font-size:200%; color:white;">
+   ~$ <font style="color:green;">ssc</font>
+   ~$ <font style="color:green;">.</font> neuro-fs stable
+    <b style="color: white;">version:  stable
     revision: -system default-
     Host type is x86_64-Linux
     -------- freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0 --------
@@ -647,7 +739,7 @@ Let's try running FreeSurfer at the FNNDSC -- old school
     FSF_OUTPUT_FORMAT nii.gz
     SUBJECTS_DIR      /neuro/users/rudolphpienaar
     MNI_DIR           /neuro/arch/x86_64-Linux/packages/freesurfer/stable/mni
-    FSL_DIR           /neuro/arch/x86_64-Linux/packages/fsl/current
+    FSL_DIR           /neuro/arch/x86_64-Linux/packages/fsl/current</b>
 </pre>
 </div>
 '''
@@ -660,7 +752,7 @@ body:
 <div>
 
 <span style="width:100%; float: left;">
-<pre style="font-size:300%;">
+<pre style="font-size:300%; color: white;">
 Let's try running FreeSurfer at the FNNDSC -- old school
 </pre>
 </span>
@@ -668,18 +760,20 @@ Let's try running FreeSurfer at the FNNDSC -- old school
 <span style="width:100%; float: left;">
 <pre style="font-size:300%;">
 
-Now we need to really understand where the data we want to process "lives"
-<em style="color: yellow;">and do some "tricky" CLI magic...</em>
+Now we need to really understand where the data
+we want to process "lives" <em style="color: yellow;">and do some
+"tricky" CLI magic...</em>
 
 </pre>
 </span>
 
-<pre id="typewriter" style="float:left; width 100%; font-size:200%;">
+<pre id="typewriter" style="float:left; width 100%; font-size:200%; color:white;">
     <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
-    ~$ cd ~/data
-    ~$ export SUBJECTS_DIR=$PWD
+    ~$ <font style="color: green;">cd</font> ~/data
+    ~$ <font style="color: yellow;">export</font> SUBJECTS_DIR=$PWD
     <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
-    ~$ recon-all -all -s SAG-anon -notalairach
+    ~$ <b style="color:white;">recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach</b>
+
 </pre>
 
 </div>
@@ -692,7 +786,7 @@ body:
 '''
 <div>
 
-<span style="width:100%; float: left;">
+<span style="width:100%; float: left; color: white;">
 <pre style="font-size:300%;">
 Let's try running FreeSurfer at the FNNDSC -- with apptainer!
 </pre>
@@ -701,19 +795,19 @@ Let's try running FreeSurfer at the FNNDSC -- with apptainer!
 <span style="width:100%; float: left;">
 <pre style="font-size:300%;">
 
-Now, let's use apptainer instead and run FreeSurfer
+Now, let's use apptainer instead and run FreeSurfer.
 
 
 </pre>
 </span>
 
-<pre id="typewriter" style="float:left; width 100%; font-size:200%;">
+<pre id="typewriter" style="float:left; width 100%; font-size:200%; color:white;">
     <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
-    ~$ cd ~/data
-    ~$ export SUBJECTS_DIR=$PWD
+    ~$ <font style="color: green;">cd</font> ~/data
+    ~$ <font style="color: yellow;">export</font> SUBJECTS_DIR=$PWD
     <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
-    ~$ FREESURFER_HOME=/usr/local/freesurfer freesurfer.sif \
-       recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach
+    ~$ <b style = "color: white;">FREESURFER_HOME=/usr/local/freesurfer freesurfer.sif \
+       recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach</b>
 </pre>
 
 </div>
@@ -727,44 +821,348 @@ body:
 <div>
 
 <span style="width:100%; float: left;">
-<pre style="font-size:300%;">
+<pre style="font-size:300%; color: white">
 FreeSurfer -- old and new
 </pre>
 </span>
 
 <span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-On the metal
-</pre>
+<pre style="font-size:300%;">On the metal</pre>
 </span>
 
-<pre style="float:left; width 100%; font-size:200%;">
+<pre style="float:left; width 100%; font-size:200%; color:white;">
     <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
-    ~$ cd ~/data
-    ~$ export SUBJECTS_DIR=$PWD
+    ~$ <font style="color: green;">cd</font> ~/data
+    ~$ <font style="color: yellow;">export</font> SUBJECTS_DIR=$PWD
     <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
-    ~$ recon-all -all -s SAG-anon -notalairach
+    ~$ <b style = "color: white;">recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach</b>
 </pre>
 
 <span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-Apptainer!
-</pre>
+<pre style="font-size:300%;">Apptainer!</pre>
 </span>
 
-<pre style="float:left; width 100%; font-size:200%;">
+<pre style="float:left; width 100%; font-size:200%; color:white;">
     <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
-    ~$ cd ~/data
-    ~$ export SUBJECTS_DIR=$PWD
+    ~$ <font style="color: green;">cd</font> ~/data
+    ~$ <font style="color: yellow;">export</font> SUBJECTS_DIR=$PWD
     <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
-    ~$ FREESURFER_HOME=/usr/local/freesurfer freesurfer.sif \
-       recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach
+    ~$ <b style = "color: white;">FREESURFER_HOME=/usr/local/freesurfer freesurfer.sif \
+       recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach</b>
 </pre>
 
 
 </div>
 '''
 
+<slidebreak>
+title:<tt>Wait... did you just say apptainer?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;"">
+Apptainer? What's that...
+</pre>
+</span>
+
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ "Containers" are the <em style = "color: white;">cool</em> way to do computing.
+_#_o_02   ▆ Containers make apps <em style = "color: white;">mostly</em> universally portable
+_#_o_03   ▆ <em style = "color: white;">and lots of other goodies...</em>
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+Cool. And stuff. But how does this relate to ChRIS?
+
+
+</pre>
+</span>
+
+<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
+        ▆ ChRIS is built to handle running "containers" for you.
+        ▆ ChRIS can run containers on diverse environments
+          (so you don't have to be an openshift dev)
+        ▆ All ChRIS containers, or <em style="color: yellow;">plugins</em> can also be run outside of ChRIS
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+So let's anonymize some data!
+</pre>
+</span>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:200%;">
+        ▆ We'll use a ChRIS plugin called <b style="color: white;">pl-anon.sif</b>
+        ▆ ChRIS plugins are just like regular CLI apps, but you need to explicitly
+          add an <b style="color: white;">input directory</b> and <b style="color: white;">output directory</b>
+        ▆ in conjunction with all the other CLI args the app might want
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+So let's anonymize some data!
+</pre>
+</span>
+
+<pre style="float:left; width 100%; font-size:200%; color:white;">
+<em style = "color: red;"># let's assume you have a dir called leg-images in a data folder</em>
+~$ <font style="color: green;">cd</font> ~/data
+~/data$ <font style="color:green;">pl-anon.sif</font> dicom_headerEdit <b style="color: purple;">leg-images</b> <b style="color: cyan;">leg-images2</b> \                                                                                                                                                                                                   ─╯
+                   --fileFilter dcm                                                    \
+                   --splitToken ","                                                    \
+                   --splitKeyValue "="                                                 \
+                   --tagInfo <font style="color:yellow;">'
+                   PatientName         =  %_name|patientID_PatientName,
+                   PatientID           =  %_md5|7_PatientID,
+                   AccessionNumber     =  %_md5|8_AccessionNumber,
+                   PatientBirthDate    =  %_strmsk|******01_PatientBirthDate,
+                   re:.*hysician       =  %_md5|4_#tag,
+                   re:.*stitution      =  #tag,
+                   re:.*ddress         =  #tag
+               '</font> --threads 0 --printElapsedTime
+
+</pre>
+
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+Wait. Did we just run something on ChRIS?
+
+</pre>
+</span>
+
+<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
+        ▆ Not entirely.
+        ▆ We ran a ChRIS plugin/app <b style="color: white;">outside</b> of ChRIS.
+        ▆ This is mostly to show you can use the rich and growing library
+          of ChRIS plugins directly
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+Ah. Ok. So how do I run something <em>inside</em> ChRIS?
+
+</pre>
+</span>
+
+<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
+        ▆ First, we need to <em style="color: white;">import</em> the data into ChRIS.
+        ▆ Then, we can <em style="color: yellow;">instruct</em> ChRIS to run some app for us:
+            ▆ via CLI;
+            ▆ or via the GUI.
+        ▆ Optionally, we can <em style="color: white;">pull</em> resultant data out of ChRIS.
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+Let's upload that data via CLI using <b style="color: cyan;">chrs</b>
+
+</pre>
+</span>
+
+<pre id=typewriter style="float:left; width 100%; font-size:200%; color:white";>
+<em style = "color: red;"># let's assume you have a dir called leg-images in a data folder</em>
+~$ <font style="color: green;">cd</font> ~/data
+~/data$ chrs <font style="color:purple;">login --address http://cube-next.tch.harvard.edu/api/v1/ \
+                   --username rudolph.pienaar --password XXXXXXX</font>
+~/data$ feed=<font style="color: purple;">$(</font><font style="color: green;">chrs</font> upload --path="upload-$(date +%s)" --feed <font style="color:yellow;">"leg images"</font> leg-images<font style="color:purple;">)</font>
+~/data$ pid=<font style="color: purple;">$(</font><font style="color: green;">chrs</font> get ${feed}plugininstances/ | <font style="color:green;">jq<font> -r <font style=color:yellow;">'.results[-1].id'</font><font style="color:purple;">)</font>
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+Let's upload that data via CLI using <b style="color: cyan;">chrs</b>
+
+</pre>
+</span>
+
+<pre style="float:left; width 100%; font-size:200%; color:white";>
+<em style = "color: red;"># let's assume you have a dir called leg-images in a data folder</em>
+~$ <font style="color: green;">cd</font> ~/data
+~/data$ chrs <font style="color:purple;">login --address http://cube-next.tch.harvard.edu/api/v1/ \
+                   --username rudolph.pienaar --password XXXXXXX</font>
+~/data$ feed=<font style="color: purple;">$(</font><font style="color: green;">chrs</font> upload --path="upload-$(date +%s)" --feed <font style="color:yellow;">"leg images"</font> leg-images<font style="color:purple;">)</font>
+~/data$ pid=<font style="color: purple;">$(</font><font style="color: green;">chrs</font> get ${feed}plugininstances/ | <font style="color:green;">jq<font> -r <font style=color:yellow;">'.results[-1].id'</font><font style="color:purple;">)</font>
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+Now let's use <b style="color: cyan;">chrs</b> to tell <b style="color: yellow;">ChRIS</b> to run this.
+
+</pre>
+</span>
+
+<pre id=typewriter style="float:left; width 100%; font-size:200%; color:white";>
+<em style = "color: red;"># Ready? Steady... GO!</em>
+~$ anon=<font style="color:purple;">$(</font><font style="color:green;">chrs</font> run-latest --compute-resource-name e2 --previous-id $pid \
+                   pl-dicom_headeredit -- --fileFilter dcm \
+                   --splitToken <font style="color:yellow;">","</font> \
+                   --splitKeyValue <font style="color:yellow;">"="</font> \
+                   --tagInfo <font style="color:yellow;">'
+                   PatientName         =  %_name|patientID_PatientName,
+                   PatientID           =  %_md5|7_PatientID,
+                   AccessionNumber     =  %_md5|8_AccessionNumber,
+                   PatientBirthDate    =  %_strmsk|******01_PatientBirthDate,
+                   re:.*hysician       =  %_md5|4_#tag,
+                   re:.*stitution      =  #tag,
+                   re:.*ddress         =  #tag
+               '</font> --threads 0 --printElapsedTime <font style="color:purple;">)</font>
+~$ <font style="color:green;">chrs</font> download ${anon}/files/ anon
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+Now let's use <b style="color: cyan;">chrs</b> to tell <b style="color: yellow;">ChRIS</b> to run this.
+
+</pre>
+</span>
+
+<pre  style="float:left; width 100%; font-size:200%; color:white";>
+<em style = "color: red;"># Ready? Steady... GO!</em>
+~$ anon=<font style="color:purple;">$(</font><font style="color:green;">chrs</font> run-latest --compute-resource-name e2 --previous-id $pid \
+                   pl-dicom_headeredit -- --fileFilter dcm \
+                   --splitToken <font style="color:yellow;">","</font> \
+                   --splitKeyValue <font style="color:yellow;">"="</font> \
+                   --tagInfo <font style="color:yellow;">'
+                   PatientName         =  %_name|patientID_PatientName,
+                   PatientID           =  %_md5|7_PatientID,
+                   AccessionNumber     =  %_md5|8_AccessionNumber,
+                   PatientBirthDate    =  %_strmsk|******01_PatientBirthDate,
+                   re:.*hysician       =  %_md5|4_#tag,
+                   re:.*stitution      =  #tag,
+                   re:.*ddress         =  #tag
+               '</font> --threads 0 --printElapsedTime <font style="color:purple;">)</font>
+~$ <font style="color:green;">chrs</font> download ${anon}/files/ anon
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title:<tt>OK... this related to ChRIS, how?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color: white;">
+Ready to try the <b style="color: yellow;">ChRIS</b> UI?
+
+</pre>
+</span>
+
+<pre id=typewriter style="float:left; width 100%; font-size:200%; color:white";>
+<em style = "color: red;"># Lets GO..!</em>
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Main ChRIS site...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
+<iframe style="display: block; height: 1050px; width: 100%;" src="https://app.chrisproject.org" frameborder="0"></iframe>
+</div>
+'''
 
 
 
@@ -798,15 +1196,6 @@ body:
 </div>
 '''
 
-<slidebreak>
-title:<tt>Main ChRIS site...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
-<iframe style="display: block; height: 1050px; width: 100%;" src="https://fnndsc.org"></iframe>
-</div>
-'''
 
 <slidebreak>
 title: <tt>End</tt>

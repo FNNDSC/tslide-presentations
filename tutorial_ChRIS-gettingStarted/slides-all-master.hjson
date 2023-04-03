@@ -154,13 +154,13 @@ _#_font_basic Overview
 
     <font style="color: white;">Difficulty level. Ideally, you:</font>
 
-   ▆ are at least <font style="color: yellow">upper-level</font> beginner, meaning:
-        ▙ basic knowledge using a Terminal
-          (commands like <font style="color: purple;">ls</font>, <font style="color: purple;">cd</font>, <font style="color: purple;">mkdir</font>, etc)
-        ▙ basic knowledge of directories, files, etc.
-   ▆ should have a <font style="color: cyan;">GitHub</font> account.
-   ▆ will need to have the command line <font style="color: purple;">git</font> tool
-     installed and accessible.
+    ▆ are at least <font style="color: yellow">upper-level</font> beginner, meaning:
+       ▙ basic knowledge using a Terminal
+         (commands like <font style="color: purple;">ls</font>, <font style="color: purple;">cd</font>, <font style="color: purple;">mkdir</font>, etc)
+       ▙ basic knowledge of directories, files, etc.
+    ▆ should have a <font style="color: cyan;">GitHub</font> account.
+    ▆ will need to have the command line <font style="color: purple;">git</font> tool
+      installed and accessible.
 
 
 </pre>
@@ -217,7 +217,7 @@ _#_font_basic Overview
           are installed. Google is your friend here.
         ▙ ideally also we recommend you setup
           <em style="color:yellow;">"sudo-less docker"</em>
-          Again, Google is your friend. 
+          Again, Google is your friend.
           Maybe even ChatGPT. Or Bard...
           <em style="color: yellow;">How do I setup sudoless docker on ubuntu?</em>
 
@@ -247,7 +247,7 @@ _#_font_basic Overview
 
 <pre id="typewriter" style="font-size:300%;">
    ▆ This is important! The <font style="color: white;">ChRIS</font> backend is
-     only fully supported on UNIX-based OSes, i.e.
+     only fully supported on <em>UNIX-y</em> OSes, i.e.
      <font style="color:white">Linux</font> and <font style="color:white;">macOS</font> (maybe <font style="color: white;">FreeBSD</font>).
    ▆ <em style="color: yellow;">It does NOT fully work on Windows!</em>
 
@@ -307,11 +307,11 @@ _#_font_basic Overview
 <pre id="typewriter" style="font-size:300%;">
    ▆ <em style="color: yellow;">If you are on Windows...</em>
         ▙ By far the best solution is for you to
-          repartition your HDD and install some Linux. 
+          repartition your HDD and install some Linux.
           We recommend <font style="color:white;">Fedora</font>, <font style="color:white;">Ubuntu</font>, <font style="color:white;">arch</font>, etc.
-        ▙ You <em>can</em> install Linux in a Virtual Machine; 
+        ▙ You <em>can</em> install Linux in a Virtual Machine;
           <em>we don't recommend that, especially </em>on low-
-	  powered hosts.</em</em>>
+	  powered hosts.</em>>
         ▙ <font style="color: white;">ChRIS</font> can be pretty resource hungry!
 
 </pre>
@@ -330,7 +330,6 @@ body:
 
 <span style="width:100%; float: left;">
 <pre style="font-size:300%;">
-
     <font style="color:white;">At this point, the <em>hardest</em> part is behind us!</font>
 
 </pre>
@@ -357,7 +356,6 @@ body:
 
 <span style="width:100%; float: left;">
 <pre style="font-size:300%;">
-
     <font style="color:white;">At this point, the <em>hardest</em> part is behind us!</font>
 
 </pre>
@@ -400,7 +398,7 @@ body:
 <em style = "color: red;"># You're so close! Now enter the pulled repo... and simply fire up minichris.sh!</em>
 ~/src$ <font style="color: green;">cd</font> miniChRIS-docker
 ~/src/miniChRIS-docker$ <font style="color: green;">./minichris.sh</font>
-                                                                                
+
 </pre>
 </div>
 '''
@@ -426,11 +424,11 @@ body:
 <pre id="typewriter">
 ... stuff... happens...
 <font style="color: purple;">
-   ________    ____  _________                       __  _     
+   ________    ____  _________                       __  _
   / ____/ /_  / __ \/  _/ ___/____  ____ ___  ____ _/ /_(_)____
  / /   / __ \/ /_/ // / \__ \/ __ \/ __ `__ \/ __ `/ __/ / ___/
-/ /___/ / / / _, _// / ___/ / /_/ / / / / / / /_/ / /_/ / /__  
-\____/_/ /_/_/ |_/___//____/\____/_/ /_/ /_/\__,_/\__/_/\___/  
+/ /___/ / / / _, _// / ___/ / /_/ / / / / / / /_/ / /_/ / /__
+\____/_/ /_/_/ |_/___//____/\____/_/ /_/ /_/\__,_/\__/_/\___/
 ... ... ...</font>
 ────────────────── Summary: 0 present, 17 changed, 0 failures ──────────────────
 
@@ -457,19 +455,177 @@ body:
 
 
 <pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-   Not entirely. If you are following along, at this stage you have
+   Not entirely. If you are following along, at this stage
+   you have
 
-   ▆ instantiated a new <font style="color:white;">ChRIS</font> 
-   ▆ but not really installed many "apps" or <font style="color:white;">plugins</font>
-   
+   ▆ instantiated a new <font style="color:white;">ChRIS</font>;
+   ▆ but not really installed many "apps" or <font style="color:white;">plugins</font>.
 
-    	<em style="color: purple ;">So let's fix that!"</em>
+
+    	<em style="color: purple ;">So let's fix that!</em>
 
 </pre>
 
 </div>
 '''
 
+<slidebreak>
+title:<tt>Are we there, yet?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%;">
+    <font style="color:white;">First things first...</font>
+
+</pre>
+</span>
+
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    Now install a python application to help "add" <font style="color:white;">plugins</font>
+    to your <font style="color: white;">ChRIS</font>. We're going to
+
+   ▆ create a <font style="color:purple;">python virtual environment</font>;
+   ▆ and install the apps <font style="color:white;">plugin2cube</font> and <font style="color:white;">pipeline2cube</font>
+     using the <font style="color:purple;">pip</font> helper.
+
+
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>Are we there, yet?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left; color: white;">
+<pre style="font-size:300%">
+After first comes... second.
+</pre>
+<pre style="font-size:200%; color:white;">
+    OK, let's create a <font style="color:purple;">python virtual environment</font>. Note you only need to create
+    it once. Afterwards, you simply use it whenever you need.
+
+</pre>
+</span>
+
+<pre id=typewriter style="font-size:200%; color:white";>
+<em style = "color: red;"># Ok, so let's create a python virtual env. Remember, you only create it once</em>
+<em style = "color: red;"># First, go to some directory to contain the env. We'll use the src dir here:</em>
+~$ <font style="color: green;">cd</font> src
+<em style = "color: red;"># Now create an environment which we'll call 'chris':</em>
+~/src$ <font style="color: green;">python</font> -m venv chris
+<em style = "color: red;"># and let's activate it:</em>
+~/src$ <font style="color: green;">source</font> chris/bin/activate
+(chris) ~/src$
+
+<em style="color: cyan;">That's pretty much it! Notice how your prompt has changed? The exact way
+in which this might change depends on your setup, but here we see
+a hint that we are in the <b>(chris)</b> environment.</em>
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Are we there, yet?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left; color:white;">
+<pre style="font-size:300%; color:white;">
+    Oh, quick one...
+</pre>
+</span>
+<span style="width:100%; float:left; color: white;">
+<pre style="font-size:200%;">
+    How do you leave a <font style="color:purple;">python virtual environment</font>?
+</pre>
+</span>
+
+<pre id=typewriter style="font-size:200%; color:white";>
+<em style = "color: red;"># Leaving a python virtual environment is rather trivial. Simply deactivate it.  </em>
+(chris) ~/src$ <font style="color: green;">deactivate</font>
+~/src$
+<em style = "color: red;"># But for our purposes, let's get back inside since we want to install some apps:</em>
+~/src$ <font style="color: green;">source</font> chris/bin/activate
+(chris) ~/src$
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Are we there, yet?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; float: left;">
+<pre style="font-size:300%; color:white;">
+    And now let's get those apps!
+</pre>
+</span>
+
+<pre id=typewriter style="font-size:200%; color:white";>
+<em style = "color: red;"># Install the apps using pip. If pip doesn't work you might need to install it.</em>
+<em style = "color: red;"># Who's gonna help? Yep. Google. Or Bard.</em>
+(chris) ~/src$ <font style="color: green;">pip</font> install plugin2cube pipeline2cube
+... stuff ... happens...
+... eventually...
+Successfully built plugin2cube pipeline2cube pfmisc
+(chris) ~/src$
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Are we there, yet?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<span style="width:100%; color:white;">
+<pre style="font-size:300%;">
+Moving right along...
+</pre>
+<pre style="font-size:200%; width:100%">
+    We'll add two apps to our ChRIS:
+    ▆ <font style="color:purple;">pl-dicom_info</font> that reports DICOM tag info; and
+    ▆ <font style="color:purple;">pl-dicom_headeredit</font> that can anonymize DICOMS.
+</pre>
+</span>
+
+<pre id=typewriter style="font-size:200%; color:white";>
+<em style = "color: red;"># Our miniChRIS setup has some default users already configured. We'll use the</em>
+<em style = "color: red;"># user called "chris" that has a default password "chris1234".                </em>
+(chris) ~/src$ <font style="color: green;">plugin2cube</font> \
+--CUBEurl <font style="color:purple;">http://localhost:8000/api/v1/<font> \
+--CUBEuser <font style="color:purple;">chris</font> \
+--CUBEpasswd <font style="color:purple;">chris1234</font> \
+--computenames <font style="color:purple;">host</font> \
+--dock_image <font style="color:purple;">fnndsc/pl-dicom_headedit</font>
+(chris) ~/src$
+
+<em style="color:cyan;">Here, we split each the command over many lines using the '\'
+separator. Hopefully each flag meaning is obvious. The
+--computenames means in this case that the plugin
+will run on the same computer that is hosting ChRIS.</em>
+
+</pre>
+</div>
+'''
 
 
 

@@ -154,13 +154,13 @@ _#_font_basic Overview
 
     <font style="color: white;">Difficulty level. Ideally, you:</font>
 
-   ▆ are at least upper-level beginner, meaning you have:
+   ▆ are at least <font style="color: yellow">upper-level</font> beginner, meaning:
         ▙ basic knowledge using a Terminal
-          know commands like <font style="color: purple;">ls</font>, <font style="color: purple;">cd</font>, <font style="color: purple;">mkdir</font>, etc)
+          (commands like <font style="color: purple;">ls</font>, <font style="color: purple;">cd</font>, <font style="color: purple;">mkdir</font>, etc)
         ▙ basic knowledge of directories, files, etc.
    ▆ should have a <font style="color: cyan;">GitHub</font> account.
-   ▆ will need to have the command line <font style="color: purple;">git</font> tool installed
-     and accessible.
+   ▆ will need to have the command line <font style="color: purple;">git</font> tool
+     installed and accessible.
 
 
 </pre>
@@ -183,12 +183,13 @@ _#_font_basic Overview
 
     <font style="color: white;">So this is really for beginners?</font>
 
-   ▆ Yes, it is. The <font style="color:white;">upper"</font>-level means you also ideally:
-        ▙ know about <font style="color:white;">Python</font> and can setup a
-          <font style="color:white;">Python virtual environment</font>.
-        ▙ don't worry too much, though -- we will show you
-          all the commands, but you might need to Google
-          if some aren't installed on your computer.
+   ▆ Yes, it is. The <font style="color:yellow;">upper</font>-level means you also ideally:
+        ▙ know about <font style="color:purple;">Python</font> and can setup a
+          <font style="color:purple;">Python virtual environment</font>.
+        ▙ don't worry too much, though -- we will
+          show you all the commands, but you might
+          need to Google if some aren't installed
+          on your computer.
 
 </pre>
 
@@ -216,8 +217,9 @@ _#_font_basic Overview
           are installed. Google is your friend here.
         ▙ ideally also we recommend you setup
           <em style="color:yellow;">"sudo-less docker"</em>
-          Again, Google is your friend. Maybe even ChatGPT.
-          Or Bard... <em style="color: yellow;">How do I setup sudoless docker on ubuntu?</em>
+          Again, Google is your friend. 
+          Maybe even ChatGPT. Or Bard...
+          <em style="color: yellow;">How do I setup sudoless docker on ubuntu?</em>
 
 
 </pre>
@@ -246,7 +248,7 @@ _#_font_basic Overview
 <pre id="typewriter" style="font-size:300%;">
    ▆ This is important! The <font style="color: white;">ChRIS</font> backend is
      only fully supported on UNIX-based OSes, i.e.
-     Linux and macOS (maybe FreeBSD).
+     <font style="color:white">Linux</font> and <font style="color:white;">macOS</font> (maybe <font style="color: white;">FreeBSD</font>).
    ▆ <em style="color: yellow;">It does NOT fully work on Windows!</em>
 
 </pre>
@@ -273,8 +275,9 @@ _#_font_basic Overview
 
 <pre id="typewriter" style="font-size:300%;">
    ▆ <em style="color: yellow;">ChRIS does NOT fully work on Windows!</em>
-        ▙ to save everyone time, please don't try on Windows,
-          get weird behaviour, and then ask the dev team "help".
+        ▙ to save everyone time, please don't try on
+          Windows, get stuck, and then ask the dev
+          team "help". ✋
         ▙ in theory <font style="color: white;">ChRIS</font> <em>could</em> work on Windows... so
         ▙ if you're super motivated to tackle this,
           by all means we welcome your help!
@@ -303,12 +306,12 @@ _#_font_basic Overview
 
 <pre id="typewriter" style="font-size:300%;">
    ▆ <em style="color: yellow;">If you are on Windows...</em>
-        ▙ By far the best solution is for you to repartition
-          your HDD and install some Linux distro. We
-          recommend Fedora, Ubuntu, arch, and many others
-        ▙ You <em>can</em> install Linux in a Virtual Machine, but
-          we don't recommend that, especially on low-powered
-          hosts.
+        ▙ By far the best solution is for you to
+          repartition your HDD and install some Linux. 
+          We recommend <font style="color:white;">Fedora</font>, <font style="color:white;">Ubuntu</font>, <font style="color:white;">arch</font>, etc.
+        ▙ You <em>can</em> install Linux in a Virtual Machine; 
+          <em>we don't recommend that, especially </em>on low-
+	  powered hosts.</em</em>>
         ▙ <font style="color: white;">ChRIS</font> can be pretty resource hungry!
 
 </pre>
@@ -325,10 +328,6 @@ body:
 '''
 <div>
 
-<pre style="float:left; width:100%">
-_#_font_basic Let's go!
-</pre>
-
 <span style="width:100%; float: left;">
 <pre style="font-size:300%;">
 
@@ -339,6 +338,7 @@ _#_font_basic Let's go!
 
 <pre id=typewriter style="font-size:200%; color:white";>
 <em style = "color: red;"># Now, open your terminal, and at the prompt choose a directory for miniChRIS-docker</em>
+<em style = "color: red;"># We'll pull the repository from github into this directory.</em>
 ~$ <font style="color: green;">cd</font>
 ~$ <font style="color: green;">mkdir</font> src
 ~$ <font style="color: green;">cd</font> ~/src
@@ -355,10 +355,6 @@ body:
 '''
 <div>
 
-<pre style="float:left; width:100%">
-_#_font_basic Let's go!
-</pre>
-
 <span style="width:100%; float: left;">
 <pre style="font-size:300%;">
 
@@ -369,6 +365,7 @@ _#_font_basic Let's go!
 
 <pre style="font-size:200%; color:white";>
 <em style = "color: red;"># Now, open your terminal, and at the prompt choose a directory for miniChRIS-docker</em>
+<em style = "color: red;"># We'll pull the repository from github into this directory.</em>
 ~$ <font style="color: green;">cd</font>
 ~$ <font style="color: green;">mkdir</font> src
 ~$ <font style="color: green;">cd</font> ~/src
@@ -392,10 +389,6 @@ body:
 '''
 <div>
 
-<pre style="float:left; width:100%">
-_#_font_basic Let's   go!
-</pre>
-
 <span style="width:100%; float: left;">
 <pre style="font-size:300%;">
     <font style="color:white;">Wait, was it that easy?</font>
@@ -404,10 +397,10 @@ _#_font_basic Let's   go!
 </span>
 
 <pre id=typewriter style="font-size:200%; color:white";>
-<em style = "color: red;"># You're so close! Now enter the pulled repo... and go!</em>
+<em style = "color: red;"># You're so close! Now enter the pulled repo... and simply fire up minichris.sh!</em>
 ~/src$ <font style="color: green;">cd</font> miniChRIS-docker
-~/src/miniChRIS-docker~$ <font style="color: green;">./minichris.sh</font>
-
+~/src/miniChRIS-docker$ <font style="color: green;">./minichris.sh</font>
+                                                                                
 </pre>
 </div>
 '''
@@ -419,10 +412,6 @@ body:
 '''
 <div>
 
-<pre style="float:left; width:100%">
-_#_font_basic Let's   go!
-</pre>
-
 <span style="width:100%; float: left;">
 <pre style="font-size:300%;">
     <font style="color:white;">Wait, was it that easy?</font>
@@ -431,17 +420,18 @@ _#_font_basic Let's   go!
 </span>
 
 <pre style="font-size:200%; color:white";>
-<em style = "color: red;"># You're so close! Now enter the pulled repo... and go!</em>
+<em style = "color: red;"># You're so close! Now enter the pulled repo... and simply fire up minichris.sh!</em>
 ~/src$ <font style="color: green;">cd</font> miniChRIS-docker
-~/src/miniChRIS-docker~$ <font style="color: green;">./minichris.sh</font>
+~/src/miniChRIS-docker$ <font style="color: green;">./minichris.sh</font>
 <pre id="typewriter">
 ... stuff... happens...
+<font style="color: purple;">
    ________    ____  _________                       __  _     
   / ____/ /_  / __ \/  _/ ___/____  ____ ___  ____ _/ /_(_)____
  / /   / __ \/ /_/ // / \__ \/ __ \/ __ `__ \/ __ `/ __/ / ___/
 / /___/ / / / _, _// / ___/ / /_/ / / / / / / /_/ / /_/ / /__  
 \____/_/ /_/_/ |_/___//____/\____/_/ /_/ /_/\__,_/\__/_/\___/  
-... ... ...
+... ... ...</font>
 ────────────────── Summary: 0 present, 17 changed, 0 failures ──────────────────
 
 </pre>
@@ -452,75 +442,34 @@ _#_font_basic Let's   go!
 
 
 <slidebreak>
-title:<tt>Where are you going...?</tt>
+title:<tt>Are we there, yet?</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
-
-<pre style="float:left; width:100%">
-_#_font_basic ME? OH  MY
-</pre>
 
 <span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-    A bit about me...
+<pre style="font-size:300%;">
+    <font style="color:white;">Are we done?</font>
+
 </pre>
 </span>
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-   ▆ scientific compute
-   ▆ "practicalities"
-   ▆ my experience...
-   ▆ <em>and biases!</em>
-   ▆ <em style="color: red;">Oh... and I'm to blame for how lots
-     of stuff at the FNNDSC have been setup.
-                   Sorry!</em>
+
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+   Not entirely. If you are following along, at this stage you have
+
+   ▆ instantiated a new <font style="color:white;">ChRIS</font> 
+   ▆ but not really installed many "apps" or <font style="color:white;">plugins</font>
+   
+
+    	<em style="color: purple ;">So let's fix that!"</em>
 
 </pre>
 
 </div>
 '''
 
-
-<slidebreak>
-title:<tt>There's a backstory...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Roads...
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    <font style="color: white;">twisty windy roads</font>
-
-
-       ▆ how my thinking
-         was shaped by my
-         experience of
-         academic research
-         compute over two
-         decades in the
-         trenches
-</pre>
-<div style="float:right; width:60%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
-    <div class="sl-block-content" style="z-index: 10;">
-
-<iframe style="border-width: 0px; width: 1000px; height: 750px; left: 80px; top: 70px;" scrolling="no" title="Road" src="https://codepen.io/cantelope/embed/JEVoge?height=300&theme-id=23783&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/cantelope/pen/JEVoge'>Road</a> by Scott R McGann
-  (<a href='https://codepen.io/cantelope'>@cantelope</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-
-    </div>
-</div>
-
-
-</div>
-'''
 
 
 
@@ -551,399 +500,6 @@ _#_font_basic Roads...
     _#_o_05   ▆ <em style="color:white;">software... lots of... software</em>
 
 </pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>The road more traveled...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Roads...
-</pre>
-
-<span style="width:100%; float: left;">
-<pre id="typewriter" style="font-size:400%; color: white;">
-   Shifted to neuro imaging...
-</pre>
-</span>
-
-<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
-    _#_o_01   ▆ Postdoc at MGH -- image processing
-    _#_o_02   ▆ MRI sequence development
-    _#_o_03   ▆ Image post-processing
-    _#_o_04   ▆ FreeSurfer team
-    _#_o_05   ▆ Developed <b style="color:cyan;">mris_calc</b>, <b style="color:cyan;">mris_curvature_stats</b>, and <b style="color:cyan;">mris_pmake</b>
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>The road more traveled...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic BCH
-</pre>
-
-<span style="width:100%; float: left;">
-<pre id="typewriter" style="font-size:400%; color: white;">
-   At BCH...
-</pre>
-</span>
-
-<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
-    _#_o_01   ▆ Technical Director of the FNNDSC
-    _#_o_02   ▆ Developed yet more software
-    _#_o_03   ▆ Continued research on brain shape/curvature
-    _#_o_04   ▆ Began to think about computing in medicine
-    _#_o_05   ▆ Started work on <b style="color:cyan;">ChRIS</b>
-    _#_o_06   ▆ Began building out the <b style="color:cyan;">Advanced Computing Group</b>
-
-</pre>
-
-</div>
-'''
-
-
-
-<slidebreak>
-title:<tt>In the beginning... there was</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic ???
-</pre>
-</div>
-
-<span style="width:100%; float: left;">
-<div>
-<pre id="typewriter" style="float:left; width 100%; font-size:300%; color: white;">
-   Ok, so what is <em style="color: yellow;">scientific</em> compute?
-</pre>
-</div>
-</span>
-
-<div>
-<pre style="font-size:200%; float:right; width: 100%">
-    _#_o_01   ▆ mortal
-    _#_o_02   ▆ non-interactive (CLI based)
-    _#_o_03   ▆ "self contained"
-    _#_o_04         ▙ initial conditions are set <em>a priori</em>
-    _#_o_05   	    ▙ an end state with terminal results is reached
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-
-title:<tt>about this module...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Key idea!
-</pre>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented like this:
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-    ╔════════════════════╗
-    ║         [inputDir] ║
-    ╟────────────────────╢
-    ║                    ║
-    ║                    ║
-    ║                    ║
-    ╚════════════════════╝
-</pre>
-</div>
-'''
-
-<slidebreak>
-
-title:<tt>about this module...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Key idea!
-</pre>
-
-<pre style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented like this:
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-    ╔════════════════════╗      ┌───────────────────┐
-    ║         [inputDir] ║      │ some "app"        │
-    ╟────────────────────╫──────┼───────────────────┤
-    ║                    ║      │                   │
-    ║                    ║      │                   │
-    ║                    ║      │                   │
-    ╚════════════════════╝      │                   │
-                                └───────────────────┘
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-
-title:<tt>about this module...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Key idea!
-</pre>
-
-<pre style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented like this:
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-    ╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
-    ║         [inputDir] ║      │ some "app"        │      ║ [outputDir]        ║
-    ╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
-    ║                    ║      │                   │      ║                    ║
-    ║                    ║      │                   │      ║                    ║
-    ║                    ║      │                   │      ║                    ║
-    ╚════════════════════╝      │                   │      ╚════════════════════╝
-                                └───────────────────┘
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-
-title:<tt>about this module...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Key idea!
-</pre>
-
-<pre style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented like this:
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-    ╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
-    ║         [inputDir] ║      │ some "app"  (CLI) │      ║ [outputDir]        ║
-    ╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
-    ║  any type of dir   ║      │ consumes          │      ║  any type of dir   ║
-    ║  tree and file     ║      │ [inputDir]        │      ║  tree and file     ║
-    ║  hierarchy         ║      │                   │      ║  hierarchy         ║
-    ╚════════════════════╝      │                   │      ╚════════════════════╝
-                                └───────────────────┘
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-
-title:<tt>about this module...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Key idea!
-</pre>
-
-<pre style="float:left; width 100%; font-size:300%;">
-   <em style="color: yellow;">Scientific compute</em> can be represented like this:
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-    ╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
-    ║         [inputDir] ║      │ some "app"  (CLI) │      ║ [outputDir]        ║
-    ╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
-    ║  any type of dir   ║      │   containerized   │      ║  any type of dir   ║
-    ║  tree and file     ║      │       docker      │      ║  tree and file     ║
-    ║  hierarchy         ║      │       image       │      ║  hierarchy         ║
-    ╚════════════════════╝      │                   │      ╚════════════════════╝
-                                └───────────────────┘
-
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>The view from on high...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="float:left; width:40%">
-<pre>
-_#_font_basic Many Worlds...
-</pre>
-</span>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-   Core observation:
-
-</pre>
-
-<div style="float:right; width:60%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
-    <div class="sl-block-content" style="z-index: 10;">
-
-<iframe style="border-width: 0px; width: 1000px; height: 750px; left: 80px; top: 70px;" scrolling="no" title="TinyPolyWorld - ThreeJS experiements." src="https://codepen.io/Zultan/embed/mwGZBP?height=300&theme-id=23783&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/Zultan/pen/mwGZBP'>TinyPolyWorld - ThreeJS experiements.</a> by Zultan
-  (<a href='https://codepen.io/Zultan'>@Zultan</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-
-    </div>
-</div>
-
-<pre style="font-size:150%; float:left; width: 40%">
-_#_o_01   ▆ biomedical research compute landscape is rich
-_#_o_02   ▆ and old!
-_#_o_03   ▆ many meaningful apps exist
-_#_o_04   ▆ <b style="color: yellow;">Almost none escape the lab</b>
-
-</pre>
-
-</div>
-'''
-
-
-<slidebreak>
-title:<tt>So many reasons...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Why..?
-</pre>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   Why is this? Why in decades of work and research, yielding
-   amazing computational tools, has this been the case?
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>If a tree falls in the woods...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic Hmmm...
-</pre>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   Susan Dray, usability expert in human computer
-   interaction and user experience,
-
-   <em style="color: yellow;">"If the user can't use it, it doesn't work"</em>
-
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01 COROLLARY
-_#_o_02   ▆ No matter how amazing a tool, if never used...
-_#_o_03     <em style="color: yellow;">it essentially doesn't exist.</em>
-
-</pre>
-
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>If a tree falls in the woods...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic CLI... CLI
-</pre>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-
-   The inescapable fact is that most <i>scientific</i> compute is
-   often terminal based, running almost exclusively on Linux.
-
-</pre>
-
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ No matter how amazing a tool, if never used...
-_#_o_02     <em style="color: yellow;">it essentially doesn't exist.</em>
-
-</pre>
-
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>If a tree falls in the woods...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Let's try running FreeSurfer at the FNNDSC -- old school
-</pre>
-</span>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:200%; color: white;">
-   ~$ <font style="color:green;">ssc</font>
-   ~$ <font style="color:green;">.</font> neuro-fs stable
-
-</pre>
-
 </div>
 '''
 
@@ -1092,53 +648,6 @@ FreeSurfer -- old and new
 '''
 
 <slidebreak>
-title:<tt>Wait... did you just say apptainer?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;"">
-Apptainer? What's that...
-</pre>
-</span>
-
-<pre style="font-size:200%; float:left; width: 100%">
-_#_o_01   ▆ "Containers" are the <em style = "color: white;">cool</em> way to do computing.
-_#_o_02   ▆ Containers make apps <em style = "color: white;">mostly</em> universally portable
-_#_o_03   ▆ <em style = "color: white;">and lots of other goodies...</em>
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Cool. And stuff. But how does this relate to ChRIS?
-
-
-</pre>
-</span>
-
-<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
-        ▆ ChRIS is built to handle running "containers" for you.
-        ▆ ChRIS can run containers on diverse environments
-          (so you don't have to be an openshift dev)
-        ▆ All ChRIS containers, or <em style="color: yellow;">plugins</em> can also be run outside of ChRIS
-
-</pre>
-</div>
-'''
-
-<slidebreak>
 title:<tt>OK... this related to ChRIS, how?</tt>
 body-style: "background: black; color:lightgreen;"
 body:
@@ -1177,7 +686,7 @@ So let's anonymize some data!
 <pre style="float:left; width 100%; font-size:200%; color:white;">
 <em style = "color: red;"># let's assume you have a dir called leg-images in a data folder</em>
 ~$ <font style="color: green;">cd</font> ~/data
-~/data$ <font style="color:green;">pl-anon.sif</font> dicom_headerEdit <b style="color: purple;">leg-images</b> <b style="color: cyan;">leg-images2</b> \                                                                                                                                                                                                   ─╯
+~/data$ <font style="color:green;">pl-anon.sif</font> dicom_headerEdit <b style="color: purple;">leg-images</b> <b style="color: cyan;">leg-images2</b> \
                    --fileFilter dcm                                                    \
                    --splitToken ","                                                    \
                    --splitKeyValue "="                                                 \
@@ -1196,31 +705,6 @@ So let's anonymize some data!
 
 </div>
 '''
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Wait. Did we just run something on ChRIS?
-
-</pre>
-</span>
-
-<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
-        ▆ Not entirely.
-        ▆ We ran a ChRIS plugin/app <b style="color: white;">outside</b> of ChRIS.
-        ▆ This is mostly to show you can use the rich and growing library
-          of ChRIS plugins directly
-
-</pre>
-</div>
-'''
-
 
 <slidebreak>
 title:<tt>OK... this related to ChRIS, how?</tt>
@@ -1369,68 +853,6 @@ Now let's use <b style="color: cyan;">chrs</b> to tell <b style="color: yellow;"
 </div>
 '''
 
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Ready to try the <b style="color: yellow;">ChRIS</b> UI?
-
-</pre>
-</span>
-
-<pre id=typewriter style="float:left; width 100%; font-size:200%; color:white";>
-<em style = "color: red;"># Lets GO..!</em>
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Main ChRIS site...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
-<iframe style="display: block; height: 1050px; width: 100%;" src="https://app.chrisproject.org" frameborder="0"></iframe>
-</div>
-'''
-
-
-
-<slidebreak>
-title:<tt>https://chrisproject.org</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
-<iframe style="display: block; height: 1050px; width: 100%;" src="https://chrisproject.org"></iframe>
-</div>
-'''
-
-<slidebreak>
-title:<tt>https://chrisstore.co</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
-<iframe style="display: block; height: 1050px; width: 100%;" src="https://chrisstore.co"></iframe>
-</div>
-'''
-
-<slidebreak>
-title:<tt>https://www.bu.edu/rhcollab/projects/radiology/</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
-<iframe style="display: block; height: 1050px; width: 100%;" src="https://www.bu.edu/rhcollab/projects/radiology/"></iframe>
-</div>
-'''
 
 
 <slidebreak>

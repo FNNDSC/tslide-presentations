@@ -1,0 +1,606 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export REPO=$(pwd)
+    export INPUTDIR=$REPO/ChRIS-RedHat-dive
+    export INPUTFILE=slides-all-master.hjson
+    export OUTPUTDIR=/var/www/html/slides/ChRIS-RedHat-dive
+```
+
+After edits, run tsmake on it:
+
+```
+    cd ~
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR             \
+             --inputDir $INPUTDIR               \
+             --slidesFile $INPUTFILE            \
+             --slideListGlob "slide-*"          \
+             --additionalDirList $INPUTDIR/figs \
+             --verbosity 3
+```
+
+Finally, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+*/
+
+title:<tt>Hello, world!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+
+
+_#_font_basic Welcome!
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Who is this guy..?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
+    <div class="sl-block-content" style="z-index: 10;">
+        <iframe style="width: 1000px; height: 550px; left: 80px; top: 70px;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation" data-src="https://codepen.io/rudolphpienaar/live/abOQoao" src="https://codepen.io/rudolphpienaar/live/abOQoao">
+        </iframe>
+    </div>
+</div>
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/profile1.jpg" width=600 style="float: right;">
+</div>
+'''
+
+<slidebreak>
+title:<tt>about the ACG... (oh, btw, don't you love acronyms?)</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic WHO?
+</pre>
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    The <b>Advanced Computing Group</b> (ACG) within the
+<b>Fetal-Neonatal Neuroimaging and Developmental Science Center</b>
+    (FNNDSC) at <b>Boston Children's Hospital</b> (BCH) focuses on:
+</pre>
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ the "D" in computational R&D
+_#_o_02   ▆ computational platforms
+_#_o_03   ▆ workflow development
+_#_o_04   ▆ deploying existing compute
+_#_o_05   ▆ de novo research solutions
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Do researchers dream of shell scripts?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Problem?
+</pre>
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+OHBM researchers for the most part...
+</pre>
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ are not software developers
+_#_o_02   ▆ are not Linux gurus
+_#_o_03   ▆ don't want to care about managing data
+_#_o_04   ▆ want their work to be usable by anyone
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>There's an RA for that</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Delegate!
+</pre>
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+When in doubt, task an RA
+</pre>
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ often know less about managing data
+_#_o_02   ▆ can "run" a script -- very manually
+_#_o_03   ▆ inevitably Excel raises its ugly head
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Hey? Can't AI do this? (no)</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Solution!
+</pre>
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+Let the platform handle the comlexity of management and the
+intricacies of computing.
+</pre>
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01   ▆ data aggregation and searching
+_#_o_02   ▆ concepts of workflows
+_#_o_03   ▆ handle execution
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>After the "why?" comes the...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic HOW?
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    We have a maturing <b>P</b>latform-<b>A</b>s-<b>A</b>-<b>S</b>ervice solution
+    developed in house at BCH (with deep collaboration
+    from Red Hat and others) called
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 800%">
+_#_o_01 ChRIS
+</pre>
+
+<pre style="float:left; width: 50%; font-size: 200%">
+_#_o_02     ▆ fully opensource
+_#_o_03     ▆ fully containerized
+_#_o_04     ▆ chains on containerized compute
+_#_o_05     ▆ on-premise
+_#_o_06     ▆ and cloud!
+</pre>
+
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>ChRIS you say? Pleased to meet you...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic ChRIS
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    Yes, ChRIS is a recursive acronym (what did you expect?):
+
+
+            <b>Ch</b>RIS    <b>R</b>esearch    <b>I</b>ntegration     <b>S</b>ystem
+</pre>
+
+<pre style="float:left; width: 100%; font-size: 800%">
+_#_o_01          ChRIS!
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>Pay attention... this is important!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+    <b>ChRIS</b> exists to basically manage this canonical structure:
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+
+╔════════════════════╗
+║         [inputDir] ║
+╟────────────────────╢
+║                    ║
+║                    ║
+║                    ║
+╚════════════════════╝
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>Pay attention... this is important!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    <b>ChRIS</b> exists to basically manage this canonical structure:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗      ┌───────────────────┐
+║         [inputDir] ║      │ some "app"        │
+╟────────────────────╫──────┼───────────────────┤
+║                    ║      │                   │
+║                    ║      │                   │
+║                    ║      │                   │
+╚════════════════════╝      │                   │
+                            └───────────────────┘
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>Pay attention... this is important!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    <b>ChRIS</b> exists to basically manage this canonical structure:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+║         [inputDir] ║      │ some "app"        │      ║ [outputDir]        ║
+╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+║                    ║      │                   │      ║                    ║
+║                    ║      │                   │      ║                    ║
+║                    ║      │                   │      ║                    ║
+╚════════════════════╝      │                   │      ╚════════════════════╝
+                            └───────────────────┘
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title:<tt>Pay attention... this is important!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    <b>ChRIS</b> exists to basically manage this canonical structure:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+║         [inputDir] ║      │ ChRIS plugin (CLI)│      ║ [outputDir]        ║
+╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+║  any type of dir   ║      │     consumes      │      ║  any type of dir   ║
+║   tree and file    ║      │    [inputDir]     │      ║   tree and file    ║
+║     hierarchy      ║      │                   │      ║     hierarchy      ║
+╚════════════════════╝      │                   │      ╚════════════════════╝
+                            └───────────────────┘
+
+
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+
+title:<tt>Wait... this isn't so hard</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Key idea!
+</pre>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    <b>ChRIS</b> exists to basically manage this canonical structure:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════════════════════╗      ┌───────────────────┐      ╔════════════════════╗
+║         [inputDir] ║      │ ChRIS plugin (CLI)│      ║ [outputDir]        ║
+╟────────────────────╫──────┼───────────────────┼──────╫────────────────────╢
+║  any type of dir   ║      │   containerized   │      ║  any type of dir   ║
+║   tree and file    ║      │       docker      │      ║   tree and file    ║
+║     hierarchy      ║      │       image       │      ║     hierarchy      ║
+╚════════════════════╝      │                   │      ╚════════════════════╝
+                            └───────────────────┘
+                                (usually lives
+                                 on dockerhub
+                                with auto-builds
+                                  off github)
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Abstract much..?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    The  │input├───┤compute├───┤output│ pattern is repeatable:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔═════════════╗      ┌─────────────┐      ╔═════════════╗
+║ [inputDir]  ║      │ plugin_A    │      ║ [outputDir] ║
+╟─────────────╫──────┼─────────────┼──────╫─────────────╢
+║             ║      │   compute   │      ║             ║
+╚═════════════╝      └─────────────┘      ╚═════════════╝
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Block world..! Oh wait, the double border and single border mean something?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    The  │input├───┤compute├───┤output│ pattern is repeatable:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════╗      ┌────┐      ╔════╗
+║    ╟──────┤    ├──────╢    ║
+╚════╝      └────┘      ╚════╝
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>They connect..!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    The  │input├───┤compute├───┤output│ pattern is repeatable:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════╗      ┌────┐      ╔════╗      ┌────┐      ╔════╗
+║    ╟──────┤    ├──────╢    ╟──────┤    ├──────╢    ║
+╚════╝      └────┘      ╚════╝      └────┘      ╚════╝
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>and split..!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    The  │input├───┤compute├───┤output│ pattern is branchable:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════╗      ┌────┐      ╔════╗      ┌────┐      ╔════╗
+║    ╟──────┤    ├──────╢    ╟──────┤    ├──────╢    ╟──────┐
+╚════╝      └────┘      ╚════╝      └────┘      ╚════╝      │
+     ┌──────────────────────────────────────────────────────┘
+     │                  ╔════╗
+     │              ┌───╢    ║
+     │              │   ╚════╝
+     │      ┌────┐  │
+     └──────┤    ├──┤
+            └────┘  │
+                    │   ╔════╗
+                    └───╢    ║
+                        ╚════╝
+
+
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Ooohhh... pretty!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    The  │input├───┤compute├───┤output│ pattern is combinatorial:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════╗      ┌────┐      ╔════╗      ┌────┐      ╔════╗
+║    ╟──────┤    ├──────╢    ╟──────┤    ├──────╢    ╟──────┐
+╚════╝      └────┘      ╚════╝      └────┘      ╚════╝      │
+     ┌──────────────────────────────────────────────────────┘
+     │                  ╔════╗      ┌────┐      ╔════╗
+     │              ┌───╢    ╟──────┤    ├──────╢    ╟───┐
+     │              │   ╚════╝      └────┘      ╚════╝   │
+     │      ┌────┐  │                                    │  ┌────┐
+     └──────┤    ├──┤                                    ├──┤    │
+            └────┘  │                                    │  └────┘
+                    │   ╔════╗      ┌────┐      ╔════╗   │
+                    └───╢    ╟──────┤    ├──────╢    ╟───┘
+                        ╚════╝      └────┘      ╚════╝
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Ooohhh... pretty!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width 100%; font-size:300%;">
+    The  │input├───┤compute├───┤output│ pattern is combinatorial:
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+╔════╗      ┌────┐      ╔════╗      ┌────┐      ╔════╗
+║    ╟──────┤    ├──────╢    ╟──────┤    ├──────╢    ╟──────┐
+╚════╝      └────┘      ╚════╝      └────┘      ╚════╝      │
+     ┌──────────────────────────────────────────────────────┘
+     │                  ╔════╗      ┌────┐      ╔════╗
+     │              ┌───╢    ╟──────┤    ├──────╢    ╟───┐
+     │              │   ╚════╝      └────┘      ╚════╝   │
+     │      ┌────┐  │                                    │  ┌────┐      ╔════╗
+     └──────┤    ├──┤                                    ├──┤    ├──────╢    ║
+            └────┘  │                                    │  └────┘      ╚════╝
+                    │   ╔════╗      ┌────┐      ╔════╗   │
+                    └───╢    ╟──────┤    ├──────╢    ╟───┘
+                        ╚════╝      └────┘      ╚════╝
+
+
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>I want in..!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
+<iframe style="display: block; height: 1050px; width: 100%;" src="https://chrisproject.org"></iframe>
+</div>
+'''
+
+<slidebreak>
+title:<tt>I love demos..! They *always* work! Except when they don't...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width: 100%; overflow:scroll; overflow-x:hidden;">
+<iframe style="display: block; height: 1050px; width: 100%;" src="http://localhost:3000"></iframe>
+</div>
+'''
+
+
+
+<slidebreak>
+title: <tt>End</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_doom Thank you.
+</pre>
+
+'''
+
+
+<slidebreak>
+title: <tt>?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Questions..?
+
+</pre>
+
+'''
+
+

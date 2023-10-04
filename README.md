@@ -68,4 +68,27 @@ cd ~/src/tslide
             --verbosity 3
 ```
 
+# Now enjoy it
+
+## system web server
+
+If you have a web server (like `apache`) up and running, and if your `$OUTPUTDIR` is the correct dir for your web server, then you can point your browser to 
+
+```html
+localhost/slides
+```
+
+to see your slide presentation.
+
+## or just python it 
+
+Alternatively, you can use python to serve it on some port:
+
+```bash
+cd $OUTPUTDIR
+python -m http.server 9100
+```
+
+And then find happiness at `http://localhost:9100`.
+
 _-30-_

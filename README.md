@@ -18,30 +18,38 @@ Funny you asked. The steps are:
 
 Fine. Just make sure about dir permissions, your web server yada yada...
 
-First, clone this repo and make a new dir for your presentation.
+First, clone this repo:
 
 ```bash
 
 git clone https://github.org/FNNDSC/tslide-presentations
 cd tslide-presentations
 export REPO=$PWD
+```
 
+Next, choose a name for your presentation. Note that this name will also be used for the directory (folder) containing the presentation. I'd strongly recommend you don't use spaces in this name.
+
+```bash
+export PRESENTATION="dontusespaces"
+```
+
+Set the name of the base directory of your web server. This will probably vary on your Linux distro. Below is for arch Linux and friends.
+
+```bash
 # This is directory of your web server. For arch linux:
 export HTMLDOCS=/srv/http/slides
+```
 
-# This is the name of your presentation. Please please
-# please don't use spaces. Trust me. Also, this name
-# should also be the name of the directory within this
-# repo containing your presentation
-export PRESENTATION=somethingcool
+Note the `cp` command below uses GNU flags. It will be different on macOS!
 
+```bash
 # Here is where you typically copy an existing presentation
 # to create the basic structure of your next one. Obviously
 # this is a one time deal. Don't do this next time otherwise
 # you'll overwrite $PRESENTATION!
-/bin/cp -prvdi tutorial_ChRIS-gettingStarted $PRESENTATION
+/bin/cp -prvdi tutorial_ChRIS-gettingStarted "$PRESENTATION"
 
-export INPUTDIR=$REPO/$PRESENTATION 
+export INPUTDIR=$REPO/"$PRESENTATION" 
 export INPUTFILE=slides-all-master.hjson
 export OUTPUTDIR=$HTMLDOCS/$PRESENTATION
 

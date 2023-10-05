@@ -83,7 +83,7 @@ cd ~/src/tslide
 If you have a web server (like `apache`) up and running, and if your `$OUTPUTDIR` is the correct dir for your web server, then you can point your browser to 
 
 ```html
-localhost/slides
+http://localhost/slides
 ```
 
 to see your slide presentation.

@@ -1,0 +1,306 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+git clone https://github.org/FNNDSC/tslide
+cd tslide
+export REPO=$(pwd)
+```
+
+Copy this text file, slides.hjon, someplace:
+
+```
+export INPUTDIR=~/tmp/slides 
+mkdir $INPUTDIR 
+cp slides.hjson $INPUTDIR
+```
+*/
+
+/*
+After edits, run tsmake on it:
+
+```
+cd $REP
+./tsmake --outputDir /tmp/presentation
+	 --inputDir ~/tmp/slides 
+	 --slidesFile ~/tmp/slides.hjson
+	 --slideListGlob "slide-*" 
+	 --slideTextNumRows=30 
+	 --verbosity 1
+```
+*/
+
+/*
+Finally, run a web server in the repo:
+
+```
+cd ~/tmp/presentation
+python -m http.server
+```
+
+*/
+
+title:<tt>BCH ChRIS working group brief discussion</tt>
+body:
+'''
+<div>
+<pre>
+
+
+
+
+
+
+Possible research/development work that could be applicable to
+COVID work at BCH
+</pre>
+</div>
+
+<div class="snippet" id="order-1">
+<pre>
+
+and accelerate development...
+
+</pre>
+</div>
+
+<div class="snippet" id="order-2">
+<pre>
+as well as outcomes.
+</pre>
+</div>
+'''
+
+<slidebreak>
+
+title: <tt>About me...</tt>
+body:
+'''
+<pre>
+Rudolph Pienaar, PhD
+______________________________________________________________
+                      Technical Director
+ Fetal-Neonatal Neuroimaging and Developmental Science Center
+                Landmark Center, 401 Park Drive
+                      Office LM7092 (East)
+                       Boston, MA, 02215
+______________________________________________________________
+                Assistant Professor in Radiology
+                   Harvard Medical School
+                     25 Shattuck Street
+                      Boston, MA, 02215
+______________________________________________________________
+</pre>
+<div class="snippet" id="order-1">
+<img src="images/profile1.jpg" width=200 style="float: left;">
+</div>
+<pre>
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>Computational framework for accelerating COVID work</tt>
+body:
+'''
+<pre>
+
+
+
+
+
+The Fetal Neonatal Neuroimaging Development Science Center has led the
+development of a compute platform called 
+
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>Computational framework for accelerating COVID work</tt>
+body:
+'''
+<pre>
+
+
+
+
+
+The Fetal Neonatal Neuroimaging Development Science Center has led the
+development of a compute platform called 
+
+
+ _____ _    ______ _____ _____ 
+/  __ \ |   | ___ \_   _/  ___|
+| /  \/ |__ | |_/ / | | \ `--. 
+| |   | '_ \|    /  | |  `--. \
+| \__/\ | | | |\ \ _| |_/\__/ /
+ \____/_| |_\_| \_|\___/\____/ 
+
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>ChRIS</tt>
+body:
+'''
+<pre>
+
+
+
+ChRIS is a distributed platform that:
+</pre>
+<div class="snippet" id="order-1">
+<pre style="float: left;">
+        * Uses containerized compute
+</pre>
+</div>
+<br>
+<div class="snippet" id="order-2">
+<pre style="float: left;">
+        * Allows for seamless data transfer between
+</pre>
+<br>
+</div>
+<div class="snippet" id="order-3" style="float:left;">
+<pre>        
+		* Internal BCH
+</pre>
+</div>
+<br>
+<div class="snippet" id="order-4" style="float:left;">
+<pre>
+
+		* BCH --> Massachusetts Open Cloud
+</pre>
+</div>
+<pre>
+
+
+
+</pre>
+'''
+
+<slidebreak>
+title:<tt>Quick style test</tt>
+body:'''
+<div class="tty">
+<p>What font is this?</p>
+<pre>
+
+
+and how about this?
+</pre>
+
+</div>
+<pre>
+</pre>
+'''
+
+<slidebreak>
+
+title:<tt>Time is arguably of the essence...</tt>
+body:
+'''
+<pre>
+
+
+
+
+Computational platforms for simulation/crunching/analysis can
+provide a meaningful contribution.
+
+
+Need to reduce the barrier of entry to deploying analysis
+at computational scale.
+
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>We propose...</tt>
+body:
+'''
+<pre>
+
+
+
+
+We propose to use ChRIS to deploy data and algorithms to the 
+Massachusetts Open Cloud to run at speed and scale.
+
+Current possible candidate analysis:
+
+	* Analysis of lung images for signs of COVID-19
+
+	* Protein folding
+
+</pre>
+'''
+
+
+<slidebreak>
+
+title: <tt>COVID-NET</tt>
+body:
+'''
+<pre>
+COVID-NET is an Initiative out of University of Waterloo and DarwinAI to
+provide various neural network models tuned to recognize abnormalities
+in chest CT indicative of COVID-19 infections.
+</pre>
+'''
+
+<slidebreak>
+
+title: <tt>We aim to...</tt>
+body:
+'''
+<pre>
+* Use ChRIS as a compute delivery platform to run COVID-NET on the 
+Mass Open Cloud
+
+* Possibly use pediatric CT where meaningful to train additional
+tuned models using ChRIS and COVID-NEt.
+</pre>
+'''
+
+
+<slidebreak>
+
+title:<tt>Additionally...</tt>
+body:
+'''
+<pre>
+
+
+* We hope to help any other basic research efforts in BCH that
+might rely on computational analysis and
+
+* Accelerate and simplify deployment
+
+
+
+</pre>
+'''
+
+
+<slidebreak>
+
+title: <tt>End</tt>
+body:
+'''
+<pre>
+
+
+Thank you.
+</pre>
+
+'''
+
+
+

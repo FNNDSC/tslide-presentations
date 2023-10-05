@@ -115,6 +115,62 @@ If that happens, don't panic -- just refresh your browser!</em>
 '''
 
 <slidebreak>
+title: <tt>Who is this guy..?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%;" class="sl-block" data-block-type="iframe" data-name="iframe-a9d1ec" data-block-id="f68c50130a2cf636708378dc3a24d823" style="width: 819px; height: 490px; left: 80px; top: 70px;">
+    <div class="sl-block-content" style="z-index: 10;">
+
+<iframe height="800" style="width: 100%;" scrolling="no" title="Terminal Emulator" src="https://codepen.io/rudolphpienaar/embed/abOQoao?default-tab=result&theme-id=23783" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/rudolphpienaar/pen/abOQoao">
+  Terminal Emulator</a> by Rudolph Pienaar (<a href="https://codepen.io/rudolphpienaar">@rudolphpienaar</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+    </div>
+</div>
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/profile2.jpg" width=600 style="float: right;">
+</div>
+'''
+
+<slidebreak>
+title:<tt>A long time ago in a lab not so far away... (in the Mid West, actually)</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic Roads...
+</pre>
+</div>
+
+<span style="width:100%; float: left;">
+<pre id="typewriter" style="font-size:400%; color: white;">
+   How time flies...
+</pre>
+</span>
+
+<div>
+<pre style="font-size:200%; float:left; width: 100%">
+    _#_o_01   ▆ PhD in a Machine Learning technique called <em style="color: yellow;">Reinforcement Learning</em>
+    _#_o_02   ▆ Practically: Control systems, muscle modeling software and...
+    _#_o_03   ▆ making a human biomechanical simulation "balance"
+    _#_o_04   ▆ stints at the FreeSurfer dev team
+    _#_o_05   ▆ CMA!
+    _#_o_06   ▆ ACG at FNNDSC at BCH (acronyms much?)
+    _#_o_07   ▆ and did I mention?
+    _#_o_08   ▆ <em style="color:white;">software... lots of... software</em>
+
+</pre>
+</div>
+'''
+
+
+
+<slidebreak>
 title:<tt>Move along, move along</tt>
 body-style: "background: black; color:lightgreen;"
 body:
@@ -126,15 +182,15 @@ _#_font_basic Overview
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color: white;">This talk will...</font>
+    <font style="color: white;">This talk</font> <font style="italic; color:yellow;">aspires</font>to...
 
    ▆ tell the story of <font style="color:yellow">ChRIS</font>,
    ▆ and in the telling...
         touch upon the challenges of medical compute
    ▆ talk about how the ChRIS "way" relates
-       ▙ to <font style="color: purple;">clouds</font>, and
-       ▙ <font style="color: purple;">AI (oh my)</font>
-   ▆ show ChRIS
+       ▙ to <font style="color: cyan;">clouds</font>, and
+       ▙ <font style="color: cyan;">AI</font> (oh my)
+   ▆ show <font style="color:yellow">ChRIS</font>
        ▙ demo
        ▙ deploy
        ▙ getting started
@@ -144,26 +200,44 @@ _#_font_basic Overview
 '''
 
 <slidebreak>
-title:<tt>Move along, move along</tt>
+title:<tt>Oh, one more thing...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
 
 <pre style="float:left; width:100%">
-_#_font_basic ChRIS?
+_#_font_basic also...
 </pre>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color: white;">I could jump ahead... and say </font> <font style="color:yellow;">ChRIS</font> is
+<pre style="float:left; width 40%; font-size:300%;">
+    <font style="color: white;">Oh, and hopefully also...</font>
 
-   ▆ a pervasively open source platform
-   ▆ designed to run compute as single containers
-   ▆ as well as "trees" of linked containers
-   ▆ facilitate
-       ▙ reproducible compute
-       ▙ sharing/collaboration of compute
-       ▙ and data
+   _#_o_01 ▆ show how <font style="color:yellow">ChRIS</font> is complementary to <font style="color:cyan;">ReproNim</font>
+   _#_o_02 ▆ explain why this is the case...
+   _#_o_03 ▆ In fact, spoilers...
+
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title:<tt>Ok, ok, huddle close...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic also...
+</pre>
+
+<pre style="float:left; width 40%; font-size:300%;">
+    <font style="color: white;">How now, brown cow?</font>
+
+   _#_o_01 ▆ <font style="color:yellow">ChRIS</font> is "compute" first, "data" second
+   _#_o_02 ▆ many other systems are arguably "data" first, "compute" second...
 
 </pre>
 </div>
@@ -181,7 +255,7 @@ _#_font_basic ChRIS?
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color: white;">I could jump ahead... and say </font> <font style="color:yellow;">ChRIS</font> is
+    <font style="color: white;">I could jump ahead... and say</font> <font style="color:yellow;">ChRIS</font> is
 
    ▆ a pervasively open source platform
    ▆ designed to run compute as single containers
@@ -195,6 +269,7 @@ _#_font_basic ChRIS?
 </div>
 '''
 
+
 <slidebreak>
 title:<tt>Move along, move along</tt>
 body-style: "background: black; color:lightgreen;"
@@ -203,14 +278,14 @@ body:
 <div>
 
 <pre style="float:left; width:100%">
-_#_font_basic Buzz
+_#_font_basic ChRIS?
  </pre>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color:yellow;">ChRIS</font>
+<pre  style="float:left; width 40%; font-size:300%;">
+    <font style="color: white;">I could jump ahead... and say</font> <font style="color:yellow;">ChRIS</font> is
 
-   ▆ cognizant of non tech end users
-   ▆ but low entry barrier to developers
+   ▆ aspires to be cognizant of non tech end users
+   ▆ also tries to provide a low entry barrier to developers
    ▆ supports
        ▙ docker swarm
        ▙ kubernetes
@@ -222,6 +297,70 @@ _#_font_basic Buzz
 '''
 
 <slidebreak>
+title:<tt>Gather round, children...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width 40%; font-size:300%;">
+    <font style="color: #43a5cf ;">A long time ago in a galaxy far, far away...</font>
+</pre>
+<iframe height="900" style="width: 100%;" scrolling="no" title="Star Wars Intro" src="https://codepen.io/rudolphpienaar/embed/LYMXNxO?default-tab=result&theme-id=23783" style="border:none;" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/rudolphpienaar/pen/LYMXNxO">
+  Star Wars Intro</a> by Rudolph Pienaar (<a href="https://codepen.io/rudolphpienaar">@rudolphpienaar</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>Move along, move along</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width 40%; font-size:300%;">
+    <font style="color: #43a5cf ;">Not that long ago, in a lab rather close by...</font>
+</pre>
+
+
+<iframe height="900" style="width: 100%;" scrolling="no" title="Once Upon A Time Scroll" src="https://codepen.io/rudolphpienaar/embed/GRPYMmz?default-tab=result&theme-id=23783" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/rudolphpienaar/pen/GRPYMmz">
+  Once Upon A Time Scroll</a> by Rudolph Pienaar (<a href="https://codepen.io/rudolphpienaar">@rudolphpienaar</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+</div>
+'''
+
+<slidebreak>
+title:<tt>Move along, move along</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width:100%">
+_#_font_basic Stories
+ </pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+    <font style="color:yellow;">Let's tell a story...</font>
+
+    Once up a time,
+    lost in space as it were...
+
+</pre>
+
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/lost-in-space.jpg" width=600 style="float: right;">
+</div>
+
+</div>
+'''
+
+<slidebreak>
 title:<tt>Move along, move along</tt>
 body-style: "background: black; color:lightgreen;"
 body:
@@ -232,85 +371,17 @@ body:
 _#_font_basic Stories
  </pre>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+<pre style="float:left; width 40%; font-size:300%;">
     <font style="color:yellow;">Let's tell a story...</font>
 
-    A long time ago...
-
+    Well, a different
+    kind of space...
 </pre>
+
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/k-space.png" style="float: right;">
 </div>
-'''
 
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Stories
- </pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color:yellow;">Let's tell a story...</font>
-
-    Once up a time...
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic Stories
- </pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color:yellow;">Let's tell a story...</font>
-
-    Once up a time...
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    Lost in space...
-
-(movie)
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-    Lost in space...
-
-(k space)
-
-</pre>
 </div>
 '''
 
@@ -342,7 +413,7 @@ body:
 '''
 <div>
 <pre style="float:left; width:100%">
-_#_font_basic Meanwhile
+_#_font_basic hmmmm... 
  </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
@@ -389,15 +460,14 @@ body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
-<pre style="float:left; width:100%">
+<pre id="typewriter" style="float:left; font-size:300%; width:100%">
 If the clinician won't come to the compute...
  </pre>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300;">
-   bring the compute to the clinican
+<pre style="float:left; width 40%; font-size:300%;">
 
-   ▆ web front end for running scripts
-   ▆ move complexity into the platform
+   _#_o_01 ▆ web front end for running scripts
+   _#_o_02 ▆ move complexity into the platform
 
 </pre>
 
@@ -466,8 +536,8 @@ body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
-<pre style="float:left; width:100%">
-_#_font_basic Philosophy
+<pre style="width:100%">
+_#_font_basic ChRIS
  </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
@@ -510,9 +580,9 @@ body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
-<pre style="float:left; width:100%">
-_#_font_basic Containers
- </pre>
+<pre style="width:100%; white-space: pre-wrap;">
+_#_font_basic Container
+</pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
 
@@ -534,7 +604,7 @@ body:
 '''
 <div>
 <pre style="float:left; width:100%">
-_#_font_basic ChRIS also
+_#_font_basic also
  </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
@@ -791,8 +861,8 @@ _#_font_basic MLops
 
    What are MLops in ChRIS?
 
-   ▆ data scientists are the developers 
-   ▆ reduce time to deploy and debug 
+   ▆ data scientists are the developers
+   ▆ reduce time to deploy and debug
 
 
 </pre>
@@ -800,529 +870,6 @@ _#_font_basic MLops
 </div>
 '''
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic also...
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color: white;">This talk will...</font>
-
-   ▆ show how <font style="color:yellow">ChRIS</font> is complementary to ReproNim
-</pre>
-
-
-</div>
-'''
-
-
-<slidebreak>
-title:<tt>Thanks for the invite! What can I bring...?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Overview
-</pre>
-
-<pre style="float:left; width 40%; font-size:300%;">
-
-    <font style="color: white;">Difficulty level. Ideally, you:</font>
-
-    ▆ are at least <font style="color: yellow">upper-level</font> beginner, meaning:
-       ▙ basic knowledge using a Terminal
-         (commands like <font style="color: purple;">ls</font>, <font style="color: purple;">cd</font>, <font style="color: purple;">mkdir</font>, etc)
-       ▙ basic knowledge of directories, files, etc.
-    ▆ should have a <font style="color: cyan;">GitHub</font> account.
-    ▆ will need to have the command line <font style="color: purple;">git</font> tool
-      installed and accessible.
-
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Is that all?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Overview
-</pre>
-
-<pre style="float:left; width 40%; font-size:300%;">
-
-    <font style="color: white;">So this is really for beginners?</font>
-
-   ▆ Yes, it is. The <font style="color:yellow;">upper</font>-level means you also ideally:
-        ▙ know about <font style="color:purple;">Python</font> and can setup a
-          <font style="color:purple;">Python virtual environment</font>.
-        ▙ don't worry too much, though -- we will
-          show you all the commands, but you might
-          need to Google if some aren't installed
-          on your computer.
-
-</pre>
-
-</div>
-'''
-
-
-<slidebreak>
-title:<tt>Red or white wine? Both? Oh, my!</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Overview
-</pre>
-
-<pre style="float:left; width 40%; font-size:300%;">
-
-    <font style="color: white;">You will also need:</font>
-
-   ▆ for <font style="color: cyan;">miniChRIS-docker</font>
-        ▙ please make sure <font style="color: cyan;">docker</font> and <font style="color: cyan;">docker-compose</font>
-          are installed. Google is your friend here.
-        ▙ ideally also we recommend you setup
-          <em style="color:yellow;">"sudo-less docker"</em>
-          Again, Google is your friend.
-          Maybe even ChatGPT. Or Bard...
-          <em style="color: yellow;">How do I setup sudoless docker on ubuntu?</em>
-
-
-</pre>
-
-</div>
-'''
-
-
-<slidebreak>
-title:<tt>Does anyone in your party have dietary restrictions?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Overview
-</pre>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-<em style="color: red;">Danger, Will Robinson!</em>
-</pre>
-</span>
-
-<pre id="typewriter" style="font-size:300%;">
-   ▆ This is important! The <font style="color: white;">ChRIS</font> backend is
-     only fully supported on <em>UNIX-y</em> OSes, i.e.
-     <font style="color:white">Linux</font> and <font style="color:white;">macOS</font> (maybe <font style="color: white;">FreeBSD</font>).
-   ▆ <em style="color: yellow;">It does NOT fully work on Windows!</em>
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Does anyone in your party have dietary restrictions?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Overview
-</pre>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-<em style="color: red;">Danger, Will Robinson!</em>
-</pre>
-</span>
-
-<pre id="typewriter" style="font-size:300%;">
-   ▆ <em style="color: yellow;">ChRIS does NOT fully work on Windows!</em>
-        ▙ to save everyone time, please don't try on
-          Windows, get stuck, and then ask the dev
-          team "help". ✋
-        ▙ in theory <font style="color: white;">ChRIS</font> <em>could</em> work on Windows... so
-        ▙ if you're super motivated to tackle this,
-          by all means we welcome your help!
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>t's and c's apply!</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<pre style="float:left; width:100%">
-_#_font_basic Overview
-</pre>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-<em style="color: red;">Danger, Will Robinson!</em>
-</pre>
-</span>
-
-<pre id="typewriter" style="font-size:300%;">
-   ▆ <em style="color: yellow;">If you are on Windows...</em>
-        ▙ By far the best solution is for you to
-          repartition your HDD and install some Linux.
-          We recommend <font style="color:white;">Fedora</font>, <font style="color:white;">Ubuntu</font>, <font style="color:white;">arch</font>, etc.
-        ▙ You <em>can</em> install Linux in a Virtual Machine;
-          <em>we don't recommend that, especially </em>on low-
-	  powered hosts.</em>>
-        ▙ <font style="color: white;">ChRIS</font> can be pretty resource hungry!
-
-</pre>
-
-</div>
-'''
-
-
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-    <font style="color:white;">At this point, the <em>hardest</em> part is behind us!</font>
-
-</pre>
-</span>
-
-<pre id=typewriter style="font-size:200%; color:white";>
-<em style = "color: red;"># Now, open your terminal, and at the prompt choose a directory for miniChRIS-docker</em>
-<em style = "color: red;"># We'll pull the repository from github into this directory.</em>
-~$ <font style="color: green;">cd</font>
-~$ <font style="color: green;">mkdir</font> src
-~$ <font style="color: green;">cd</font> ~/src
-~/src$ <font style="color: green;">git</font> clone <font style="color:purple;">https://github.com/FNNDSC/miniChRIS-docker</font>
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-    <font style="color:white;">At this point, the <em>hardest</em> part is behind us!</font>
-
-</pre>
-</span>
-
-<pre style="font-size:200%; color:white";>
-<em style = "color: red;"># Now, open your terminal, and at the prompt choose a directory for miniChRIS-docker</em>
-<em style = "color: red;"># We'll pull the repository from github into this directory.</em>
-~$ <font style="color: green;">cd</font>
-~$ <font style="color: green;">mkdir</font> src
-~$ <font style="color: green;">cd</font> ~/src
-~/src$ <font style="color: green;">git</font> clone <font style="color:purple;">https://github.com/FNNDSC/miniChRIS-docker</font>
-Cloning into 'miniChRIS-docker'...
-remote: Enumerating objects: 726, done.
-remote: Counting objects: 100% (139/139), done.
-remote: Compressing objects: 100% (36/36), done.
-remote: Total 726 (delta 115), reused 115 (delta 102), pack-reused 587
-Receiving objects: 100% (726/726), 195.47 KiB | 3.05 MiB/s, done.
-Resolving deltas: 100% (423/423), done.
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-    <font style="color:white;">Wait, was it that easy?</font>
-
-</pre>
-</span>
-
-<pre id=typewriter style="font-size:200%; color:white";>
-<em style = "color: red;"># You're so close! Now enter the pulled repo... and simply fire up minichris.sh!</em>
-~/src$ <font style="color: green;">cd</font> miniChRIS-docker
-~/src/miniChRIS-docker$ <font style="color: green;">./minichris.sh</font>
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-    <font style="color:white;">Wait, was it that easy?</font>
-
-</pre>
-</span>
-
-<pre style="font-size:200%; color:white";>
-<em style = "color: red;"># You're so close! Now enter the pulled repo... and simply fire up minichris.sh!</em>
-~/src$ <font style="color: green;">cd</font> miniChRIS-docker
-~/src/miniChRIS-docker$ <font style="color: green;">./minichris.sh</font>
-<pre id="typewriter">
-... stuff... happens...
-<font style="color: purple;">
-   ________    ____  _________                       __  _
-  / ____/ /_  / __ \/  _/ ___/____  ____ ___  ____ _/ /_(_)____
- / /   / __ \/ /_/ // / \__ \/ __ \/ __ `__ \/ __ `/ __/ / ___/
-/ /___/ / / / _, _// / ___/ / /_/ / / / / / / /_/ / /_/ / /__
-\____/_/ /_/_/ |_/___//____/\____/_/ /_/ /_/\__,_/\__/_/\___/
-... ... ...</font>
-────────────────── Summary: 0 present, 17 changed, 0 failures ──────────────────
-
-</pre>
-</pre>
-</div>
-'''
-
-
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-    <font style="color:white;">Are we done?</font>
-
-</pre>
-</span>
-
-
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-   Not entirely. If you are following along, at this stage
-   you have
-
-   ▆ instantiated a new <font style="color:white;">ChRIS</font>;
-   ▆ but not really installed many "apps" or <font style="color:white;">plugins</font>.
-
-
-    	<em style="color: purple ;">So let's fix that!</em>
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-    <font style="color:white;">First things first...</font>
-
-</pre>
-</span>
-
-
-<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
-    Now install a python application to help "add" <font style="color:white;">plugins</font>
-    to your <font style="color: white;">ChRIS</font>. We're going to
-
-   ▆ create a <font style="color:purple;">python virtual environment</font>;
-   ▆ and install the apps <font style="color:white;">plugin2cube</font> and <font style="color:white;">pipeline2cube</font>
-     using the <font style="color:purple;">pip</font> helper.
-
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left; color: white;">
-<pre style="font-size:300%">
-After first comes... second.
-</pre>
-<pre style="font-size:200%; color:white;">
-    OK, let's create a <font style="color:purple;">python virtual environment</font>. Note you only need to create
-    it once. Afterwards, you simply use it whenever you need.
-
-</pre>
-</span>
-
-<pre id=typewriter style="font-size:200%; color:white";>
-<em style = "color: red;"># Ok, so let's create a python virtual env. Remember, you only create it once</em>
-<em style = "color: red;"># First, go to some directory to contain the env. We'll use the src dir here:</em>
-~$ <font style="color: green;">cd</font> src
-<em style = "color: red;"># Now create an environment which we'll call 'chris':</em>
-~/src$ <font style="color: green;">python</font> -m venv chris
-<em style = "color: red;"># and let's activate it:</em>
-~/src$ <font style="color: green;">source</font> chris/bin/activate
-(chris) ~/src$
-
-<em style="color: cyan;">That's pretty much it! Notice how your prompt has changed? The exact way
-in which this might change depends on your setup, but here we see
-a hint that we are in the <b>(chris)</b> environment.</em>
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left; color:white;">
-<pre style="font-size:300%; color:white;">
-    Oh, quick one...
-</pre>
-</span>
-<span style="width:100%; float:left; color: white;">
-<pre style="font-size:200%;">
-    How do you leave a <font style="color:purple;">python virtual environment</font>?
-</pre>
-</span>
-
-<pre id=typewriter style="font-size:200%; color:white";>
-<em style = "color: red;"># Leaving a python virtual environment is rather trivial. Simply deactivate it.  </em>
-(chris) ~/src$ <font style="color: green;">deactivate</font>
-~/src$
-<em style = "color: red;"># But for our purposes, let's get back inside since we want to install some apps:</em>
-~/src$ <font style="color: green;">source</font> chris/bin/activate
-(chris) ~/src$
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color:white;">
-    And now let's get those apps!
-</pre>
-</span>
-
-<pre id=typewriter style="font-size:200%; color:white";>
-<em style = "color: red;"># Install the apps using pip. If pip doesn't work you might need to install it.</em>
-<em style = "color: red;"># Who's gonna help? Yep. Google. Or Bard.</em>
-(chris) ~/src$ <font style="color: green;">pip</font> install plugin2cube pipeline2cube
-... stuff ... happens...
-... eventually...
-Successfully built plugin2cube pipeline2cube pfmisc
-(chris) ~/src$
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>Are we there, yet?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; color:white;">
-<pre style="font-size:300%;">
-Moving right along...
-</pre>
-<pre style="font-size:200%; width:100%">
-    We'll add two apps to our ChRIS:
-    ▆ <font style="color:purple;">pl-dicom_info</font> that reports DICOM tag info; and
-    ▆ <font style="color:purple;">pl-dicom_headeredit</font> that can anonymize DICOMS.
-</pre>
-</span>
-
-<pre id=typewriter style="font-size:200%; color:white";>
-<em style = "color: red;"># Our miniChRIS setup has some default users already configured. We'll use the</em>
-<em style = "color: red;"># user called "chris" that has a default password "chris1234".                </em>
-(chris) ~/src$ <font style="color: green;">plugin2cube</font> \
---CUBEurl <font style="color:purple;">http://localhost:8000/api/v1/<font> \
---CUBEuser <font style="color:purple;">chris</font> \
---CUBEpasswd <font style="color:purple;">chris1234</font> \
---computenames <font style="color:purple;">host</font> \
---dock_image <font style="color:purple;">fnndsc/pl-dicom_headedit</font>
-(chris) ~/src$
-
-<em style="color:cyan;">Here, we split each the command over many lines using the '\'
-separator. Hopefully each flag meaning is obvious. The
---computenames means in this case that the plugin
-will run on the same computer that is hosting ChRIS.</em>
-
-</pre>
-</div>
-'''
 
 
 
@@ -1356,355 +903,6 @@ _#_font_basic Roads...
 </div>
 '''
 
-
-
-<slidebreak>
-title:<tt>If a tree falls in the woods...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Let's try running FreeSurfer at the FNNDSC -- old school
-</pre>
-</span>
-
-<pre style="float:left; width 100%; font-size:200%; color:white;">
-   ~$ <font style="color:green;">ssc</font>
-   ~$ <font style="color:green;">.</font> neuro-fs stable
-    <b style="color: white;">version:  stable
-    revision: -system default-
-    Host type is x86_64-Linux
-    -------- freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0 --------
-    Setting up environment for FreeSurfer/FS-FAST (and FSL)
-    FREESURFER_HOME   /neuro/arch/x86_64-Linux/packages/freesurfer/stable
-    FSFAST_HOME       /neuro/arch/x86_64-Linux/packages/freesurfer/stable/fsfast
-    FSF_OUTPUT_FORMAT nii.gz
-    SUBJECTS_DIR      /neuro/users/rudolphpienaar
-    MNI_DIR           /neuro/arch/x86_64-Linux/packages/freesurfer/stable/mni
-    FSL_DIR           /neuro/arch/x86_64-Linux/packages/fsl/current</b>
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>If a tree falls in the woods...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Let's try running FreeSurfer at the FNNDSC -- old school
-</pre>
-</span>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-
-Now we need to really understand where the data
-we want to process "lives" <em style="color: yellow;">and do some
-"tricky" CLI magic...</em>
-
-</pre>
-</span>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:200%; color:white;">
-    <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
-    ~$ <font style="color: green;">cd</font> ~/data
-    ~$ <font style="color: yellow;">export</font> SUBJECTS_DIR=$PWD
-    <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
-    ~$ <b style="color:white;">recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach</b>
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>If a tree falls in the woods...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left; color: white;">
-<pre style="font-size:300%;">
-Let's try running FreeSurfer at the FNNDSC -- with apptainer!
-</pre>
-</span>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-
-Now, let's use apptainer instead and run FreeSurfer.
-
-
-</pre>
-</span>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:200%; color:white;">
-    <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
-    ~$ <font style="color: green;">cd</font> ~/data
-    ~$ <font style="color: yellow;">export</font> SUBJECTS_DIR=$PWD
-    <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
-    ~$ <b style = "color: white;">FREESURFER_HOME=/usr/local/freesurfer freesurfer.sif \
-       recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach</b>
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>If a tree falls in the woods...</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white">
-FreeSurfer -- old and new
-</pre>
-</span>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">On the metal</pre>
-</span>
-
-<pre style="float:left; width 100%; font-size:200%; color:white;">
-    <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
-    ~$ <font style="color: green;">cd</font> ~/data
-    ~$ <font style="color: yellow;">export</font> SUBJECTS_DIR=$PWD
-    <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
-    ~$ <b style = "color: white;">recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach</b>
-</pre>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">Apptainer!</pre>
-</span>
-
-<pre style="float:left; width 100%; font-size:200%; color:white;">
-    <em style="color: red;"># For example, assuming you have a "data" directory off your home...</em>
-    ~$ <font style="color: green;">cd</font> ~/data
-    ~$ <font style="color: yellow;">export</font> SUBJECTS_DIR=$PWD
-    <em style="color: red;"># and assuming a directory within that called SAG-anon...</em>
-    ~$ <b style = "color: white;">FREESURFER_HOME=/usr/local/freesurfer freesurfer.sif \
-       recon-all -all -sd $SUBJECTS_DIR -s SAG-anon -notalairach</b>
-</pre>
-
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-So let's anonymize some data!
-</pre>
-</span>
-
-<pre id="typewriter" style="float:left; width 100%; font-size:200%;">
-        ▆ We'll use a ChRIS plugin called <b style="color: white;">pl-anon.sif</b>
-        ▆ ChRIS plugins are just like regular CLI apps, but you need to explicitly
-          add an <b style="color: white;">input directory</b> and <b style="color: white;">output directory</b>
-        ▆ in conjunction with all the other CLI args the app might want
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%;">
-So let's anonymize some data!
-</pre>
-</span>
-
-<pre style="float:left; width 100%; font-size:200%; color:white;">
-<em style = "color: red;"># let's assume you have a dir called leg-images in a data folder</em>
-~$ <font style="color: green;">cd</font> ~/data
-~/data$ <font style="color:green;">pl-anon.sif</font> dicom_headerEdit <b style="color: purple;">leg-images</b> <b style="color: cyan;">leg-images2</b> \
-                   --fileFilter dcm                                                    \
-                   --splitToken ","                                                    \
-                   --splitKeyValue "="                                                 \
-                   --tagInfo <font style="color:yellow;">'
-                   PatientName         =  %_name|patientID_PatientName,
-                   PatientID           =  %_md5|7_PatientID,
-                   AccessionNumber     =  %_md5|8_AccessionNumber,
-                   PatientBirthDate    =  %_strmsk|******01_PatientBirthDate,
-                   re:.*hysician       =  %_md5|4_#tag,
-                   re:.*stitution      =  #tag,
-                   re:.*ddress         =  #tag
-               '</font> --threads 0 --printElapsedTime
-
-</pre>
-
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Ah. Ok. So how do I run something <em>inside</em> ChRIS?
-
-</pre>
-</span>
-
-<pre id="typewriter" style="font-size:200%; float:left; width: 100%">
-        ▆ First, we need to <em style="color: white;">import</em> the data into ChRIS.
-        ▆ Then, we can <em style="color: yellow;">instruct</em> ChRIS to run some app for us:
-            ▆ via CLI;
-            ▆ or via the GUI.
-        ▆ Optionally, we can <em style="color: white;">pull</em> resultant data out of ChRIS.
-
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Let's upload that data via CLI using <b style="color: cyan;">chrs</b>
-
-</pre>
-</span>
-
-<pre id=typewriter style="float:left; width 100%; font-size:200%; color:white";>
-<em style = "color: red;"># let's assume you have a dir called leg-images in a data folder</em>
-~$ <font style="color: green;">cd</font> ~/data
-~/data$ chrs <font style="color:purple;">login --address http://cube-next.tch.harvard.edu/api/v1/ \
-                   --username rudolph.pienaar --password XXXXXXX</font>
-~/data$ feed=<font style="color: purple;">$(</font><font style="color: green;">chrs</font> upload --path="upload-$(date +%s)" --feed <font style="color:yellow;">"leg images"</font> leg-images<font style="color:purple;">)</font>
-~/data$ pid=<font style="color: purple;">$(</font><font style="color: green;">chrs</font> get ${feed}plugininstances/ | <font style="color:green;">jq<font> -r <font style=color:yellow;">'.results[-1].id'</font><font style="color:purple;">)</font>
-
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Let's upload that data via CLI using <b style="color: cyan;">chrs</b>
-
-</pre>
-</span>
-
-<pre style="float:left; width 100%; font-size:200%; color:white";>
-<em style = "color: red;"># let's assume you have a dir called leg-images in a data folder</em>
-~$ <font style="color: green;">cd</font> ~/data
-~/data$ chrs <font style="color:purple;">login --address http://cube-next.tch.harvard.edu/api/v1/ \
-                   --username rudolph.pienaar --password XXXXXXX</font>
-~/data$ feed=<font style="color: purple;">$(</font><font style="color: green;">chrs</font> upload --path="upload-$(date +%s)" --feed <font style="color:yellow;">"leg images"</font> leg-images<font style="color:purple;">)</font>
-~/data$ pid=<font style="color: purple;">$(</font><font style="color: green;">chrs</font> get ${feed}plugininstances/ | <font style="color:green;">jq<font> -r <font style=color:yellow;">'.results[-1].id'</font><font style="color:purple;">)</font>
-
-</pre>
-</div>
-'''
-
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Now let's use <b style="color: cyan;">chrs</b> to tell <b style="color: yellow;">ChRIS</b> to run this.
-
-</pre>
-</span>
-
-<pre id=typewriter style="float:left; width 100%; font-size:200%; color:white";>
-<em style = "color: red;"># Ready? Steady... GO!</em>
-~$ anon=<font style="color:purple;">$(</font><font style="color:green;">chrs</font> run-latest --compute-resource-name e2 --previous-id $pid \
-                   pl-dicom_headeredit -- --fileFilter dcm \
-                   --splitToken <font style="color:yellow;">","</font> \
-                   --splitKeyValue <font style="color:yellow;">"="</font> \
-                   --tagInfo <font style="color:yellow;">'
-                   PatientName         =  %_name|patientID_PatientName,
-                   PatientID           =  %_md5|7_PatientID,
-                   AccessionNumber     =  %_md5|8_AccessionNumber,
-                   PatientBirthDate    =  %_strmsk|******01_PatientBirthDate,
-                   re:.*hysician       =  %_md5|4_#tag,
-                   re:.*stitution      =  #tag,
-                   re:.*ddress         =  #tag
-               '</font> --threads 0 --printElapsedTime <font style="color:purple;">)</font>
-~$ <font style="color:green;">chrs</font> download ${anon}/files/ anon
-</pre>
-</div>
-'''
-
-<slidebreak>
-title:<tt>OK... this related to ChRIS, how?</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-
-<span style="width:100%; float: left;">
-<pre style="font-size:300%; color: white;">
-Now let's use <b style="color: cyan;">chrs</b> to tell <b style="color: yellow;">ChRIS</b> to run this.
-
-</pre>
-</span>
-
-<pre  style="float:left; width 100%; font-size:200%; color:white";>
-<em style = "color: red;"># Ready? Steady... GO!</em>
-~$ anon=<font style="color:purple;">$(</font><font style="color:green;">chrs</font> run-latest --compute-resource-name e2 --previous-id $pid \
-                   pl-dicom_headeredit -- --fileFilter dcm \
-                   --splitToken <font style="color:yellow;">","</font> \
-                   --splitKeyValue <font style="color:yellow;">"="</font> \
-                   --tagInfo <font style="color:yellow;">'
-                   PatientName         =  %_name|patientID_PatientName,
-                   PatientID           =  %_md5|7_PatientID,
-                   AccessionNumber     =  %_md5|8_AccessionNumber,
-                   PatientBirthDate    =  %_strmsk|******01_PatientBirthDate,
-                   re:.*hysician       =  %_md5|4_#tag,
-                   re:.*stitution      =  #tag,
-                   re:.*ddress         =  #tag
-               '</font> --threads 0 --printElapsedTime <font style="color:purple;">)</font>
-~$ <font style="color:green;">chrs</font> download ${anon}/files/ anon
-</pre>
-</div>
-'''
 
 
 

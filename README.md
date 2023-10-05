@@ -40,7 +40,7 @@ Set the name of the base directory of your web server. This will probably vary o
 export HTMLDOCS=/srv/http/slides
 ```
 
-Note the `cp` command below uses GNU flags. It will be different on macOS!
+I usually copy an existing presentation as the base of a new one. Note the `cp` command below uses GNU flags. It will be different on macOS!
 
 ```bash
 # Here is where you typically copy an existing presentation
@@ -48,10 +48,14 @@ Note the `cp` command below uses GNU flags. It will be different on macOS!
 # this is a one time deal. Don't do this next time otherwise
 # you'll overwrite $PRESENTATION!
 /bin/cp -prvdi tutorial_ChRIS-gettingStarted "$PRESENTATION"
+```
 
+And set some final flourishes:
+
+```bash
 export INPUTDIR=$REPO/"$PRESENTATION" 
 export INPUTFILE=slides-all-master.hjson
-export OUTPUTDIR=$HTMLDOCS/$PRESENTATION
+export OUTPUTDIR=$HTMLDOCS/"$PRESENTATION"
 
 ```
 

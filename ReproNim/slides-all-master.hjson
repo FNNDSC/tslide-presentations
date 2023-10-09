@@ -90,7 +90,7 @@ body:
 '''
 <div>
 <pre style="font-size:300%;">
-This tutorial lives here:
+This talk lives here:
 </pre>
 <pre style="font-size:175%; color: cyan;">
 <a style="color: cyan;" href=http://fnndsc.childrens.harvard.edu/ChRIS/ReproNim>
@@ -155,14 +155,13 @@ _#_font_basic Roads...
 
 <div>
 <pre style="font-size:200%; float:left; width: 100%">
-    _#_o_01   ▆ PhD in a Machine Learning technique called <em style="color: yellow;">Reinforcement Learning</em>
-    _#_o_02   ▆ Practically: Control systems, muscle modeling software and...
-    _#_o_03   ▆ making a human biomechanical simulation "balance"
-    _#_o_04   ▆ stints at the FreeSurfer dev team
-    _#_o_05   ▆ CMA!
-    _#_o_06   ▆ ACG at FNNDSC at BCH (acronyms much?)
-    _#_o_07   ▆ and did I mention?
-    _#_o_08   ▆ <em style="color:white;">software... lots of... software</em>
+    _#_o_01   ▆ Biomed Eng PhD in a Machine Learning technique called <em style="color: yellow;">Reinforcement Learning</em>
+    _#_o_02   ▆ Practically: Control systems, muscle modeling software, nerve impulse trains...
+    _#_o_03   ▆ stints at the FreeSurfer dev team
+    _#_o_04   ▆ CMA!
+    _#_o_05   ▆ ACG at FNNDSC at BCH (acronyms much?)
+    _#_o_06   ▆ and did I mention?
+    _#_o_07   ▆ <em style="color:white;">software... lots of... software</em>
 
 </pre>
 </div>
@@ -182,7 +181,7 @@ _#_font_basic Overview
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color: white;">This talk</font> <font style="italic; color:yellow;">aspires</font>to...
+    <font style="color: white;">This talk</font> <font style="italic; color:yellow;">aspires</font> <font style="color:white;">to...</font>
 
    ▆ tell the story of <font style="color:yellow">ChRIS</font>,
    ▆ and in the telling...
@@ -236,8 +235,8 @@ _#_font_basic also...
 <pre style="float:left; width 40%; font-size:300%;">
     <font style="color: white;">How now, brown cow?</font>
 
-   _#_o_01 ▆ <font style="color:yellow">ChRIS</font> is "compute" first, "data" second
-   _#_o_02 ▆ many other systems are arguably "data" first, "compute" second...
+   _#_o_01 ▆ <font style="color:yellow">ChRIS</font> is <font style="color:cyan"><b>compute</b></font> first, <font style="color:cyan"><em>data</em></font> second
+   _#_o_02 ▆ <font style="color:yellow">other systems</font> are arguably <font style="color:cyan"><b>data</b></font> first, <font style="color:cyan"><em>compute</em></font> second...
 
 </pre>
 </div>
@@ -255,7 +254,7 @@ _#_font_basic ChRIS?
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color: white;">I could jump ahead... and say</font> <font style="color:yellow;">ChRIS</font> is
+    <font style="color: white;">I could jump ahead... and say</font> <font style="color:yellow;">ChRIS</font> <font style="color:white;">is</font>
 
    ▆ a pervasively open source platform
    ▆ designed to run compute as single containers
@@ -282,20 +281,39 @@ _#_font_basic ChRIS?
  </pre>
 
 <pre  style="float:left; width 40%; font-size:300%;">
-    <font style="color: white;">I could jump ahead... and say</font> <font style="color:yellow;">ChRIS</font> is
+    <font style="color: white;">I could jump ahead... and say</font> <font style="color:yellow;">ChRIS</font>
 
-   ▆ aspires to be cognizant of non tech end users
-   ▆ also tries to provide a low entry barrier to developers
-   ▆ supports
-       ▙ docker swarm
-       ▙ kubernetes
-       ▙ openshift
-       ▙ slurm HPC
+   _#_o_01 ▆ aspires to be cognizant of non tech end users
+   _#_o_02 ▆ also tries to provide a low entry barrier to developers
+   _#_o_03 ▆ <font style="color:cyan;">GUI</font> <em>and</em> <font style="color:white;">CLI</font>
 
 </pre>
 </div>
 '''
 
+<slidebreak>
+title:<tt>Move along, move along</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="float:left; width:100%">
+_#_font_basic ChRIS?
+ </pre>
+
+<pre  style="float:left; width 40%; font-size:300%;">
+    <font style="color: white;">I could jump ahead... and say</font> <font style="color:yellow;">ChRIS</font>
+
+   _#_o_01 ▆ supports
+   _#_o_02     ▙ docker swarm
+   _#_o_03     ▙ kubernetes
+   _#_o_04     ▙ openshift
+   _#_o_05     ▙ slurm HPC
+
+</pre>
+</div>
+'''
 <slidebreak>
 title:<tt>Gather round, children...</tt>
 body-style: "background: black; color:lightgreen;"
@@ -316,7 +334,7 @@ body:
 '''
 
 <slidebreak>
-title:<tt>Move along, move along</tt>
+title:<tt>Once upon a time...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -336,7 +354,7 @@ body:
 '''
 
 <slidebreak>
-title:<tt>Move along, move along</tt>
+title:<tt>Danger, Will Robinson!</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -361,7 +379,7 @@ _#_font_basic Stories
 '''
 
 <slidebreak>
-title:<tt>Move along, move along</tt>
+title:<tt>Brains...</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
@@ -395,11 +413,13 @@ body:
 _#_font_basic Lessons
  </pre>
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-    <font style="color:yellow;">Software</font>
+<pre  style="float:left; width 40%; font-size:300%;">
+    <font style="color:yellow;">Software</font>, particularly in <em>research</em>
 
-   ▆ gets lost
-   ▆ lives unecessarily short life
+   _#_o_01 ▆ is written by non-software devs
+   _#_o_02 ▆ is easily disregarded
+   _#_o_03 ▆ is underappreciated
+   _#_o_04 ▆ often lives unnecessarily short lives
 
 </pre>
 
@@ -413,7 +433,7 @@ body:
 '''
 <div>
 <pre style="float:left; width:100%">
-_#_font_basic hmmmm... 
+_#_font_basic hmmmm...
  </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
@@ -422,7 +442,7 @@ _#_font_basic hmmmm...
    ▆ get data
    ▆ run simple analyses
    ▆ get results
-   ▆ with a twist...
+   ▆ <font style="color:cyan;"><i>with a twist...</i></font>
 
 </pre>
 
@@ -440,13 +460,14 @@ _#_font_basic Users
  </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-   Clinicians will probably never...
+   <font style="color:yellow;">Clinicians</font> will probably never...
 
    ▆ open a terminal
    ▆ run a script
 
 
-   RA's...
+   <font style="color:cyan;">RA's</font>, alas...
+
    ▆ don't have a choice!
 
 </pre>
@@ -460,14 +481,40 @@ body-style: "background: black; color:lightgreen;"
 body:
 '''
 <div>
-<pre id="typewriter" style="float:left; font-size:300%; width:100%">
-If the clinician won't come to the compute...
+<pre style="float:left; width:100%">
+_#_font_basic Users
+ </pre>
+
+<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
+    These two different user classes can fundamentally shape
+    the design of a system...
+
+    <font style="color:yellow;">ChRIS</font> skewed towards users
+    who would <i>prefer</i> not to run scripts,
+
+    while maintaining a <b>strong</b> bias to power users who
+    <font style="color:yellow;">prefer to use the CLI.</font>
+
+</pre>
+
+</div>
+'''
+<slidebreak>
+title:<tt>Move along, move along</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre id="typewriter" style="float:left; font-size:350%; width:100%">
+    If the <b>user</b> (clinician?) won't come to the compute...
+
+          <font style="color:yellow;"><i>bring the compute to the user!</i></font>
  </pre>
 
 <pre style="float:left; width 40%; font-size:300%;">
 
    _#_o_01 ▆ web front end for running scripts
-   _#_o_02 ▆ move complexity into the platform
+   _#_o_02 ▆ move complexity <i>into the platform</i>
 
 </pre>
 
@@ -501,7 +548,7 @@ body:
 '''
 <div>
 <pre style="float:left; width:100%">
-To the web!
+_#_font_basic WEB!
 </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
@@ -512,8 +559,45 @@ To the web!
 
 </pre>
 
+<pre style="color:yellow;float:left; width:80%; font-size:400%">
+     _#_o_01 ▆ focus on the <b>analysis</b>...
+     _#_o_02 ▆ have the data <i>fit the analysis</i>
+
+</pre>
 </div>
 '''
+
+<slidebreak>
+title:<tt>If a tree falls in the woods...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre style="float:left; width:100%">
+_#_font_basic Hmmm...
+</pre>
+
+<pre id="typewriter" style="float:left; width 100%; font-size:300%;">
+
+   Susan Dray, usability expert in human computer
+   interaction and user experience,
+
+   <em style="color: yellow;">"If the user can't use it, it doesn't work"</em>
+
+</pre>
+
+<pre style="font-size:200%; float:left; width: 100%">
+_#_o_01 COROLLARY
+_#_o_02   ▆ No matter how amazing a tool, if never used...
+_#_o_03     <em style="color: yellow;">it essentially doesn't exist.</em>
+
+</pre>
+
+
+</div>
+'''
+
+
 
 <slidebreak>
 title:<tt>Move along, move along</tt>
@@ -522,181 +606,21 @@ body:
 '''
 <div>
 <pre style="float:left; width:100%">
-ChRIS
-</pre>
-
-pic...
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="width:100%">
-_#_font_basic ChRIS
+_#_font_basic AI
  </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-   ▆ offer compute
-   ▆ any compute
-   ▆ unstructured data
-
+   Well what is AI?
 </pre>
 
-</div>
-'''
+<pre style = "float:rightl; width: 50%; font-size:200%;">
+   _#_o_01 ▆ train
+   _#_o_02 ▆ infer
 
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic ChRIS 3.0
- </pre>
+   _#_o_03 words matter...
 
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-   ▆ it's all about the compute
-   ▆ chains of compute
-   ▆ user groups
-       ▙ clinical
-       ▙ research
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="width:100%; white-space: pre-wrap;">
-_#_font_basic Container
-</pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-   ▆ each compute is containerized
-   ▆ these containers
-       ▙ should be easy to build
-       ▙ should be runnable outside of ChRIS
-       ▙ no requirements on data
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic also
- </pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-
-   ▆ orchestrate chains of containers
-   ▆ handle data flows
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic Cloud
- </pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-   There is no cloud...
-
-   it's just someone else's computer.
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic Cloud
- </pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-   Each plugin in ChRIS...
-
-   ▆ includes a descriptor of where to be scheduled
-       ▙ of course there is an infrastructure in ChRIS
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic Cloudy
- </pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-   ChRIS natively
-
-   ▆ can use container schedulers
-       ▙ docker swarm for dev
-       ▙ k8
-       ▙ OpenShift
-
-</pre>
-
-</div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic Old school
- </pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-   ChRIS also...
-
-   ▆ can use HPC
-       ▙ using cromwell
-       ▙ SLURM
+   _#_o_04 ▆ optimize / tune
+   _#_o_05 ▆ run
 
 </pre>
 
@@ -714,38 +638,19 @@ _#_font_basic AI
  </pre>
 
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-   Well what is AI?
+    <font style="color:yellow;">What is AI..?</font>
 
-   ▆ train
-   ▆ infer
+    Most people/media/industry
+    take this to mean:
 
-   words matter...
 
-   ▆ optimize / tune
-   ▆ run
+    <font style="color:cyan;"><em>Neural Networks</em>
 
 </pre>
 
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/sad-algo.png" width=600 style="float: right;">
 </div>
-'''
-
-<slidebreak>
-title:<tt>Move along, move along</tt>
-body-style: "background: black; color:lightgreen;"
-body:
-'''
-<div>
-<pre style="float:left; width:100%">
-_#_font_basic AI
- </pre>
-
-<pre id="typewriter" style="float:left; width 40%; font-size:300%;">
-   Well what is AI?
-
-   ▆ most mean neural networks
-   ▆ interesting times
-
-</pre>
 
 </div>
 '''
@@ -836,7 +741,7 @@ _#_font_basic MLops
 <pre id="typewriter" style="float:left; width 40%; font-size:300%;">
 
    ▆ FastAPI apps
-       ▙ Single-shot
+       ▙ single-shot
        ▙ typically not part of a larger system
        ▙ self contained
 
@@ -871,37 +776,19 @@ _#_font_basic MLops
 '''
 
 
-
-
 <slidebreak>
-title:<tt>A long time ago in a lab not so far away... (in the Mid West, actually)</tt>
+title: <tt>End</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
-<div>
+<pre>
 
-<pre style="float:left; width:100%">
-_#_font_basic Roads...
-</pre>
-</div>
-
-<span style="width:100%; float: left;">
-<pre id="typewriter" style="font-size:400%; color: white;">
-   Once upon a time... early 2000s
-</pre>
-</span>
-
-<div>
-<pre style="font-size:200%; float:left; width: 100%">
-    _#_o_01   ▆ PhD in a Machine Learning technique called <em style="color: yellow;">Reinforcement Learning</em>
-    _#_o_02   ▆ Practically: Control systems, muscle modeling software and...
-    _#_o_03   ▆ making a human biomechanical simulation "balance"
-    _#_o_04   ▆ and did I mention?
-    _#_o_05   ▆ <em style="color:white;">software... lots of... software</em>
+_#_cowpy_random Demo time?
 
 </pre>
-</div>
+
 '''
+
 
 
 
@@ -911,11 +798,32 @@ title: <tt>End</tt>
 body-style: "background: black; color:lightgreen;"
 body:
 '''
-<pre>
+<pre style="float:left; width:40%;">
 
 _#_cowpy_random Thank you.
 
 _#_font_doom Thank you.
+</pre>
+
+
+<pre id="typewriter" style="float:right; width:60%; font-size:300%;">
+
+
+<font style="color:yellow;">And to the core team..!</font>
+
+</pre>
+
+<pre style="font-size:200%; float:right; width:60%;">
+
+   _#_o_01 ▆ Jorge "Collection+JSON" Bernal
+   _#_o_02 ▆ Gideon "Front and Center" Pinto
+   _#_o_03 ▆ Sandip "Apps... apps... apps..." Samal
+   _#_o_04 ▆ Jennings "The Rust-afarian" Zhang
+   _#_o_05 ▆ Chuan-Heng "Jupyter is the way" Hsiao
+   _#_o_06 ▆ Ellen "The Doc" Grant
+
+   _#_o_07 ▆ and many more..!
+
 </pre>
 
 '''

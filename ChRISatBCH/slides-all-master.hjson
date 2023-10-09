@@ -1,0 +1,279 @@
+/*
+To create slides from this text file:
+
+Clone the repo:
+
+```
+    git clone https://github.org/FNNDSC/tslide-presentations
+    cd tslide-presentations
+    export ROOT=$PWD
+    export REPO=ChRISatBCH
+    export HTMLDOCS=/srv/http/slides
+    export INPUTDIR=$ROOT/$REPO
+    export INPUTFILE=slides-all-master.hjson
+    export OUTPUTDIR=$HTMLDOCS/$REPO
+```
+
+After edits, run tsmake on it:
+
+```
+    cd ~
+    git clone https://github.org/FNNDSC/tslide
+    cd tslide
+    ./tsmake --outputDir $OUTPUTDIR             \
+             --inputDir $INPUTDIR               \
+             --no-pageSplit                     \
+             --slidesFile $INPUTFILE            \
+             --slideListGlob "slide-*"          \
+             --additionalDirList $INPUTDIR/figs \
+             --verbosity 3
+```
+
+Finally, run a web server in the repo:
+
+```
+    cd $OUTPUTDIR
+    python -m http.server 9100
+```
+
+*/
+title:<tt>Hello, world!</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+<pre>
+_#_font_basic Welcome!
+
+
+
+</pre>
+</div>
+
+<div class="container">
+<pre style="font-size:300%;">
+<em style="color: yellow;">   ChRIS and BCH -- beyond AI</em>
+What is possible with <font style="color:white;">imagination</font>
+</pre>
+</div>
+
+<div>
+<pre style="font-size:150%; line-height: 118%; color: white;">
+
+┌──────────────────┐
+│ ChRIS FNNDSC     │
+├──────────────────┴───────────────────────────────────────────┐
+│ matrix: #chris:fedora.im                                     │
+│ mailto: dev@babymri.org                                      │
+│ web:    http://chrisproject.org                              │
+└──────────────────────────────────────────────────────────────┘
+
+</pre>
+
+</div>
+'''
+
+<slidebreak>
+title: <tt>icebreakers...?<tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div>
+
+<pre style="font-size:250%;">
+
+Welcome!
+
+In this introductory meeting we hope to connect around:
+<pre id="typewriter">
+   ▆ What we have developed
+        ▙ a thing we call <em style="color:yellow;">ChRIS</em>
+        ▙ and what it's good for...
+
+   ▆ What is the big picture
+
+   ▆ What can we deliver and what do we want? 
+
+   ▆ Can BCH support this to its potential? 
+
+
+</pre>
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Who are we..?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%; font-size:250%">
+<pre id="typewriter">
+Who are we?
+
+   A large and diverse center focused on research innovation,
+   primarily from a technical computer/software perspective.
+</pre>
+</div>
+
+<div style="float:right; width:50%;" class="snippet" id="order-1">
+    <img src="figs/FNNDSC-2018.jpg" width=1200 style="float: right;">
+</div>
+'''
+
+<slidebreak>
+title: <tt>Nice to meet you...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%; font-size:250%">
+<pre id="typewriter">
+Some notes about your introductory email:
+
+  Tatiana will provide the expertise and strategy to lead and
+  <em style="color:yellow;">reimagine</em> our clinical research operations.
+   
+   she will help us deliver on our <em style="color:yellow;">ambitious research goals</em>.
+   
+   ... as well as expanding our <em style="color:yellow;">industry-supported programs</em>.
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Nice to meet you...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%; font-size:250%">
+<pre id="typewriter">
+Some notes about your introductory email:
+
+  What works... and
+  What doesn't
+
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Nice to meet you...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%; font-size:250%">
+<pre>
+What doesn't work?
+
+  Historically, lack of acceptance of importance of software research.
+
+  Bias against industry leading/defining software tech developed in house.
+
+  Concept that only external companies can provide software solutions
+  to support clinical work
+</pre>
+</div>
+'''
+
+<slidebreak>
+title: <tt>Nice to meet you...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%; font-size:250%">
+<pre>
+  What has happened?
+
+  "AI" has "burst" onto the scene and with it the
+  sudden realization that software (and hardware)
+  can do more that run Word and Excel.
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title: <tt>Nice to meet you...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%; font-size:250%">
+<pre>
+  Is this a problem?
+
+  "AI" from a programmatic perspective is rather
+  uninteresting. It is a specific example of a more
+  general class of scientific compute.
+
+  If you build "AI" infrastructure, you might paint yourself
+  into a corner and cut off most other supporting software.
+
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title: <tt>Nice to meet you...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%; font-size:250%">
+ <pre>
+  Is this a problem?
+
+  We have built a general purpose scientific compute
+  platform and integrated this into clincial workflows...
+</pre>
+</div>
+'''
+
+
+<slidebreak>
+title: <tt>Nice to meet you...</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<div style="float:left; width:50%; font-size:250%">
+<pre>
+  Is this a problem?
+
+  It works for AI and non-AI -- any scientific compute
+  application.
+</pre>
+</div>
+'''
+
+
+
+
+<slidebreak>
+title: <tt>End</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Thank you.
+
+_#_font_doom Thank you.
+</pre>
+
+'''
+
+
+<slidebreak>
+title: <tt>?</tt>
+body-style: "background: black; color:lightgreen;"
+body:
+'''
+<pre>
+
+_#_cowpy_random Questions..?
+
+</pre>
+
+'''
+
+
